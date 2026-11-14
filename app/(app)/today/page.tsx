@@ -4,6 +4,7 @@ import Link from "next/link";
 import { LogOut, RotateCcw, Sparkles, UtensilsCrossed } from "lucide-react";
 import { USE_MOCKS } from "@/lib/config";
 import { getSession } from "@/lib/session";
+import { FinishSetupBanner } from "@/components/today/finish-setup-banner";
 import { FreeFoodCard } from "@/components/today/free-food-card";
 import { LoggedMeals } from "@/components/today/logged-meals";
 import { MacroSummary } from "@/components/today/macro-summary";
@@ -72,6 +73,8 @@ export default function TodayPage() {
           </button>
         </div>
       </header>
+
+      <FinishSetupBanner email={profile.email} status={profile.onboarding_status} />
 
       {logsError ? (
         <ErrorState error={logsError} onRetry={reloadLogs} />

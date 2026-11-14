@@ -13,7 +13,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { useToast } from "@/components/ui/toast";
 import { api, withAiFallback, type AiResult } from "@/lib/api";
 import { filterForProfile } from "@/lib/diet";
-import { useLocations, locationsForPlan } from "@/lib/hooks/use-locations";
+import { defaultLocationId, useLocations, locationsForPlan } from "@/lib/hooks/use-locations";
 import { useLogs } from "@/lib/hooks/use-logs";
 import { useProfile } from "@/lib/hooks/use-profile";
 import { remaining, targetsOf } from "@/lib/macros";
@@ -41,9 +41,9 @@ function Plates() {
   const { locations, error: locError, reload: reloadLocations } = useLocations();
 
   const visible = useMemo(() => (locations && profile ? locationsForPlan(locations, profile.meal_plan_type) : null), [locations, profile]);
-  // TODO(nearest): no location data yet, so default to the first dining hall.
+  // Opens on the student's favorite hall from onboarding, else the first dining hall.
   const [picked, setPicked] = useState<string | null>(null);
-  const locationId = picked ?? visible?.find((l) => l.kind === "dining_hall")?.id ?? null;
+  const locationId = picked ?? (visible ? defaultLocationId(visible, profile?.favorite_location_ids) : null);
   const location = visible?.find((l) => l.id === locationId) ?? null;
   const isRetail = location?.kind === "retail";
 
@@ -154,6 +154,14 @@ function Plates() {
         </div>
       ) : (
         <>
+          {profile && profile.onboarding_status !== "complete" ? (
+            <p className="text-sm text-muted">
+              Tell us your diet and meal plan for better picks.{" "}
+              <Link href="/onboarding" className="font-medium text-text underline underline-offset-4">
+                Finish setup
+              </Link>
+            </p>
+          ) : null}
           {current.offline ? (
             <p className="flex items-center gap-1.5 text-xs text-muted">
               <WifiOff aria-hidden className="size-3.5" /> Offline estimate: built from today&apos;s menu without AI.

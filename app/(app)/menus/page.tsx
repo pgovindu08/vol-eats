@@ -13,7 +13,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { useToast } from "@/components/ui/toast";
 import { api } from "@/lib/api";
 import { DIET_BADGES } from "@/lib/diet";
-import { useLocations } from "@/lib/hooks/use-locations";
+import { defaultLocationId, useLocations } from "@/lib/hooks/use-locations";
 import { useLogs } from "@/lib/hooks/use-logs";
 import { useProfile } from "@/lib/hooks/use-profile";
 import { currentMealPeriod } from "@/lib/meal-period";
@@ -45,7 +45,7 @@ function Menus() {
   const { locations, error: locError, reload: reloadLocations } = useLocations();
 
   const [picked, setPicked] = useState<string | null>(null);
-  const locationId = picked ?? locations?.[0]?.id ?? null;
+  const locationId = picked ?? (locations ? defaultLocationId(locations, profile?.favorite_location_ids) : null);
   const location = locations?.find((l) => l.id === locationId) ?? null;
   const isRetail = location?.kind === "retail";
   const [period, setPeriod] = useState<MealPeriod>(() => currentMealPeriod());

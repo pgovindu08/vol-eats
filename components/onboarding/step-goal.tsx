@@ -21,14 +21,29 @@ const GOALS: { value: GoalType; label: string; description: string }[] = [
   { value: "maintain", label: "Maintain & eat healthier", description: "Same weight, better choices." },
 ];
 
-export function StepGoal({ draft, onNext }: { draft: OnboardingDraft; onNext: (patch: Partial<OnboardingDraft>) => void }) {
-  const { control, register, handleSubmit, formState } = useForm({
+export function StepGoal({
+  draft,
+  onNext,
+  onSkip,
+}: {
+  draft: OnboardingDraft;
+  onNext: (patch: Partial<OnboardingDraft>) => void;
+  /** "Set up later": go straight into the app with rough targets. */
+  onSkip?: (patch: Partial<OnboardingDraft>) => void;
+}) {
+  const { control, register, handleSubmit, formState, getValues } = useForm({
     resolver: zodResolver(schema),
     defaultValues: { goal_type: draft.goal_type, goal_text: draft.goal_text ?? "" },
   });
 
   return (
-    <StepShell title="What's your goal?" subtitle="We'll set your daily calories and macros around it." formId="step-goal">
+    <StepShell
+      title="What's your goal?"
+      subtitle="We'll set your daily calories and macros around it."
+      formId="step-goal"
+      // No validation: skipping should always work. Keep whatever they already picked.
+      secondary={onSkip ? { label: "Set up later", onClick: () => onSkip({ goal_type: getValues("goal_type"), goal_text: getValues("goal_text") }) } : undefined}
+    >
       <form id="step-goal" noValidate className="space-y-6" onSubmit={handleSubmit((v) => onNext({ goal_type: v.goal_type, goal_text: v.goal_text }))}>
         <Controller
           control={control}

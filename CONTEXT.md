@@ -82,6 +82,97 @@ All the changes done by the AI is entered in here.
 - **Error copy:** 404 now uses the generic message instead of "We couldn't find that", since a 404 usually means a route isn't deployed yet. Menus and Plates no longer show a loading skeleton under the error when locations fail.
 - **Mocks on:** ran the full demo path: demo login (640 cal) → plate picks → log a plate (1,180) → log from Menus (1,360) → Budget → Events → Reset (640).
 
+## 2026-11-14 — Onboarding v2, phase 1: data and resume (Claude Code, for Swagat, branch `feature/onboarding-v2`)
+
+Plan: `docs/prompts/onboarding-v2.md`.
+
+- **New profile fields** in `lib/types.ts`, all `TODO(schema)` for Supul: `living_situation`, `favorite_location_ids`, `kitchen_access`, `onboarding_status`.
+  - `lib/profile.ts` `normalizeProfile()` fills defaults for older profiles: living situation comes from the meal plan, and status is `"complete"`.
+  - `lib/api.ts` applies it to every profile it returns, so v1 mock data and a backend without these columns both keep working.
+  - The demo profile is now on campus, with Rocky Top as favorite.
+- **Per-user drafts** (`lib/onboarding-draft.ts`): saved under `cf.onboarding-draft:<email>`, with `updated_at` and a 14-day expiry.
+  - The v1 shared draft is deleted, not migrated, because its owner is unknown. This deliberately differs from the prompt.
+  - `furthest` replaces `step`.
+- **Step in the URL** (`/onboarding?step=N`): refresh keeps the step, the phone's back gesture goes back a step, and out-of-range steps clamp to the furthest reached.
+- **Resume:** a "Welcome back: step N of 4" card with Continue / Start over (Start over asks to confirm). A "Not you? Sign out" link is on every step.
+- **Safe submit:** answers are saved before submitting. On failure: "Couldn't save. Your answers are kept, so try again."
+- **Already finished:** visiting `/onboarding` with a complete profile goes to `/today`.
+- **Bug fixed:** sign-out leaked state between users.
+  - Next 16 keeps visited pages alive in memory (`<Activity>`), so after sign-out the next user on the device saw the previous user's onboarding step and resume card.
+  - All sign-outs now go through `signOut()` in `lib/session.ts`, which does a full page load, as Next's "State and authentication" guide recommends.
+  - Onboarding also reloads if the signed-in user changed while it was hidden.
+- **Tests:** 51 passing; new ones cover draft keying, expiry, legacy deletion and profile normalization.
+- **Checked in the browser:** back and forward, `?step=9`, resume, the shared-phone switch, Start over, failed submit and the finished-user redirect.
+- **Lighthouse** accessibility is 100 on all onboarding steps.
+
+## 2026-11-14 — Onboarding v2, phase 2: living-situation flow, finish later (Claude Code, for Swagat)
+
+- **Flow logic** (`lib/onboarding-flow.ts`, pure and tested):
+  - Steps are `goal → body → diet → living → money → review`. The URL now carries the step id (`?step=living`) instead of a number, because the number of steps depends on the branch.
+  - Off-campus cooks without dining dollars skip Money, and the count stays honest ("Step 5 of 5").
+  - `buildProfileInput()` drops fields that don't apply to the chosen branch.
+  - `profileToDraft()` rebuilds a draft from a saved partial or skipped profile.
+- **Step 4, "Where do you live and eat?"** (`components/onboarding/step-living.tsx`):
+  - **On campus:** meal plan, with "No meal plan" behind a link, plus favorite dining halls.
+  - **Off campus with a plan:** meal plan, favorite halls and kitchen.
+  - **Off campus cooking:** weekly grocery budget (required), kitchen (required), and an "I also have dining dollars" option with its plan.
+- **Step 5, Money** (`step-money.tsx`, formerly `step-plan.tsx`): shows only the balances that apply (dining dollars, swipes for Block plans, off-campus budget unless already asked).
+- **Step 6, Review** (`step-review.tsx`): one card per section. **Edit** opens that step with `&edit=1`, and Next returns to Review (or goes to Money if the change made it apply).
+- **Finish later:**
+  - **"Set up later" on step 1:** saves `onboarding_status: "skipped"` with default body values (rough targets), goes to `/today`, and keeps the draft.
+  - **"Calculate now, finish the rest later" on step 2:** validates the body step, then saves `"partial"` with real targets and resumes at diet.
+- **Today banner** (`components/today/finish-setup-banner.tsx`): shown while setup isn't complete, with different copy for skipped and partial. **Continue setup** resumes at the first unfinished step, rebuilding from the profile if the local draft is gone. "Hide for today" hides it for 24 hours.
+  - Plates shows a "Finish setup" hint for incomplete profiles.
+- **Favorite hall:** Plates and Menus open on the first favorite hall (`defaultLocationId` in `lib/hooks/use-locations.ts`). `TODO(nearest)` is removed.
+- **Fixed while testing:**
+  - "Finish later" resumed at body instead of diet.
+  - Next keeps pages in memory, which would have left the Review button stuck on "Calculating…" when returning.
+  - Continue setup with no local draft landed on step 1, because the URL was corrected before the rebuilt draft arrived.
+- **Tests:** 64 passing.
+- **Checked in the browser:**
+  - On-campus path, and off-campus cooking path (5 steps).
+  - Set up later → banner → Continue → finish later → banner → Continue, with and without a local draft → complete, after which the banner is gone.
+  - Edit from Review, hiding the banner, and the demo account.
+  - No overflow at 360px.
+- **Lighthouse** accessibility is 100 on goal, both living branches, money, review, Today with the banner, and Plates with the hint.
+
+## 2026-11-14 — Onboarding v2 polish (Claude Code, for Swagat)
+
+- **Allergen names:** `ALLERGEN_LABELS` and `allergenList()` in `lib/diet.ts` are now used by the diet chips, the Review step and the Menus item sheet. Review used to show raw values like "peanut", and the Menus sheet replaced only the first underscore ("tree nuts, peanut").
+- **Live step count:** the living step reports unsaved choices (`onChange`) so "Step 4 of 6" becomes "of 5" as soon as "Off campus, cooking for myself" is picked. The header, progress bar and resume card all update.
+
+## 2026-11-14 — Menus refreshed from the scraper, and a pork-filter fix (Claude Code, for Swagat)
+
+- **Fresh scrape:** ran `scraper/cli.js` for today (2026-11-14): Rocky Top 285 items, Stokely 279. Regenerated `mock/menu-items.generated.json` (`npm run mock:menus`), and 40 of the 66 demo items changed.
+  - Before refreshing, I checked that the old mock menus matched the Nov 13 scraper output exactly (66 items, 0 mismatches).
+- **The app still doesn't call the scraper live:**
+  - There's no `/api/menus` route yet, and the GitHub workflow that `scraper/AUTOMATION.md` describes isn't in the repo.
+  - So the demo menus are a snapshot until someone re-runs `node scraper/cli.js && npm run mock:menus`, or the backend serves the scraper.
+- **Bug found by the new menu: pork filtering.** Halal and No-pork plate picks could include **Grilled Kielbasa**. Checking every scraped ingredient list found three more items whose names don't say pork: Salami, Hawaiian BBQ Pizza, and a "Beef Hot Dog" that lists pork in its ingredients.
+  - `lib/diet.ts` now matches those words too.
+  - Vegetarian- or vegan-tagged items skip the pork check, so "Incogmeato Sausage" and "Hot Dog Bun" aren't wrongly excluded.
+  - Verified: every pork-containing item in today's scrape is excluded. A Halal demo got 28 different suggestions across halls and meals, with no pork.
+  - `TODO(schema)` for Supul: derive a `contains_pork` flag from the scraper's ingredients instead of matching names.
+- **Tests:** the diet tests used to look up yesterday's dishes by name, so they broke on the new menu. They now use their own sample items, so refreshing the menus can't break them. 65 tests passing.
+
+## 2026-11-14 — No money questions in onboarding (Claude Code, for Swagat, branch `feature/onboarding-no-money`)
+
+- **Onboarding is now 5 steps for everyone:** goal → body → diet → living → review.
+  - Removed the Money step (`step-money.tsx` deleted), plus "I also have dining dollars" and the grocery budget field for off-campus cooks.
+  - Meal plan names stay, because they decide which places a student can pay at.
+  - The living step tells students they can add dining dollars, swipes and budgets on the Budget tab.
+  - Old drafts saved with Money as a step resolve to Review.
+- **Budget screen** (`components/budget/amount-editor.tsx`): students enter the numbers here instead.
+  - Swipes left (Block plans, whole numbers only), dining dollars balance (plans with dining dollars) and a weekly budget (titled "Grocery budget" for off-campus cooks).
+  - Each shows an input with Save when empty, and the value with "Update" once saved.
+  - Saves call `PATCH /api/profile` through the new `api.updateMoney()` (`TODO(§9)`: confirm with backend).
+- **Balances are preserved:** `buildProfileInput()` takes the balances already on the profile, so a student who skips setup, adds a budget on Budget, then finishes onboarding keeps it. Balances the new meal plan doesn't use are dropped.
+- **Tests:** 65 passing.
+- **Checked in the browser:**
+  - A new student sees 5 steps and saves with no balances.
+  - Budget: entering swipes (12.5 rejected) and dining dollars, then Update.
+  - Skip → add budget → finish onboarding keeps the budget.
+- **Lighthouse** accessibility is 100 on both living branches, Review, Budget with empty inputs, and the demo's Budget.
 ## Phase 7 — Live scraper menus (Claude Code, for Supul)
 
 - **lib/scraper-menus.ts** (new): maps `scraper/data/rockytop.json` and `stokely.json` to `MenuItem[]` using the same rules as `scripts/build-mock-menus.mjs`: ids `${location_id}-${id}-${period}`, diet tags, allergens, and rounded macros. Stations with toppings, condiments or dressings are skipped, along with implausible calorie values. It returns the full menu, not the old 11 picks per period.
