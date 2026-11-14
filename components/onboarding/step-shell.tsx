@@ -1,5 +1,10 @@
-import type { ReactNode } from "react";
+"use client";
+
+import { createContext, useContext, type ReactNode } from "react";
 import { Button } from "@/components/ui/button";
+
+/** Lets the wizard relabel every step's main button (e.g. "Save" when editing from Profile). */
+export const NextLabelContext = createContext<string | null>(null);
 
 /** Heading, body and the Back/Next bar shared by every onboarding step. */
 export function StepShell({
@@ -7,7 +12,7 @@ export function StepShell({
   subtitle,
   formId,
   onBack,
-  nextLabel = "Next",
+  nextLabel,
   busy,
   secondary,
   children,
@@ -22,6 +27,7 @@ export function StepShell({
   secondary?: { label: string; onClick: () => void };
   children: ReactNode;
 }) {
+  const contextLabel = useContext(NextLabelContext);
   return (
     <>
       <div className={secondary ? "flex-1 space-y-6 pb-40" : "flex-1 space-y-6 pb-28"}>
@@ -51,7 +57,7 @@ export function StepShell({
             </Button>
           ) : null}
           <Button type="submit" form={formId} size="lg" block disabled={busy}>
-            {nextLabel}
+            {nextLabel ?? contextLabel ?? "Next"}
           </Button>
         </div>
       </div>

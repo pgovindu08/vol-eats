@@ -2,6 +2,7 @@
 
 import { Suspense, use, useEffect, useState, type ReactNode } from "react";
 import { browser } from "react-dom";
+import Link from "next/link";
 import { CalendarDays, CreditCard, Dumbbell, ShoppingBasket, Ticket, TriangleAlert, Wallet } from "lucide-react";
 import { AmountEditor } from "@/components/budget/amount-editor";
 import { PageHeader } from "@/components/layout/page-header";
@@ -84,7 +85,15 @@ function Budget() {
 
   return (
     <div className="space-y-4">
-      <PageHeader title="Budget" subtitle={profile.meal_plan_name ?? "No meal plan"} />
+      <PageHeader
+        title="Budget"
+        subtitle={profile.meal_plan_name ?? "No meal plan"}
+        action={
+          <Link href="/profile" className="flex min-h-11 items-center px-2 text-sm font-medium text-muted underline underline-offset-4 hover:text-text">
+            Profile
+          </Link>
+        }
+      />
 
       <Card icon={CalendarDays} title="Semester">
         <div className="flex items-end justify-between gap-4">

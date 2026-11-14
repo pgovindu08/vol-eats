@@ -38,6 +38,55 @@
 
   --tab-bar-height: 64px;
   --content-max: 480px;
+
+  color-scheme: light;
+}
+
+/*
+ * Dark theme. Applied when the user picks Dark in Profile (data-theme="dark"), or picks System
+ * and the OS is dark. Every text color here passes 4.5:1 on --surface and --surface-2.
+ */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #121211;
+    --surface: #1c1c1a;
+    --surface-2: #2a2a27;
+    --text: #f2f1ec;
+    --text-muted: #a8a69f;
+    --border: #3a3935;
+    --primary: #ff8a1f;
+    --primary-fg: #1c1c1a;
+    --accent: #b8b9bb;
+    --success: #5cc98a;
+    --warning: #e0a84a;
+    --danger: #f28b82;
+    --calories: #ff8a1f;
+    --protein: #7aa2f7;
+    --carbs: #4fd1bd;
+    --fat: #d9a648;
+    --shadow-card: 0 1px 2px rgb(0 0 0 / 0.4), 0 2px 8px rgb(0 0 0 / 0.3);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #121211;
+  --surface: #1c1c1a;
+  --surface-2: #2a2a27;
+  --text: #f2f1ec;
+  --text-muted: #a8a69f;
+  --border: #3a3935;
+  --primary: #ff8a1f;
+  --primary-fg: #1c1c1a;
+  --accent: #b8b9bb;
+  --success: #5cc98a;
+  --warning: #e0a84a;
+  --danger: #f28b82;
+  --calories: #ff8a1f;
+  --protein: #7aa2f7;
+  --carbs: #4fd1bd;
+  --fat: #d9a648;
+  --shadow-card: 0 1px 2px rgb(0 0 0 / 0.4), 0 2px 8px rgb(0 0 0 / 0.3);
+  color-scheme: dark;
 }
 
 @theme inline {

@@ -1,5 +1,38 @@
 All the changes done by the AI is entered in here.
 
+## 2026-11-14 — App v3, Person A, Step 1: navigation, Profile, dark mode, Reset app (Claude Code, for Swagat, branch `feature/app-v3-screens`)
+
+- **Tabs:** Today · Food · Log · Menus · Events (`components/layout/bottom-tabs.tsx`).
+  - Log uses a plain `NotebookPen` icon, with no orange circle.
+  - Budget lost its tab and is reached from Profile.
+  - The active tab has an orange icon and a bold label (orange text fails contrast on white).
+- **Profile avatar:** `components/layout/profile-button.tsx`, in every tab header (`PageHeader` shows it by default, and Today and Food add it).
+- **Today:**
+  - Removed the "Lunch is being served" pill and the old ↺ reset button.
+  - "What should I eat?" is now a small "Not sure what to eat? See picks near you →" row going to `/food`.
+  - The meal list is now one line: "Logged 3 meals · 640 cal · View in Log →".
+- **`/food`:** for now it re-exports the plate picks screen. Step 3 replaces it with the location list.
+- **`/profile`:**
+  - **Targets:** sliders in `components/profile/targets-editor.tsx`, saved with `api.updateTargets`.
+  - **Your details:** each Edit opens `/onboarding?step=…&edit=1&return=profile`.
+  - **Budget:** `AmountEditor` fields, plus a link to `/budget`.
+  - **Settings:** Appearance (System / Light / Dark), Units (ft/lb or cm/kg), Sign out, and Reset app (mocks only).
+- **Editing from Profile:**
+  - The wizard loads every saved answer (`profileToFullDraft` in `lib/onboarding-flow.ts`) and doesn't redirect finished users in this mode.
+  - The step button says "Save" (via `NextLabelContext` in `step-shell.tsx`). Saving returns to `/profile` and recomputes targets, keeping balances and favorites. Back goes to Profile.
+- **Dark mode:**
+  - Dark values for every token in `app/globals.css` (both `[data-theme="dark"]` and the System dark media query), all text at 4.5:1 or better.
+  - The choice is saved in `cf.theme`. A no-flash inline script in `app/layout.tsx` follows Next's "Preventing flash" guide.
+- **Units preference:** `cf.units` sets the starting units for onboarding and how Profile displays body details.
+- **Reset app:** `resetAppToDemo()` in `lib/preferences.ts` removes every `cf.*` key, signs in as the demo user, and does a full page load to `/today` (breakfast logged).
+- **Checked:**
+  - Edit diet and edit body (targets went 3,070 → 3,000, balances kept).
+  - Light/dark switching.
+  - Reset clears extra accounts and drafts.
+  - No overflow at 360px.
+  - 77 tests passing.
+  - Lighthouse accessibility 100 on Today, Profile, Food, Profile-edit onboarding and Events, in both light and dark.
+
 ## 2026-11-14 — Frontend phase 1: shell (Claude Code, for Swagat)
 
 **Added** a Next.js 16 app (App Router, TypeScript strict, Tailwind v4) at the repo root, next to `scraper/`.
