@@ -74,6 +74,9 @@ export default function TargetsPage() {
         target_fat_g: draft.fat_g,
       });
       router.push("/today");
+      // Next keeps this page in memory; don't leave it stuck on "Saving…".
+      setSaving(false);
+      setAdjusting(false);
     } catch (e) {
       setSaveError(errorMessage(e));
       setSaving(false);

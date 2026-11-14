@@ -46,7 +46,7 @@ export function setUnits(units: UnitSystem) {
 export const THEME_BOOT_SCRIPT = `try{var t=localStorage.getItem("${THEME_KEY}");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}`;
 
 /**
- * Demo reset (mocks only): clears every Campus Fuel key on this device (accounts, drafts,
+ * Demo reset (mocks only): clears every Vol Eats key on this device (accounts, drafts,
  * logs, budget prefs, banner dismissals, theme), signs in as the demo user, and reloads.
  */
 export function resetAppToDemo(demoEmail: string) {

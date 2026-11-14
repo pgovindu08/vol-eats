@@ -26,8 +26,8 @@ The current values are a **placeholder theme** (neutral surfaces with UT orange)
 | `--radius-md` | `rounded-md` | `12px` | Inputs, buttons |
 | `--radius-lg` | `rounded-lg` | `20px` | Cards, bottom sheets |
 | `--shadow-card` | `shadow-card` | soft 2-layer | Cards |
-| `--font-sans` | `font-sans` | system stack | All text |
-| `--font-display` | `font-display` | = sans | Headings, big numbers |
+| `--app-font-sans` | `font-sans` | DM Sans (next/font) | All text |
+| `--app-font-display` | `font-display` | Bricolage Grotesque (next/font) | Headings, big numbers, logo wordmark |
 | `--tab-bar-height` | `h-(--tab-bar-height)` | `64px` | Bottom tab bar, page bottom padding |
 | `--content-max` | `max-w-(--content-max)` | `480px` | Centered content column |
 
