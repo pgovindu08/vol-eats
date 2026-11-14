@@ -41,6 +41,8 @@ export interface OnboardingDraft {
   living_situation?: LivingSituation;
   favorite_location_ids?: string[];
   kitchen_access?: KitchenAccess | null;
+  /** Off-campus cooks: "I also have dining dollars". */
+  has_dining_dollars?: boolean;
 
   meal_plan_name?: string;
   dining_dollars_balance?: number | null;

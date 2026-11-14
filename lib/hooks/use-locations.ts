@@ -35,6 +35,11 @@ export function useLocations() {
   return { locations, error, reload };
 }
 
+/** The student's first favorite hall that's in the list, else the first dining hall. */
+export function defaultLocationId(locations: Location[], favorites: string[] = []) {
+  return favorites.find((id) => locations.some((l) => l.id === id)) ?? locations.find((l) => l.kind === "dining_hall")?.id ?? locations[0]?.id ?? null;
+}
+
 /** Swipe-only plans can't pay at retail, so they only see dining halls. */
 export function locationsForPlan(locations: Location[], plan: MealPlanType) {
   return plan === "swipes" ? locations.filter((l) => l.kind === "dining_hall") : locations;

@@ -86,10 +86,13 @@ export function StepBody({
   draft,
   onNext,
   onBack,
+  onFinishEarly,
 }: {
   draft: OnboardingDraft;
   onNext: (patch: Partial<OnboardingDraft>) => void;
   onBack: () => void;
+  /** "Calculate now, finish the rest later": validates this step, then saves a partial profile. */
+  onFinishEarly?: (patch: Partial<OnboardingDraft>) => void;
 }) {
   const goalType = draft.goal_type ?? "maintain";
   const schema = useMemo(() => makeSchema(goalType), [goalType]);
@@ -112,6 +115,11 @@ export function StepBody({
   const imperial = units === "imperial";
   const e = formState.errors;
   const err = (k: keyof typeof e) => e[k]?.message as string | undefined;
+  const toPatch = (vals: Parameters<Parameters<typeof handleSubmit>[0]>[0]): Partial<OnboardingDraft> => ({
+    ...vals,
+    ...toMetric(vals),
+    units: vals.units as UnitSystem,
+  });
 
   /** Switching units converts what's already typed. */
   function switchUnits(next: UnitSystem) {
@@ -142,16 +150,15 @@ export function StepBody({
   const minGoalLabel = minGoal ? (imperial ? `${Math.ceil(minGoal * 2.20462)} lb` : `${Math.ceil(minGoal)} kg`) : null;
 
   return (
-    <StepShell title="About you" subtitle="Used only to estimate how much you burn each day." formId="step-body" onBack={onBack}>
-      <form
-        id="step-body"
-        noValidate
-        className="space-y-6"
-        onSubmit={handleSubmit((vals) => {
-          const metric = toMetric(vals);
-          onNext({ ...vals, ...metric, units: vals.units as UnitSystem });
-        })}
-      >
+    <StepShell
+      title="About you"
+      subtitle="Used only to estimate how much you burn each day."
+      formId="step-body"
+      onBack={onBack}
+      // Runs the same validation as Next, then saves a partial profile instead of moving on.
+      secondary={onFinishEarly ? { label: "Calculate now, finish the rest later", onClick: () => void handleSubmit((vals) => onFinishEarly(toPatch(vals)))() } : undefined}
+    >
+      <form id="step-body" noValidate className="space-y-6" onSubmit={handleSubmit((vals) => onNext(toPatch(vals)))}>
         <div role="group" aria-label="Units" className="inline-flex rounded-md border bg-surface p-1">
           {(["imperial", "metric"] as const).map((u) => (
             <button

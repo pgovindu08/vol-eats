@@ -7,53 +7,15 @@ import { ResumeCard } from "@/components/onboarding/resume-card";
 import { StepBody } from "@/components/onboarding/step-body";
 import { StepDiet } from "@/components/onboarding/step-diet";
 import { StepGoal } from "@/components/onboarding/step-goal";
-import { StepPlan } from "@/components/onboarding/step-plan";
+import { StepLiving } from "@/components/onboarding/step-living";
+import { StepMoney } from "@/components/onboarding/step-money";
+import { StepReview } from "@/components/onboarding/step-review";
 import { Skeleton } from "@/components/ui/skeleton";
 import { api } from "@/lib/api";
-import { findMealPlan } from "@/lib/meal-plans";
 import { clearDraft, emptyDraft, hasProgress, loadDraft, saveDraft, type OnboardingDraft } from "@/lib/onboarding-draft";
-import { inferLivingSituation } from "@/lib/profile";
+import { buildProfileInput, needsMoneyStep, nextStep, profileToDraft, resolveStep, stepIndex, stepPosition, visibleSteps, type StepId } from "@/lib/onboarding-flow";
 import { getSession, signOut } from "@/lib/session";
-import type { ProfileInput } from "@/lib/types";
-import { SCHOOL } from "@/mock/locations";
-
-const STEPS = 4;
-
-function toProfileInput(d: OnboardingDraft, email: string): ProfileInput {
-  const plan = findMealPlan(d.meal_plan_name);
-  return {
-    email,
-    display_name: null,
-    school_id: SCHOOL.id, // TODO(schema): single-school for the hackathon
-    goal_type: d.goal_type ?? "maintain",
-    goal_text: d.goal_text?.trim() || null,
-    sex: d.sex ?? "unspecified",
-    age: d.age!,
-    height_cm: d.height_cm!,
-    weight_kg: d.weight_kg!,
-    goal_weight_kg: d.goal_weight_kg!,
-    activity_level: d.activity_level ?? "light",
-    diet_tags: d.diet_tags,
-    allergens: d.allergens,
-    meal_plan_name: d.meal_plan_name ?? null,
-    meal_plan_type: plan?.type ?? "none",
-    dining_dollars_balance: d.dining_dollars_balance ?? null,
-    swipes_remaining: d.swipes_remaining ?? null,
-    weekly_food_budget_usd: d.weekly_food_budget_usd ?? null,
-    // Step 4 asks these in phase 2; until then, infer from the meal plan.
-    living_situation: d.living_situation ?? inferLivingSituation(plan?.type ?? "none"),
-    favorite_location_ids: d.favorite_location_ids ?? [],
-    kitchen_access: d.kitchen_access ?? null,
-    onboarding_status: "complete",
-  };
-}
-
-/** Step from `?step=N` (1-based in the URL), limited to steps already reached. */
-function stepFromUrl(raw: string | null, furthest: number) {
-  const n = Number(raw);
-  if (!raw || !Number.isInteger(n) || n < 1) return Math.min(furthest, STEPS - 1);
-  return Math.min(n - 1, furthest, STEPS - 1);
-}
+import type { OnboardingStatus } from "@/lib/types";
 
 export default function OnboardingPage() {
   return (
@@ -86,15 +48,15 @@ function Wizard() {
   // Steps pushed onto history in this visit, so in-app Back can use the real back stack.
   const pushed = useRef(0);
 
-  const step = stepFromUrl(searchParams.get("step"), draft.furthest);
-  const urlStep = searchParams.get("step");
+  const step = resolveStep(searchParams.get("step"), draft);
+  const editing = searchParams.get("edit") === "1";
+  const { position, total } = stepPosition(step, draft);
+  const query = searchParams.toString();
 
-  // No session → login. Already finished onboarding → Today (never restart a finished setup).
-  // Effects re-run when Next reveals this preserved page, so this also catches a different
-  // user having signed in since: reload rather than show the previous person's draft.
   useEffect(() => {
-    const current = getSession()?.email ?? null;
-    if (current !== email) {
+    // Effects re-run when Next reveals this preserved page, so this also catches a different
+    // user having signed in since: reload rather than show the previous person's draft.
+    if ((getSession()?.email ?? null) !== email) {
       window.location.reload();
       return;
     }
@@ -106,7 +68,18 @@ function Wizard() {
     api
       .getProfile()
       .then((p) => {
-        if (!cancelled && p?.onboarding_status === "complete") router.replace("/today");
+        if (cancelled || !p) return;
+        // Finished onboarding → never restart it.
+        if (p.onboarding_status === "complete") return router.replace("/today");
+        // "Continue setup" with no local draft (cleared storage, other device): rebuild from the saved
+        // profile and jump to its first unfinished step. Storage is the source of truth here because
+        // every change is saved there immediately.
+        if (hasProgress(loadDraft(email))) return;
+        const rebuilt = profileToDraft(p);
+        saveDraft(email, rebuilt);
+        setDraft(rebuilt);
+        setShowResume(true);
+        router.replace(`/onboarding?step=${resolveStep(null, rebuilt)}`, { scroll: false });
       })
       .catch(() => {}); // offline is fine: keep onboarding usable
     return () => {
@@ -114,36 +87,53 @@ function Wizard() {
     };
   }, [email, router]);
 
-  // Keep the URL in sync (e.g. resuming lands on the saved step, or ?step=9 is clamped).
+  // Keep the URL in sync (resuming lands on the saved step; unknown or future steps are corrected).
   useEffect(() => {
-    if (urlStep !== String(step + 1)) router.replace(`/onboarding?step=${step + 1}`, { scroll: false });
-  }, [urlStep, step, router]);
+    const params = new URLSearchParams(query);
+    if (params.get("step") === step) return;
+    params.set("step", step);
+    router.replace(`/onboarding?${params}`, { scroll: false });
+  }, [query, step, router]);
 
   if (!email) return <WizardSkeleton />;
 
-  function update(patch: Partial<OnboardingDraft>) {
-    setDraft((prev) => {
-      const next = { ...prev, ...patch };
-      saveDraft(email!, next);
-      return next;
-    });
+  function save(next: OnboardingDraft) {
+    setDraft(next);
+    saveDraft(email!, next);
   }
 
-  function goNext(to: number, patch: Partial<OnboardingDraft>) {
-    update({ ...patch, furthest: Math.max(draft.furthest, to) });
+  function push(to: StepId, edit = false) {
     setShowResume(false);
+    setSubmitError(null);
     pushed.current += 1;
-    router.push(`/onboarding?step=${to + 1}`);
+    router.push(`/onboarding?step=${to}${edit ? "&edit=1" : ""}`);
   }
 
-  function goBack(to: number) {
+  function goNext(current: StepId, patch: Partial<OnboardingDraft>) {
+    const merged = { ...draft, ...patch };
+    let to = nextStep(current, merged) ?? "review";
+    let stillEditing = false;
+    if (editing) {
+      // Editing from Review returns to Review, unless the change opened up the Money step.
+      const moneyNewlyNeeded = current === "living" && needsMoneyStep(merged) && !needsMoneyStep(draft);
+      to = moneyNewlyNeeded ? "money" : "review";
+      stillEditing = moneyNewlyNeeded;
+    }
+    save({ ...merged, furthest: Math.max(merged.furthest, stepIndex(to)) });
+    push(to, stillEditing);
+  }
+
+  function goBack() {
     setShowResume(false);
+    if (editing) return push("review");
+    const visible = visibleSteps(draft);
+    const prev = visible[visible.indexOf(step) - 1] ?? "goal";
     // Use real history when we got here by pushing, so the phone's back gesture and this button agree.
     if (pushed.current > 0) {
       pushed.current -= 1;
       router.back();
     } else {
-      router.replace(`/onboarding?step=${to + 1}`);
+      router.replace(`/onboarding?step=${prev}`);
     }
   }
 
@@ -152,18 +142,23 @@ function Wizard() {
     setDraft(emptyDraft());
     setShowResume(false);
     pushed.current = 0;
-    router.replace("/onboarding?step=1");
+    router.replace("/onboarding?step=goal");
   }
 
-  async function finish(patch: Partial<OnboardingDraft>) {
+  /** Saves the profile. "complete" clears the draft; partial/skipped keep it so Continue setup resumes. */
+  async function submit(status: OnboardingStatus, patch: Partial<OnboardingDraft>, then: string) {
     const full = { ...draft, ...patch };
-    update(patch); // saved first, so a failed submit never loses answers
+    // "Finish later" after the body step: Continue setup should reopen at the first unanswered step.
+    if (status === "partial") full.furthest = Math.max(full.furthest, stepIndex("diet"));
+    save(full); // saved first, so a failed submit never loses answers
     setBusy(true);
     setSubmitError(null);
     try {
-      await api.saveProfile(toProfileInput(full, email!));
-      clearDraft(email!);
-      router.push("/onboarding/targets");
+      await api.saveProfile(buildProfileInput(full, email!, status));
+      if (status === "complete") clearDraft(email!);
+      router.push(then);
+      // Next keeps this page in memory after navigating away; don't leave it stuck on "saving".
+      setBusy(false);
     } catch {
       setSubmitError("Couldn't save. Your answers are kept, so try again.");
       setBusy(false);
@@ -172,19 +167,15 @@ function Wizard() {
 
   return (
     <>
-      {showResume ? <ResumeCard step={step + 1} total={STEPS} onContinue={() => setShowResume(false)} onStartOver={startOver} /> : null}
+      {showResume ? <ResumeCard step={position} total={total} onContinue={() => setShowResume(false)} onStartOver={startOver} /> : null}
 
       <div className="pb-6">
         <div className="flex items-center justify-between">
           <p className="text-xs font-medium text-muted">
-            Step {step + 1} of {STEPS}
+            Step {position} of {total}
           </p>
           {/* Shared phones: switch accounts mid-setup. Your own draft stays saved for next time. */}
-          <button
-            type="button"
-            onClick={signOut}
-            className="-my-3 min-h-11 px-1 text-xs text-muted underline underline-offset-4 hover:text-text"
-          >
+          <button type="button" onClick={signOut} className="-my-3 min-h-11 px-1 text-xs text-muted underline underline-offset-4 hover:text-text">
             Not you? Sign out
           </button>
         </div>
@@ -192,19 +183,46 @@ function Wizard() {
           role="progressbar"
           aria-label="Onboarding progress"
           aria-valuemin={1}
-          aria-valuemax={STEPS}
-          aria-valuenow={step + 1}
+          aria-valuemax={total}
+          aria-valuenow={position}
           className="mt-2 h-1.5 overflow-hidden rounded-full bg-surface-2"
         >
-          <div className="h-full rounded-full bg-primary transition-[width] duration-200" style={{ width: `${((step + 1) / STEPS) * 100}%` }} />
+          <div className="h-full rounded-full bg-primary transition-[width] duration-200" style={{ width: `${(position / total) * 100}%` }} />
         </div>
       </div>
 
-      {/* key: remount the step's form when its saved answers change (e.g. after Start over). */}
-      {step === 0 && <StepGoal key={`0-${draft.updated_at}`} draft={draft} onNext={(p) => goNext(1, p)} />}
-      {step === 1 && <StepBody key={`1-${draft.updated_at}`} draft={draft} onNext={(p) => goNext(2, p)} onBack={() => goBack(0)} />}
-      {step === 2 && <StepDiet key={`2-${draft.updated_at}`} draft={draft} onNext={(p) => goNext(3, p)} onBack={() => goBack(1)} />}
-      {step === 3 && <StepPlan key={`3-${draft.updated_at}`} draft={draft} onNext={finish} onBack={() => goBack(2)} busy={busy} submitError={submitError} />}
+      {submitError && step !== "review" ? (
+        <p role="alert" className="mb-4 rounded-md bg-surface-2 px-3 py-2 text-sm text-danger">
+          {submitError}
+        </p>
+      ) : null}
+
+      {/* key: remount a step's form when its saved answers are replaced (Start over, Continue setup). */}
+      {step === "goal" && (
+        <StepGoal key={`goal-${draft.updated_at}`} draft={draft} onNext={(p) => goNext("goal", p)} onSkip={editing ? undefined : (p) => submit("skipped", p, "/today")} />
+      )}
+      {step === "body" && (
+        <StepBody
+          key={`body-${draft.updated_at}`}
+          draft={draft}
+          onNext={(p) => goNext("body", p)}
+          onBack={goBack}
+          onFinishEarly={editing ? undefined : (p) => submit("partial", p, "/onboarding/targets")}
+        />
+      )}
+      {step === "diet" && <StepDiet key={`diet-${draft.updated_at}`} draft={draft} onNext={(p) => goNext("diet", p)} onBack={goBack} />}
+      {step === "living" && <StepLiving key={`living-${draft.updated_at}`} draft={draft} onNext={(p) => goNext("living", p)} onBack={goBack} />}
+      {step === "money" && <StepMoney key={`money-${draft.updated_at}`} draft={draft} onNext={(p) => goNext("money", p)} onBack={goBack} />}
+      {step === "review" && (
+        <StepReview
+          draft={draft}
+          onEdit={(id) => push(id, true)}
+          onSubmit={() => submit("complete", {}, "/onboarding/targets")}
+          onBack={goBack}
+          busy={busy}
+          submitError={submitError}
+        />
+      )}
     </>
   );
 }

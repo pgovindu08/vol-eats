@@ -104,3 +104,34 @@ Plan: `docs/prompts/onboarding-v2.md`.
 - **Tests:** 51 passing; new ones cover draft keying, expiry, legacy deletion and profile normalization.
 - **Checked in the browser:** back and forward, `?step=9`, resume, the shared-phone switch, Start over, failed submit and the finished-user redirect.
 - **Lighthouse** accessibility is 100 on all onboarding steps.
+
+## 2026-11-14 — Onboarding v2, phase 2: living-situation flow, finish later (Claude Code, for Swagat)
+
+- **Flow logic** (`lib/onboarding-flow.ts`, pure and tested):
+  - Steps are `goal → body → diet → living → money → review`. The URL now carries the step id (`?step=living`) instead of a number, because the number of steps depends on the branch.
+  - Off-campus cooks without dining dollars skip Money, and the count stays honest ("Step 5 of 5").
+  - `buildProfileInput()` drops fields that don't apply to the chosen branch.
+  - `profileToDraft()` rebuilds a draft from a saved partial or skipped profile.
+- **Step 4, "Where do you live and eat?"** (`components/onboarding/step-living.tsx`):
+  - **On campus:** meal plan, with "No meal plan" behind a link, plus favorite dining halls.
+  - **Off campus with a plan:** meal plan, favorite halls and kitchen.
+  - **Off campus cooking:** weekly grocery budget (required), kitchen (required), and an "I also have dining dollars" option with its plan.
+- **Step 5, Money** (`step-money.tsx`, formerly `step-plan.tsx`): shows only the balances that apply (dining dollars, swipes for Block plans, off-campus budget unless already asked).
+- **Step 6, Review** (`step-review.tsx`): one card per section. **Edit** opens that step with `&edit=1`, and Next returns to Review (or goes to Money if the change made it apply).
+- **Finish later:**
+  - **"Set up later" on step 1:** saves `onboarding_status: "skipped"` with default body values (rough targets), goes to `/today`, and keeps the draft.
+  - **"Calculate now, finish the rest later" on step 2:** validates the body step, then saves `"partial"` with real targets and resumes at diet.
+- **Today banner** (`components/today/finish-setup-banner.tsx`): shown while setup isn't complete, with different copy for skipped and partial. **Continue setup** resumes at the first unfinished step, rebuilding from the profile if the local draft is gone. "Hide for today" hides it for 24 hours.
+  - Plates shows a "Finish setup" hint for incomplete profiles.
+- **Favorite hall:** Plates and Menus open on the first favorite hall (`defaultLocationId` in `lib/hooks/use-locations.ts`). `TODO(nearest)` is removed.
+- **Fixed while testing:**
+  - "Finish later" resumed at body instead of diet.
+  - Next keeps pages in memory, which would have left the Review button stuck on "Calculating…" when returning.
+  - Continue setup with no local draft landed on step 1, because the URL was corrected before the rebuilt draft arrived.
+- **Tests:** 64 passing.
+- **Checked in the browser:**
+  - On-campus path, and off-campus cooking path (5 steps).
+  - Set up later → banner → Continue → finish later → banner → Continue, with and without a local draft → complete, after which the banner is gone.
+  - Edit from Review, hiding the banner, and the demo account.
+  - No overflow at 360px.
+- **Lighthouse** accessibility is 100 on goal, both living branches, money, review, Today with the banner, and Plates with the hint.
