@@ -3,8 +3,9 @@
 import { Suspense, use, useEffect, useMemo, useState } from "react";
 import { browser } from "react-dom";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { ArrowLeft, RefreshCw, WifiOff } from "lucide-react";
+import { ProfileButton } from "@/components/layout/profile-button";
 import { LocationPicker, PeriodPicker } from "@/components/menus/pickers";
 import { PlateCard, PlateCardSkeleton } from "@/components/plates/plate-card";
 import { Button } from "@/components/ui/button";
@@ -40,14 +41,32 @@ function Plates() {
   const { eaten, loading: logsLoading, addLog } = useLogs();
   const { locations, error: locError, reload: reloadLocations } = useLocations();
 
-  const visible = useMemo(() => (locations && profile ? locationsForPlan(locations, profile.meal_plan_type) : null), [locations, profile]);
+  // Opened from a Food tab card: ?location=<id>&period=<meal>. Without a location, Food is the entry point.
+  const searchParams = useSearchParams();
+  const requestedLocation = searchParams.get("location");
+  const requestedPeriod = searchParams.get("period");
+  useEffect(() => {
+    if (!requestedLocation) router.replace("/food");
+  }, [requestedLocation, router]);
+
+  const visible = useMemo(() => {
+    if (!locations || !profile) return null;
+    const allowed = locationsForPlan(locations, profile.meal_plan_type);
+    // A place picked on Food stays selectable even if it's not on the student's plan.
+    const extra = locations.find((l) => l.id === requestedLocation && !allowed.includes(l));
+    return extra ? [...allowed, extra] : allowed;
+  }, [locations, profile, requestedLocation]);
   // Opens on the student's favorite hall from onboarding, else the first dining hall.
   const [picked, setPicked] = useState<string | null>(null);
-  const locationId = picked ?? (visible ? defaultLocationId(visible, profile?.favorite_location_ids) : null);
+  const locationId =
+    picked ??
+    (visible ? (visible.some((l) => l.id === requestedLocation) ? requestedLocation : defaultLocationId(visible, profile?.favorite_location_ids)) : null);
   const location = visible?.find((l) => l.id === locationId) ?? null;
   const isRetail = location?.kind === "retail";
 
-  const [period, setPeriod] = useState<MealPeriod>(() => currentMealPeriod());
+  const [period, setPeriod] = useState<MealPeriod>(() =>
+    requestedPeriod === "breakfast" || requestedPeriod === "lunch" || requestedPeriod === "dinner" ? requestedPeriod : currentMealPeriod(),
+  );
   const [variant, setVariant] = useState(0);
   const [result, setResult] = useState<{ key: string; value: AiResult<PlateRecommendation> } | null>(null);
   const [error, setError] = useState<{ key: string; value: unknown } | null>(null);
@@ -123,11 +142,14 @@ function Plates() {
 
   return (
     <div className="space-y-4 pt-4">
-      <header className="flex items-center gap-2">
-        <Link href="/today" aria-label="Back to Today" className="-ml-2 flex size-11 items-center justify-center rounded-full hover:bg-surface-2">
-          <ArrowLeft aria-hidden className="size-5" />
-        </Link>
-        <h1 className="font-display text-2xl font-bold">What should I eat?</h1>
+      <header className="flex items-start justify-between gap-3">
+        <div>
+          <Link href="/food" className="-ml-2 flex min-h-11 items-center gap-1 px-2 text-sm font-medium text-muted hover:text-text">
+            <ArrowLeft aria-hidden className="size-4" /> All places
+          </Link>
+          <h1 className="font-display text-3xl font-extrabold tracking-tight">Plate picks</h1>
+        </div>
+        <ProfileButton />
       </header>
 
       {locError ? (

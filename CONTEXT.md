@@ -1,5 +1,94 @@
 All the changes done by the AI is entered in here.
 
+## 2026-11-14 — App v3, Person A, Step 3: Food tab (Claude Code, for Swagat, branch `feature/app-v3-food`)
+
+- **`/food`:** every location from `/api/locations` (nothing hard-coded), sorted by walking distance from Min Kao. Each card shows:
+  - Name and building.
+  - "0.2 mi · 5 min walk".
+  - An open status ("Open until 8:00 PM", "Opens 10:00 AM", "Opens tomorrow …").
+  - What the student can pay with, based on their meal plan. Places their plan can't use are dimmed and say "Not on your plan".
+  - A **top pick**: the first plate from Supul's `buildPlates` for that location and meal, filtered by diet.
+- **Filters:** a meal picker (defaults to now), plus "Open now" and "On my plan" chips. There's an empty state when nothing matches.
+- **Tapping a card** opens `/plates?location=…&period=…`, scoped to that place, with an "All places" back link. `/plates` with no location redirects to `/food`. A place that isn't on the student's plan still opens.
+- **`lib/stubs.ts`** gets stand-ins for `distanceFromMinKao` and `openStatus` (approximate coordinates and hours, `TODO(verify)`), with tests. Switch to Person B's `lib/campus-geo.ts` and `lib/hours.ts` when they land.
+- **Not built yet:** the Ask box. It needs Person B's `api.ai.ask`.
+- **Checked:**
+  - Sorting and filters.
+  - The meal picker carries through to the picks.
+  - The `/plates` redirect, and no overflow.
+  - 83 tests passing.
+  - Lighthouse accessibility 100 on Food and two picks pages, in light and dark.
+
+## 2026-11-14 — Vol Eats branding and demo pass (Claude Code, for Swagat, branch `feature/app-v3-brand`)
+
+- **Renamed** the app to **Vol Eats** (`APP_NAME` in `lib/config.ts`, README). localStorage keys keep the `cf.` prefix so existing data still loads.
+- **Fonts** via `next/font/google`, self-hosted with no runtime requests to Google: **Bricolage Grotesque** for headings, big numbers and the wordmark, **DM Sans** for body.
+  - The tokens are `--app-font-display` and `--app-font-sans` in `app/globals.css`. The original names were circular with Tailwind's `--font-sans`, so the fonts never applied.
+  - Page titles are bolder and larger (`text-3xl font-extrabold`).
+- **Logo:** `components/brand/logo.tsx` (`LogoMark`, `Logo`), a "V" rising out of a bowl on UT orange. The V doubles as a check mark.
+  - Used on login, the Today header, every onboarding step, 404 and the error screen.
+  - `app/icon.svg` is the browser tab icon. It replaces the Next.js `favicon.ico`.
+- **Demo bug fixed:** Next keeps pages in memory, so opening Log → Add meal a second time showed the previous screen stuck on "Saving…" (disabled), and the meal couldn't be saved.
+  - `/log/add` now resets its busy state and remounts the form after saving. The targets screen resets too. Plate picks already did this (Supul's change).
+- **Demo path checked end to end with mocks:** Reset app → Today 640 cal → Food → log a plate (1,830) → Log → photo log twice (2,450, both saved) → Profile dark/light → Reset app → 640 again.
+  - Also checked: no overflow at 360px, 81 tests passing.
+  - Lighthouse accessibility is 100 on login, Today, Food, Log, Profile and onboarding, in light and dark.
+
+## 2026-11-14 — App v3, Person A, Step 2: Log tab with calendar (Claude Code, for Swagat, branch `feature/app-v3-log`)
+
+- **`/log`** is now the meal tracker:
+  - A Monday–Sunday week strip with previous/next week and "Back to today". Future days are disabled.
+  - Each day has a status dot versus the calorie target: on target within ±10% (success), under (muted), over (warning), or an open circle for no logs. Each dot has a screen-reader label and there's a visible legend.
+  - Below that, the selected day's meals grouped by meal, with "x / target cal · status".
+  - The selected day is in the URL (`?date=`), so back and forward work.
+- **Today vs past days:** today's meals use `LogsProvider`, so Today's rings stay in sync. Past days are fetched per week and edited through the API, then refetched.
+- **"Add meal" button** (bottom right) opens a sheet with Photo, Quick add and "From a menu" (today only, because menus show today's food).
+- **`/log/add`** (moved from the old `/log`): photo and Quick add, with `?mode=` and `?date=`. Past-day logs get `logged_at` at that meal's time in Eastern time (`atMealTime`). Buttons say "Add to Tue, Nov 10".
+- **Moved and generalized:** `components/log/logged-meals.tsx` and `edit-log-sheet.tsx` (formerly in `components/today`) now take `onUpdate` / `onDelete`, so they work for any day.
+- **`lib/log-days.ts`** (tested): `weekDays`, `dayStatus`, `logsByDay`, `atMealTime`, `shortDay`.
+- **`lib/stubs.ts`:** a temporary `logsRange` that loads each day with `GET /api/logs?date=`. It uses Person B's `api.logsRange` automatically once that exists. Delete it after B's branch merges. The demo's 6 days of history is also B's work (`mock/demo-profile.ts`).
+- **Checked:**
+  - Seeded past days show hit, under and over correctly.
+  - Editing a past meal (Tue went 3,700 → 2,500, Over → Under).
+  - Quick add to a past day (saved at 6:30 PM ET, total 2,800, on target).
+  - Back and forward, and future days disabled.
+  - No overflow at 360px.
+  - 81 tests passing.
+  - Lighthouse accessibility 100 on `/log`, a past day, `/log/add` and Today, in light and dark.
+
+## 2026-11-14 — App v3, Person A, Step 1: navigation, Profile, dark mode, Reset app (Claude Code, for Swagat, branch `feature/app-v3-screens`)
+
+- **Tabs:** Today · Food · Log · Menus · Events (`components/layout/bottom-tabs.tsx`).
+  - Log uses a plain `NotebookPen` icon, with no orange circle.
+  - Budget lost its tab and is reached from Profile.
+  - The active tab has an orange icon and a bold label (orange text fails contrast on white).
+- **Profile avatar:** `components/layout/profile-button.tsx`, in every tab header (`PageHeader` shows it by default, and Today and Food add it).
+- **Today:**
+  - Removed the "Lunch is being served" pill and the old ↺ reset button.
+  - "What should I eat?" is now a small "Not sure what to eat? See picks near you →" row going to `/food`.
+  - The meal list is now one line: "Logged 3 meals · 640 cal · View in Log →".
+- **`/food`:** for now it re-exports the plate picks screen. Step 3 replaces it with the location list.
+- **`/profile`:**
+  - **Targets:** sliders in `components/profile/targets-editor.tsx`, saved with `api.updateTargets`.
+  - **Your details:** each Edit opens `/onboarding?step=…&edit=1&return=profile`.
+  - **Budget:** `AmountEditor` fields, plus a link to `/budget`.
+  - **Settings:** Appearance (System / Light / Dark), Units (ft/lb or cm/kg), Sign out, and Reset app (mocks only).
+- **Editing from Profile:**
+  - The wizard loads every saved answer (`profileToFullDraft` in `lib/onboarding-flow.ts`) and doesn't redirect finished users in this mode.
+  - The step button says "Save" (via `NextLabelContext` in `step-shell.tsx`). Saving returns to `/profile` and recomputes targets, keeping balances and favorites. Back goes to Profile.
+- **Dark mode:**
+  - Dark values for every token in `app/globals.css` (both `[data-theme="dark"]` and the System dark media query), all text at 4.5:1 or better.
+  - The choice is saved in `cf.theme`. A no-flash inline script in `app/layout.tsx` follows Next's "Preventing flash" guide.
+- **Units preference:** `cf.units` sets the starting units for onboarding and how Profile displays body details.
+- **Reset app:** `resetAppToDemo()` in `lib/preferences.ts` removes every `cf.*` key, signs in as the demo user, and does a full page load to `/today` (breakfast logged).
+- **Checked:**
+  - Edit diet and edit body (targets went 3,070 → 3,000, balances kept).
+  - Light/dark switching.
+  - Reset clears extra accounts and drafts.
+  - No overflow at 360px.
+  - 77 tests passing.
+  - Lighthouse accessibility 100 on Today, Profile, Food, Profile-edit onboarding and Events, in both light and dark.
+
 ## 2026-11-14 — Frontend phase 1: shell (Claude Code, for Swagat)
 
 **Added** a Next.js 16 app (App Router, TypeScript strict, Tailwind v4) at the repo root, next to `scraper/`.

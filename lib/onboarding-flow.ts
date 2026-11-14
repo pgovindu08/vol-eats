@@ -6,6 +6,7 @@ import { findMealPlan } from "./meal-plans";
 import { emptyDraft, type OnboardingDraft } from "./onboarding-draft";
 import { inferLivingSituation } from "./profile";
 import type { OnboardingStatus, Profile, ProfileInput } from "./types";
+import { cmToFtIn, kgToLb } from "./units";
 import { SCHOOL } from "@/mock/locations";
 
 // Onboarding asks no money questions. Dining dollars, swipes left and food budgets
@@ -107,6 +108,39 @@ export function buildProfileInput(d: OnboardingDraft, email: string, status: Onb
  * Rebuilds a draft from a saved partial/skipped profile, for "Continue setup" when the
  * local draft is gone (cleared storage or another device). Resumes at the first unfinished step.
  */
+/**
+ * Every answer from a saved profile, for editing one section from the Profile screen.
+ * Body values are shown in the student's preferred units.
+ */
+export function profileToFullDraft(p: Profile, units: "imperial" | "metric", now = Date.now()): OnboardingDraft {
+  const { feet, inches } = cmToFtIn(p.height_cm);
+  const imperial = units === "imperial";
+  return {
+    ...emptyDraft(now),
+    furthest: stepIndex("review"),
+    goal_type: p.goal_type,
+    goal_text: p.goal_text ?? undefined,
+    sex: p.sex,
+    age: p.age,
+    units,
+    height_cm: p.height_cm,
+    height_ft: feet,
+    height_in: inches,
+    weight: imperial ? kgToLb(p.weight_kg) : p.weight_kg,
+    goal_weight: imperial ? kgToLb(p.goal_weight_kg) : p.goal_weight_kg,
+    weight_kg: p.weight_kg,
+    goal_weight_kg: p.goal_weight_kg,
+    activity_level: p.activity_level,
+    diet_tags: p.diet_tags,
+    no_restrictions: p.diet_tags.length === 0,
+    allergens: p.allergens,
+    living_situation: p.living_situation,
+    meal_plan_name: p.meal_plan_name ?? (p.living_situation === "on_campus" ? "No meal plan" : undefined),
+    favorite_location_ids: p.favorite_location_ids,
+    kitchen_access: p.kitchen_access,
+  };
+}
+
 export function profileToDraft(p: Profile, now = Date.now()): OnboardingDraft {
   const base = emptyDraft(now);
   if (p.onboarding_status === "skipped") return { ...base, goal_type: p.goal_type };
