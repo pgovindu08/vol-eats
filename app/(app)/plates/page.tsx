@@ -4,7 +4,8 @@ import { Suspense, use, useEffect, useMemo, useState } from "react";
 import { browser } from "react-dom";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { ArrowLeft, RefreshCw, WifiOff } from "lucide-react";
+import { RefreshCw, WifiOff } from "lucide-react";
+import { ProfileButton } from "@/components/layout/profile-button";
 import { LocationPicker, PeriodPicker } from "@/components/menus/pickers";
 import { PlateCard, PlateCardSkeleton } from "@/components/plates/plate-card";
 import { Button } from "@/components/ui/button";
@@ -123,11 +124,9 @@ function Plates() {
 
   return (
     <div className="space-y-4 pt-4">
-      <header className="flex items-center gap-2">
-        <Link href="/today" aria-label="Back to Today" className="-ml-2 flex size-11 items-center justify-center rounded-full hover:bg-surface-2">
-          <ArrowLeft aria-hidden className="size-5" />
-        </Link>
+      <header className="flex items-start justify-between gap-3">
         <h1 className="font-display text-2xl font-bold">What should I eat?</h1>
+        <ProfileButton />
       </header>
 
       {locError ? (
