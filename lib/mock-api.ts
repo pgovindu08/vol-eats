@@ -18,7 +18,7 @@ import { getSession } from "./session";
 import { LOCATIONS } from "@/mock/locations";
 import { RETAIL_ITEMS } from "@/mock/retail-items";
 import { mockEvents } from "@/mock/events";
-import { DEMO_EMAIL, DEMO_PROFILE, demoLogs } from "@/mock/demo-profile";
+import { DEMO_EMAIL, DEMO_PROFILE, demoHistory, demoLogs } from "@/mock/demo-profile";
 import { mockTargetsExplanation, MOCK_PHOTO_ESTIMATE } from "@/mock/ai";
 import { filterForProfile } from "./diet";
 import { buildPlates } from "./plate-builder";
@@ -85,7 +85,7 @@ export async function mockRequest<T>(method: HttpMethod, path: string, body?: un
 
   // Seed the demo user's breakfast once per day.
   if (email === DEMO_EMAIL && db.demoSeededFor !== today) {
-    db.logs = [...db.logs.filter((l) => l.profile_id !== DEMO_PROFILE.id), ...demoLogs(today)];
+    db.logs = [...db.logs.filter((l) => l.profile_id !== DEMO_PROFILE.id), ...demoLogs(today), ...demoHistory(today)];
     db.demoSeededFor = today;
     saveDb(db);
   }
