@@ -67,18 +67,40 @@ describe("buildPlates", () => {
 });
 
 describe("fitsDiet", () => {
-  const byName = (n: string) => [...halls, ...RETAIL_ITEMS].find((i) => i.name === n)!;
+  // Dining-hall menus change daily (npm run mock:menus), so these use their own sample items
+  // instead of looking up today's dishes by name.
+  const item = (name: string, patch: Partial<MenuItem> = {}): MenuItem => ({
+    id: name, location_id: "loc-rockytop", date: null, meal_period: "lunch", station: "Entree", name, serving_size: null,
+    calories: 200, protein_g: 20, carbs_g: 5, fat_g: 8, tags: [], allergens: [], ...patch,
+  });
+  const chicken = item("Grilled Chicken", { tags: ["gluten_free", "dairy_free"] });
+  const veganTenders = item("Spicy Plant-Based Chicken Tenders", { tags: ["vegan", "vegetarian", "dairy_free"] });
 
   it("only keeps tagged items for vegetarian/vegan", () => {
-    expect(fitsDiet(byName("Grilled Chicken"), ["vegetarian"], [])).toBe(false);
-    expect(fitsDiet(byName("Spicy Plant-Based Chicken Tenders"), ["vegan"], [])).toBe(true);
+    expect(fitsDiet(chicken, ["vegetarian"], [])).toBe(false);
+    expect(fitsDiet(veganTenders, ["vegan"], [])).toBe(true);
+    expect(fitsDiet(veganTenders, ["vegetarian"], [])).toBe(true);
   });
 
   it("drops pork by name for no-pork and halal", () => {
-    expect(fitsDiet(byName("Pork Sausage Links"), ["no_pork"], [])).toBe(false);
-    expect(fitsDiet(byName("Pork Sausage Links"), ["halal"], [])).toBe(false);
-    expect(fitsDiet(byName("Grilled Chicken"), ["halal"], [])).toBe(true);
+    // Real names from scraped menus, including ones whose pork only shows in the ingredients.
+    for (const name of ["Pork Sausage Links", "Grilled Kielbasa", "Salami", "Beef Hot Dog", "Hawaiian BBQ  Pizza", "Bacon", "Pepperoni Pizza", "Mozole Pork"]) {
+      expect(fitsDiet(item(name), ["no_pork"], []), name).toBe(false);
+      expect(fitsDiet(item(name), ["halal"], []), name).toBe(false);
+    }
+    expect(fitsDiet(chicken, ["halal"], [])).toBe(true);
+    // Meat-free items with "sausage" or "hot dog" in the name aren't pork.
+    expect(fitsDiet(item("Incogmeato™ Sausage", { tags: ["vegan", "vegetarian"] }), ["no_pork"], [])).toBe(true);
+    expect(fitsDiet(item("Hot Dog Bun", { tags: ["vegetarian"] }), ["halal"], [])).toBe(true);
   });
+
+  it("every vegetarian-tagged item on today's menus passes the vegetarian filter", () => {
+    const veg = halls.filter((i) => i.tags.includes("vegetarian"));
+    expect(veg.length).toBeGreaterThan(0);
+    expect(veg.every((i) => fitsDiet(i, ["vegetarian"], []))).toBe(true);
+  });
+
+  const byName = (n: string) => RETAIL_ITEMS.find((i) => i.name === n)!; // retail items are fixed, so names are safe
 
   it("drops items with the user's allergens", () => {
     expect(fitsDiet(byName("Chick-fil-A Chicken Sandwich"), [], ["wheat"])).toBe(false);

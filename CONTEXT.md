@@ -140,3 +140,17 @@ Plan: `docs/prompts/onboarding-v2.md`.
 
 - **Allergen names:** `ALLERGEN_LABELS` and `allergenList()` in `lib/diet.ts` are now used by the diet chips, the Review step and the Menus item sheet. Review used to show raw values like "peanut", and the Menus sheet replaced only the first underscore ("tree nuts, peanut").
 - **Live step count:** the living step reports unsaved choices (`onChange`) so "Step 4 of 6" becomes "of 5" as soon as "Off campus, cooking for myself" is picked. The header, progress bar and resume card all update.
+
+## 2026-11-14 — Menus refreshed from the scraper, and a pork-filter fix (Claude Code, for Swagat)
+
+- **Fresh scrape:** ran `scraper/cli.js` for today (2026-11-14): Rocky Top 285 items, Stokely 279. Regenerated `mock/menu-items.generated.json` (`npm run mock:menus`), and 40 of the 66 demo items changed.
+  - Before refreshing, I checked that the old mock menus matched the Nov 13 scraper output exactly (66 items, 0 mismatches).
+- **The app still doesn't call the scraper live:**
+  - There's no `/api/menus` route yet, and the GitHub workflow that `scraper/AUTOMATION.md` describes isn't in the repo.
+  - So the demo menus are a snapshot until someone re-runs `node scraper/cli.js && npm run mock:menus`, or the backend serves the scraper.
+- **Bug found by the new menu: pork filtering.** Halal and No-pork plate picks could include **Grilled Kielbasa**. Checking every scraped ingredient list found three more items whose names don't say pork: Salami, Hawaiian BBQ Pizza, and a "Beef Hot Dog" that lists pork in its ingredients.
+  - `lib/diet.ts` now matches those words too.
+  - Vegetarian- or vegan-tagged items skip the pork check, so "Incogmeato Sausage" and "Hot Dog Bun" aren't wrongly excluded.
+  - Verified: every pork-containing item in today's scrape is excluded. A Halal demo got 28 different suggestions across halls and meals, with no pork.
+  - `TODO(schema)` for Supul: derive a `contains_pork` flag from the scraper's ingredients instead of matching names.
+- **Tests:** the diet tests used to look up yesterday's dishes by name, so they broke on the new menu. They now use their own sample items, so refreshing the menus can't break them. 65 tests passing.

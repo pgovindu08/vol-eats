@@ -1,15 +1,21 @@
 import type { Allergen, DietTag, MenuItem, Profile } from "./types";
 
-// UTK data has no halal or pork flags, so pork is detected by name.
-// TODO(schema): replace with real tags if the scraper/DB adds them.
-const PORK = /\b(pork|bacon|ham|sausage|pepperoni|prosciutto|chorizo|carnitas|mozole)\b/i;
+// UTK data has no halal or pork flags, so pork is detected by name. Names aren't reliable
+// (a scraped "Beef Hot Dog" lists pork in its ingredients), so hot dogs and Hawaiian pizza are
+// excluded too. Words found by checking scraped ingredient lists.
+// TODO(schema): the scraper has full ingredients. Ask Supul for a contains_pork flag derived from
+// them, and use that here instead of name matching.
+const PORK =
+  /\b(pork|bacon|ham|sausages?|pepperoni|prosciutto|chorizo|carnitas|mozole|kielbasa|salami|bratwursts?|brats?|andouille|pancetta|hot ?dogs?|hawaiian)\b/i;
 
 /** Does this item respect the user's diet tags and allergens? */
 export function fitsDiet(item: MenuItem, diet: DietTag[], allergens: Allergen[]) {
   if (allergens.some((a) => item.allergens.includes(a))) return false;
   for (const tag of diet) {
     if (tag === "no_pork" || tag === "halal") {
-      if (PORK.test(item.name)) return false;
+      // Vegetarian/vegan items can't contain pork, so "Incogmeato Sausage" or "Hot Dog Bun" stay in.
+      const meatFree = item.tags.includes("vegetarian") || item.tags.includes("vegan");
+      if (!meatFree && PORK.test(item.name)) return false;
       // Halal can't be verified from UTK data; non-pork items are allowed through.
       continue;
     }
