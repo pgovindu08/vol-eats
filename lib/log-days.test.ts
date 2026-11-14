@@ -32,3 +32,15 @@ describe("log calendar helpers", () => {
     expect(shortDay("2026-11-11")).toBe("Wed, Nov 11");
   });
 });
+
+import { demoHistory, DEMO_PROFILE } from "@/mock/demo-profile";
+import { sumLogs } from "./macros";
+
+describe("demo history", () => {
+  it("fills the 6 days before today with a mix of on target, under and over", () => {
+    const byDay = logsByDay(demoHistory("2026-11-14"));
+    expect(Object.keys(byDay).sort()).toEqual(["2026-11-08", "2026-11-09", "2026-11-10", "2026-11-11", "2026-11-12", "2026-11-13"]);
+    const statuses = Object.values(byDay).map((l) => dayStatus(sumLogs(l).calories, DEMO_PROFILE.target_calories));
+    expect(new Set(statuses)).toEqual(new Set(["hit", "under", "over"]));
+  });
+});

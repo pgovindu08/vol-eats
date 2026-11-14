@@ -1,5 +1,11 @@
 All the changes done by the AI is entered in here.
 
+## 2026-11-14 — Demo history for the Log calendar (Claude Code, for Swagat, branch `feature/demo-history`)
+
+- `demoHistory(today)` in `mock/demo-profile.ts` gives the demo user 6 fixed past days (3 on target, 2 under, 1 over), so the Log calendar looks real in the demo. It's seeded with today's breakfast in `lib/mock-api.ts` and comes back after Reset app.
+- This was Person B's item. It was done here so the demo is ready for submission.
+- Test added: 84 passing.
+
 ## 2026-11-14 — App v3, Person A, Step 3: Food tab (Claude Code, for Swagat, branch `feature/app-v3-food`)
 
 - **`/food`:** every location from `/api/locations` (nothing hard-coded), sorted by walking distance from Min Kao. Each card shows:
