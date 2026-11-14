@@ -154,3 +154,22 @@ Plan: `docs/prompts/onboarding-v2.md`.
   - Verified: every pork-containing item in today's scrape is excluded. A Halal demo got 28 different suggestions across halls and meals, with no pork.
   - `TODO(schema)` for Supul: derive a `contains_pork` flag from the scraper's ingredients instead of matching names.
 - **Tests:** the diet tests used to look up yesterday's dishes by name, so they broke on the new menu. They now use their own sample items, so refreshing the menus can't break them. 65 tests passing.
+
+## 2026-11-14 — No money questions in onboarding (Claude Code, for Swagat, branch `feature/onboarding-no-money`)
+
+- **Onboarding is now 5 steps for everyone:** goal → body → diet → living → review.
+  - Removed the Money step (`step-money.tsx` deleted), plus "I also have dining dollars" and the grocery budget field for off-campus cooks.
+  - Meal plan names stay, because they decide which places a student can pay at.
+  - The living step tells students they can add dining dollars, swipes and budgets on the Budget tab.
+  - Old drafts saved with Money as a step resolve to Review.
+- **Budget screen** (`components/budget/amount-editor.tsx`): students enter the numbers here instead.
+  - Swipes left (Block plans, whole numbers only), dining dollars balance (plans with dining dollars) and a weekly budget (titled "Grocery budget" for off-campus cooks).
+  - Each shows an input with Save when empty, and the value with "Update" once saved.
+  - Saves call `PATCH /api/profile` through the new `api.updateMoney()` (`TODO(§9)`: confirm with backend).
+- **Balances are preserved:** `buildProfileInput()` takes the balances already on the profile, so a student who skips setup, adds a budget on Budget, then finishes onboarding keeps it. Balances the new meal plan doesn't use are dropped.
+- **Tests:** 65 passing.
+- **Checked in the browser:**
+  - A new student sees 5 steps and saves with no balances.
+  - Budget: entering swipes (12.5 rejected) and dining dollars, then Update.
+  - Skip → add budget → finish onboarding keeps the budget.
+- **Lighthouse** accessibility is 100 on both living branches, Review, Budget with empty inputs, and the demo's Budget.

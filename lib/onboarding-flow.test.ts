@@ -9,22 +9,23 @@ const NOW = Date.parse("2026-11-14T12:00:00Z");
 const body = { sex: "female", age: 20, height_cm: 167.6, weight_kg: 68, goal_weight_kg: 63.5, activity_level: "moderate" } as const;
 const draft = (patch: Partial<OnboardingDraft>): OnboardingDraft => ({ ...emptyDraft(NOW), goal_type: "lose_fat", ...body, ...patch });
 
-describe("visible steps per living situation", () => {
-  it("on campus and off campus with a plan see all 6 steps", () => {
-    expect(visibleSteps(draft({ living_situation: "on_campus" }))).toHaveLength(6);
-    expect(visibleSteps(draft({ living_situation: "off_campus_plan" }))).toHaveLength(6);
+describe("steps (no money questions in onboarding)", () => {
+  it("every student sees the same 5 steps", () => {
+    for (const living of ["on_campus", "off_campus_plan", "off_campus_cooking"] as const) {
+      expect(visibleSteps(draft({ living_situation: living }))).toEqual(["goal", "body", "diet", "living", "review"]);
+    }
   });
 
-  it("off-campus cooks skip Money unless they also have dining dollars", () => {
-    expect(visibleSteps(draft({ living_situation: "off_campus_cooking" }))).not.toContain("money");
-    expect(visibleSteps(draft({ living_situation: "off_campus_cooking", has_dining_dollars: true, meal_plan_name: "Dining Dollar Plan" }))).toContain("money");
-  });
-
-  it("goes from living straight to review when Money is skipped, and counts honestly", () => {
-    const d = draft({ living_situation: "off_campus_cooking" });
+  it("goes from living straight to review and counts 5", () => {
+    const d = draft({ living_situation: "on_campus" });
     expect(nextStep("living", d)).toBe("review");
     expect(stepPosition("review", d)).toEqual({ position: 5, total: 5 });
-    expect(stepPosition("review", draft({ living_situation: "on_campus" }))).toEqual({ position: 6, total: 6 });
+  });
+
+  it("drafts saved when Money was a step still land on review", () => {
+    const old = draft({ furthest: 5, living_situation: "on_campus" });
+    expect(resolveStep(null, old)).toBe("review");
+    expect(resolveStep("money", old)).toBe("review");
   });
 });
 
@@ -38,38 +39,49 @@ describe("resolveStep (?step= in the URL)", () => {
     expect(resolveStep("banana", d)).toBe("diet");
     expect(resolveStep("review", d)).toBe("diet");
   });
-  it("never lands on a skipped step", () => {
-    const cook = draft({ furthest: stepIndex("review"), living_situation: "off_campus_cooking" });
-    expect(resolveStep("money", cook)).toBe("review");
-  });
 });
 
 describe("buildProfileInput", () => {
-  it("on campus keeps meal plan, swipes and favorite halls, and drops kitchen", () => {
-    const p = buildProfileInput(
-      draft({ living_situation: "on_campus", meal_plan_name: "Vol Block 75", swipes_remaining: 40, dining_dollars_balance: 200, favorite_location_ids: ["loc-stokely"], kitchen_access: "full" }),
-      "a@vols.utk.edu",
-      "complete",
-    );
-    expect(p).toMatchObject({ meal_plan_type: "both", swipes_remaining: 40, dining_dollars_balance: 200, favorite_location_ids: ["loc-stokely"], kitchen_access: null });
+  // Entered on the Budget screen before finishing setup.
+  const money = { dining_dollars_balance: 200, swipes_remaining: 40, weekly_food_budget_usd: 50 };
+
+  it("a brand-new student has no balances (onboarding doesn't ask)", () => {
+    const p = buildProfileInput(draft({ living_situation: "on_campus", meal_plan_name: "Vol Block 75" }), "a@vols.utk.edu", "complete");
+    expect(p).toMatchObject({ meal_plan_type: "both", dining_dollars_balance: null, swipes_remaining: null, weekly_food_budget_usd: null });
   });
 
-  it("off-campus cooks without dining dollars have no meal plan, but keep kitchen and grocery budget", () => {
+  it("on campus keeps favorite halls, drops kitchen, and keeps balances entered on Budget", () => {
     const p = buildProfileInput(
-      draft({ living_situation: "off_campus_cooking", meal_plan_name: "Vol Block 75", swipes_remaining: 40, kitchen_access: "microwave", weekly_food_budget_usd: 60, favorite_location_ids: ["loc-stokely"] }),
+      draft({ living_situation: "on_campus", meal_plan_name: "Vol Block 75", favorite_location_ids: ["loc-stokely"], kitchen_access: "full" }),
       "a@vols.utk.edu",
       "complete",
+      money,
     );
-    expect(p).toMatchObject({ meal_plan_name: null, meal_plan_type: "none", swipes_remaining: null, kitchen_access: "microwave", weekly_food_budget_usd: 60, favorite_location_ids: [] });
+    expect(p).toMatchObject({ swipes_remaining: 40, dining_dollars_balance: 200, weekly_food_budget_usd: 50, favorite_location_ids: ["loc-stokely"], kitchen_access: null });
   });
 
-  it("off-campus cooks with dining dollars keep the balance", () => {
+  it("drops balances the new plan doesn't use", () => {
+    const p = buildProfileInput(draft({ living_situation: "on_campus", meal_plan_name: "Tennessee Unlimited 7" }), "a@vols.utk.edu", "complete", money);
+    expect(p.swipes_remaining).toBeNull(); // unlimited plan: no swipe count
+    expect(p.dining_dollars_balance).toBe(200);
+  });
+
+  it("off-campus cooks have no meal plan but keep kitchen and their weekly budget", () => {
     const p = buildProfileInput(
-      draft({ living_situation: "off_campus_cooking", has_dining_dollars: true, meal_plan_name: "Dining Dollar Plan", dining_dollars_balance: 150 }),
+      draft({ living_situation: "off_campus_cooking", meal_plan_name: "Vol Block 75", kitchen_access: "microwave", favorite_location_ids: ["loc-stokely"] }),
       "a@vols.utk.edu",
       "complete",
+      money,
     );
-    expect(p).toMatchObject({ meal_plan_type: "dining_dollars", dining_dollars_balance: 150 });
+    expect(p).toMatchObject({
+      meal_plan_name: null,
+      meal_plan_type: "none",
+      swipes_remaining: null,
+      dining_dollars_balance: null,
+      kitchen_access: "microwave",
+      weekly_food_budget_usd: 50,
+      favorite_location_ids: [],
+    });
   });
 
   it("'Set up later' with no body details uses safe defaults", () => {

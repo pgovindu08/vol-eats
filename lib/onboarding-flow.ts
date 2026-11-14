@@ -8,7 +8,9 @@ import { inferLivingSituation } from "./profile";
 import type { OnboardingStatus, Profile, ProfileInput } from "./types";
 import { SCHOOL } from "@/mock/locations";
 
-export const STEP_IDS = ["goal", "body", "diet", "living", "money", "review"] as const;
+// Onboarding asks no money questions. Dining dollars, swipes left and food budgets
+// are entered on the Budget screen instead.
+export const STEP_IDS = ["goal", "body", "diet", "living", "review"] as const;
 export type StepId = (typeof STEP_IDS)[number];
 
 export const STEP_TITLES: Record<StepId, string> = {
@@ -16,7 +18,6 @@ export const STEP_TITLES: Record<StepId, string> = {
   body: "About you",
   diet: "How you eat",
   living: "Where you live and eat",
-  money: "Money",
   review: "Review",
 };
 
@@ -28,14 +29,10 @@ export function planHasDiningDollars(planName: string | null | undefined) {
   return t === "both" || t === "dining_dollars";
 }
 
-/** Off-campus cooks already gave their grocery budget, so Money only applies if they also have dining dollars. */
-export function needsMoneyStep(d: OnboardingDraft) {
-  if (d.living_situation === "off_campus_cooking") return !!d.has_dining_dollars && planHasDiningDollars(d.meal_plan_name);
-  return true;
-}
-
+/** Every student sees the same steps now. Kept as a function so callers don't care. */
 export function visibleSteps(d: OnboardingDraft): StepId[] {
-  return STEP_IDS.filter((id) => id !== "money" || needsMoneyStep(d));
+  void d;
+  return [...STEP_IDS];
 }
 
 /**
@@ -63,12 +60,19 @@ export function stepPosition(current: StepId, d: OnboardingDraft) {
 /** Used when someone chooses "Set up later" before giving body details. Targets are a rough estimate. */
 export const DEFAULT_BODY = { sex: "unspecified", age: 20, height_cm: 170, weight_kg: 70, activity_level: "light" } as const;
 
-/** Turns the draft into the profile we save. Fields that don't apply to the chosen branch are dropped. */
-export function buildProfileInput(d: OnboardingDraft, email: string, status: OnboardingStatus): ProfileInput {
+/** Money fields entered on the Budget screen, kept when onboarding saves over a partial/skipped profile. */
+export type MoneyFields = Pick<Profile, "dining_dollars_balance" | "swipes_remaining" | "weekly_food_budget_usd">;
+
+/**
+ * Turns the draft into the profile we save. Fields that don't apply to the chosen branch are dropped.
+ * Onboarding doesn't ask about money, so balances come from `previous` (what the student already
+ * entered on Budget), and are dropped if the new meal plan doesn't use them.
+ */
+export function buildProfileInput(d: OnboardingDraft, email: string, status: OnboardingStatus, previous?: MoneyFields | null): ProfileInput {
   const hasBody = d.age !== undefined && d.height_cm !== undefined && d.weight_kg !== undefined;
   const living = d.living_situation;
   const cooking = living === "off_campus_cooking";
-  const planName = cooking ? (d.has_dining_dollars ? (d.meal_plan_name ?? null) : null) : (d.meal_plan_name ?? null);
+  const planName = cooking ? null : (d.meal_plan_name ?? null);
   const plan = findMealPlan(planName);
   const planType = plan?.type ?? "none";
   const weight_kg = hasBody ? d.weight_kg! : DEFAULT_BODY.weight_kg;
@@ -89,9 +93,9 @@ export function buildProfileInput(d: OnboardingDraft, email: string, status: Onb
     allergens: d.allergens,
     meal_plan_name: plan && plan.type !== "none" ? plan.name : null,
     meal_plan_type: planType,
-    dining_dollars_balance: planHasDiningDollars(planName) ? (d.dining_dollars_balance ?? null) : null,
-    swipes_remaining: plan?.block ? (d.swipes_remaining ?? null) : null,
-    weekly_food_budget_usd: d.weekly_food_budget_usd ?? null,
+    dining_dollars_balance: planHasDiningDollars(planName) ? (previous?.dining_dollars_balance ?? null) : null,
+    swipes_remaining: plan?.block ? (previous?.swipes_remaining ?? null) : null,
+    weekly_food_budget_usd: previous?.weekly_food_budget_usd ?? null,
     living_situation: living ?? (status === "complete" ? inferLivingSituation(planType) : "on_campus"),
     favorite_location_ids: cooking ? [] : (d.favorite_location_ids ?? []),
     kitchen_access: living === "off_campus_plan" || cooking ? (d.kitchen_access ?? null) : null,

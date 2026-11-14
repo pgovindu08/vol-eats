@@ -1,6 +1,6 @@
 "use client";
 
-import { Suspense, use, useCallback, useEffect, useRef, useState } from "react";
+import { Suspense, use, useEffect, useRef, useState } from "react";
 import { browser } from "react-dom";
 import { useRouter, useSearchParams } from "next/navigation";
 import { ResumeCard } from "@/components/onboarding/resume-card";
@@ -8,12 +8,11 @@ import { StepBody } from "@/components/onboarding/step-body";
 import { StepDiet } from "@/components/onboarding/step-diet";
 import { StepGoal } from "@/components/onboarding/step-goal";
 import { StepLiving } from "@/components/onboarding/step-living";
-import { StepMoney } from "@/components/onboarding/step-money";
 import { StepReview } from "@/components/onboarding/step-review";
 import { Skeleton } from "@/components/ui/skeleton";
 import { api } from "@/lib/api";
 import { clearDraft, emptyDraft, hasProgress, loadDraft, saveDraft, type OnboardingDraft } from "@/lib/onboarding-draft";
-import { buildProfileInput, needsMoneyStep, nextStep, profileToDraft, resolveStep, stepIndex, stepPosition, visibleSteps, type StepId } from "@/lib/onboarding-flow";
+import { buildProfileInput, nextStep, profileToDraft, resolveStep, stepIndex, stepPosition, visibleSteps, type MoneyFields, type StepId } from "@/lib/onboarding-flow";
 import { getSession, signOut } from "@/lib/session";
 import type { OnboardingStatus } from "@/lib/types";
 
@@ -47,14 +46,12 @@ function Wizard() {
   const [submitError, setSubmitError] = useState<string | null>(null);
   // Steps pushed onto history in this visit, so in-app Back can use the real back stack.
   const pushed = useRef(0);
-  // Unsaved choices on the current step that change how many steps there are (living situation),
-  // so "Step 4 of 6" becomes "of 5" as soon as someone picks "cooking for myself".
-  const [preview, setPreview] = useState<{ step: StepId; patch: Partial<OnboardingDraft> } | null>(null);
-  const previewLiving = useCallback((patch: Partial<OnboardingDraft>) => setPreview({ step: "living", patch }), []);
+  // Balances the student already entered on Budget (partial/skipped profiles), kept when onboarding saves.
+  const [savedMoney, setSavedMoney] = useState<MoneyFields | null>(null);
 
   const step = resolveStep(searchParams.get("step"), draft);
   const editing = searchParams.get("edit") === "1";
-  const { position, total } = stepPosition(step, preview?.step === step ? { ...draft, ...preview.patch } : draft);
+  const { position, total } = stepPosition(step, draft);
   const query = searchParams.toString();
 
   useEffect(() => {
@@ -75,6 +72,7 @@ function Wizard() {
         if (cancelled || !p) return;
         // Finished onboarding → never restart it.
         if (p.onboarding_status === "complete") return router.replace("/today");
+        setSavedMoney({ dining_dollars_balance: p.dining_dollars_balance, swipes_remaining: p.swipes_remaining, weekly_food_budget_usd: p.weekly_food_budget_usd });
         // "Continue setup" with no local draft (cleared storage, other device): rebuild from the saved
         // profile and jump to its first unfinished step. Storage is the source of truth here because
         // every change is saved there immediately.
@@ -115,16 +113,10 @@ function Wizard() {
 
   function goNext(current: StepId, patch: Partial<OnboardingDraft>) {
     const merged = { ...draft, ...patch };
-    let to = nextStep(current, merged) ?? "review";
-    let stillEditing = false;
-    if (editing) {
-      // Editing from Review returns to Review, unless the change opened up the Money step.
-      const moneyNewlyNeeded = current === "living" && needsMoneyStep(merged) && !needsMoneyStep(draft);
-      to = moneyNewlyNeeded ? "money" : "review";
-      stillEditing = moneyNewlyNeeded;
-    }
+    // Editing from Review returns to Review.
+    const to = editing ? "review" : (nextStep(current, merged) ?? "review");
     save({ ...merged, furthest: Math.max(merged.furthest, stepIndex(to)) });
-    push(to, stillEditing);
+    push(to);
   }
 
   function goBack() {
@@ -158,7 +150,7 @@ function Wizard() {
     setBusy(true);
     setSubmitError(null);
     try {
-      await api.saveProfile(buildProfileInput(full, email!, status));
+      await api.saveProfile(buildProfileInput(full, email!, status, savedMoney));
       if (status === "complete") clearDraft(email!);
       router.push(then);
       // Next keeps this page in memory after navigating away; don't leave it stuck on "saving".
@@ -216,9 +208,8 @@ function Wizard() {
       )}
       {step === "diet" && <StepDiet key={`diet-${draft.updated_at}`} draft={draft} onNext={(p) => goNext("diet", p)} onBack={goBack} />}
       {step === "living" && (
-        <StepLiving key={`living-${draft.updated_at}`} draft={draft} onNext={(p) => goNext("living", p)} onBack={goBack} onChange={previewLiving} />
+        <StepLiving key={`living-${draft.updated_at}`} draft={draft} onNext={(p) => goNext("living", p)} onBack={goBack} />
       )}
-      {step === "money" && <StepMoney key={`money-${draft.updated_at}`} draft={draft} onNext={(p) => goNext("money", p)} onBack={goBack} />}
       {step === "review" && (
         <StepReview
           draft={draft}

@@ -3,7 +3,10 @@
 import { Suspense, use, useEffect, useState, type ReactNode } from "react";
 import { browser } from "react-dom";
 import { CalendarDays, CreditCard, Dumbbell, ShoppingBasket, Ticket, TriangleAlert, Wallet } from "lucide-react";
+import { AmountEditor } from "@/components/budget/amount-editor";
 import { PageHeader } from "@/components/layout/page-header";
+import { useToast } from "@/components/ui/toast";
+import { errorMessage } from "@/lib/errors";
 import { ErrorState } from "@/components/ui/error-state";
 import { Field, Input } from "@/components/ui/field";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -47,7 +50,8 @@ export default function BudgetPage() {
 
 function Budget() {
   use(browser("Budget settings are stored in localStorage."));
-  const { profile, error, reload } = useProfile();
+  const { profile, error, reload, setProfile } = useProfile();
+  const toast = useToast();
   const [prefs, setPrefs] = useState<Prefs>(loadPrefs);
   const update = (patch: Partial<Prefs>) =>
     setPrefs((p) => {
@@ -63,7 +67,20 @@ function Budget() {
   const weeks = weeksLeft(today, prefs.semesterEnd);
   const plan = findMealPlan(profile.meal_plan_name);
   const hasSwipes = profile.meal_plan_type === "swipes" || profile.meal_plan_type === "both";
-  const hasDD = (profile.meal_plan_type === "dining_dollars" || profile.meal_plan_type === "both") && profile.dining_dollars_balance != null;
+  const hasDD = profile.meal_plan_type === "dining_dollars" || profile.meal_plan_type === "both";
+  const cooking = profile.living_situation === "off_campus_cooking";
+
+  // Onboarding doesn't ask about money, so students add these numbers here.
+  async function saveMoney(patch: Parameters<typeof api.updateMoney>[0]) {
+    try {
+      setProfile(await api.updateMoney(patch));
+      toast("Saved");
+      return true;
+    } catch (e) {
+      toast(`Couldn't save. ${errorMessage(e)}`, { tone: "error" });
+      return false;
+    }
+  }
 
   return (
     <div className="space-y-4">
@@ -85,24 +102,67 @@ function Budget() {
         <Card icon={Ticket} title="Meal swipes">
           {plan?.unlimited ? (
             <Stat value="Unlimited" label="swipes at the dining halls. Go as often as you like." />
-          ) : plan?.block && profile.swipes_remaining != null ? (
-            <div className="grid grid-cols-2 gap-3">
-              <Stat value={String(profile.swipes_remaining)} label="swipes left" />
-              <Stat value={weeks > 0 ? (profile.swipes_remaining / weeks).toFixed(1) : String(profile.swipes_remaining)} label="per week to last the semester" />
-            </div>
+          ) : plan?.block ? (
+            <AmountEditor
+              id="swipes-left"
+              label="How many swipes do you have left?"
+              value={profile.swipes_remaining}
+              format={String}
+              whole
+              onSave={(n) => saveMoney({ swipes_remaining: n })}
+            >
+              {profile.swipes_remaining != null ? (
+                <div className="grid grid-cols-2 gap-3">
+                  <Stat value={String(profile.swipes_remaining)} label="swipes left" />
+                  <Stat value={weeks > 0 ? (profile.swipes_remaining / weeks).toFixed(1) : String(profile.swipes_remaining)} label="per week to last the semester" />
+                </div>
+              ) : null}
+            </AmountEditor>
           ) : (
             <Stat value={plan?.name.match(/\d+$/)?.[0] ?? "—"} label="swipes per week, reset every week" />
           )}
         </Card>
       ) : null}
 
-      {hasDD ? <DiningDollars profile={profile} weeks={weeks} today={today} semesterEnd={prefs.semesterEnd} spent={prefs.spentThisWeek} onSpent={(v) => update({ spentThisWeek: v })} /> : null}
-
-      {profile.weekly_food_budget_usd != null ? (
-        <Card icon={Wallet} title="Off-campus food">
-          <Stat value={formatUsd(profile.weekly_food_budget_usd)} label="weekly budget for groceries and takeout" />
-        </Card>
+      {hasDD ? (
+        profile.dining_dollars_balance == null ? (
+          <Card icon={CreditCard} title="Dining dollars">
+            <AmountEditor
+              id="dd-balance"
+              label="Your dining dollars balance ($)"
+              hint="Check the VolCard app. A rough number is fine."
+              value={null}
+              format={formatUsd}
+              onSave={(n) => saveMoney({ dining_dollars_balance: n })}
+            />
+          </Card>
+        ) : (
+          <DiningDollars
+            profile={profile}
+            weeks={weeks}
+            today={today}
+            semesterEnd={prefs.semesterEnd}
+            spent={prefs.spentThisWeek}
+            onSpent={(v) => update({ spentThisWeek: v })}
+            onSaveBalance={(n) => saveMoney({ dining_dollars_balance: n })}
+          />
+        )
       ) : null}
+
+      <Card icon={Wallet} title={cooking ? "Grocery budget" : "Off-campus food"}>
+        <AmountEditor
+          id="weekly-budget"
+          label={cooking ? "Weekly grocery budget ($)" : "Weekly off-campus food budget ($)"}
+          hint={cooking ? undefined : "Groceries, takeout, anything not on your plan. Optional."}
+          value={profile.weekly_food_budget_usd}
+          format={formatUsd}
+          onSave={(n) => saveMoney({ weekly_food_budget_usd: n })}
+        >
+          {profile.weekly_food_budget_usd != null ? (
+            <Stat value={formatUsd(profile.weekly_food_budget_usd)} label={cooking ? "per week for groceries" : "per week for groceries and takeout"} />
+          ) : null}
+        </AmountEditor>
+      </Card>
 
       {profile.meal_plan_type !== "swipes" ? <ProteinPerDollar profile={profile} /> : null}
 
@@ -120,6 +180,7 @@ function DiningDollars({
   semesterEnd,
   spent,
   onSpent,
+  onSaveBalance,
 }: {
   profile: Profile;
   weeks: number;
@@ -127,6 +188,7 @@ function DiningDollars({
   semesterEnd: string;
   spent: string;
   onSpent: (v: string) => void;
+  onSaveBalance: (n: number) => Promise<boolean>;
 }) {
   const balance = profile.dining_dollars_balance ?? 0;
   const allowance = perWeek(balance, weeks);
@@ -136,10 +198,12 @@ function DiningDollars({
 
   return (
     <Card icon={CreditCard} title="Dining dollars">
-      <div className="grid grid-cols-2 gap-3">
-        <Stat value={formatUsd(balance)} label="balance" />
-        <Stat value={formatUsd(allowance)} label={`per week until ${formatShortDate(semesterEnd)}`} />
-      </div>
+      <AmountEditor id="dd-balance" label="Your dining dollars balance ($)" value={balance} format={formatUsd} onSave={onSaveBalance}>
+        <div className="grid grid-cols-2 gap-3">
+          <Stat value={formatUsd(balance)} label="balance" />
+          <Stat value={formatUsd(allowance)} label={`per week until ${formatShortDate(semesterEnd)}`} />
+        </div>
+      </AmountEditor>
       <Field id="spent-week" label="Spent this week ($)" hint="No transaction data yet, so enter a rough number." className="mt-4">
         <Input id="spent-week" aria-describedby="spent-week-hint" type="number" inputMode="decimal" min={0} placeholder="0" value={spent} onChange={(e) => onSpent(e.target.value)} />
       </Field>

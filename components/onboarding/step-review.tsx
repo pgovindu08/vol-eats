@@ -3,7 +3,6 @@
 import type { ReactNode } from "react";
 import { Pencil } from "lucide-react";
 import { allergenList, DIET_LABELS } from "@/lib/diet";
-import { formatUsd } from "@/lib/budget";
 import { useLocations } from "@/lib/hooks/use-locations";
 import type { OnboardingDraft } from "@/lib/onboarding-draft";
 import { STEP_TITLES, visibleSteps, type StepId } from "@/lib/onboarding-flow";
@@ -61,22 +60,9 @@ export function StepReview({
       step: "living",
       rows: [
         ["Living", draft.living_situation ? LIVING[draft.living_situation] : "—"],
-        ...(draft.living_situation !== "off_campus_cooking" || draft.has_dining_dollars ? ([["Meal plan", draft.meal_plan_name ?? "—"]] as [string, ReactNode][]) : []),
+        ...(draft.living_situation !== "off_campus_cooking" ? ([["Meal plan", draft.meal_plan_name ?? "—"]] as [string, ReactNode][]) : []),
         ...(halls.length ? ([["Favorite hall", halls.join(", ")]] as [string, ReactNode][]) : []),
         ...(draft.kitchen_access ? ([["Kitchen", KITCHEN[draft.kitchen_access]]] as [string, ReactNode][]) : []),
-        ...(draft.living_situation === "off_campus_cooking" && draft.weekly_food_budget_usd != null
-          ? ([["Grocery budget", `${formatUsd(draft.weekly_food_budget_usd)} / week`]] as [string, ReactNode][])
-          : []),
-      ],
-    },
-    {
-      step: "money",
-      rows: [
-        ...(draft.dining_dollars_balance != null ? ([["Dining dollars", formatUsd(draft.dining_dollars_balance)]] as [string, ReactNode][]) : []),
-        ...(draft.swipes_remaining != null ? ([["Swipes left", draft.swipes_remaining]] as [string, ReactNode][]) : []),
-        ...(draft.living_situation !== "off_campus_cooking"
-          ? ([["Off-campus budget", draft.weekly_food_budget_usd != null ? `${formatUsd(draft.weekly_food_budget_usd)} / week` : "Not set"]] as [string, ReactNode][])
-          : []),
       ],
     },
   ];
