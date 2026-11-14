@@ -5,20 +5,24 @@ import { Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet } from "@/components/ui/sheet";
 import { Stepper } from "@/components/ui/stepper";
-import { useLogs } from "@/lib/hooks/use-logs";
 import type { FoodLog } from "@/lib/types";
 
-export function EditLogSheet({ log, onClose }: { log: FoodLog | null; onClose: () => void }) {
+export interface LogActions {
+  onUpdate: (id: string, patch: { servings: number }) => void;
+  onDelete: (id: string) => void;
+}
+
+/** Edit servings or delete a logged meal. Works for any day: the caller supplies the save/delete actions. */
+export function EditLogSheet({ log, onClose, onUpdate, onDelete }: { log: FoodLog | null; onClose: () => void } & LogActions) {
   return (
     <Sheet open={log !== null} onClose={onClose} title={log?.name ?? "Edit"}>
       {/* key resets the servings state each time a different log opens */}
-      {log ? <EditLogBody key={log.id} log={log} onClose={onClose} /> : null}
+      {log ? <EditLogBody key={log.id} log={log} onClose={onClose} onUpdate={onUpdate} onDelete={onDelete} /> : null}
     </Sheet>
   );
 }
 
-function EditLogBody({ log, onClose }: { log: FoodLog; onClose: () => void }) {
-  const { updateLog, deleteLog } = useLogs();
+function EditLogBody({ log, onClose, onUpdate, onDelete }: { log: FoodLog; onClose: () => void } & LogActions) {
   const [servings, setServings] = useState(log.servings);
 
   const rows = [
@@ -53,7 +57,7 @@ function EditLogBody({ log, onClose }: { log: FoodLog; onClose: () => void }) {
           className="text-danger"
           onClick={() => {
             onClose();
-            void deleteLog(log.id);
+            onDelete(log.id);
           }}
         >
           <Trash2 aria-hidden className="size-4" /> Delete
@@ -64,7 +68,7 @@ function EditLogBody({ log, onClose }: { log: FoodLog; onClose: () => void }) {
           disabled={servings === log.servings}
           onClick={() => {
             onClose();
-            void updateLog(log.id, { servings });
+            onUpdate(log.id, { servings });
           }}
         >
           Save

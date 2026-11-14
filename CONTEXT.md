@@ -1,5 +1,27 @@
 All the changes done by the AI is entered in here.
 
+## 2026-11-14 — App v3, Person A, Step 2: Log tab with calendar (Claude Code, for Swagat, branch `feature/app-v3-log`)
+
+- **`/log`** is now the meal tracker:
+  - A Monday–Sunday week strip with previous/next week and "Back to today". Future days are disabled.
+  - Each day has a status dot versus the calorie target: on target within ±10% (success), under (muted), over (warning), or an open circle for no logs. Each dot has a screen-reader label and there's a visible legend.
+  - Below that, the selected day's meals grouped by meal, with "x / target cal · status".
+  - The selected day is in the URL (`?date=`), so back and forward work.
+- **Today vs past days:** today's meals use `LogsProvider`, so Today's rings stay in sync. Past days are fetched per week and edited through the API, then refetched.
+- **"Add meal" button** (bottom right) opens a sheet with Photo, Quick add and "From a menu" (today only, because menus show today's food).
+- **`/log/add`** (moved from the old `/log`): photo and Quick add, with `?mode=` and `?date=`. Past-day logs get `logged_at` at that meal's time in Eastern time (`atMealTime`). Buttons say "Add to Tue, Nov 10".
+- **Moved and generalized:** `components/log/logged-meals.tsx` and `edit-log-sheet.tsx` (formerly in `components/today`) now take `onUpdate` / `onDelete`, so they work for any day.
+- **`lib/log-days.ts`** (tested): `weekDays`, `dayStatus`, `logsByDay`, `atMealTime`, `shortDay`.
+- **`lib/stubs.ts`:** a temporary `logsRange` that loads each day with `GET /api/logs?date=`. It uses Person B's `api.logsRange` automatically once that exists. Delete it after B's branch merges. The demo's 6 days of history is also B's work (`mock/demo-profile.ts`).
+- **Checked:**
+  - Seeded past days show hit, under and over correctly.
+  - Editing a past meal (Tue went 3,700 → 2,500, Over → Under).
+  - Quick add to a past day (saved at 6:30 PM ET, total 2,800, on target).
+  - Back and forward, and future days disabled.
+  - No overflow at 360px.
+  - 81 tests passing.
+  - Lighthouse accessibility 100 on `/log`, a past day, `/log/add` and Today, in light and dark.
+
 ## 2026-11-14 — App v3, Person A, Step 1: navigation, Profile, dark mode, Reset app (Claude Code, for Swagat, branch `feature/app-v3-screens`)
 
 - **Tabs:** Today · Food · Log · Menus · Events (`components/layout/bottom-tabs.tsx`).

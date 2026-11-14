@@ -20,7 +20,7 @@ const CONFIDENCE: Record<PhotoEstimate["confidence"], { label: string; className
   low: { label: "Low confidence: double-check", className: "text-danger" },
 };
 
-export function PhotoLog({ mealPeriod, busy, onSave }: { mealPeriod: MealPeriod; busy: boolean; onSave: (input: FoodLogInput) => void }) {
+export function PhotoLog({ mealPeriod, busy, onSave, saveLabel = "Save to today" }: { mealPeriod: MealPeriod; busy: boolean; onSave: (input: FoodLogInput) => void; saveLabel?: string }) {
   const [state, setState] = useState<State>({ step: "idle" });
   const inputRef = useRef<HTMLInputElement>(null);
   const libraryRef = useRef<HTMLInputElement>(null);
@@ -123,7 +123,7 @@ export function PhotoLog({ mealPeriod, busy, onSave }: { mealPeriod: MealPeriod;
             defaults={state.estimate ?? undefined}
             mealPeriod={mealPeriod}
             source="photo"
-            submitLabel="Save to today"
+            submitLabel={saveLabel}
             busy={busy}
             onSubmit={onSave}
           />
