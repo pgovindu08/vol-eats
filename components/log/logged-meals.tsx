@@ -4,20 +4,21 @@ import { useState } from "react";
 import { Camera, ChevronRight, PenLine, Sparkles, UtensilsCrossed } from "lucide-react";
 import { MEAL_PERIOD_LABELS } from "@/lib/meal-period";
 import type { FoodLog, LogSource, MealPeriod } from "@/lib/types";
-import { EditLogSheet } from "./edit-log-sheet";
+import { EditLogSheet, type LogActions } from "./edit-log-sheet";
 
 const PERIODS: MealPeriod[] = ["breakfast", "lunch", "dinner"];
 const SOURCE_ICON: Record<LogSource, typeof Camera> = { menu: UtensilsCrossed, plate: Sparkles, photo: Camera, manual: PenLine };
 const SOURCE_LABEL: Record<LogSource, string> = { menu: "From menu", plate: "From plate pick", photo: "From photo", manual: "Added manually" };
 
-export function LoggedMeals({ logs }: { logs: FoodLog[] }) {
+/** A day's meals grouped by breakfast/lunch/dinner; tap one to edit or delete it. */
+export function LoggedMeals({ logs, title, onUpdate, onDelete }: { logs: FoodLog[]; title: string } & LogActions) {
   const [editingId, setEditingId] = useState<string | null>(null);
   const editing = logs.find((l) => l.id === editingId) ?? null;
 
   return (
     <section aria-labelledby="logged-heading" className="space-y-4">
-      <h2 id="logged-heading" className="font-display text-lg font-bold">
-        Logged today
+      <h2 id="logged-heading" className="sr-only">
+        {title}
       </h2>
       {PERIODS.map((period) => {
         // Sorted by time logged, so an undone delete returns to its original spot.
@@ -67,7 +68,7 @@ export function LoggedMeals({ logs }: { logs: FoodLog[] }) {
           </div>
         );
       })}
-      <EditLogSheet log={editing} onClose={() => setEditingId(null)} />
+      <EditLogSheet log={editing} onClose={() => setEditingId(null)} onUpdate={onUpdate} onDelete={onDelete} />
     </section>
   );
 }
