@@ -4,8 +4,8 @@
   "serviceAreaId": 125621,
   "source": "https://dining.utk.edu/vendor/rocky-top-dining-hall/",
   "date": "2026-11-14",
-  "scrapedAt": "2026-11-14T17:40:34.821Z",
-  "itemCount": 285,
+  "scrapedAt": "2026-11-14T23:56:24.320Z",
+  "itemCount": 286,
   "items": [
     {
       "id": "72933",
@@ -2134,6 +2134,44 @@
         "tree_nuts": false
       },
       "ingredients": "Unsalted Butter (Pasteurized Cream, Natural Flavoring.)"
+    },
+    {
+      "id": "103246",
+      "name": "Buttermilk Pancakes",
+      "station": "Grill",
+      "period": "Lunch",
+      "description": "Fluffy, golden brown buttermilk pancakes",
+      "serving": "2 each",
+      "nutrition": {
+        "calories": 160,
+        "total_fat": 1.5,
+        "saturated_fat": 0.5,
+        "trans_fat": 0,
+        "cholesterol": 0,
+        "sodium": 501,
+        "carbohydrate": 33,
+        "fiber": 1,
+        "total_sugars": 6,
+        "protein": 4.8,
+        "calcium": 66.7,
+        "iron": 1.7,
+        "potassium": 55
+      },
+      "vegan": false,
+      "vegetarian": true,
+      "contains": {
+        "soy": false,
+        "eggs": false,
+        "fish": false,
+        "milk": true,
+        "wheat": true,
+        "gluten": true,
+        "peanut": false,
+        "sesame": false,
+        "shellfish": false,
+        "tree_nuts": false
+      },
+      "ingredients": "Water, Pancake Mix  (ENRICHED BLEACHED FLOUR (BLEACHED WHEAT FLOUR, NIACINAMIDE, REDUCED IRON, THIAMIN MONONITRATE, RIBOFLAVIN, FOLIC ACID), SUGAR, LEAVENING (BAKING SODA, SODIUM ALUMINUM PHOSPHATE, MONOCALCIUM PHOSPHATE), DEXTROSE, BUTTERMILK POWDER, PALM OIL, SALT, WHEAT GLUTEN, CORN SYRUP SOLIDS, SODIUM CASEINATE, MONO AND DIGLYCERIDES, DIPOTASSIUM PHOSPHATE, LACTIC ACID, TOCOPHEROLS (TO PRESERVE FRESHNESS).)"
     },
     {
       "id": "72953",
