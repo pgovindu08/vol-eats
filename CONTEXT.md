@@ -1,5 +1,24 @@
 All the changes done by the AI is entered in here.
 
+## 2026-11-14 — App v3, Person A, Step 3: Food tab (Claude Code, for Swagat, branch `feature/app-v3-food`)
+
+- **`/food`:** every location from `/api/locations` (nothing hard-coded), sorted by walking distance from Min Kao. Each card shows:
+  - Name and building.
+  - "0.2 mi · 5 min walk".
+  - An open status ("Open until 8:00 PM", "Opens 10:00 AM", "Opens tomorrow …").
+  - What the student can pay with, based on their meal plan. Places their plan can't use are dimmed and say "Not on your plan".
+  - A **top pick**: the first plate from Supul's `buildPlates` for that location and meal, filtered by diet.
+- **Filters:** a meal picker (defaults to now), plus "Open now" and "On my plan" chips. There's an empty state when nothing matches.
+- **Tapping a card** opens `/plates?location=…&period=…`, scoped to that place, with an "All places" back link. `/plates` with no location redirects to `/food`. A place that isn't on the student's plan still opens.
+- **`lib/stubs.ts`** gets stand-ins for `distanceFromMinKao` and `openStatus` (approximate coordinates and hours, `TODO(verify)`), with tests. Switch to Person B's `lib/campus-geo.ts` and `lib/hours.ts` when they land.
+- **Not built yet:** the Ask box. It needs Person B's `api.ai.ask`.
+- **Checked:**
+  - Sorting and filters.
+  - The meal picker carries through to the picks.
+  - The `/plates` redirect, and no overflow.
+  - 83 tests passing.
+  - Lighthouse accessibility 100 on Food and two picks pages, in light and dark.
+
 ## 2026-11-14 — Vol Eats branding and demo pass (Claude Code, for Swagat, branch `feature/app-v3-brand`)
 
 - **Renamed** the app to **Vol Eats** (`APP_NAME` in `lib/config.ts`, README). localStorage keys keep the `cf.` prefix so existing data still loads.
