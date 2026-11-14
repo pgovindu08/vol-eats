@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Controller, useForm, useWatch } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -52,7 +52,18 @@ const KITCHEN: { value: KitchenAccess; label: string; description: string }[] = 
 
 const PLAN_GROUPS = ["Freshman", "Upperclass", "Dining dollars only"] as const;
 
-export function StepLiving({ draft, onNext, onBack }: { draft: OnboardingDraft; onNext: (patch: Partial<OnboardingDraft>) => void; onBack: () => void }) {
+export function StepLiving({
+  draft,
+  onNext,
+  onBack,
+  onChange,
+}: {
+  draft: OnboardingDraft;
+  onNext: (patch: Partial<OnboardingDraft>) => void;
+  onBack: () => void;
+  /** Reports unsaved choices that change the step count. Must be a stable function. */
+  onChange?: (patch: Partial<OnboardingDraft>) => void;
+}) {
   const { control, register, handleSubmit, formState, setValue } = useForm({
     resolver: zodResolver(schema),
     defaultValues: {
@@ -67,6 +78,9 @@ export function StepLiving({ draft, onNext, onBack }: { draft: OnboardingDraft; 
   const living = useWatch({ control, name: "living_situation" });
   const hasDD = useWatch({ control, name: "has_dining_dollars" });
   const planName = useWatch({ control, name: "meal_plan_name" });
+  useEffect(() => {
+    onChange?.({ living_situation: living, has_dining_dollars: hasDD, meal_plan_name: planName || undefined });
+  }, [living, hasDD, planName, onChange]);
   // "No meal plan" is rare on campus, so it hides behind a link.
   const [showNoPlan, setShowNoPlan] = useState(planName === NO_PLAN);
   const e = formState.errors;

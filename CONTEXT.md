@@ -135,3 +135,8 @@ Plan: `docs/prompts/onboarding-v2.md`.
   - Edit from Review, hiding the banner, and the demo account.
   - No overflow at 360px.
 - **Lighthouse** accessibility is 100 on goal, both living branches, money, review, Today with the banner, and Plates with the hint.
+
+## 2026-11-14 — Onboarding v2 polish (Claude Code, for Swagat)
+
+- **Allergen names:** `ALLERGEN_LABELS` and `allergenList()` in `lib/diet.ts` are now used by the diet chips, the Review step and the Menus item sheet. Review used to show raw values like "peanut", and the Menus sheet replaced only the first underscore ("tree nuts, peanut").
+- **Live step count:** the living step reports unsaved choices (`onChange`) so "Step 4 of 6" becomes "of 5" as soon as "Off campus, cooking for myself" is picked. The header, progress bar and resume card all update.

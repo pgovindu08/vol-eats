@@ -2,7 +2,7 @@
 
 import type { ReactNode } from "react";
 import { Pencil } from "lucide-react";
-import { DIET_LABELS } from "@/lib/diet";
+import { allergenList, DIET_LABELS } from "@/lib/diet";
 import { formatUsd } from "@/lib/budget";
 import { useLocations } from "@/lib/hooks/use-locations";
 import type { OnboardingDraft } from "@/lib/onboarding-draft";
@@ -54,7 +54,7 @@ export function StepReview({
       step: "diet",
       rows: [
         ["Diet", draft.no_restrictions || !draft.diet_tags.length ? "No restrictions" : draft.diet_tags.map((t) => DIET_LABELS[t]).join(", ")],
-        ["Allergies", draft.allergens.length ? draft.allergens.map((a) => a.replace("_", " ")).join(", ") : "None"],
+        ["Allergies", draft.allergens.length ? allergenList(draft.allergens) : "None"],
       ],
     },
     {

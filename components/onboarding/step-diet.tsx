@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ChipGroup } from "@/components/ui/choice";
+import { ALLERGEN_LABELS } from "@/lib/diet";
 import type { OnboardingDraft } from "@/lib/onboarding-draft";
 import type { Allergen, DietTag } from "@/lib/types";
 import { StepShell } from "./step-shell";
@@ -18,17 +19,9 @@ const DIETS: { value: DietChip; label: string }[] = [
   { value: "none", label: "No restrictions" },
 ];
 
-const ALLERGENS: { value: Allergen; label: string }[] = [
-  { value: "milk", label: "Milk" },
-  { value: "eggs", label: "Eggs" },
-  { value: "fish", label: "Fish" },
-  { value: "shellfish", label: "Shellfish" },
-  { value: "soy", label: "Soy" },
-  { value: "wheat", label: "Wheat" },
-  { value: "sesame", label: "Sesame" },
-  { value: "peanut", label: "Peanuts" },
-  { value: "tree_nuts", label: "Tree nuts" },
-];
+// Same names everywhere (chips, Review, Menus) via ALLERGEN_LABELS.
+const ALLERGEN_CHOICES: Allergen[] = ["milk", "eggs", "fish", "shellfish", "soy", "wheat", "sesame", "peanut", "tree_nuts"];
+const ALLERGENS = ALLERGEN_CHOICES.map((value) => ({ value, label: ALLERGEN_LABELS[value] }));
 
 // No validation needed (everything is optional), so this step uses plain state.
 export function StepDiet({

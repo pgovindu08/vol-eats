@@ -5,7 +5,7 @@ import { TriangleAlert } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet } from "@/components/ui/sheet";
 import { Stepper } from "@/components/ui/stepper";
-import { DIET_LABELS } from "@/lib/diet";
+import { allergenList, DIET_LABELS } from "@/lib/diet";
 import type { Allergen, MenuItem } from "@/lib/types";
 
 export function MenuItemSheet({
@@ -46,7 +46,7 @@ function Body({ item, userAllergens, onLog }: { item: MenuItem; userAllergens: A
 
       {flagged.length ? (
         <p role="alert" className="flex items-center gap-1.5 rounded-md bg-surface-2 px-3 py-2 text-sm text-warning">
-          <TriangleAlert aria-hidden className="size-4 shrink-0" /> Contains {flagged.join(", ").replace("_", " ")}, which you&apos;re avoiding.
+          <TriangleAlert aria-hidden className="size-4 shrink-0" /> Contains {allergenList(flagged, { lowercase: true })}, which you&apos;re avoiding.
         </p>
       ) : null}
 
@@ -65,7 +65,7 @@ function Body({ item, userAllergens, onLog }: { item: MenuItem; userAllergens: A
       {item.tags.length || item.allergens.length ? (
         <div className="space-y-1 text-xs text-muted">
           {item.tags.length ? <p>{item.tags.map((t) => DIET_LABELS[t]).join(" · ")}</p> : null}
-          {item.allergens.length ? <p>Allergens: {item.allergens.map((a) => a.replace("_", " ")).join(", ")}</p> : null}
+          {item.allergens.length ? <p>Allergens: {allergenList(item.allergens)}</p> : null}
         </div>
       ) : null}
 

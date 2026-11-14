@@ -31,6 +31,26 @@ export const DIET_LABELS: Record<DietTag, string> = {
   no_pork: "No pork",
 };
 
+/** Display names for allergens. Use these instead of showing raw values like "tree_nuts". */
+export const ALLERGEN_LABELS: Record<Allergen, string> = {
+  milk: "Milk",
+  eggs: "Eggs",
+  fish: "Fish",
+  shellfish: "Shellfish",
+  soy: "Soy",
+  wheat: "Wheat",
+  gluten: "Gluten",
+  sesame: "Sesame",
+  peanut: "Peanuts",
+  tree_nuts: "Tree nuts",
+};
+
+/** "Milk, Tree nuts" (or lowercase for use mid-sentence). */
+export function allergenList(allergens: Allergen[], { lowercase = false } = {}) {
+  const names = allergens.map((a) => ALLERGEN_LABELS[a]);
+  return (lowercase ? names.map((n) => n.toLowerCase()) : names).join(", ");
+}
+
 /** Short badge text for menu rows. */
 export const DIET_BADGES: Partial<Record<DietTag, string>> = {
   vegan: "VG",
