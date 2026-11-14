@@ -16,6 +16,10 @@ export type Sex = "male" | "female" | "unspecified";
 export type ActivityLevel = "sedentary" | "light" | "moderate" | "very_active";
 export type GoalType = "lose_fat" | "build_muscle" | "maintain";
 export type MealPlanType = "swipes" | "dining_dollars" | "both" | "none";
+export type LivingSituation = "on_campus" | "off_campus_plan" | "off_campus_cooking";
+export type KitchenAccess = "full" | "microwave" | "none";
+/** "partial" = finished goal + body only; "skipped" = chose "Set up later" before that. */
+export type OnboardingStatus = "complete" | "partial" | "skipped";
 
 export type DietTag = "vegetarian" | "vegan" | "halal" | "gluten_free" | "dairy_free" | "no_pork";
 export type Allergen =
@@ -96,6 +100,12 @@ export interface Profile {
   dining_dollars_balance: number | null; // TODO(schema): ask Supul to add
   swipes_remaining: number | null; // TODO(schema): ask Supul to add
   weekly_food_budget_usd: number | null; // TODO(schema): ask Supul to add
+
+  // Onboarding v2 (Tier 1). Older profiles get defaults from lib/profile.ts.
+  living_situation: LivingSituation; // TODO(schema): ask Supul to add
+  favorite_location_ids: string[]; // TODO(schema): ask Supul to add
+  kitchen_access: KitchenAccess | null; // TODO(schema): ask Supul to add
+  onboarding_status: OnboardingStatus; // TODO(schema): ask Supul to add
 }
 
 /** Fields the client sends to POST /api/profile; the server computes targets. */

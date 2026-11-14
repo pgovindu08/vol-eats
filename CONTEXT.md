@@ -81,3 +81,26 @@ All the changes done by the AI is entered in here.
 - **Mocks off** (`NEXT_PUBLIC_USE_MOCKS=false` production build): no mock code ships in the bundle. The repo has no `/api` routes yet, so every call 404s. Login shows "Couldn't sign in right now", and each screen shows "Try again" with no crash. The full demo path needs the backend routes in `lib/api.ts`.
 - **Error copy:** 404 now uses the generic message instead of "We couldn't find that", since a 404 usually means a route isn't deployed yet. Menus and Plates no longer show a loading skeleton under the error when locations fail.
 - **Mocks on:** ran the full demo path: demo login (640 cal) → plate picks → log a plate (1,180) → log from Menus (1,360) → Budget → Events → Reset (640).
+
+## 2026-11-14 — Onboarding v2, phase 1: data and resume (Claude Code, for Swagat, branch `feature/onboarding-v2`)
+
+Plan: `docs/prompts/onboarding-v2.md`.
+
+- **New profile fields** in `lib/types.ts`, all `TODO(schema)` for Supul: `living_situation`, `favorite_location_ids`, `kitchen_access`, `onboarding_status`.
+  - `lib/profile.ts` `normalizeProfile()` fills defaults for older profiles: living situation comes from the meal plan, and status is `"complete"`.
+  - `lib/api.ts` applies it to every profile it returns, so v1 mock data and a backend without these columns both keep working.
+  - The demo profile is now on campus, with Rocky Top as favorite.
+- **Per-user drafts** (`lib/onboarding-draft.ts`): saved under `cf.onboarding-draft:<email>`, with `updated_at` and a 14-day expiry.
+  - The v1 shared draft is deleted, not migrated, because its owner is unknown. This deliberately differs from the prompt.
+  - `furthest` replaces `step`.
+- **Step in the URL** (`/onboarding?step=N`): refresh keeps the step, the phone's back gesture goes back a step, and out-of-range steps clamp to the furthest reached.
+- **Resume:** a "Welcome back: step N of 4" card with Continue / Start over (Start over asks to confirm). A "Not you? Sign out" link is on every step.
+- **Safe submit:** answers are saved before submitting. On failure: "Couldn't save. Your answers are kept, so try again."
+- **Already finished:** visiting `/onboarding` with a complete profile goes to `/today`.
+- **Bug fixed:** sign-out leaked state between users.
+  - Next 16 keeps visited pages alive in memory (`<Activity>`), so after sign-out the next user on the device saw the previous user's onboarding step and resume card.
+  - All sign-outs now go through `signOut()` in `lib/session.ts`, which does a full page load, as Next's "State and authentication" guide recommends.
+  - Onboarding also reloads if the signed-in user changed while it was hidden.
+- **Tests:** 51 passing; new ones cover draft keying, expiry, legacy deletion and profile normalization.
+- **Checked in the browser:** back and forward, `?step=9`, resume, the shared-phone switch, Start over, failed submit and the finished-user redirect.
+- **Lighthouse** accessibility is 100 on all onboarding steps.

@@ -62,6 +62,7 @@ describe("mock API", () => {
       height_cm: 165, weight_kg: 60, goal_weight_kg: 57, activity_level: "light", diet_tags: ["vegetarian"], allergens: [],
       meal_plan_type: "dining_dollars", goal_type: "lose_fat", meal_plan_name: "Dining Dollar Plan",
       dining_dollars_balance: 400, swipes_remaining: null, weekly_food_budget_usd: null,
+      living_situation: "off_campus_plan", favorite_location_ids: [], kitchen_access: "full", onboarding_status: "complete",
     } satisfies ProfileInput;
     const saved = await mockRequest<Profile>("POST", "/api/profile", input);
     expect(saved.target_calories).toBeGreaterThan(1200);

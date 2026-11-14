@@ -25,6 +25,7 @@ import type {
 } from "./types";
 
 import { ApiError } from "./errors";
+import { normalizeProfile } from "./profile";
 
 export { ApiError, errorMessage } from "./errors";
 
@@ -94,12 +95,16 @@ export const api = {
   menus: (params: { location_id: string; date?: string; meal_period?: MealPeriod }) =>
     request<MenuItem[]>("GET", `/api/menus${qs(params)}`),
 
-  getProfile: () => request<Profile | null>("GET", "/api/profile"),
+  // Profiles are normalized so fields added later (onboarding v2) always have values.
+  getProfile: async () => {
+    const p = await request<Profile | null>("GET", "/api/profile");
+    return p ? normalizeProfile(p) : null;
+  },
   /** Creates or replaces the profile; the server computes targets (CONTEXT §7). */
-  saveProfile: (input: ProfileInput) => request<Profile>("POST", "/api/profile", input),
+  saveProfile: async (input: ProfileInput) => normalizeProfile(await request<Profile>("POST", "/api/profile", input)),
   /** Manual target overrides from the "Adjust" sliders. */
-  updateTargets: (targets: Pick<Profile, "target_calories" | "target_protein_g" | "target_carbs_g" | "target_fat_g">) =>
-    request<Profile>("PATCH", "/api/profile", targets),
+  updateTargets: async (targets: Pick<Profile, "target_calories" | "target_protein_g" | "target_carbs_g" | "target_fat_g">) =>
+    normalizeProfile(await request<Profile>("PATCH", "/api/profile", targets)),
 
   logs: (params: { date?: string } = {}) => request<FoodLog[]>("GET", `/api/logs${qs(params)}`),
   addLog: (input: FoodLogInput) => request<FoodLog>("POST", "/api/logs", input),

@@ -16,6 +16,18 @@ export function getSession(): Session | null {
   }
 }
 
+/**
+ * Sign out with a full page load, not router navigation. Next keeps visited pages alive
+ * in memory (<Activity>), so a soft navigation would carry one user's in-memory state
+ * (onboarding answers, profile, logs) over to whoever signs in next on the same device.
+ */
+export function signOut() {
+  setSession(null);
+  // A full reload is intentional here (Next's "State and authentication" guide recommends it for logout).
+  // eslint-disable-next-line @next/next/no-location-assign-relative-destination
+  window.location.href = "/login";
+}
+
 export function setSession(session: Session | null) {
   try {
     if (session) window.localStorage.setItem(KEY, JSON.stringify(session));

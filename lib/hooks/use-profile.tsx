@@ -4,7 +4,7 @@ import { createContext, useCallback, useContext, useEffect, useState, type React
 import { useRouter } from "next/navigation";
 import { api } from "@/lib/api";
 import { ApiError } from "@/lib/errors";
-import { getSession, setSession } from "@/lib/session";
+import { getSession, signOut as clearSessionAndReload } from "@/lib/session";
 import type { Profile } from "@/lib/types";
 
 interface ProfileState {
@@ -59,10 +59,7 @@ export function ProfileProvider({ children }: { children: ReactNode }) {
     setAttempt((a) => a + 1);
   }, []);
 
-  const signOut = useCallback(() => {
-    setSession(null);
-    router.replace("/login");
-  }, [router]);
+  const signOut = useCallback(() => clearSessionAndReload(), []);
 
   return (
     <ProfileContext.Provider value={{ profile, loading, error, reload, setProfile, signOut }}>
