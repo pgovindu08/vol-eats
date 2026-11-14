@@ -105,6 +105,9 @@ export const api = {
   /** Manual target overrides from the "Adjust" sliders. */
   updateTargets: async (targets: Pick<Profile, "target_calories" | "target_protein_g" | "target_carbs_g" | "target_fat_g">) =>
     normalizeProfile(await request<Profile>("PATCH", "/api/profile", targets)),
+  /** Budget screen: dining dollars, swipes left and weekly food budget (no longer asked in onboarding). */
+  updateMoney: async (patch: Partial<Pick<Profile, "dining_dollars_balance" | "swipes_remaining" | "weekly_food_budget_usd">>) =>
+    normalizeProfile(await request<Profile>("PATCH", "/api/profile", patch)),
 
   logs: (params: { date?: string } = {}) => request<FoodLog[]>("GET", `/api/logs${qs(params)}`),
   addLog: (input: FoodLogInput) => request<FoodLog>("POST", "/api/logs", input),

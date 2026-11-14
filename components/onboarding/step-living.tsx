@@ -1,21 +1,19 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Controller, useForm, useWatch } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { ChipGroup, ChoiceCards } from "@/components/ui/choice";
-import { Field, Input, Select, a11y } from "@/components/ui/field";
+import { Field, Select, a11y } from "@/components/ui/field";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useLocations } from "@/lib/hooks/use-locations";
 import { MEAL_PLANS } from "@/lib/meal-plans";
 import type { OnboardingDraft } from "@/lib/onboarding-draft";
 import type { KitchenAccess, LivingSituation } from "@/lib/types";
-import { toNumber } from "@/lib/utils";
 import { StepShell } from "./step-shell";
 
 const NO_PLAN = "No meal plan";
-const DD_PLANS = MEAL_PLANS.filter((p) => p.type === "dining_dollars").map((p) => p.name);
 
 const schema = z
   .object({
@@ -23,8 +21,6 @@ const schema = z
     meal_plan_name: z.string(),
     favorite_location_ids: z.array(z.string()),
     kitchen_access: z.enum(["full", "microwave", "none"]).optional(),
-    has_dining_dollars: z.boolean(),
-    weekly_food_budget_usd: z.preprocess(toNumber, z.number().min(0, "Can't be negative").max(2000, "That seems too high").optional()),
   })
   .superRefine((v, ctx) => {
     const issue = (path: string, message: string) => ctx.addIssue({ code: "custom", path: [path], message });
@@ -32,10 +28,6 @@ const schema = z
     if (v.living_situation === "on_campus" && !v.meal_plan_name) issue("meal_plan_name", "Pick your meal plan");
     if (v.living_situation === "off_campus_plan" && (!v.meal_plan_name || v.meal_plan_name === NO_PLAN)) issue("meal_plan_name", "Pick your meal plan");
     if (v.living_situation !== "on_campus" && !v.kitchen_access) issue("kitchen_access", "Pick your kitchen setup");
-    if (v.living_situation === "off_campus_cooking") {
-      if (v.weekly_food_budget_usd === undefined) issue("weekly_food_budget_usd", "Enter a rough weekly budget");
-      if (v.has_dining_dollars && !DD_PLANS.includes(v.meal_plan_name)) issue("meal_plan_name", "Pick your dining dollar plan");
-    }
   });
 
 const LIVING: { value: LivingSituation; label: string; description: string }[] = [
@@ -56,13 +48,10 @@ export function StepLiving({
   draft,
   onNext,
   onBack,
-  onChange,
 }: {
   draft: OnboardingDraft;
   onNext: (patch: Partial<OnboardingDraft>) => void;
   onBack: () => void;
-  /** Reports unsaved choices that change the step count. Must be a stable function. */
-  onChange?: (patch: Partial<OnboardingDraft>) => void;
 }) {
   const { control, register, handleSubmit, formState, setValue } = useForm({
     resolver: zodResolver(schema),
@@ -71,16 +60,10 @@ export function StepLiving({
       meal_plan_name: draft.meal_plan_name ?? "",
       favorite_location_ids: draft.favorite_location_ids ?? [],
       kitchen_access: draft.kitchen_access ?? undefined,
-      has_dining_dollars: draft.has_dining_dollars ?? false,
-      weekly_food_budget_usd: draft.weekly_food_budget_usd ?? undefined,
     },
   });
   const living = useWatch({ control, name: "living_situation" });
-  const hasDD = useWatch({ control, name: "has_dining_dollars" });
   const planName = useWatch({ control, name: "meal_plan_name" });
-  useEffect(() => {
-    onChange?.({ living_situation: living, has_dining_dollars: hasDD, meal_plan_name: planName || undefined });
-  }, [living, hasDD, planName, onChange]);
   // "No meal plan" is rare on campus, so it hides behind a link.
   const [showNoPlan, setShowNoPlan] = useState(planName === NO_PLAN);
   const e = formState.errors;
@@ -96,11 +79,9 @@ export function StepLiving({
           const cooking = v.living_situation === "off_campus_cooking";
           onNext({
             living_situation: v.living_situation,
-            meal_plan_name: cooking && !v.has_dining_dollars ? undefined : v.meal_plan_name || undefined,
+            meal_plan_name: cooking ? undefined : v.meal_plan_name || undefined,
             favorite_location_ids: cooking ? [] : v.favorite_location_ids,
             kitchen_access: v.living_situation === "on_campus" ? null : (v.kitchen_access ?? null),
-            has_dining_dollars: cooking ? v.has_dining_dollars : undefined,
-            weekly_food_budget_usd: cooking ? (v.weekly_food_budget_usd ?? null) : draft.weekly_food_budget_usd,
           });
         })}
       >
@@ -147,27 +128,8 @@ export function StepLiving({
           </>
         ) : null}
 
-        {living === "off_campus_cooking" ? (
-          <>
-            <Field id="weekly_food_budget_usd" label="Weekly grocery budget ($)" hint="A rough number is fine." error={err("weekly_food_budget_usd")}>
-              <Input {...a11y("weekly_food_budget_usd", err("weekly_food_budget_usd"), true)} type="number" inputMode="decimal" placeholder="60" {...register("weekly_food_budget_usd")} />
-            </Field>
-            <label className="flex min-h-11 cursor-pointer items-center gap-3 text-sm">
-              <input type="checkbox" className="size-5 accent-primary" {...register("has_dining_dollars")} />I also have dining dollars
-            </label>
-            {hasDD ? (
-              <Field id="meal_plan_name" label="Dining dollar plan" error={err("meal_plan_name")}>
-                <Select {...a11y("meal_plan_name", err("meal_plan_name"))} {...register("meal_plan_name")}>
-                  <option value="">Choose your plan</option>
-                  {DD_PLANS.map((n) => (
-                    <option key={n} value={n}>
-                      {n}
-                    </option>
-                  ))}
-                </Select>
-              </Field>
-            ) : null}
-          </>
+        {living ? (
+          <p className="-mt-2 text-sm text-muted">Dining dollars, swipes and budgets can be added on the Budget tab anytime.</p>
         ) : null}
 
         {living === "off_campus_plan" || living === "off_campus_cooking" ? (
