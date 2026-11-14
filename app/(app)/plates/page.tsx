@@ -56,7 +56,8 @@ function Plates() {
 
   const left = profile ? remaining(targetsOf(profile), eaten) : null;
   const leftKey = left ? JSON.stringify(left) : null;
-  const requestKey = `${locationId}|${isRetail ? "all" : period}|${variant}|${attempt}`;
+  // leftKey is part of the key so plates are rebuilt (re-sized) after anything is logged.
+  const requestKey = `${locationId}|${isRetail ? "all" : period}|${variant}|${attempt}|${leftKey}`;
   const ready = !!profile && !!locationId && !logsLoading && !!leftKey;
 
   useEffect(() => {
@@ -72,7 +73,7 @@ function Plates() {
         } else {
           // AI slow or down: build plates locally from the real menu so the user is never stuck.
           const menu = await api.menus({ location_id: locationId, meal_period: isRetail ? undefined : period });
-          value = { data: buildPlates(filterForProfile(menu, profile), rem, variant), offline: true };
+          value = { data: buildPlates(filterForProfile(menu, profile), rem, variant, period), offline: true };
         }
         if (!cancelled) setResult({ key: requestKey, value });
       } catch (e) {
@@ -82,32 +83,36 @@ function Plates() {
     return () => {
       cancelled = true;
     };
-    // requestKey covers location, period, variant and retries.
+    // requestKey covers location, period, variant, retries and what's left today.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [ready, requestKey]);
 
   async function logPlate(plate: Plate) {
     setLoggingId(plate.id);
     const mealPeriod = isRetail ? currentMealPeriod() : period;
-    const saved = await Promise.all(
-      plate.items.map((i) =>
-        addLog({
-          menu_item_id: i.menu_item_id,
-          name: i.name,
-          servings: i.servings,
-          calories: i.calories,
-          protein_g: i.protein_g,
-          carbs_g: i.carbs_g,
-          fat_g: i.fat_g,
-          meal_period: mealPeriod,
-          source: "plate",
-        }),
-      ),
-    );
-    if (saved.every(Boolean)) {
-      toast(`Logged ${plate.title.toLowerCase()}`);
-      router.push("/today");
-    } else {
+    try {
+      const saved = await Promise.all(
+        plate.items.map((i) =>
+          addLog({
+            menu_item_id: i.menu_item_id,
+            name: i.name,
+            servings: i.servings,
+            calories: i.calories,
+            protein_g: i.protein_g,
+            carbs_g: i.carbs_g,
+            fat_g: i.fat_g,
+            meal_period: mealPeriod,
+            source: "plate",
+          }),
+        ),
+      );
+      if (saved.every(Boolean)) {
+        toast(`Logged ${plate.title.toLowerCase()}`);
+        router.push("/today");
+      }
+    } finally {
+      // Next keeps this page alive in the background after navigating away,
+      // so always clear the "Logging…" state or the buttons stay disabled on return.
       setLoggingId(null);
     }
   }

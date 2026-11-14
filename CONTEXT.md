@@ -81,3 +81,32 @@ All the changes done by the AI is entered in here.
 - **Mocks off** (`NEXT_PUBLIC_USE_MOCKS=false` production build): no mock code ships in the bundle. The repo has no `/api` routes yet, so every call 404s. Login shows "Couldn't sign in right now", and each screen shows "Try again" with no crash. The full demo path needs the backend routes in `lib/api.ts`.
 - **Error copy:** 404 now uses the generic message instead of "We couldn't find that", since a 404 usually means a route isn't deployed yet. Menus and Plates no longer show a loading skeleton under the error when locations fail.
 - **Mocks on:** ran the full demo path: demo login (640 cal) → plate picks → log a plate (1,180) → log from Menus (1,360) → Budget → Events → Reset (640).
+
+## Phase 7 — Live scraper menus (Claude Code, for Supul)
+
+- **lib/scraper-menus.ts** (new): maps `scraper/data/rockytop.json` and `stokely.json` to `MenuItem[]` using the same rules as `scripts/build-mock-menus.mjs`: ids `${location_id}-${id}-${period}`, diet tags, allergens, and rounded macros. Stations with toppings, condiments or dressings are skipped, along with implausible calorie values. It returns the full menu, not the old 11 picks per period.
+- **app/api/menus/route.ts** (new): `GET /api/menus?location_id&meal_period` returns scraped dining hall items plus `RETAIL_ITEMS`. A bad `meal_period` returns 400. The `X-Menu-Date` header carries the scraped menu's date.
+- **app/api/locations/route.ts** (new): `GET /api/locations` returns `LOCATIONS`. TODO(schema): move to Supabase.
+- **lib/mock-api.ts**: menus and plates now come from `lib/scraper-menus.ts` instead of `mock/menu-items.generated.json`, so mock mode shows the real menu too. `MenuItem.date` is now the scraped date, no longer the requested date.
+- **lib/scraper-menus.test.ts** (new): mapping and filter tests, plus a sanity check on the committed data.
+- **Freshness:** UTK only publishes today's menu. The `scrape-menus` GitHub Action (every 2 hours) commits new `scraper/data/*.json`, and each commit redeploys on Vercel. The `date` query param is accepted but ignored, because only the latest day exists.
+- **Left alone:** `npm run mock:menus` and `mock/menu-items.generated.json` are no longer used. They can be deleted.
+
+## Phase 8 — Macro-fitting plates + Plates page fixes (Claude Code, for Supul)
+
+- **lib/plate-builder.ts** (rewritten; same `buildPlates(menu, remaining, variant)` signature, plus an optional `period`):
+  - **Meal budget:** remaining macros for the day divided by the meals still to come. Breakfast gets 1/3, lunch 1/2, dinner everything left.
+  - **Plate styles:** high-protein (about 115% of the meal's protein share), balanced, and lighter (about 65% of the meal's calories).
+  - **How a plate is filled:** greedy search. It adds items or changes servings in 0.5× steps (0.5× to 2×, at most 4 items, one item per station) while the weighted macro error drops. Going over on calories is penalised twice as hard.
+  - **Exclusions:** desserts and bakery items are left out. Plates never share items.
+  - **Regenerate:** excludes the previous variant's items and randomly drops about 35% of the rest. The drop uses a seeded PRNG, so a given variant is deterministic.
+  - **Day's calories used up:** returns a single light snack plate.
+  - **Reason text:** shows the user's real numbers, e.g. "Sized for your lunch budget of 1,270 cal".
+- **lib/plate-builder.test.ts** (new) covers the meal split, the fit to budget, big vs small users, the servings and dessert rules, the snack case and regenerate.
+- **app/(app)/plates/page.tsx:**
+  - Fixed "Log this plate" getting stuck on "Logging…" after the first log. `loggingId` was never reset. With Cache Components, Next keeps the page mounted after `router.push`, so the buttons stayed disabled. It's now reset in `finally`.
+  - Remaining macros are now part of `requestKey`, so plates rebuild and resize after anything is logged.
+  - The offline fallback now passes the selected `period` to `buildPlates`.
+- **Known gaps:**
+  - The free-text "Describe it in your own words" (`goal_text`) is stored but not used anywhere yet.
+  - Some topping items (e.g. shredded cheese, diced ham) can still be picked for plates.

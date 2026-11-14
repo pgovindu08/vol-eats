@@ -1,0 +1,37 @@
+name: Scrape dining menus
+
+on:
+  schedule:
+    # Every 2 hours (UTC). Menus only get committed when they actually change.
+    - cron: "15 */2 * * *"
+  workflow_dispatch: # adds a "Run workflow" button in the Actions tab
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scrape-menus
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Scrape menus
+        id: scrape
+        run: node scraper/update.js
+
+      - name: Commit changes
+        if: steps.scrape.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add scraper/data
+          git commit -m "Update dining menus ($(TZ=America/New_York date +%F' '%H:%M) ET)"
+          git push

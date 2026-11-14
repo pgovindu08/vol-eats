@@ -5,6 +5,9 @@
  *
  * Data written here (profile, logs) is kept in localStorage under "cf.mockdb"
  * so the demo survives a refresh. That stands in for the real database.
+ *
+ * Dining hall menus are NOT fake: they come from the scraper output via
+ * lib/scraper-menus.ts, the same source the real /api/menus route uses.
  */
 import type { HttpMethod, PlatesBody } from "./api";
 import type { FoodLog, FoodLogInput, MealPeriod, MenuItem, Profile, ProfileInput } from "./types";
@@ -19,7 +22,7 @@ import { DEMO_EMAIL, DEMO_PROFILE, demoLogs } from "@/mock/demo-profile";
 import { mockTargetsExplanation, MOCK_PHOTO_ESTIMATE } from "@/mock/ai";
 import { filterForProfile } from "./diet";
 import { buildPlates } from "./plate-builder";
-import hallItems from "@/mock/menu-items.generated.json";
+import { hallMenuItems } from "./scraper-menus";
 
 const DB_KEY = "cf.mockdb";
 
@@ -61,8 +64,9 @@ function fail(status: number, message: string): never {
   throw new ApiError(status, message);
 }
 
-function allMenuItems(date: string): MenuItem[] {
-  return [...(hallItems as MenuItem[]).map((i) => ({ ...i, date })), ...RETAIL_ITEMS];
+/** Scraped dining hall items (carry the scraped menu's date) plus static retail items. */
+function allMenuItems(): MenuItem[] {
+  return [...hallMenuItems(), ...RETAIL_ITEMS];
 }
 
 const newId = (prefix: string) => `${prefix}-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 7)}`;
@@ -93,9 +97,8 @@ export async function mockRequest<T>(method: HttpMethod, path: string, body?: un
       return LOCATIONS as T;
 
     case "GET /api/menus": {
-      const date = q.get("date") ?? today;
       const period = q.get("meal_period") as MealPeriod | null;
-      const items = allMenuItems(date).filter(
+      const items = allMenuItems().filter(
         (i) =>
           (!q.get("location_id") || i.location_id === q.get("location_id")) &&
           (!period || i.meal_period === period || i.meal_period === "all_day"),
@@ -172,7 +175,7 @@ export async function mockRequest<T>(method: HttpMethod, path: string, body?: un
 
     case "POST /api/ai/plates": {
       const { location_id, meal_period, remaining, variant } = body as PlatesBody;
-      const menu = allMenuItems(today).filter(
+      const menu = allMenuItems().filter(
         (i) => i.location_id === location_id && (i.meal_period === meal_period || i.meal_period === "all_day"),
       );
       return buildPlates(profile ? filterForProfile(menu, profile) : menu, remaining, variant) as T;
