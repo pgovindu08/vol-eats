@@ -1,6 +1,6 @@
 # vol-eats
 
-Campus Fuel: a mobile-first web app that helps UTK students hit their calorie and macro targets with what the dining halls are serving today.
+Vol Eats: a mobile-first web app that helps UTK students hit their calorie and macro targets with what the dining halls are serving today.
 
 ## Run the frontend
 

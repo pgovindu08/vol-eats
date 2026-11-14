@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { ChevronRight, Sparkles, UtensilsCrossed } from "lucide-react";
+import { Logo } from "@/components/brand/logo";
 import { ProfileButton } from "@/components/layout/profile-button";
 import { FinishSetupBanner } from "@/components/today/finish-setup-banner";
 import { FreeFoodCard } from "@/components/today/free-food-card";
@@ -32,16 +33,19 @@ export default function TodayPage() {
   const firstName = profile.display_name?.split(" ")[0];
 
   return (
-    <div className="space-y-5 pt-6">
-      <header className="flex items-start justify-between gap-3">
+    <div className="space-y-5 pt-4">
+      <div className="flex items-center justify-between gap-3">
+        <Logo size={30} />
+        <ProfileButton />
+      </div>
+      <header>
         <div>
           <p className="text-sm text-muted">{formatLongDate()}</p>
-          <h1 className="font-display text-2xl font-bold">
+          <h1 className="font-display text-3xl font-extrabold tracking-tight">
             {greeting()}
             {firstName ? `, ${firstName}` : ""}
           </h1>
         </div>
-        <ProfileButton />
       </header>
 
       <FinishSetupBanner email={profile.email} status={profile.onboarding_status} />

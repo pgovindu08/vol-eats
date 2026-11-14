@@ -1,5 +1,20 @@
 All the changes done by the AI is entered in here.
 
+## 2026-11-14 — Vol Eats branding and demo pass (Claude Code, for Swagat, branch `feature/app-v3-brand`)
+
+- **Renamed** the app to **Vol Eats** (`APP_NAME` in `lib/config.ts`, README). localStorage keys keep the `cf.` prefix so existing data still loads.
+- **Fonts** via `next/font/google`, self-hosted with no runtime requests to Google: **Bricolage Grotesque** for headings, big numbers and the wordmark, **DM Sans** for body.
+  - The tokens are `--app-font-display` and `--app-font-sans` in `app/globals.css`. The original names were circular with Tailwind's `--font-sans`, so the fonts never applied.
+  - Page titles are bolder and larger (`text-3xl font-extrabold`).
+- **Logo:** `components/brand/logo.tsx` (`LogoMark`, `Logo`), a "V" rising out of a bowl on UT orange. The V doubles as a check mark.
+  - Used on login, the Today header, every onboarding step, 404 and the error screen.
+  - `app/icon.svg` is the browser tab icon. It replaces the Next.js `favicon.ico`.
+- **Demo bug fixed:** Next keeps pages in memory, so opening Log → Add meal a second time showed the previous screen stuck on "Saving…" (disabled), and the meal couldn't be saved.
+  - `/log/add` now resets its busy state and remounts the form after saving. The targets screen resets too. Plate picks already did this (Supul's change).
+- **Demo path checked end to end with mocks:** Reset app → Today 640 cal → Food → log a plate (1,830) → Log → photo log twice (2,450, both saved) → Profile dark/light → Reset app → 640 again.
+  - Also checked: no overflow at 360px, 81 tests passing.
+  - Lighthouse accessibility is 100 on login, Today, Food, Log, Profile and onboarding, in light and dark.
+
 ## 2026-11-14 — App v3, Person A, Step 2: Log tab with calendar (Claude Code, for Swagat, branch `feature/app-v3-log`)
 
 - **`/log`** is now the meal tracker:

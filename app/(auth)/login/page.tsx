@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { Flame } from "lucide-react";
+import { LogoMark } from "@/components/brand/logo";
 import { Button } from "@/components/ui/button";
 import { Field, Input, a11y } from "@/components/ui/field";
 import { api } from "@/lib/api";
@@ -54,10 +54,8 @@ export default function LoginPage() {
   return (
     <main className="mx-auto flex min-h-dvh max-w-(--content-max) flex-col px-4 pb-8 pt-16">
       <div className="flex-1">
-        <div className="flex size-14 items-center justify-center rounded-lg bg-primary text-primary-fg">
-          <Flame aria-hidden className="size-8" />
-        </div>
-        <h1 className="mt-6 font-display text-3xl font-bold">{APP_NAME}</h1>
+        <LogoMark size={64} />
+        <h1 className="mt-6 font-display text-4xl font-extrabold tracking-tight">{APP_NAME}</h1>
         <p className="mt-2 text-muted">{APP_TAGLINE}</p>
       </div>
 

@@ -1,5 +1,5 @@
 // App-wide constants. Change the product name here only.
-export const APP_NAME = "Campus Fuel";
+export const APP_NAME = "Vol Eats";
 export const APP_TAGLINE = "Hit your macros with what UTK is serving today.";
 
 /** When true, lib/api.ts talks to lib/mock-api.ts instead of the real routes. */

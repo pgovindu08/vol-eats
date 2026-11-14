@@ -41,6 +41,7 @@ function LogScreen() {
   const isToday = date === today;
   const [tab, setTab] = useState<Tab>(searchParams.get("mode") === "quick" ? "quick" : "photo");
   const [busy, setBusy] = useState(false);
+  const [formKey, setFormKey] = useState(0);
   const mealPeriod = currentMealPeriod();
 
   async function save(input: FoodLogInput) {
@@ -59,6 +60,10 @@ function LogScreen() {
     if (savedName) {
       toast(`Logged ${savedName}${isToday ? "" : ` on ${shortDay(date)}`}`);
       router.push(isToday ? "/log" : `/log?date=${date}`);
+      // Next keeps this page alive in memory after navigating away. Reset it so the next
+      // "Add meal" starts with an empty form instead of a stuck "Saving…" button.
+      setBusy(false);
+      setFormKey((k) => k + 1);
     } else {
       setBusy(false);
     }
@@ -97,7 +102,7 @@ function LogScreen() {
         ))}
       </div>
 
-      <div role="tabpanel" id={`panel-${tab}`} aria-labelledby={`tab-${tab}`}>
+      <div key={formKey} role="tabpanel" id={`panel-${tab}`} aria-labelledby={`tab-${tab}`}>
         {tab === "photo" ? (
           <PhotoLog mealPeriod={mealPeriod} busy={busy} onSave={save} saveLabel={isToday ? "Save to today" : `Save to ${shortDay(date)}`} />
         ) : (
