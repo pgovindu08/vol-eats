@@ -4,8 +4,8 @@
   "serviceAreaId": 125621,
   "source": "https://dining.utk.edu/vendor/rocky-top-dining-hall/",
   "date": "2026-11-15",
-  "scrapedAt": "2026-11-15T15:40:39.066Z",
-  "itemCount": 277,
+  "scrapedAt": "2026-11-16T02:11:15.783Z",
+  "itemCount": 282,
   "items": [
     {
       "id": "60838",
@@ -388,6 +388,44 @@
       "ingredients": "Yellow Cake (SUGAR, ENRICHED FLOUR BLEACHED (WHEAT FLOUR, NIACIN, IRON, THIAMIN MONONITRATE, RIBOFLAVIN, FOLIC ACID), PALM OIL, DEXTROSE. CONTAINS 2% OR LESS OF: LEAVENING (SODIUM ALUMINUM PHOSPHATE, BAKING SODA), PROPYLENE GLYCOL MONO AND DIESTERS OF FATTY ACIDS, MODIFIED CORN STARCH, EGGS WITH SODIUM SILICOALUMINATE, EGG WHITE, SALT, NONFAT MILK, MONO AND DIGLYCERIDES, SOY LECITHIN, XANTHAN GUM, WHEY, NATURAL FLAVOR, ANNATTO AND TURMERIC EXTRACT COLOR.), Vanilla Icing (SUGAR, PALM OIL, WATER, CORN SYRUP, CORN STARCH. CONTAINS 2% OR LESS OF: SALT,MONOGLYCERIDES, YELLOWS 5 ; 6 AND OTHER COLOR ADDED, POLYSORBATE 60, POTASSIUM SORBATE (PRESERVATIVE), NATURALAND ARTIFICIAL FLAVOR, SODIUM STEAROYL LACTYLATE, SODIUM ACID PYROPHOSPHATE, CITRIC ACID, NONFAT MILK.), Banana, Water, Chocolate Chips (INGREDIENTS: SUGAR, CHOCOLATE LIQUOR, COCOA BUTTER, MILKFAT, SOY LECITHIN, NATURAL FLAVOR. CONTAINS: MILK, SOY.)"
     },
     {
+      "id": "103280",
+      "name": "Blueberry Crumb Cupcake",
+      "station": "Bakery",
+      "period": "Lunch",
+      "description": "Blueberry coffee cake, topped with a buttery streusel crumble & light dusting of powdered sugar",
+      "serving": "each",
+      "nutrition": {
+        "calories": 160,
+        "total_fat": 4.5,
+        "saturated_fat": 2.5,
+        "trans_fat": 0,
+        "cholesterol": 5,
+        "sodium": 172,
+        "carbohydrate": 28,
+        "fiber": 1,
+        "total_sugars": 16,
+        "protein": 1.5,
+        "calcium": 1.2,
+        "iron": 0.7,
+        "potassium": 5
+      },
+      "vegan": false,
+      "vegetarian": true,
+      "contains": {
+        "soy": true,
+        "eggs": true,
+        "fish": false,
+        "milk": true,
+        "wheat": true,
+        "gluten": true,
+        "peanut": false,
+        "sesame": null,
+        "shellfish": false,
+        "tree_nuts": false
+      },
+      "ingredients": "Mix (CAKE MIX: ENRICHED FLOUR BLEACHED(WHEAT FLOUR, NIACIN, IRON, THIAMIN MONONITRATE,RIBOFLAVIN, FOLIC ACID), SUGAR, PALM OIL, LEAVENING(BAKING SODA, SODIUM ALUMINUM PHOSPHATE).CONTAINS 2% OR LESS OF: DEXTROSE, NONFAT MILK,EGG YOLK WITH SODIUM SILICOALUMINATE, SALT,MODIFIED CORN STARCH, EGGS WITH SODIUMSILICOALUMINATE, XANTHAN GUM, SOY LECITHIN, WHEY,NATURAL FLAVOR, ANNATTO AND TURMERIC EXTRACTCOLOR.TOPPING MIX: ENRICHED FLOUR BLEACHED(WHEAT FLOUR, NIACIN, IRON, THIAMIN MONONITRATE,RIBOFLAVIN, FOLIC ACID), BROWN SUGAR, SUGAR, PALMOIL, CINNAMON, SOY FLOUR, EGG, NONFAT MILK.), Water, Blueberries, Topping (CAKE MIX: ENRICHED FLOUR BLEACHED(WHEAT FLOUR, NIACIN, IRON, THIAMIN MONONITRATE,RIBOFLAVIN, FOLIC ACID), SUGAR, PALM OIL, LEAVENING(BAKING SODA, SODIUM ALUMINUM PHOSPHATE).CONTAINS 2% OR LESS OF: DEXTROSE, NONFAT MILK,EGG YOLK WITH SODIUM SILICOALUMINATE, SALT,MODIFIED CORN STARCH, EGGS WITH SODIUMSILICOALUMINATE, XANTHAN GUM, SOY LECITHIN, WHEY,NATURAL FLAVOR, ANNATTO AND TURMERIC EXTRACTCOLOR.TOPPING MIX: ENRICHED FLOUR BLEACHED(WHEAT FLOUR, NIACIN, IRON, THIAMIN MONONITRATE,RIBOFLAVIN, FOLIC ACID), BROWN SUGAR, SUGAR, PALMOIL, CINNAMON, SOY FLOUR, EGG, NONFAT MILK.), Powdered Sugar"
+    },
+    {
       "id": "60993",
       "name": "Chocolate Chip Cookie",
       "station": "Bakery",
@@ -616,6 +654,44 @@
       "ingredients": "Jelly (High Fructose Corn Syrup, Corn Syrup, Concentrated Concord Grape Juice, Concentrated White Grape Juice, Contains 2% or less of Sugar, Pectin, Citric Acid, Sodium Benzoate (Preservative), Sodium Citrate.)"
     },
     {
+      "id": "103281",
+      "name": "Powdered Sugar Donut Bites",
+      "station": "Bakery",
+      "period": "Lunch",
+      "description": "Freshly baked donut bites coated with powdered sugar",
+      "serving": "4 each",
+      "nutrition": {
+        "calories": 210,
+        "total_fat": 12,
+        "saturated_fat": 5.5,
+        "trans_fat": 0,
+        "cholesterol": 10,
+        "sodium": 302,
+        "carbohydrate": 23,
+        "fiber": 0,
+        "total_sugars": 10,
+        "protein": 2.2,
+        "calcium": 6.6,
+        "iron": 1.2,
+        "potassium": 40
+      },
+      "vegan": false,
+      "vegetarian": true,
+      "contains": {
+        "soy": true,
+        "eggs": true,
+        "fish": false,
+        "milk": true,
+        "wheat": true,
+        "gluten": true,
+        "peanut": false,
+        "sesame": false,
+        "shellfish": false,
+        "tree_nuts": false
+      },
+      "ingredients": "Donut Holes (ENRICHED UNBLEACHED WHEAT FLOUR (WHEAT FLOUR,NIACIN, REDUCED IRON, THIAMINE MONONITRATE, ENZYME, RIBOFLAVIN, FOLIC ACID),PALM OIL, SUGAR, WATER, SOYBEAN OIL, CONTAINS LESS THAN 2% OF THEFOLLOWING: DEFATTED SOY FLOUR, EGG YOLKS, LEAVENING (SODIUM ACIDPYROPHOSPHATE, BAKING SODA), DEXTROSE, WHEAT STARCH, SALT, SKIM MILK,MODIFIED WHEAT STARCH, POTATO FLOUR, ARTIFICIAL FLAVOR, SODIUM STEAROYLLACTYLATE.), Powdered Sugar"
+    },
+    {
       "id": "60957",
       "name": "Strawberry Cream Cheese",
       "station": "Bakery",
@@ -652,6 +728,44 @@
         "tree_nuts": false
       },
       "ingredients": "Cream Cheese (PASTEURIZED MILK AND CREAM, SALT, CAROB BEAN GUM, CHEESE CULTURE), Strawberry Preserve (Strawberries, High Fructose Corn Syrup, Corn  Syrup, Sugar, Fruit Pectin, Citric Acid.)"
+    },
+    {
+      "id": "103282",
+      "name": "Strawberry Danish",
+      "station": "Bakery",
+      "period": "Lunch",
+      "description": "Freshly baked sugar-topped cheese pastry with strawberry preserves",
+      "serving": "each",
+      "nutrition": {
+        "calories": 390,
+        "total_fat": 19.5,
+        "saturated_fat": 9,
+        "trans_fat": 0,
+        "cholesterol": 30,
+        "sodium": 420,
+        "carbohydrate": 50,
+        "fiber": 1,
+        "total_sugars": 27,
+        "protein": 5.7,
+        "calcium": 39.2,
+        "iron": 1.2,
+        "potassium": 85
+      },
+      "vegan": null,
+      "vegetarian": null,
+      "contains": {
+        "soy": null,
+        "eggs": null,
+        "fish": null,
+        "milk": null,
+        "wheat": null,
+        "gluten": null,
+        "peanut": null,
+        "sesame": null,
+        "shellfish": null,
+        "tree_nuts": null
+      },
+      "ingredients": "Cheese Danish, Strawberry Preserve"
     },
     {
       "id": "60994",
@@ -5746,6 +5860,44 @@
       "ingredients": "Balsamic Vinaigrette Dressing (WATER, HIGH FRUCTOSE CORN SYRUP, BALSAMIC VINEGAR, RED WINE VINEGAR, VEGETABLE OIL (SOYBEAN AND/OR CANOLA), OLIVE OIL, CONTAINS LESS THAN 2% OF SALT, DRIED GARLIC, XANTHAN GUM, SPICE, SODIUM ALGINATE, PROPYLENE GLYCOL ALGINATE, CALCIUM DISODIUM EDTA (TO PROTECT FLAVOR), SULFITING AGENTS.)"
     },
     {
+      "id": "103279",
+      "name": "Black Bean & Corn Salad",
+      "station": "Produce Market",
+      "period": "Lunch",
+      "description": "Black beans, roasted corn, bell peppers and jalapeno tossed with a cilantro-lime vinaigrette",
+      "serving": "1/2 cup",
+      "nutrition": {
+        "calories": 110,
+        "total_fat": 3.5,
+        "saturated_fat": 0.5,
+        "trans_fat": 0,
+        "cholesterol": 0,
+        "sodium": 169,
+        "carbohydrate": 17,
+        "fiber": 3,
+        "total_sugars": 2,
+        "protein": 4.1,
+        "calcium": 27.7,
+        "iron": 1.2,
+        "potassium": 320
+      },
+      "vegan": true,
+      "vegetarian": true,
+      "contains": {
+        "soy": false,
+        "eggs": false,
+        "fish": false,
+        "milk": false,
+        "wheat": false,
+        "gluten": false,
+        "peanut": false,
+        "sesame": false,
+        "shellfish": false,
+        "tree_nuts": false
+      },
+      "ingredients": "Black Beans, Corn Kernels, Lime Juice, Red Bell Pepper, Green Bell Pepper, Yellow Bell Pepper, Onion, Jalapeno Pepper, Vegetable Oil Blend (Vegetable Oil (May contain one or more of the following: Soybean, Canola, Corn, Sunflower Oil); Olive Oil; Colorant: Beta-Carotene E160a(i)), Cilantro, Vegetable Oil Blend (Vegetable Oil (May contain one or more of the following: Soybean, Canola, Corn, Sunflower Oil); Olive Oil; Colorant: Beta-Carotene E160a(i)), Garlic, Cumin, Chili Powder (CHILI PEPPER, SPICES, SALT, SILICON DIOXIDE (TO MAKE FREE FLOWING) AND GARLIC), Kosher Salt, Kosher Salt, Black Pepper"
+    },
+    {
       "id": "60913",
       "name": "Black Olives",
       "station": "Produce Market",
@@ -7418,6 +7570,82 @@
       "ingredients": "Tomato "
     },
     {
+      "id": "103284",
+      "name": "Broccoli  Cheddar Soup",
+      "station": "Soup",
+      "period": "Lunch",
+      "description": "Fresh cut broccoli and seasonings simmered in a velvety smooth cheese sauce",
+      "serving": "6 fl oz",
+      "nutrition": {
+        "calories": 190,
+        "total_fat": 13,
+        "saturated_fat": 7.5,
+        "trans_fat": 0,
+        "cholesterol": 35,
+        "sodium": 1083,
+        "carbohydrate": 11,
+        "fiber": 1,
+        "total_sugars": 4,
+        "protein": 7.4,
+        "calcium": 222.2,
+        "iron": 0.5,
+        "potassium": 180
+      },
+      "vegan": false,
+      "vegetarian": false,
+      "contains": {
+        "soy": false,
+        "eggs": false,
+        "fish": false,
+        "milk": true,
+        "wheat": false,
+        "gluten": false,
+        "peanut": false,
+        "sesame": false,
+        "shellfish": false,
+        "tree_nuts": false
+      },
+      "ingredients": "Broccoli Cheddar Cheese Soup (Water, Broccoli, Pasteurized Processed Cheddar Cheese (Cheddar Cheese [Pasteurized Milk, Cheese Culture, Salt, Enzymes], Water, Sodium Phosphate, Milkfat, Salt, Apocarotenal [Color]), Pasteurized Process Cheese Spread (American Cheese [Cultured Milk, Salt, Enzymes], Water, Whey, Sodium Phosphate, Whey Protein Concentrate, Skim Milk, Salt, Milkfat, Artificial Color), Heavy Cream, Yellow Onions, Modified Food Starch, Broccoli Puree, Contains less than 2% of Salt, Cooked Chicken Meat, Sugar, Chicken Fat, Yeast Extract, Chicken Stock, Sodium Phosphate, Mono- and Diglycerides, Whey Powder, Hydrolyzed Corn Protein, Powdered Butter Blend (Whey Solids, Enzyme Modified Butter, Maltodextrin, Salt, Dehydrated Butter, Guar Gum, Annatto [Color], Turmeric [Color]), Onion Powder, Disodium Inosinate and Disodium Guanylate, Turmeric, Natural Flavor, Yellow 5, Red 40.)"
+    },
+    {
+      "id": "103283",
+      "name": "Broccoli Cheddar Soup",
+      "station": "Soup",
+      "period": "Lunch",
+      "description": "Chunks of fresh cut broccoli and seasonings simmered in a velvety smooth cheese sauce",
+      "serving": "6 fl oz",
+      "nutrition": {
+        "calories": 160,
+        "total_fat": 11.5,
+        "saturated_fat": 6.5,
+        "trans_fat": 0,
+        "cholesterol": 35,
+        "sodium": 963,
+        "carbohydrate": 10,
+        "fiber": 1,
+        "total_sugars": 3,
+        "protein": 6.6,
+        "calcium": 197.5,
+        "iron": 0.4,
+        "potassium": 160
+      },
+      "vegan": false,
+      "vegetarian": false,
+      "contains": {
+        "soy": false,
+        "eggs": false,
+        "fish": false,
+        "milk": true,
+        "wheat": false,
+        "gluten": false,
+        "peanut": false,
+        "sesame": false,
+        "shellfish": false,
+        "tree_nuts": false
+      },
+      "ingredients": "Broccoli Cheddar Cheese Soup (Water, Broccoli, Pasteurized Processed Cheddar Cheese (Cheddar Cheese [Pasteurized Milk, Cheese Culture, Salt, Enzymes], Water, Sodium Phosphate, Milkfat, Salt, Apocarotenal [Color]), Pasteurized Process Cheese Spread (American Cheese [Cultured Milk, Salt, Enzymes], Water, Whey, Sodium Phosphate, Whey Protein Concentrate, Skim Milk, Salt, Milkfat, Artificial Color), Heavy Cream, Yellow Onions, Modified Food Starch, Broccoli Puree, Contains less than 2% of Salt, Cooked Chicken Meat, Sugar, Chicken Fat, Yeast Extract, Chicken Stock, Sodium Phosphate, Mono- and Diglycerides, Whey Powder, Hydrolyzed Corn Protein, Powdered Butter Blend (Whey Solids, Enzyme Modified Butter, Maltodextrin, Salt, Dehydrated Butter, Guar Gum, Annatto [Color], Turmeric [Color]), Onion Powder, Disodium Inosinate and Disodium Guanylate, Turmeric, Natural Flavor, Yellow 5, Red 40.)"
+    },
+    {
       "id": "60873",
       "name": "Goldfish® Crackers",
       "station": "Soup",
@@ -7568,44 +7796,6 @@
         "tree_nuts": false
       },
       "ingredients": "Tomato Basil Soup (INGREDIENTS: Chopped Tomatoes (tomatoes, salt, naturally derived citric acid), Vegetable Stock (water, onions, cabbage, celery, mushrooms, carrots, turnips, black peppercorns, mustard seed, dill weed, thyme, bay leaves, marjoram), Onions, Carrots, Basil, Tomato Paste (tomatoes), Extra Virgin Olive Oil, Canola Oil, Garlic, Sea Salt, Dried Basil, Bay Leaves.)"
-    },
-    {
-      "id": "103101",
-      "name": "Twice Stuffed Baked Potato Soup",
-      "station": "Soup",
-      "period": "Lunch",
-      "description": "Diced russet potatoes, onions, chives, cheddar and Parmesan cheese sauce",
-      "serving": "6 fl oz",
-      "nutrition": {
-        "calories": 240,
-        "total_fat": 15,
-        "saturated_fat": 7.5,
-        "trans_fat": 0.5,
-        "cholesterol": 45,
-        "sodium": 626,
-        "carbohydrate": 22,
-        "fiber": 1,
-        "total_sugars": 2,
-        "protein": 4.3,
-        "calcium": 38.7,
-        "iron": 0.7,
-        "potassium": 300
-      },
-      "vegan": false,
-      "vegetarian": false,
-      "contains": {
-        "soy": true,
-        "eggs": false,
-        "fish": false,
-        "milk": true,
-        "wheat": true,
-        "gluten": true,
-        "peanut": false,
-        "sesame": false,
-        "shellfish": false,
-        "tree_nuts": false
-      },
-      "ingredients": "Baked Potato Soup (WATER,  DEHYDRATED POTATOES, HEAVY CREAM (FROM MILK), ONIONS, SHREDDED HASH BROWN  POTATOES (POTATOES, DEXTROSE), CREAM CHEESE (PASTEURIZED MILK AND CREAM,  SALT, CAROB BEAN GUM, CHEESE CULTURE), CONTAINS LESS THAN 2% OF ENRICHED  FLOUR (WHEAT FLOUR, NIACIN, REDUCED IRON, THIAMINE MONONITRATE, RIBOFLAVIN,  FOLIC ACID), CANOLA OIL, BACON BITS (PORK, WATER, SALT, SUGAR, SODIUM  PHOSPHATE, SODIUM ERYTHORBATE, SODIUM NITRITE), MODIFIED FOOD STARCH, POTATO  FLAKES, GREEN ONIONS, SALT, CHICKEN BASE (CHICKEN MEAT INCLUDING CHICKEN  JUICES, HYDROLYZED SOY AND CORN PROTEIN, POTATO FLOUR, FLAVORINGS, AUTOLYZED  YEAST EXTRACT, CARROT POWDER, TURMERIC), PARMESAN CHEESE (CULTURED PART-SKIM  MILK, SALT, ENZYMES), CHIVES, PEPPER SAUCE (VINEGAR, RED PEPPER, SALT),  SPICES, SUGAR)"
     },
     {
       "id": "60807",
@@ -9204,42 +9394,17 @@
       "ingredients": "Russet Potato, Vegetable Oil Blend (Vegetable Oil (May contain one or more of the following: Soybean, Canola, Corn, Sunflower Oil); Olive Oil; Colorant: Beta-Carotene E160a(i)), Montreal Steak Seasoning (COARSE SALT, SPICES (INCLUDING BLACK PEPPER AND RED PEPPER), GARLIC, ONION, SUNFLOWER OIL, NATURAL FLAVOR AND EXTRACTIVES OF PAPRIKA.)"
     },
     {
-      "id": "60798",
-      "name": "Citrus Braised Pork",
+      "id": "103285",
+      "name": "Beef Goulash",
       "station": "True Balance",
       "period": "Dinner",
-      "description": "Pork marinated in lime, orange juice, garlic and bay leaf",
-      "serving": "1/2 cup",
-      "nutrition": {
-        "calories": 180,
-        "total_fat": 11,
-        "saturated_fat": 4,
-        "trans_fat": 0,
-        "cholesterol": 55,
-        "sodium": 193,
-        "carbohydrate": 2,
-        "fiber": 0,
-        "total_sugars": 1,
-        "protein": 16,
-        "calcium": 19.3,
-        "iron": 1.1,
-        "potassium": 320
-      },
-      "vegan": false,
-      "vegetarian": false,
-      "contains": {
-        "soy": false,
-        "eggs": false,
-        "fish": false,
-        "milk": false,
-        "wheat": false,
-        "gluten": false,
-        "peanut": false,
-        "sesame": false,
-        "shellfish": false,
-        "tree_nuts": false
-      },
-      "ingredients": "Pork Shoulder, Orange Juice, Onion, Lime Juice, Garlic, Kosher Salt, Black Pepper"
+      "description": null,
+      "serving": null,
+      "nutrition": {},
+      "vegan": null,
+      "vegetarian": null,
+      "contains": {},
+      "ingredients": null
     },
     {
       "id": "60771",

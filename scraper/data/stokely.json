@@ -4,8 +4,8 @@
   "serviceAreaId": 116094,
   "source": "https://dining.utk.edu/vendor/stokely-dining-hall/",
   "date": "2026-11-15",
-  "scrapedAt": "2026-11-15T15:40:39.251Z",
-  "itemCount": 290,
+  "scrapedAt": "2026-11-16T02:11:16.036Z",
+  "itemCount": 295,
   "items": [
     {
       "id": "72306",
@@ -5898,6 +5898,82 @@
       "ingredients": "Mushrooms"
     },
     {
+      "id": "103278",
+      "name": "Garlic Roasted Broccoli",
+      "station": "Pasta",
+      "period": "Dinner",
+      "description": "Oven-roasted broccoli and garlic",
+      "serving": "1/2 cup",
+      "nutrition": {
+        "calories": 50,
+        "total_fat": 3.5,
+        "saturated_fat": 0.5,
+        "trans_fat": 0,
+        "cholesterol": 0,
+        "sodium": 66,
+        "carbohydrate": 4,
+        "fiber": 2,
+        "total_sugars": 1,
+        "protein": 1.8,
+        "calcium": 30,
+        "iron": 0.5,
+        "potassium": 190
+      },
+      "vegan": true,
+      "vegetarian": true,
+      "contains": {
+        "soy": false,
+        "eggs": false,
+        "fish": false,
+        "milk": false,
+        "wheat": false,
+        "gluten": false,
+        "peanut": false,
+        "sesame": false,
+        "shellfish": false,
+        "tree_nuts": false
+      },
+      "ingredients": "Broccoli, Canola Oil, Garlic, Kosher Salt, Black Pepper"
+    },
+    {
+      "id": "103274",
+      "name": "Pimento Mac & Cheese",
+      "station": "Pasta",
+      "period": "Dinner",
+      "description": "White cheddar macaroni & cheese, roasted red peppers",
+      "serving": "1/2 serving",
+      "nutrition": {
+        "calories": 210,
+        "total_fat": 11,
+        "saturated_fat": 6.5,
+        "trans_fat": 0,
+        "cholesterol": 30,
+        "sodium": 749,
+        "carbohydrate": 18,
+        "fiber": 0,
+        "total_sugars": 1,
+        "protein": 9.2,
+        "calcium": 213.9,
+        "iron": 0.8,
+        "potassium": 140
+      },
+      "vegan": false,
+      "vegetarian": false,
+      "contains": {
+        "soy": null,
+        "eggs": true,
+        "fish": null,
+        "milk": true,
+        "wheat": true,
+        "gluten": true,
+        "peanut": null,
+        "sesame": null,
+        "shellfish": null,
+        "tree_nuts": null
+      },
+      "ingredients": "Macaroni and Cheese (Cavatappi Pasta (Semolina Wheat Flour [Enriched with Niacin, Iron, Thiamine Mononitrate, Riboflavin, Folic Acid], Egg White), Water, Whole Milk, Pasteurized Process Cheese Spread (Cheddar and Colby Cheese [Pasteurized Milk , Cheese Culture, Salt, Enzymes], Water, Whey, Sodium Phosphate, Whey Protein Concentrate, Skim Milk, Milk Fat, Salt, Carrageenan, Cellulose Gum), Pasteurized Process White Cheddar Cheese (Cultured Milk, Water, Cream, Skim Milk, Sodium Phosphates, Salt, Lactic Acid, Enzymes), White Cheddar Cheese (Pasteurized Milk, Cheese Culture, Salt, Enzymes), Butter (Sweet Cream, Salt), Modified Corn Starch, Parmesan Cheese (Part- Skim Milk, Cheese Culture, Salt, Enzymes), Parmesan and Romano Cheese Base (Parmesan and Romano Cheese [Milk, Culture, Enzymes, Salt], Water, Whey, Salt, Modified Corn Starch, Cultured Buttermilk Solids, Calcium and Sodium Caseinates, Natural Flavoring, and Garlic Powder), Cheddar Cheese Flavor (Cheddar Cheese [Milk,  Cultures, Salt, Enzymes], Whey Disodium Phosphate, Enzymes), Salt, Spice, Nisin Preparation (Salt, Nisin [A Natural Antimicrobial]).), Roasted Red Peppers"
+    },
+    {
       "id": "72148",
       "name": "Assorted Bagels",
       "station": "Pizza",
@@ -6200,6 +6276,19 @@
         "tree_nuts": false
       },
       "ingredients": "Variety Muffin Mix (ENRICHED FLOUR BLEACHED (WHEAT FLOUR, NIACIN,  IRON, THIAMIN MONONITRATE, RIBOFLAVIN, FOLIC ACID), SUGAR, PALM OIL, MODIFIED CORN STARCH, MODIFIED WHEY. CONTAINS  2% OR LESS OF: LEAVENING (SODIUM ACID PYROPHOSPHATE, BAKING SODA, MONOCALCIUM PHOSPHATE), DEXTROSE, MONO AND  DIGLYCERIDES, SALT, EGGS WITH SODIUM SILICOALUMINATE, XANTHAN GUM, NONFAT MILK, NATURAL FLAVOR, SOY FLOUR.), Water, Banana, Granulated Sugar"
+    },
+    {
+      "id": "103277",
+      "name": "Cheese Pizza",
+      "station": "Pizza",
+      "period": "Lunch",
+      "description": null,
+      "serving": null,
+      "nutrition": {},
+      "vegan": null,
+      "vegetarian": null,
+      "contains": {},
+      "ingredients": null
     },
     {
       "id": "102408",
@@ -9622,6 +9711,44 @@
       "ingredients": "Water, Gravy Mix (MALTODEXTRIN, WHEY, BLEACHED ENRICHED FLOUR (WHEAT FLOUR, NIACIN, REDUCED IRON, THIAMINE MONONITRATE, RIBOFLAVIN, FOLIC ACID), MODIFIEDCORNSTARCH, CANOLA OIL, SOYBEAN OIL, SKIM MILK, TAPIOCA STARCH, SALT, 2% OR LESS OF HYDROLYZED SOY, CORN AND WHEAT PROTEINS, SODIUM CASEINATE, XANTHAN GUM, SPICES, SUGAR, YEAST EXTRACT, CITRIC ACID, DISODIUM INOSINATE, NATURAL FLAVORS, DEXTROSE, DISODIUM GUANYLATE)"
     },
     {
+      "id": "103276",
+      "name": "Grits",
+      "station": "Traditions",
+      "period": "Lunch",
+      "description": "Homestyle grits",
+      "serving": "6 fl oz",
+      "nutrition": {
+        "calories": 90,
+        "total_fat": 0.5,
+        "saturated_fat": 0,
+        "trans_fat": 0,
+        "cholesterol": 0,
+        "sodium": 74,
+        "carbohydrate": 21,
+        "fiber": 1,
+        "total_sugars": 0,
+        "protein": 2.3,
+        "calcium": 5.9,
+        "iron": 1.2,
+        "potassium": 35
+      },
+      "vegan": true,
+      "vegetarian": true,
+      "contains": {
+        "soy": false,
+        "eggs": false,
+        "fish": false,
+        "milk": false,
+        "wheat": false,
+        "gluten": true,
+        "peanut": false,
+        "sesame": false,
+        "shellfish": false,
+        "tree_nuts": false
+      },
+      "ingredients": "Water, Grits (DEGERMINATED WHITE CORN GRITS, NIACINAMIDE*,  REDUCED IRON, THIAMIN MONONITRATE*, RIBOFLAVIN*, FOLIC ACID*. *ONE OF THE B  VITAMINS), Kosher Salt"
+    },
+    {
       "id": "72301",
       "name": "Hash Brown Potato Patty",
       "station": "Traditions",
@@ -9658,6 +9785,19 @@
         "tree_nuts": false
       },
       "ingredients": "Hash Brown Potato (Potatoes, Vegetable Oil (Contains One Or More Of The Following Oils: Canola, Soybean, Cottonseed, Sunflower, Corn). Contains 2% or less of Dehydrated Onion, Dextrose, Natural Flavor, Salt, Sodium Acid Pyrophosphate Added To MaintainColor.)"
+    },
+    {
+      "id": "103275",
+      "name": "Oatmeal",
+      "station": "Traditions",
+      "period": "Lunch",
+      "description": null,
+      "serving": null,
+      "nutrition": {},
+      "vegan": null,
+      "vegetarian": null,
+      "contains": {},
+      "ingredients": null
     },
     {
       "id": "72302",
