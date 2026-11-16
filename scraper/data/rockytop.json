@@ -4,8 +4,8 @@
   "serviceAreaId": 125621,
   "source": "https://dining.utk.edu/vendor/rocky-top-dining-hall/",
   "date": "2026-11-16",
-  "scrapedAt": "2026-11-16T09:49:39.178Z",
-  "itemCount": 278,
+  "scrapedAt": "2026-11-16T20:30:22.996Z",
+  "itemCount": 273,
   "items": [
     {
       "id": "73214",
@@ -2098,44 +2098,6 @@
       "ingredients": "Potato Chips (Potatoes, Vegetable Oil (Contains One Or More Of The Following Oils: Canola, Soybean, Cottonseed, Sunflower, Corn). Contains 2% or less of Dextrose, Salt, Sodium Acid Pyrophosphate Added To Maintain Color.), Barbecue Seasoning (SUGAR, MALTED BARLEY FLOUR, SALT, DEXTROSE, TOMATO, TORULA YEAST, SPICES(INCLUDING PAPRIKA, CHILI PEPPER), ONION, CORN MALTODEXTRIN, NATURAL FLAVOR (INCLUDINGMESQUITE SMOKE), GARLIC, CALCIUM SILICATE (TO MAKE FREE FLOWING), EXTRACTIVES OF PAPRIKA& SULFITING AGENTS.), Kosher Salt, Granulated Sugar"
     },
     {
-      "id": "73290",
-      "name": "Buffalo Sauce",
-      "station": "Grill - Toppings",
-      "period": "Lunch",
-      "description": "Spicy hot Buffalo wing sauce",
-      "serving": "2 tablespoon",
-      "nutrition": {
-        "calories": 10,
-        "total_fat": 0.5,
-        "saturated_fat": 0,
-        "trans_fat": 0,
-        "cholesterol": 0,
-        "sodium": 726,
-        "carbohydrate": 1,
-        "fiber": 0,
-        "total_sugars": 0,
-        "protein": 0.2,
-        "calcium": 4.4,
-        "iron": 0.1,
-        "potassium": 45
-      },
-      "vegan": true,
-      "vegetarian": true,
-      "contains": {
-        "soy": false,
-        "eggs": false,
-        "fish": false,
-        "milk": false,
-        "wheat": false,
-        "gluten": false,
-        "peanut": false,
-        "sesame": false,
-        "shellfish": false,
-        "tree_nuts": false
-      },
-      "ingredients": "Buffalo Wing Sauce (DISTILLED VINEGAR, AGED CAYENNE RED PEPPERS, SALT, WATER, CANOLA OIL, PAPRIKA, XANTHAN GUM (THICKENER), GARLIC POWDER & NATURAL FLAVOR.)"
-    },
-    {
       "id": "73197",
       "name": "Dill Pickle Slices",
       "station": "Grill - Toppings",
@@ -2174,82 +2136,6 @@
       "ingredients": "Pickle Slices (FRESH  CUCUMBERS, WATER, SALT, DISTILLED VINEGAR, CONTAINS LESS THAN 2% OF DRIED  GARLIC, CALCIUM CHLORIDE, SPICE, SODIUM BENZOATE (TO PRESERVE FLAVOR),  MUSTARD SEED, DRIED RED PEPPERS, NATURAL FLAVOR, POLYSORBATE 80, OLEORESIN  TURMERIC)"
     },
     {
-      "id": "73389",
-      "name": "Garlic Parmesan Sauce",
-      "station": "Grill - Toppings",
-      "period": "Lunch",
-      "description": "Garlic Parmesan Sauce",
-      "serving": "1 serving",
-      "nutrition": {
-        "calories": 2670,
-        "total_fat": 262,
-        "saturated_fat": 46,
-        "trans_fat": 2.5,
-        "cholesterol": 45,
-        "sodium": 14630,
-        "carbohydrate": 62,
-        "fiber": 8,
-        "total_sugars": 18,
-        "protein": 27.7,
-        "calcium": 582.5,
-        "iron": 4,
-        "potassium": 860
-      },
-      "vegan": false,
-      "vegetarian": false,
-      "contains": {
-        "soy": true,
-        "eggs": false,
-        "fish": false,
-        "milk": true,
-        "wheat": false,
-        "gluten": false,
-        "peanut": false,
-        "sesame": false,
-        "shellfish": false,
-        "tree_nuts": false
-      },
-      "ingredients": "Wing Sauce (WATER, VEGETABLE OIL (SOYBEAN AND/OR CANOLA),  MARGARINE (SOYBEAN AND HYDROGENATED SOYBEAN OILS, WATER, SALT, MONO AND  DIGLYCERIDES, SOY LECITHIN, SODIUM BENZOATE [PRESERVATIVE], NATURAL &  ARTIFICIAL FLAVOR, BETA-CAROTENE [COLOR], VITAMIN A PALMITATE), DISTILLED  VINEGAR, GARLIC,* PARMESAN CHEESE (PASTEURIZED PART-SKIM MILK, CHEESE  CULTURES, SALT, ENZYMES), SALT, CONTAINS LESS THAN 2% OF AGED CAYENNE RED  PEPPER, SUGAR, ONION CONCENTRATE (ONION JUICE, ONION JUICE CONCENTRATE, SALT,  ONION OIL), PHOSPHORIC ACID, WHEY PROTEIN CONCENTRATE, XANTHAN GUM, CITRIC  ACID, SPICE, NATURAL FLAVOR, POLYSORBATE 60, PROPYLENE GLYCOL ALGINATE,  SORBIC ACID AND SODIUM BENZOATE (PRESERVATIVES), BETA CAROTENE (COLOR),  LACTIC ACID, CALCIUM DISODIUM EDTA (TO PROTECT FLAVOR). *DRIED.)"
-    },
-    {
-      "id": "73291",
-      "name": "Korean BBQ Sauce",
-      "station": "Grill - Toppings",
-      "period": "Lunch",
-      "description": "Tangy tomato barbecue sauce",
-      "serving": "2 tablespoon",
-      "nutrition": {
-        "calories": 50,
-        "total_fat": 0.5,
-        "saturated_fat": 0,
-        "trans_fat": 0,
-        "cholesterol": 0,
-        "sodium": 629,
-        "carbohydrate": 11,
-        "fiber": 0,
-        "total_sugars": 10,
-        "protein": 1,
-        "calcium": 8.8,
-        "iron": 0.3,
-        "potassium": 85
-      },
-      "vegan": null,
-      "vegetarian": null,
-      "contains": {
-        "soy": null,
-        "eggs": null,
-        "fish": null,
-        "milk": null,
-        "wheat": null,
-        "gluten": null,
-        "peanut": null,
-        "sesame": null,
-        "shellfish": null,
-        "tree_nuts": null
-      },
-      "ingredients": "Korean BBQ Sauce "
-    },
-    {
       "id": "73229",
       "name": "Lettuce",
       "station": "Grill - Toppings",
@@ -2286,44 +2172,6 @@
         "tree_nuts": false
       },
       "ingredients": "Lettuce"
-    },
-    {
-      "id": "73388",
-      "name": "Rocky Top Burger Sauce",
-      "station": "Grill - Toppings",
-      "period": "Lunch",
-      "description": "Blend of creamy mayonnaise, Mustard, Honey, Seasonings and Diced Jalapenos.  ",
-      "serving": "1 fl oz",
-      "nutrition": {
-        "calories": 140,
-        "total_fat": 10.5,
-        "saturated_fat": 1.5,
-        "trans_fat": 0,
-        "cholesterol": 5,
-        "sodium": 380,
-        "carbohydrate": 10,
-        "fiber": 0,
-        "total_sugars": 9,
-        "protein": 0.3,
-        "calcium": 4.9,
-        "iron": 0.3,
-        "potassium": 30
-      },
-      "vegan": false,
-      "vegetarian": true,
-      "contains": {
-        "soy": false,
-        "eggs": true,
-        "fish": false,
-        "milk": false,
-        "wheat": false,
-        "gluten": false,
-        "peanut": false,
-        "sesame": false,
-        "shellfish": false,
-        "tree_nuts": false
-      },
-      "ingredients": "Mayonnaise (SOYBEAN OIL, DISTILLED VINEGAR, EGG YOLK, WATER, HIGH FRUCTOSE CORN SYRUP, CONTAINS LESS THAN 2% OF SALT, MUSTARD BRAN, CALCIUM DISODIUM EDTA (TO PROTECT FLAVOR)), Honey, Jalapeno Chili Peppers, Dijon Mustard (Distilled White Vinegar, Mustard Seed, Water, Salt, White Wine, Citric Acid, Tartaric Acid, Fruit Pectin, Sugar, Spices), Cider Vinegar, Yellow Mustard (DISTILLED VINEGAR, WATER, #1 GRADE MUSTARD SEED, SALT, TURMERIC, PAPRIKA, SPICE, NATURAL FLAVOR & GARLIC POWDER.), Paprika"
     },
     {
       "id": "73293",
@@ -2400,44 +2248,6 @@
         "tree_nuts": false
       },
       "ingredients": "Tomato "
-    },
-    {
-      "id": "73390",
-      "name": "Sweet Chili BBQ Sauce",
-      "station": "Grill - Toppings",
-      "period": "Lunch",
-      "description": "BBQ sauce blended with sweet Chili sauce",
-      "serving": "1 fl oz",
-      "nutrition": {
-        "calories": 70,
-        "total_fat": 0,
-        "saturated_fat": 0,
-        "trans_fat": 0,
-        "cholesterol": 0,
-        "sodium": 254,
-        "carbohydrate": 17,
-        "fiber": 0,
-        "total_sugars": 15,
-        "protein": 0.3,
-        "calcium": 4.7,
-        "iron": 0.1,
-        "potassium": 85
-      },
-      "vegan": true,
-      "vegetarian": true,
-      "contains": {
-        "soy": false,
-        "eggs": false,
-        "fish": false,
-        "milk": false,
-        "wheat": false,
-        "gluten": false,
-        "peanut": false,
-        "sesame": false,
-        "shellfish": false,
-        "tree_nuts": false
-      },
-      "ingredients": "Barbecue Sauce (HIGH FRUCTOSE CORN SYRUP, DISTILLED VINEGAR, TOMATO PASTE, MODIFIED CORN STARCH, CONTAINS LESS THAN 2% OF SALT, PINEAPPLE JUICE CONCENTRATE, NATURAL SMOKE FLAVOR, SPICE, CARAMEL COLOR, MOLASSES, SODIUM BENZOATE (PRESERVATIVE), GARLIC,* MUSTARD FLOUR, CORN SYRUP, SUGAR, TAMARIND, NATURAL FLAVOR, CELERY SEED. *DRIED.), Sweet Thai Chili Sauce (WATER, SUGAR, RED WINE VINEGAR, RED  BELL PEPPERS (RED BELL PEPPERS, VINEGAR, SALT, POTASSIUM SORBATE AND SODIUM  BENZOATE [PRESERVATIVES], CALCIUM CHLORIDE), JALAPENO PEPPERS (RED JALAPENO PEPPERS, VINEGAR, WATER, SALT,  CALCIUM CHLORIDE, POTASSIUM SORBATE [PRESERVATIVE], CAPSICUM), MODIFIED FOOD  STARCH, 2% OR LESS OF SPICE, DRIED GARLIC, XANTHAN GUM, SALT.)"
     },
     {
       "id": "73292",
@@ -9090,26 +8900,26 @@
       "ingredients": "Water, Lentil, Russet Potato, Carrots, Celery, Onion, Red Bell Pepper, Vegetable Base (SAUTEED VEGETABLE PUREE MIX (CARROTS, ONIONS, CELERY), CORN STARCH, MALTODEXTRIN, VEGETABLE OIL (CORN AND/OR CANOLA OIL), HYDROLYZED CORN PROTEIN, YEAST EXTRACT, TOMATO POWDER, WATER, ONION POWDER, 2% OR LESS OF DISODIUM INOSINATE AND DISODIUM GUANYLATE, SALT, GARLIC POWDER, PAPRIKA (COLOR), NATURAL FLAVORS, LACTIC ACID, NATURAL FLAVOR, MODIFIED CORNSTARCH, CITRIC ACID.), Garlic, Tomato Paste, Canola Oil, Kosher Salt, Black Pepper, Dried Bay Leaf, Dried Thyme Leaf"
     },
     {
-      "id": "73370",
-      "name": "Seasoned Roast Beef",
+      "id": "103300",
+      "name": "Herb Roasted Pork Loin",
       "station": "True Balance",
       "period": "Lunch",
-      "description": "Slow-roasted eye-round of beef rubbed with peppery seasoning",
-      "serving": "3 ozw",
+      "description": "Slow-roasted pork loin seasoned with thyme, sage and garlic",
+      "serving": "16 ozw",
       "nutrition": {
-        "calories": 120,
-        "total_fat": 3,
-        "saturated_fat": 1,
+        "calories": 990,
+        "total_fat": 37,
+        "saturated_fat": 12,
         "trans_fat": 0,
-        "cholesterol": 50,
-        "sodium": 377,
-        "carbohydrate": 0,
-        "fiber": 0,
+        "cholesterol": 395,
+        "sodium": 856,
+        "carbohydrate": 3,
+        "fiber": 1,
         "total_sugars": 0,
-        "protein": 20.3,
-        "calcium": 15.4,
-        "iron": 1.3,
-        "potassium": 280
+        "protein": 146.5,
+        "calcium": 136,
+        "iron": 6.4,
+        "potassium": 2720
       },
       "vegan": false,
       "vegetarian": false,
@@ -9125,7 +8935,7 @@
         "shellfish": false,
         "tree_nuts": false
       },
-      "ingredients": "Beef Round Eye, Montreal Steak Seasoning (COARSE SALT, SPICES (INCLUDING BLACK PEPPER AND RED PEPPER), GARLIC, ONION, SUNFLOWER OIL, NATURAL FLAVOR AND EXTRACTIVES OF PAPRIKA.)"
+      "ingredients": "Pork Loin, Onion Powder, Ground Mustard, Kosher Salt, Garlic Powder, Black Pepper, Dried Thyme Leaf, Dried Sage"
     },
     {
       "id": "73369",

@@ -4,8 +4,8 @@
   "serviceAreaId": 116094,
   "source": "https://dining.utk.edu/vendor/stokely-dining-hall/",
   "date": "2026-11-16",
-  "scrapedAt": "2026-11-16T09:49:39.324Z",
-  "itemCount": 285,
+  "scrapedAt": "2026-11-16T20:30:29.978Z",
+  "itemCount": 284,
   "items": [
     {
       "id": "65578",
@@ -82,44 +82,6 @@
         "tree_nuts": false
       },
       "ingredients": "Chocolate Chip Cookie (Enriched bleached flour (bleached wheat flour, malted barley flour, niacin, iron, thiamine mononitrate, riboflavin, folic acid), Sugar, Palm oil, Margarine (palm oil, water, soybean oil, contains 2% or less of: salt, mono- and diglycerides, natural flavor [contains milk], citric acid, vitamin A palmitate added, beta carotene [color]), Semi-sweet chocolate chips (sugar, unsweetened chocolate, cocoa butter, dextrose, soy lecithin, natural flavor, milk), Chocolate flavored chips (sugar, fractionated interesterified  vegetable fat [palm kernel and/or palm oils], cocoa powder [processed with alkali], dextrose, soy lecithin, polysorbate 60, sorbitan monostearate, natural flavor, salt, vanilla extract, milk), Water, Eggs, Dextrose, Contains 2% or less of: Molasses, Pregelatinized wheat starch, Baking soda, Salt, Natural and artificial flavors.)"
-    },
-    {
-      "id": "65582",
-      "name": "Chocolate Cupcake",
-      "station": "Bakery",
-      "period": "Lunch",
-      "description": "Baked to perfection, chocolate cupcake topped with a generous swirl of chocolate whipped icing",
-      "serving": "each",
-      "nutrition": {
-        "calories": 310,
-        "total_fat": 13.5,
-        "saturated_fat": 8,
-        "trans_fat": 0,
-        "cholesterol": 0,
-        "sodium": 114,
-        "carbohydrate": 45,
-        "fiber": 2,
-        "total_sugars": 33,
-        "protein": 2.7,
-        "calcium": 12.1,
-        "iron": 2.9,
-        "potassium": 40
-      },
-      "vegan": null,
-      "vegetarian": null,
-      "contains": {
-        "soy": null,
-        "eggs": null,
-        "fish": null,
-        "milk": null,
-        "wheat": true,
-        "gluten": null,
-        "peanut": null,
-        "sesame": null,
-        "shellfish": null,
-        "tree_nuts": null
-      },
-      "ingredients": "Powdered Sugar, Plant Based Butter Spread, Oat Milk, Granulated Sugar, Rice Flour, Baking Cocoa, Oat Milk, Baking Cocoa, White Vinegar, Canola Oil, Baking Soda, Pure Vanilla Extract, Xanthan Gum, Pure Vanilla Extract, Kosher Salt"
     },
     {
       "id": "65348",
@@ -3694,26 +3656,26 @@
       "ingredients": "Black Beans, Corn Kernels, Lime Juice, Red Bell Pepper, Onion, Jalapeno Pepper, Canola Oil, Canola Oil, Garlic, Cumin, Chili Powder, Cilantro, Kosher Salt, Kosher Salt, Black Pepper"
     },
     {
-      "id": "65374",
-      "name": "Taco-Seasoned Grilled Chicken",
+      "id": "103298",
+      "name": "Taco Seasoned Meat",
       "station": "International",
       "period": "Lunch",
-      "description": "Taco-seasoned grilled chicken thighs",
-      "serving": "4 ozw",
+      "description": "A protein-packed meat blend crafted with beef, lean chicken, and ancient grain sorghum seasoned with a spicy blend of chili powders, garlic and cumin",
+      "serving": "3 ozw",
       "nutrition": {
-        "calories": 170,
-        "total_fat": 7,
-        "saturated_fat": 1.5,
+        "calories": 270,
+        "total_fat": 19.5,
+        "saturated_fat": 8,
         "trans_fat": 0,
-        "cholesterol": 105,
-        "sodium": 406,
-        "carbohydrate": 2,
+        "cholesterol": 60,
+        "sodium": 565,
+        "carbohydrate": 7,
         "fiber": 0,
         "total_sugars": 1,
-        "protein": 22.5,
-        "calcium": 3.9,
-        "iron": 1.2,
-        "potassium": 15
+        "protein": 16.4,
+        "calcium": 27.8,
+        "iron": 1.6,
+        "potassium": 270
       },
       "vegan": false,
       "vegetarian": false,
@@ -3729,7 +3691,7 @@
         "shellfish": null,
         "tree_nuts": null
       },
-      "ingredients": "Chicken Thigh, Taco Seasoning, Vegetable Oil Blend"
+      "ingredients": "Protein Trio Meat Blend, Water, Taco Seasoning"
     },
     {
       "id": "65591",
@@ -4036,6 +3998,44 @@
       "ingredients": "Jalapeno Chili Peppers"
     },
     {
+      "id": "103299",
+      "name": "Kung Pao Pork",
+      "station": "International",
+      "period": "Dinner",
+      "description": "Spicy stir-fry of pork, onion, water chestnuts, and carrots s in a chili garlic sauce",
+      "serving": "1/2 cup",
+      "nutrition": {
+        "calories": 120,
+        "total_fat": 5.5,
+        "saturated_fat": 1,
+        "trans_fat": 0,
+        "cholesterol": 25,
+        "sodium": 512,
+        "carbohydrate": 7,
+        "fiber": 1,
+        "total_sugars": 4,
+        "protein": 11.1,
+        "calcium": 25.9,
+        "iron": 0.8,
+        "potassium": 290
+      },
+      "vegan": false,
+      "vegetarian": false,
+      "contains": {
+        "soy": null,
+        "eggs": null,
+        "fish": null,
+        "milk": null,
+        "wheat": null,
+        "gluten": null,
+        "peanut": null,
+        "sesame": null,
+        "shellfish": null,
+        "tree_nuts": null
+      },
+      "ingredients": "Pork Loin, Korean Hot Taco Sauce, Water Chestnuts, Onion, Carrots, Celery, Green Onion, Vegetable Oil Blend"
+    },
+    {
       "id": "65509",
       "name": "Pico de Gallo",
       "station": "International",
@@ -4262,44 +4262,6 @@
         "tree_nuts": null
       },
       "ingredients": "Black Beans, Corn Kernels, Lime Juice, Red Bell Pepper, Onion, Jalapeno Pepper, Canola Oil, Canola Oil, Garlic, Cumin, Chili Powder, Cilantro, Kosher Salt, Kosher Salt, Black Pepper"
-    },
-    {
-      "id": "65624",
-      "name": "Taco Meat Trio Blend",
-      "station": "International",
-      "period": "Dinner",
-      "description": "A blend of spicy taco-seasoned ground beef, chicken, and sorghum",
-      "serving": "4 ozw",
-      "nutrition": {
-        "calories": 290,
-        "total_fat": 20.5,
-        "saturated_fat": 8.5,
-        "trans_fat": 0,
-        "cholesterol": 65,
-        "sodium": 742,
-        "carbohydrate": 8,
-        "fiber": 0,
-        "total_sugars": 2,
-        "protein": 17.6,
-        "calcium": 31.6,
-        "iron": 1.8,
-        "potassium": 290
-      },
-      "vegan": false,
-      "vegetarian": false,
-      "contains": {
-        "soy": null,
-        "eggs": null,
-        "fish": null,
-        "milk": null,
-        "wheat": null,
-        "gluten": null,
-        "peanut": null,
-        "sesame": null,
-        "shellfish": null,
-        "tree_nuts": null
-      },
-      "ingredients": "Protein Trio Meat Blend, Water, Taco Seasoning"
     },
     {
       "id": "65379",
