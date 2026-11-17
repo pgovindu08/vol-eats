@@ -4,8 +4,8 @@
   "serviceAreaId": 125621,
   "source": "https://dining.utk.edu/vendor/rocky-top-dining-hall/",
   "date": "2026-11-16",
-  "scrapedAt": "2026-11-16T20:30:22.996Z",
-  "itemCount": 273,
+  "scrapedAt": "2026-11-17T04:30:16.618Z",
+  "itemCount": 276,
   "items": [
     {
       "id": "73214",
@@ -502,6 +502,44 @@
       "ingredients": "Coconut Flakes, Angel Food Cake Mix, Water"
     },
     {
+      "id": "103320",
+      "name": "Cranberry Orange Mini Muffin",
+      "station": "Bakery",
+      "period": "Lunch",
+      "description": "Freshly baked muffin with orange and cranberries",
+      "serving": "1 muffin",
+      "nutrition": {
+        "calories": 80,
+        "total_fat": 2,
+        "saturated_fat": 1,
+        "trans_fat": 0,
+        "cholesterol": 0,
+        "sodium": 112,
+        "carbohydrate": 14,
+        "fiber": 0,
+        "total_sugars": 7,
+        "protein": 0.7,
+        "calcium": 5.8,
+        "iron": 0.3,
+        "potassium": 30
+      },
+      "vegan": false,
+      "vegetarian": true,
+      "contains": {
+        "soy": true,
+        "eggs": true,
+        "fish": false,
+        "milk": true,
+        "wheat": true,
+        "gluten": true,
+        "peanut": false,
+        "sesame": false,
+        "shellfish": false,
+        "tree_nuts": false
+      },
+      "ingredients": "Variety Muffin Mix (ENRICHED FLOUR BLEACHED (WHEAT FLOUR, NIACIN,  IRON, THIAMIN MONONITRATE, RIBOFLAVIN, FOLIC ACID), SUGAR, PALM OIL, MODIFIED CORN STARCH, MODIFIED WHEY. CONTAINS  2% OR LESS OF: LEAVENING (SODIUM ACID PYROPHOSPHATE, BAKING SODA, MONOCALCIUM PHOSPHATE), DEXTROSE, MONO AND  DIGLYCERIDES, SALT, EGGS WITH SODIUM SILICOALUMINATE, XANTHAN GUM, NONFAT MILK, NATURAL FLAVOR, SOY FLOUR.), Water, Orange Juice, Cranberries"
+    },
+    {
       "id": "73296",
       "name": "Grape Jelly",
       "station": "Bakery",
@@ -728,6 +766,44 @@
         "tree_nuts": false
       },
       "ingredients": "Cream Cheese (PASTEURIZED MILK AND CREAM, SALT, CAROB BEAN GUM, CHEESE CULTURE), Water"
+    },
+    {
+      "id": "103321",
+      "name": "White Chocolate Cherry Scone",
+      "station": "Bakery",
+      "period": "Lunch",
+      "description": "Freshly baked chocolate scone with white chocolate chips and cherries drizzled with chocolate icing",
+      "serving": "each",
+      "nutrition": {
+        "calories": 170,
+        "total_fat": 6.5,
+        "saturated_fat": 4,
+        "trans_fat": 0,
+        "cholesterol": 0,
+        "sodium": 251,
+        "carbohydrate": 26,
+        "fiber": 1,
+        "total_sugars": 11,
+        "protein": 1.9,
+        "calcium": 44.3,
+        "iron": 1.6,
+        "potassium": 25
+      },
+      "vegan": false,
+      "vegetarian": true,
+      "contains": {
+        "soy": true,
+        "eggs": true,
+        "fish": false,
+        "milk": true,
+        "wheat": true,
+        "gluten": true,
+        "peanut": false,
+        "sesame": false,
+        "shellfish": false,
+        "tree_nuts": false
+      },
+      "ingredients": "Buttermilk Biscuit Mix (ENRICHED FLOUR BLEACHED (WHEAT FLOUR, NIACIN, IRON, THIAMIN MONONITRATE, RIBOFLAVIN, FOLIC ACID), PALM OIL, LEAVENING (BAKING SODA, SODIUM ALUMINUM PHOSPHATE, MONOCALCIUM PHOSPHATE), SALT, BUTTERMILK, DEXTROSE, SOY FLOUR, EGG.), Water, White Chocolate Chips (Sugar, Fractionated Palm Kernel and Hydrogenated Palm Oil, Milk, Nonfat Milk, and Less than 2% of Soy Lecithin, Natural Flavor.), Icing (SUGAR, PALM OIL, WATER, CORN SYRUP, COCOA PROCESSED WITH ALKALI, CORN STARCH. CONTAINS 2% OR LESS OF: SALT, MONOGLYCERIDES, POTASSIUM SORBATE (PRESERVATIVE), POLYSORBATE 60, NATURAL AND ARTIFICIAL FLAVOR, SODIUM STEAROYL LACTYLATE, SODIUM ACID PYROPHOSPHATE, CITRIC ACID, COLOR ADDED, NONFAT MILK.), Granulated Sugar, Dried Cherries, Baking Cocoa (cocoa)"
     },
     {
       "id": "73412",
@@ -5782,6 +5858,44 @@
         "tree_nuts": false
       },
       "ingredients": "Cantaloupe, Pineapple, Honeydew, Red Grapes, Blueberries, Strawberries"
+    },
+    {
+      "id": "103319",
+      "name": "Greek Chickpea Salad",
+      "station": "Produce Market",
+      "period": "Lunch",
+      "description": "Chickpeas, tomato, feta and ripe olives tossed with a sun-dried tomato vinaigrette",
+      "serving": "1 cup",
+      "nutrition": {
+        "calories": 140,
+        "total_fat": 7,
+        "saturated_fat": 3,
+        "trans_fat": 0,
+        "cholesterol": 10,
+        "sodium": 434,
+        "carbohydrate": 14,
+        "fiber": 4,
+        "total_sugars": 4,
+        "protein": 6.6,
+        "calcium": 130.2,
+        "iron": 2.4,
+        "potassium": 330
+      },
+      "vegan": false,
+      "vegetarian": true,
+      "contains": {
+        "soy": false,
+        "eggs": false,
+        "fish": false,
+        "milk": true,
+        "wheat": false,
+        "gluten": false,
+        "peanut": false,
+        "sesame": false,
+        "shellfish": false,
+        "tree_nuts": false
+      },
+      "ingredients": "Garbanzo Beans, Tomato , Feta Cheese (Feta Cheese (Pasteurized Part-Skim Milk, Cheese Culture, Salt, Enzymes). Anti-Caking Blend (Powdered Cellulose, Natamycin [A Natural Mold Inhibitor]).), Black Olive, Green Onion, Water, Red Wine Vinegar, Parsley, Sun Dried Tomato, Vegetable Oil Blend (Vegetable Oil (May contain one or more of the following: Soybean, Canola, Corn, Sunflower Oil); Olive Oil; Colorant: Beta-Carotene E160a(i)), Onion, Dijon Mustard (Distilled White Vinegar, Mustard Seed, Water, Salt, White Wine, Citric Acid, Tartaric Acid, Fruit Pectin, Sugar, Spices), Garlic, Thyme, Basil, Parsley, Kosher Salt, Black Pepper, Paprika"
     },
     {
       "id": "73355",
