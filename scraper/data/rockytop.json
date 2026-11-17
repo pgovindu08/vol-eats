@@ -4,8 +4,8 @@
   "serviceAreaId": 125621,
   "source": "https://dining.utk.edu/vendor/rocky-top-dining-hall/",
   "date": "2026-11-17",
-  "scrapedAt": "2026-11-17T16:02:57.254Z",
-  "itemCount": 272,
+  "scrapedAt": "2026-11-17T23:31:52.223Z",
+  "itemCount": 279,
   "items": [
     {
       "id": "73492",
@@ -312,6 +312,44 @@
       "ingredients": "Cream Cheese (PASTEURIZED MILK AND CREAM, SALT, CAROB BEAN GUM, CHEESE CULTURE), Water"
     },
     {
+      "id": "103461",
+      "name": "Apple Cinnamon Mini Muffin",
+      "station": "Bakery",
+      "period": "Lunch",
+      "description": "Freshly baked miniature muffin with apples, raisins and ground cinnamon",
+      "serving": "1 muffin",
+      "nutrition": {
+        "calories": 90,
+        "total_fat": 2,
+        "saturated_fat": 1,
+        "trans_fat": 0,
+        "cholesterol": 0,
+        "sodium": 119,
+        "carbohydrate": 16,
+        "fiber": 0,
+        "total_sugars": 10,
+        "protein": 0.8,
+        "calcium": 8,
+        "iron": 0.4,
+        "potassium": 40
+      },
+      "vegan": false,
+      "vegetarian": true,
+      "contains": {
+        "soy": true,
+        "eggs": true,
+        "fish": false,
+        "milk": true,
+        "wheat": true,
+        "gluten": true,
+        "peanut": false,
+        "sesame": false,
+        "shellfish": false,
+        "tree_nuts": false
+      },
+      "ingredients": "Variety Muffin Mix (ENRICHED FLOUR BLEACHED (WHEAT FLOUR, NIACIN,  IRON, THIAMIN MONONITRATE, RIBOFLAVIN, FOLIC ACID), SUGAR, PALM OIL, MODIFIED CORN STARCH, MODIFIED WHEY. CONTAINS  2% OR LESS OF: LEAVENING (SODIUM ACID PYROPHOSPHATE, BAKING SODA, MONOCALCIUM PHOSPHATE), DEXTROSE, MONO AND  DIGLYCERIDES, SALT, EGGS WITH SODIUM SILICOALUMINATE, XANTHAN GUM, NONFAT MILK, NATURAL FLAVOR, SOY FLOUR.), Water, Apples, Seedless Raisins, Granulated Sugar, Cinnamon"
+    },
+    {
       "id": "73658",
       "name": "Assorted Bagels",
       "station": "Bakery",
@@ -464,6 +502,44 @@
       "ingredients": "Yellow Cake (SUGAR, ENRICHED FLOUR BLEACHED (WHEAT FLOUR, NIACIN, IRON, THIAMIN MONONITRATE, RIBOFLAVIN, FOLIC ACID), PALM OIL, DEXTROSE. CONTAINS 2% OR LESS OF: LEAVENING (SODIUM ALUMINUM PHOSPHATE, BAKING SODA), PROPYLENE GLYCOL MONO AND DIESTERS OF FATTY ACIDS, MODIFIED CORN STARCH, EGGS WITH SODIUM SILICOALUMINATE, EGG WHITE, SALT, NONFAT MILK, MONO AND DIGLYCERIDES, SOY LECITHIN, XANTHAN GUM, WHEY, NATURAL FLAVOR, ANNATTO AND TURMERIC EXTRACT COLOR.), Oreo Pieces (UNBLEACHED ENRICHED FLOUR (WHEAT FLOUR, NIACIN, REDUCED IRON, THIAMINE MONONITRATE [VITAMIN B1], RIBOFLAVIN [VITAMIN B2], FOLIC ACID), SUGAR, PALM OIL, SOYBEAN AND/OR CANOLA OIL, COCOA (PROCESSED WITH ALKALI), INVERT SUGAR, LEAVENING (BAKING SODA AND/OR CALCIUM PHOSPHATE), SOY LECITHIN, SALT, CHOCOLATE, NATURAL FLAVOR.), Brown Sugar, Margarine (PALM OIL, WATER, SOYBEAN OIL, CONTAINS LESS THAN 2% OF SOY LECITHIN, VEGETABLE MONO & DIGLYCERIDES, POTASSIUM SORBATE (A PRESERVATIVE), CITRIC ACID, NATURAL & ARTIFICIAL FLAVOR, BETA CAROTENE (COLOR), VITAMIN A PALMITATE ADDED, WHEY.), Liquid Whole Eggs (WHOLE EGG, CITRIC ACID, 0.15% WATER ADDED AS CARRIER FOR CITRIC ACID. CITRIC ACID ADDED TO PRESERVE COLOR.)"
     },
     {
+      "id": "103458",
+      "name": "Double Chocolate Chip Mini Muffin",
+      "station": "Bakery",
+      "period": "Lunch",
+      "description": "Freshly baked chocolate muffin chock full of semisweet chocolate chips",
+      "serving": "1 muffin",
+      "nutrition": {
+        "calories": 120,
+        "total_fat": 3.5,
+        "saturated_fat": 2,
+        "trans_fat": 0,
+        "cholesterol": 0,
+        "sodium": 133,
+        "carbohydrate": 21,
+        "fiber": 1,
+        "total_sugars": 13,
+        "protein": 1.3,
+        "calcium": 10.7,
+        "iron": 1,
+        "potassium": 45
+      },
+      "vegan": false,
+      "vegetarian": null,
+      "contains": {
+        "soy": true,
+        "eggs": true,
+        "fish": null,
+        "milk": true,
+        "wheat": true,
+        "gluten": null,
+        "peanut": null,
+        "sesame": null,
+        "shellfish": null,
+        "tree_nuts": null
+      },
+      "ingredients": "Variety Muffin Mix, Water, Chocolate Chips, Chocolate Syrup, Granulated Sugar, Baking Cocoa"
+    },
+    {
       "id": "73656",
       "name": "Iced Sugar Cookies",
       "station": "Bakery",
@@ -500,6 +576,19 @@
         "tree_nuts": null
       },
       "ingredients": "Sugar Cookie, Vanilla Heat and Ice Icing"
+    },
+    {
+      "id": "103460",
+      "name": "S'mores Donut Bites",
+      "station": "Bakery",
+      "period": "Lunch",
+      "description": null,
+      "serving": null,
+      "nutrition": {},
+      "vegan": null,
+      "vegetarian": null,
+      "contains": {},
+      "ingredients": null
     },
     {
       "id": "73600",
@@ -614,6 +703,44 @@
         "tree_nuts": false
       },
       "ingredients": "Strawberry Preserve (Strawberries, High Fructose Corn Syrup, Corn  Syrup, Sugar, Fruit Pectin, Citric Acid.)"
+    },
+    {
+      "id": "103459",
+      "name": "Strawberry Shortcake Parfait",
+      "station": "Bakery",
+      "period": "Lunch",
+      "description": "Fluffy layers of yellow cake, strawberry mousse, whipped topping and fresh strawberries",
+      "serving": "each",
+      "nutrition": {
+        "calories": 160,
+        "total_fat": 5.5,
+        "saturated_fat": 4.5,
+        "trans_fat": 0,
+        "cholesterol": 5,
+        "sodium": 191,
+        "carbohydrate": 27,
+        "fiber": 0,
+        "total_sugars": 18,
+        "protein": 1.4,
+        "calcium": 8.9,
+        "iron": 4.3,
+        "potassium": 30
+      },
+      "vegan": false,
+      "vegetarian": false,
+      "contains": {
+        "soy": true,
+        "eggs": true,
+        "fish": false,
+        "milk": true,
+        "wheat": true,
+        "gluten": true,
+        "peanut": false,
+        "sesame": false,
+        "shellfish": false,
+        "tree_nuts": false
+      },
+      "ingredients": "Vanilla Pudding (WATER, SKIM MILK, SUGAR, MODIFIED CORN STARCH, COCONUT OIL, CONTAINS LESS THAN 2% OF SALT, ARTIFICIAL FLAVOR, MONO- AND DIGLYCERIDES, SODIUM HEXAMETAPHOSPHATE, YELLOW 5, YELLOW 6.), Yellow Cake (SUGAR, ENRICHED FLOUR BLEACHED (WHEAT FLOUR, NIACIN, IRON, THIAMIN MONONITRATE, RIBOFLAVIN, FOLIC ACID), PALM OIL, DEXTROSE. CONTAINS 2% OR LESS OF: LEAVENING (SODIUM ALUMINUM PHOSPHATE, BAKING SODA), PROPYLENE GLYCOL MONO AND DIESTERS OF FATTY ACIDS, MODIFIED CORN STARCH, EGGS WITH SODIUM SILICOALUMINATE, EGG WHITE, SALT, NONFAT MILK, MONO AND DIGLYCERIDES, SOY LECITHIN, XANTHAN GUM, WHEY, NATURAL FLAVOR, ANNATTO AND TURMERIC EXTRACT COLOR.), Strawberries, Water, Whipped Topping (WATER, HIGH FRUCTOSE CORN SYRUP, HYDROGENATED VEGETABLE OIL (PALM, PALMKERNEL, COCONUT AND/OR COTTONSEED), CONTAINS LESS THAN 2% OF THEFOLLOWING: *SODIUM CASEINATE (A MILK DERIVATIVE), DEXTROSE, ARTIFICIAL FLAVOR,POLYSORBATE 60, SORBITAN MONOSTEARATE, GUAR GUM, XANTHAN GUM, COLOREDWITH TURMERIC AND ANNATTO EXTRACTS), Whipped Topping (WATER, HIGH FRUCTOSE CORN SYRUP, HYDROGENATED VEGETABLE OIL (PALM, PALMKERNEL, COCONUT AND/OR COTTONSEED), CONTAINS LESS THAN 2% OF THEFOLLOWING: *SODIUM CASEINATE (A MILK DERIVATIVE), DEXTROSE, ARTIFICIAL FLAVOR,POLYSORBATE 60, SORBITAN MONOSTEARATE, GUAR GUM, XANTHAN GUM, COLOREDWITH TURMERIC AND ANNATTO EXTRACTS), Strawberry Gelatin (Cherry:  Sugar, Dextrose, Gelatin, Fumaric Acid, Disodium Phosphate, Sodium Citrate,  Malic Acid, Citric Acid, Artificial Flavor, Red 40, Ascorbic Acid (Vitamin  C), Red 40 Lake, Blue 1. Raspberry: Sugar, Dextrose, Gelatin, Fumaric Acid,  Disodium Phosphate, Sodium Citrate, Natural and Artificial Flavor, Malic  Acid, Citric Acid, Ascorbic Acid (Vitamin C), Red 40, Red 40 Lake, Blue 1.  Strawberry: Sugar, Dextrose, Gelatin, Fumaric Acid, Disodium Phosphate,  Sodium Citrate, Malic Acid, Citric Acid, Natural and Artificial Flavor, Red  40, Ascorbic Acid (Vitamin C), Acesulfame Potassium, Red 40 Lake.)"
     },
     {
       "id": "73653",
@@ -5784,6 +5911,44 @@
       "ingredients": "Cantaloupe, Pineapple, Honeydew, Red Grapes, Blueberries, Strawberries"
     },
     {
+      "id": "103457",
+      "name": "Greek Pasta Salad",
+      "station": "Produce Market",
+      "period": "Lunch",
+      "description": "Penne pasta, fresh vegetables, feta and black olives tossed with an herb vinaigrette",
+      "serving": "1/2 cup",
+      "nutrition": {
+        "calories": 80,
+        "total_fat": 3.5,
+        "saturated_fat": 1,
+        "trans_fat": 0,
+        "cholesterol": 0,
+        "sodium": 196,
+        "carbohydrate": 11,
+        "fiber": 2,
+        "total_sugars": 2,
+        "protein": 2.7,
+        "calcium": 40.2,
+        "iron": 0.8,
+        "potassium": 140
+      },
+      "vegan": false,
+      "vegetarian": true,
+      "contains": {
+        "soy": false,
+        "eggs": false,
+        "fish": false,
+        "milk": true,
+        "wheat": true,
+        "gluten": true,
+        "peanut": false,
+        "sesame": false,
+        "shellfish": false,
+        "tree_nuts": false
+      },
+      "ingredients": "Water, Tomato, Cellentani (SEMOLINA (WHEAT), DURUM WHEAT FLOUR, NIACIN (VITAMIN B3), FERROUS SULPHATE OR FERROUS LACTATE (IRON), THIAMINE MONONITRATE (VITAMIN B1), RIBOFLAVIN (VITAMIN B2), FOLIC ACID.), Onion, Cucumber, Spinach, Red Bell Pepper, Green Bell Pepper, Feta Cheese (Feta Cheese (Pasteurized Part-Skim Milk, Cheese Culture, Salt, Enzymes). Anti-Caking Blend (Powdered Cellulose, Natamycin [A Natural Mold Inhibitor]).), Red Wine Vinegar, Vegetable Oil Blend (Vegetable Oil (May contain one or more of the following: Soybean, Canola, Corn, Sunflower Oil); Olive Oil; Colorant: Beta-Carotene E160a(i)), Black Olive, Kosher Salt, Granulated Sugar, Thyme"
+    },
+    {
       "id": "73535",
       "name": "Green Peas",
       "station": "Produce Market",
@@ -7735,6 +7900,44 @@
       "ingredients": "Sour Cream (Cultured Cream, Enzyme.), Low-Fat Buttermilk, Lime Juice, Cilantro, Lemon Zest, Kosher Salt"
     },
     {
+      "id": "103462",
+      "name": "Citrus  Pulled Pork",
+      "station": "Tex Mex",
+      "period": "Lunch",
+      "description": "Pulled   pork marinated in a blend of lime & orange juice with garlic, onion and   spices",
+      "serving": "1/2 cup",
+      "nutrition": {
+        "calories": 200,
+        "total_fat": 8,
+        "saturated_fat": 3,
+        "trans_fat": 0,
+        "cholesterol": 90,
+        "sodium": 211,
+        "carbohydrate": 2,
+        "fiber": 0,
+        "total_sugars": 1,
+        "protein": 27.2,
+        "calcium": 16,
+        "iron": 1.6,
+        "potassium": 490
+      },
+      "vegan": false,
+      "vegetarian": false,
+      "contains": {
+        "soy": false,
+        "eggs": false,
+        "fish": false,
+        "milk": false,
+        "wheat": false,
+        "gluten": false,
+        "peanut": false,
+        "sesame": false,
+        "shellfish": false,
+        "tree_nuts": false
+      },
+      "ingredients": "Seasoned Pork (Pork), Orange Juice, Onion, Lime Juice, Garlic, Kosher Salt, Black Pepper"
+    },
+    {
       "id": "73518",
       "name": "Iceberg Lettuce",
       "station": "Tex Mex",
@@ -8303,6 +8506,44 @@
         "tree_nuts": false
       },
       "ingredients": "Onion, Green Bell Pepper, Red Bell Pepper, Canola Oil, Kosher Salt"
+    },
+    {
+      "id": "103464",
+      "name": "Slow-Braised Beef",
+      "station": "Tex Mex",
+      "period": "Dinner",
+      "description": "Slow-braised beef with chilies, lime and spices.",
+      "serving": "4 fl oz",
+      "nutrition": {
+        "calories": 100,
+        "total_fat": 4.5,
+        "saturated_fat": 1,
+        "trans_fat": 0,
+        "cholesterol": 30,
+        "sodium": 180,
+        "carbohydrate": 4,
+        "fiber": 1,
+        "total_sugars": 1,
+        "protein": 10.6,
+        "calcium": 20.7,
+        "iron": 1.6,
+        "potassium": 240
+      },
+      "vegan": null,
+      "vegetarian": null,
+      "contains": {
+        "soy": null,
+        "eggs": null,
+        "fish": null,
+        "milk": null,
+        "wheat": null,
+        "gluten": null,
+        "peanut": null,
+        "sesame": null,
+        "shellfish": null,
+        "tree_nuts": null
+      },
+      "ingredients": "Beef Chuck, Water, Onion, Chili Paste, Guajillo Paste, Lime Juice, Cider Vinegar, Vegetable Oil Blend, Garlic, Cumin, Coriander, Beef Base, Dried Oregano, Kosher Salt, Black Pepper"
     },
     {
       "id": "73547",
@@ -8951,6 +9192,44 @@
       "ingredients": "Water, White Rice"
     },
     {
+      "id": "103463",
+      "name": "Cajun Roasted Pork Loin",
+      "station": "True Balance",
+      "period": "Dinner",
+      "description": "Slow roasted Cajun-seasoned pork loin, expertly marinated with a bold blend of Cajun spices",
+      "serving": "3 ozw",
+      "nutrition": {
+        "calories": 220,
+        "total_fat": 10.5,
+        "saturated_fat": 2.5,
+        "trans_fat": 0,
+        "cholesterol": 75,
+        "sodium": 161,
+        "carbohydrate": 1,
+        "fiber": 0,
+        "total_sugars": 0,
+        "protein": 27.5,
+        "calcium": 26.7,
+        "iron": 1.2,
+        "potassium": 520
+      },
+      "vegan": false,
+      "vegetarian": false,
+      "contains": {
+        "soy": false,
+        "eggs": false,
+        "fish": false,
+        "milk": false,
+        "wheat": false,
+        "gluten": false,
+        "peanut": false,
+        "sesame": false,
+        "shellfish": false,
+        "tree_nuts": false
+      },
+      "ingredients": "Pork Loin, Vegetable Oil Blend (Vegetable Oil (May contain one or more of the following: Soybean, Canola, Corn, Sunflower Oil); Olive Oil; Colorant: Beta-Carotene E160a(i)), Cajun Seasoning (GARLIC, SPICES (INCLUDING PAPRIKA, OREGANO, RED PEPPER), SALT AND ONION.), Garlic"
+    },
+    {
       "id": "73709",
       "name": "Cranberry Oatmeal  Cookie",
       "station": "True Balance",
@@ -9025,44 +9304,6 @@
         "tree_nuts": false
       },
       "ingredients": "Honeydew, Red Grapes, Cantaloupe, Pineapple"
-    },
-    {
-      "id": "73705",
-      "name": "Montreal Chicken Tenders",
-      "station": "True Balance",
-      "period": "Dinner",
-      "description": "Grilled tender chicken strips seasoned with a robust blend of black & red peppers, garlic and salt",
-      "serving": "each",
-      "nutrition": {
-        "calories": 80,
-        "total_fat": 2.5,
-        "saturated_fat": 0.5,
-        "trans_fat": 0,
-        "cholesterol": 40,
-        "sodium": 55,
-        "carbohydrate": 0,
-        "fiber": 0,
-        "total_sugars": 0,
-        "protein": 12.8,
-        "calcium": 3.9,
-        "iron": 0.2,
-        "potassium": 190
-      },
-      "vegan": false,
-      "vegetarian": false,
-      "contains": {
-        "soy": false,
-        "eggs": false,
-        "fish": false,
-        "milk": false,
-        "wheat": false,
-        "gluten": false,
-        "peanut": false,
-        "sesame": false,
-        "shellfish": false,
-        "tree_nuts": false
-      },
-      "ingredients": "Chicken Breast, Canola Oil, Montreal Chicken Seasoning (GARLIC, ONION, SALT, SPICES (INCLUDING BLACK PEPPER, PARSLEY, RED PEPPER,PAPRIKA), ORANGE PEEL, GREEN BELL PEPPER & SULFITING AGENT)"
     },
     {
       "id": "73706",
