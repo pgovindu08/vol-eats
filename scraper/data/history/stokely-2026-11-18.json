@@ -4,8 +4,8 @@
   "serviceAreaId": 116094,
   "source": "https://dining.utk.edu/vendor/stokely-dining-hall/",
   "date": "2026-11-18",
-  "scrapedAt": "2026-11-18T07:32:08.625Z",
-  "itemCount": 294,
+  "scrapedAt": "2026-11-18T17:17:14.698Z",
+  "itemCount": 293,
   "items": [
     {
       "id": "73920",
@@ -386,44 +386,6 @@
         "tree_nuts": null
       },
       "ingredients": "Devil's Food Cake, Vanilla Icing, Water, Egg Blend, Cereal, Vegetable Oil Blend"
-    },
-    {
-      "id": "73963",
-      "name": "Lemon Ricotta Cookie",
-      "station": "Bakery",
-      "period": "Dinner",
-      "description": "lemon juice, ricotta cheese, lemon zest",
-      "serving": "1 cookie",
-      "nutrition": {
-        "calories": 150,
-        "total_fat": 4.5,
-        "saturated_fat": 2.5,
-        "trans_fat": 0,
-        "cholesterol": 25,
-        "sodium": 150,
-        "carbohydrate": 27,
-        "fiber": 0,
-        "total_sugars": 19,
-        "protein": 2.1,
-        "calcium": 34.8,
-        "iron": 0.6,
-        "potassium": 40
-      },
-      "vegan": false,
-      "vegetarian": false,
-      "contains": {
-        "soy": false,
-        "eggs": true,
-        "fish": false,
-        "milk": true,
-        "wheat": true,
-        "gluten": true,
-        "peanut": null,
-        "sesame": null,
-        "shellfish": false,
-        "tree_nuts": null
-      },
-      "ingredients": "Ricotta Cheese (Pasteurized milk, pasteurized whey, pasteurized cream, vinegar, and salt), Granulated Sugar, Wheat Flour (Bleached Wheat Flour, Malted Barley Flour, Niacin, Iron, Thiamin Mononitrate, Riboflavin, Folic Acid), Powdered Sugar, Unsalted Butter (Pasteurized Cream, Natural Flavoring.), Lemon Juice, Liquid Whole Eggs (WHOLE EGG, CITRIC ACID, 0.15% WATER ADDED AS CARRIER FOR CITRIC ACID. CITRIC ACID ADDED TO PRESERVE COLOR.), Lemon Zest, Salt, Baking Powder"
     },
     {
       "id": "73967",
@@ -5067,7 +5029,7 @@
       "station": "Omelet",
       "period": "Lunch",
       "description": "Ready-to-use blended eggs",
-      "serving": "1/4 cup",
+      "serving": "2 ozw",
       "nutrition": {
         "calories": 80,
         "total_fat": 5.5,
@@ -5079,7 +5041,7 @@
         "fiber": 0,
         "total_sugars": 0,
         "protein": 7.1,
-        "calcium": 31.7,
+        "calcium": 31.6,
         "iron": 1,
         "potassium": 80
       },
@@ -6050,6 +6012,44 @@
       "ingredients": "Bagel"
     },
     {
+      "id": "103621",
+      "name": "Banana Bread",
+      "station": "Pizza",
+      "period": "Breakfast",
+      "description": "Freshly baked homemade loaf made with fresh bananas",
+      "serving": "1 slice",
+      "nutrition": {
+        "calories": 260,
+        "total_fat": 8,
+        "saturated_fat": 3,
+        "trans_fat": 0,
+        "cholesterol": 35,
+        "sodium": 133,
+        "carbohydrate": 43,
+        "fiber": 1,
+        "total_sugars": 24,
+        "protein": 3.7,
+        "calcium": 39.5,
+        "iron": 1.3,
+        "potassium": 95
+      },
+      "vegan": false,
+      "vegetarian": false,
+      "contains": {
+        "soy": true,
+        "eggs": true,
+        "fish": false,
+        "milk": true,
+        "wheat": true,
+        "gluten": true,
+        "peanut": null,
+        "sesame": null,
+        "shellfish": false,
+        "tree_nuts": null
+      },
+      "ingredients": "Granulated Sugar, Wheat Flour (Bleached Wheat Flour, Malted Barley Flour, Niacin, Iron, Thiamin Mononitrate, Riboflavin, Folic Acid), Banana, Margarine (PALM OIL, WATER, SOYBEAN OIL, CONTAINS LESS THAN 2% OF SOY LECITHIN, VEGETABLE MONO & DIGLYCERIDES, POTASSIUM SORBATE (A PRESERVATIVE), CITRIC ACID, NATURAL & ARTIFICIAL FLAVOR, BETA CAROTENE (COLOR), VITAMIN A PALMITATE ADDED, WHEY.), Whole Milk, Liquid Whole Eggs (WHOLE EGG, CITRIC ACID, 0.15% WATER ADDED AS CARRIER FOR CITRIC ACID. CITRIC ACID ADDED TO PRESERVE COLOR.), Baking Powder, Pure Vanilla Extract, Baking Soda, Kosher Salt"
+    },
+    {
       "id": "73768",
       "name": "Bananas Foster Mini Muffin",
       "station": "Pizza",
@@ -6086,44 +6086,6 @@
         "tree_nuts": false
       },
       "ingredients": "Variety Muffin Mix (ENRICHED FLOUR BLEACHED (WHEAT FLOUR, NIACIN,  IRON, THIAMIN MONONITRATE, RIBOFLAVIN, FOLIC ACID), SUGAR, PALM OIL, MODIFIED CORN STARCH, MODIFIED WHEY. CONTAINS  2% OR LESS OF: LEAVENING (SODIUM ACID PYROPHOSPHATE, BAKING SODA, MONOCALCIUM PHOSPHATE), DEXTROSE, MONO AND  DIGLYCERIDES, SALT, EGGS WITH SODIUM SILICOALUMINATE, XANTHAN GUM, NONFAT MILK, NATURAL FLAVOR, SOY FLOUR.), Water, Banana, Brown Sugar, Brown Sugar, Margarine (PALM OIL, WATER, SOYBEAN OIL, CONTAINS LESS THAN 2% OF SOY LECITHIN, VEGETABLE MONO & DIGLYCERIDES, POTASSIUM SORBATE (A PRESERVATIVE), CITRIC ACID, NATURAL & ARTIFICIAL FLAVOR, BETA CAROTENE (COLOR), VITAMIN A PALMITATE ADDED, WHEY.), White Rum, Cinnamon"
-    },
-    {
-      "id": "73766",
-      "name": "Chocolate Chip Banana Bread",
-      "station": "Pizza",
-      "period": "Breakfast",
-      "description": "Freshly baked banana loaf with chocolate chips topped with cinnamon streusel",
-      "serving": "each",
-      "nutrition": {
-        "calories": 320,
-        "total_fat": 11,
-        "saturated_fat": 5.5,
-        "trans_fat": 0,
-        "cholesterol": 0,
-        "sodium": 324,
-        "carbohydrate": 54,
-        "fiber": 2,
-        "total_sugars": 31,
-        "protein": 3,
-        "calcium": 20.8,
-        "iron": 2,
-        "potassium": 160
-      },
-      "vegan": false,
-      "vegetarian": false,
-      "contains": {
-        "soy": true,
-        "eggs": true,
-        "fish": false,
-        "milk": true,
-        "wheat": true,
-        "gluten": true,
-        "peanut": null,
-        "sesame": null,
-        "shellfish": false,
-        "tree_nuts": null
-      },
-      "ingredients": "Variety Muffin Mix (ENRICHED FLOUR BLEACHED (WHEAT FLOUR, NIACIN,  IRON, THIAMIN MONONITRATE, RIBOFLAVIN, FOLIC ACID), SUGAR, PALM OIL, MODIFIED CORN STARCH, MODIFIED WHEY. CONTAINS  2% OR LESS OF: LEAVENING (SODIUM ACID PYROPHOSPHATE, BAKING SODA, MONOCALCIUM PHOSPHATE), DEXTROSE, MONO AND  DIGLYCERIDES, SALT, EGGS WITH SODIUM SILICOALUMINATE, XANTHAN GUM, NONFAT MILK, NATURAL FLAVOR, SOY FLOUR.), Water, Banana, Chocolate Chips (SEMI-SWEET CHOCOLATE [SUGAR; CHOCOLATE; COCOA BUTTER; MILK FAT; LECITHIN (SOY); NATURAL FLAVOR; MILK]), Wheat Flour (Bleached Wheat Flour, Malted Barley Flour, Niacin, Iron, Thiamin Mononitrate, Riboflavin, Folic Acid), Margarine (PALM OIL, WATER, SOYBEAN OIL, CONTAINS LESS THAN 2% OF SOY LECITHIN, VEGETABLE MONO & DIGLYCERIDES, POTASSIUM SORBATE (A PRESERVATIVE), CITRIC ACID, NATURAL & ARTIFICIAL FLAVOR, BETA CAROTENE (COLOR), VITAMIN A PALMITATE ADDED, WHEY.), Brown Sugar, Granulated Sugar, Cinnamon"
     },
     {
       "id": "73733",
@@ -9698,34 +9660,34 @@
       "ingredients": "Turkey Sausage (Turkey, Mechanically Separated Turkey, Water, Seasoning (Salt, Spices, Corn Syrup Solids, Spice Extractives, BHA, BHT, Citric Acid), Natural Flavoring. In a Calcium Alginate Casing.)"
     },
     {
-      "id": "103219",
-      "name": "Baked Pit Ham",
+      "id": "103622",
+      "name": "Brown Sugar Glazed Ham",
       "station": "Traditions",
       "period": "Lunch",
-      "description": "Slow-baked and infused with a rich, smoky flavor",
-      "serving": "3 ozw",
+      "description": "Baked brown sugar-coated ham served with honey glaze",
+      "serving": "1 serving",
       "nutrition": {
-        "calories": 120,
-        "total_fat": 5,
+        "calories": 200,
+        "total_fat": 6,
         "saturated_fat": 2,
         "trans_fat": 0,
-        "cholesterol": 50,
-        "sodium": 1290,
-        "carbohydrate": 3,
+        "cholesterol": 45,
+        "sodium": 1243,
+        "carbohydrate": 23,
         "fiber": 0,
-        "total_sugars": 2,
-        "protein": 15.5,
-        "calcium": 5.2,
-        "iron": 0.7,
+        "total_sugars": 21,
+        "protein": 15,
+        "calcium": 17.5,
+        "iron": 0.8,
         "potassium": 540
       },
-      "vegan": null,
+      "vegan": false,
       "vegetarian": null,
       "contains": {
-        "soy": null,
+        "soy": true,
         "eggs": null,
         "fish": null,
-        "milk": null,
+        "milk": true,
         "wheat": null,
         "gluten": null,
         "peanut": null,
@@ -9733,7 +9695,7 @@
         "shellfish": null,
         "tree_nuts": null
       },
-      "ingredients": "Ham"
+      "ingredients": "Ham, Brown Sugar, Honey, Brown Sugar, Margarine, Ground Mustard"
     },
     {
       "id": "73918",
@@ -10116,44 +10078,6 @@
       "ingredients": "Peas and onion"
     },
     {
-      "id": "73949",
-      "name": "Seasoned Rice",
-      "station": "Vegan",
-      "period": "Lunch",
-      "description": "Long grain white rice seasoned with salt and pepper",
-      "serving": "1/2 cup",
-      "nutrition": {
-        "calories": 130,
-        "total_fat": 1,
-        "saturated_fat": 0,
-        "trans_fat": 0,
-        "cholesterol": 0,
-        "sodium": 71,
-        "carbohydrate": 27,
-        "fiber": 1,
-        "total_sugars": 0,
-        "protein": 2.8,
-        "calcium": 23.6,
-        "iron": 1,
-        "potassium": 55
-      },
-      "vegan": true,
-      "vegetarian": true,
-      "contains": {
-        "soy": false,
-        "eggs": false,
-        "fish": false,
-        "milk": false,
-        "wheat": false,
-        "gluten": false,
-        "peanut": false,
-        "sesame": false,
-        "shellfish": false,
-        "tree_nuts": false
-      },
-      "ingredients": "Water, White Rice, Canola Oil, Kosher Salt, Black Pepper"
-    },
-    {
       "id": "73950",
       "name": "Spicy Vegetable Gumbo",
       "station": "Vegan",
@@ -10190,6 +10114,44 @@
         "tree_nuts": false
       },
       "ingredients": "Tomatoes, Water, Onion, Eggplant, Okra, Squash Zucchini, Mushrooms, Green Bell Pepper, Celery, Water, Garlic, Vegetable Base (SAUTEED VEGETABLE PUREE MIX (CARROTS, ONIONS, CELERY), CORN STARCH, MALTODEXTRIN, VEGETABLE OIL (CORN AND/OR CANOLA OIL), HYDROLYZED CORN PROTEIN, YEAST EXTRACT, TOMATO POWDER, WATER, ONION POWDER, 2% OR LESS OF DISODIUM INOSINATE AND DISODIUM GUANYLATE, SALT, GARLIC POWDER, PAPRIKA (COLOR), NATURAL FLAVORS, LACTIC ACID, NATURAL FLAVOR, MODIFIED CORNSTARCH, CITRIC ACID.), Tabasco Hot Sauce (DISTILLED VINEGAR, RED PEPPER, SALT.), Canola Oil, Cornstarch, Cajun Seasoning (Salt, Spices, Paprika, Garlic, Onion.), Kosher Salt, Black Pepper, Dried Thyme Leaf"
+    },
+    {
+      "id": "103623",
+      "name": "Yellow Rice",
+      "station": "Vegan",
+      "period": "Lunch",
+      "description": "Savory long grain rice cooked in vegetable broth with turmeric",
+      "serving": "1/2 cup",
+      "nutrition": {
+        "calories": 140,
+        "total_fat": 2,
+        "saturated_fat": 0,
+        "trans_fat": 0,
+        "cholesterol": 0,
+        "sodium": 118,
+        "carbohydrate": 28,
+        "fiber": 1,
+        "total_sugars": 0,
+        "protein": 3,
+        "calcium": 24.5,
+        "iron": 1.2,
+        "potassium": 70
+      },
+      "vegan": true,
+      "vegetarian": true,
+      "contains": {
+        "soy": false,
+        "eggs": false,
+        "fish": false,
+        "milk": false,
+        "wheat": false,
+        "gluten": false,
+        "peanut": false,
+        "sesame": false,
+        "shellfish": false,
+        "tree_nuts": false
+      },
+      "ingredients": "Water, White Rice, Vegetable Base (SAUTEED VEGETABLE PUREE MIX (CARROTS, ONIONS, CELERY), CORN STARCH, MALTODEXTRIN, VEGETABLE OIL (CORN AND/OR CANOLA OIL), HYDROLYZED CORN PROTEIN, YEAST EXTRACT, TOMATO POWDER, WATER, ONION POWDER, 2% OR LESS OF DISODIUM INOSINATE AND DISODIUM GUANYLATE, SALT, GARLIC POWDER, PAPRIKA (COLOR), NATURAL FLAVORS, LACTIC ACID, NATURAL FLAVOR, MODIFIED CORNSTARCH, CITRIC ACID.), Canola Oil, Turmeric, Kosher Salt"
     },
     {
       "id": "73998",
