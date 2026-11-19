@@ -4,8 +4,8 @@
   "serviceAreaId": 125621,
   "source": "https://dining.utk.edu/vendor/rocky-top-dining-hall/",
   "date": "2026-11-18",
-  "scrapedAt": "2026-11-18T17:17:14.445Z",
-  "itemCount": 281,
+  "scrapedAt": "2026-11-19T00:24:39.782Z",
+  "itemCount": 279,
   "items": [
     {
       "id": "75182",
@@ -2174,44 +2174,6 @@
       "ingredients": "Hot Dog Roll (UNBLEACHED ENRICHED FLOUR (WHEAT FLOUR, MALTED BARLEY FLOUR, NIACIN, REDUCED IRON, THIAMIN MONONITRATE, RIBOFLAVIN, FOLIC ACID), WATER, HIGH FRUCTOSE CORN SYRUP, YEAST, CONTAINS 2% OR LESS OF EACH OF THE FOLLOWING: WHEAT GLUTEN, SOYBEAN OIL, SALT, DOUGH CONDITIONERS (CONTAINS ONE OR MORE OF THE FOLLOWING: SODIUM STEAROYL LACTYLATE, CALCIUM STEAROYL LACTYLATE, MONOGLYCERIDES, MONO- AND DI- GLYVERICES, DISTILLED MONOGLYCERIDES, CALCIUM PEROXIDE, CALCIUM IODATE, DATEM, ETHOXYLATED MONO AND DIGLYCERICES, ENZYMES, ASCORBIC ACID, CALCIUM CARBONATE, MONOCALCIUM PHOSPHATE, SESAME FLOUR, SOY LECITHIN, CALCIUM PROPIONATE (TO RETARD SPOILAGE))"
     },
     {
-      "id": "75242",
-      "name": "Timberline Chili",
-      "station": "Grill",
-      "period": "Lunch",
-      "description": "Tender beef, beans and peppers simmered in a zesty tomato sauce seasoned with chili and pepper",
-      "serving": "4 fl oz",
-      "nutrition": {
-        "calories": 70,
-        "total_fat": 3.5,
-        "saturated_fat": 1,
-        "trans_fat": 0,
-        "cholesterol": 10,
-        "sodium": 215,
-        "carbohydrate": 6,
-        "fiber": 2,
-        "total_sugars": 2,
-        "protein": 4.9,
-        "calcium": 21.2,
-        "iron": 1,
-        "potassium": 200
-      },
-      "vegan": false,
-      "vegetarian": false,
-      "contains": {
-        "soy": true,
-        "eggs": false,
-        "fish": false,
-        "milk": false,
-        "wheat": true,
-        "gluten": true,
-        "peanut": false,
-        "sesame": false,
-        "shellfish": false,
-        "tree_nuts": false
-      },
-      "ingredients": "Chili Bean Soup (KIDNEY BEANS (COOKED KIDNEY BEANS, WATER, SALT,  CALCIUM CHLORIDE, DISODIUM EDTA [AS A PRESERVATIVE]), GROUND BEEF, WATER,  TOMATOES IN JUICE (TOMATOES, TOMATO JUICE, CITRIC ACID, CALCIUM CHLORIDE),  TOMATO PASTE, CELERY, GREEN BELL PEPPERS, CONTAINS LESS THAN 2% OF BROWN  SUGAR, MODIFIED FOOD STARCH, CHILI PEPPERS, DRIED ONIONS, SALT, FLAVOR  ENHANCER (HYDROLYZED CORN GLUTEN, WHEAT PROTEIN AND SOY PROTEIN, AUTOLYZED  YEAST EXTRACT), SUGAR, DEXTROSE, GARLIC, SPICES, NATURAL FLAVOR)"
-    },
-    {
       "id": "75391",
       "name": "Crispy Tater Tots",
       "station": "Grill",
@@ -2402,44 +2364,6 @@
       "ingredients": "Tomato "
     },
     {
-      "id": "75157",
-      "name": "Dill Pickle Slices",
-      "station": "Grill - Toppings",
-      "period": "Lunch",
-      "description": "Dill pickle slices",
-      "serving": "2 slice",
-      "nutrition": {
-        "calories": 0,
-        "total_fat": 0,
-        "saturated_fat": 0,
-        "trans_fat": 0,
-        "cholesterol": 0,
-        "sodium": 160,
-        "carbohydrate": 0,
-        "fiber": 0,
-        "total_sugars": 0,
-        "protein": 0.1,
-        "calcium": 8.5,
-        "iron": 0.1,
-        "potassium": 15
-      },
-      "vegan": true,
-      "vegetarian": true,
-      "contains": {
-        "soy": false,
-        "eggs": false,
-        "fish": false,
-        "milk": false,
-        "wheat": false,
-        "gluten": false,
-        "peanut": false,
-        "sesame": false,
-        "shellfish": false,
-        "tree_nuts": false
-      },
-      "ingredients": "Pickle Slices (FRESH  CUCUMBERS, WATER, SALT, DISTILLED VINEGAR, CONTAINS LESS THAN 2% OF DRIED  GARLIC, CALCIUM CHLORIDE, SPICE, SODIUM BENZOATE (TO PRESERVE FLAVOR),  MUSTARD SEED, DRIED RED PEPPERS, NATURAL FLAVOR, POLYSORBATE 80, OLEORESIN  TURMERIC)"
-    },
-    {
       "id": "75275",
       "name": "Jalapeno Peppers",
       "station": "Grill - Toppings",
@@ -2478,26 +2402,26 @@
       "ingredients": "Jalapeno Chili Peppers"
     },
     {
-      "id": "75206",
-      "name": "Lettuce",
+      "id": "103686",
+      "name": "Sauerkraut",
       "station": "Grill - Toppings",
       "period": "Lunch",
-      "description": "Fresh lettuce leaves",
-      "serving": "1 cup",
+      "description": "Fresh sauerkraut",
+      "serving": "1/4 cup",
       "nutrition": {
-        "calories": 5,
+        "calories": 10,
         "total_fat": 0,
         "saturated_fat": 0,
         "trans_fat": 0,
         "cholesterol": 0,
-        "sodium": 10,
-        "carbohydrate": 1,
-        "fiber": 0,
+        "sodium": 350,
+        "carbohydrate": 2,
+        "fiber": 2,
         "total_sugars": 0,
-        "protein": 0.5,
-        "calcium": 13,
-        "iron": 0.3,
-        "potassium": 70
+        "protein": 0,
+        "calcium": 0,
+        "iron": 0,
+        "potassium": 0
       },
       "vegan": true,
       "vegetarian": true,
@@ -2513,27 +2437,27 @@
         "shellfish": false,
         "tree_nuts": false
       },
-      "ingredients": "Lettuce"
+      "ingredients": "Sauerkraut"
     },
     {
-      "id": "75205",
-      "name": "Shredded Cheddar & Monterey Jack",
+      "id": "103685",
+      "name": "Shredded Cheddar Cheese",
       "station": "Grill - Toppings",
       "period": "Lunch",
-      "description": "Shredded Monterey Jack cheddar cheese",
+      "description": "Shredded Cheddar cheese",
       "serving": "1/4 cup",
       "nutrition": {
         "calories": 110,
-        "total_fat": 8.5,
+        "total_fat": 9,
         "saturated_fat": 5,
-        "trans_fat": 0,
+        "trans_fat": 0.5,
         "cholesterol": 25,
-        "sodium": 172,
-        "carbohydrate": 1,
+        "sodium": 179,
+        "carbohydrate": 2,
         "fiber": 0,
         "total_sugars": 0,
-        "protein": 6.5,
-        "calcium": 199.5,
+        "protein": 6.3,
+        "calcium": 194.7,
         "iron": 0.1,
         "potassium": 20
       },
@@ -2551,7 +2475,45 @@
         "shellfish": false,
         "tree_nuts": false
       },
-      "ingredients": "Monterey Jack Cheese (Monterey Jack Cheese (Pasteurized Milk, Cheese Culture, Salt, Enzymes), Cheddar Cheese (Pasteurized Milk, Cheese Culture, Salt, Enzymes, Annatto [Color] If Colored). Potato Starch And Powdered Cellulose Added To Prevent Caking.)"
+      "ingredients": "Cheddar Cheese (CHEDDAR CHEESE (CULTURED PASTEURIZED MILK, SALT, ENZYMES, ANNATTO [VEGETABLE COLOR]), ANTI-CAKING BLEND (POTATO STARCH,  POWDERED CELLULOSE))"
+    },
+    {
+      "id": "103688",
+      "name": "Sweet Pickle Relish",
+      "station": "Grill - Toppings",
+      "period": "Lunch",
+      "description": "Sweet pickle relish",
+      "serving": "1 tablespoon",
+      "nutrition": {
+        "calories": 15,
+        "total_fat": 0,
+        "saturated_fat": 0,
+        "trans_fat": 0,
+        "cholesterol": 0,
+        "sodium": 107,
+        "carbohydrate": 3,
+        "fiber": 0,
+        "total_sugars": 3,
+        "protein": 0.1,
+        "calcium": 0.2,
+        "iron": 0,
+        "potassium": 5
+      },
+      "vegan": true,
+      "vegetarian": true,
+      "contains": {
+        "soy": false,
+        "eggs": false,
+        "fish": false,
+        "milk": false,
+        "wheat": false,
+        "gluten": false,
+        "peanut": false,
+        "sesame": false,
+        "shellfish": false,
+        "tree_nuts": false
+      },
+      "ingredients": "Sweet Pickle Relish (CUCUMBERS,  HIGH FRUCTOSE CORN SYRUP, SALT, DISTILLED WHITE VINEGAR, WATER, ALUMINUM  SULPHATE, XANTHAN GUM, NATURAL FLAVOR, DEHYDRATED RED BELL PEPPERS,  POLYSORBATE 80, OLEORESIN TURMERIC)"
     },
     {
       "id": "75300",
@@ -6012,44 +5974,6 @@
       "ingredients": "Croutons (ENRICHED FLOUR (WHEAT FLOUR, MALTED BARLEY FLOUR, NIACIN, REDUCED IRON, THIAMIN MONONITRATE, RIBOFLAVIN, FOLIC ACID), CANOLA AND/OR SUNFLOWER OIL (WITH ROSEMARY EXTRACT AND ASCORBIC ACID [TO PRESERVE FRESHNESS]), WHEY, SALT, SUGAR, YEAST, 2% OR LESS OF SPICES, DEHYDRATED PARSLEY, ONION POWDER, PAPRIKA (COLOR), TURMERIC (COLOR), EXTRACTIVE OF PAPRIKA (COLOR), SPICE EXTRACTIVE, ENZYMES.)"
     },
     {
-      "id": "75322",
-      "name": "Cucumbers",
-      "station": "Produce Market",
-      "period": "Lunch",
-      "description": "Sliced fresh cucumbers",
-      "serving": "1 ozw",
-      "nutrition": {
-        "calories": 5,
-        "total_fat": 0,
-        "saturated_fat": 0,
-        "trans_fat": 0,
-        "cholesterol": 0,
-        "sodium": 0,
-        "carbohydrate": 1,
-        "fiber": 0,
-        "total_sugars": 0,
-        "protein": 0.2,
-        "calcium": 4.5,
-        "iron": 0.1,
-        "potassium": 40
-      },
-      "vegan": true,
-      "vegetarian": true,
-      "contains": {
-        "soy": false,
-        "eggs": false,
-        "fish": false,
-        "milk": false,
-        "wheat": false,
-        "gluten": false,
-        "peanut": false,
-        "sesame": false,
-        "shellfish": false,
-        "tree_nuts": false
-      },
-      "ingredients": "Cucumber"
-    },
-    {
       "id": "75324",
       "name": "Fresh Fruit Salad",
       "station": "Produce Market",
@@ -6352,6 +6276,44 @@
         "tree_nuts": false
       },
       "ingredients": "Dark Red Kidney Beans"
+    },
+    {
+      "id": "103689",
+      "name": "Roasted Corn",
+      "station": "Produce Market",
+      "period": "Lunch",
+      "description": "Roasted corn tossed with salt and pepper",
+      "serving": "1/4 cup",
+      "nutrition": {
+        "calories": 50,
+        "total_fat": 1.5,
+        "saturated_fat": 0,
+        "trans_fat": 0,
+        "cholesterol": 0,
+        "sodium": 36,
+        "carbohydrate": 10,
+        "fiber": 1,
+        "total_sugars": 1,
+        "protein": 1.5,
+        "calcium": 2.3,
+        "iron": 0.2,
+        "potassium": 105
+      },
+      "vegan": true,
+      "vegetarian": true,
+      "contains": {
+        "soy": false,
+        "eggs": false,
+        "fish": false,
+        "milk": false,
+        "wheat": false,
+        "gluten": false,
+        "peanut": false,
+        "sesame": false,
+        "shellfish": false,
+        "tree_nuts": false
+      },
+      "ingredients": "Corn Kernels, Vegetable Oil Blend (Vegetable Oil (May contain one or more of the following: Soybean, Canola, Corn, Sunflower Oil); Olive Oil; Colorant: Beta-Carotene E160a(i)), Kosher Salt, Black Pepper"
     },
     {
       "id": "75213",
@@ -6886,44 +6848,6 @@
       "ingredients": "Croutons (ENRICHED FLOUR (WHEAT FLOUR, MALTED BARLEY FLOUR, NIACIN, REDUCED IRON, THIAMIN MONONITRATE, RIBOFLAVIN, FOLIC ACID), CANOLA AND/OR SUNFLOWER OIL (WITH ROSEMARY EXTRACT AND ASCORBIC ACID [TO PRESERVE FRESHNESS]), WHEY, SALT, SUGAR, YEAST, 2% OR LESS OF SPICES, DEHYDRATED PARSLEY, ONION POWDER, PAPRIKA (COLOR), TURMERIC (COLOR), EXTRACTIVE OF PAPRIKA (COLOR), SPICE EXTRACTIVE, ENZYMES.)"
     },
     {
-      "id": "75435",
-      "name": "Cucumbers",
-      "station": "Produce Market",
-      "period": "Dinner",
-      "description": "Sliced fresh cucumbers",
-      "serving": "1 ozw",
-      "nutrition": {
-        "calories": 5,
-        "total_fat": 0,
-        "saturated_fat": 0,
-        "trans_fat": 0,
-        "cholesterol": 0,
-        "sodium": 0,
-        "carbohydrate": 1,
-        "fiber": 0,
-        "total_sugars": 0,
-        "protein": 0.2,
-        "calcium": 4.5,
-        "iron": 0.1,
-        "potassium": 40
-      },
-      "vegan": true,
-      "vegetarian": true,
-      "contains": {
-        "soy": false,
-        "eggs": false,
-        "fish": false,
-        "milk": false,
-        "wheat": false,
-        "gluten": false,
-        "peanut": false,
-        "sesame": false,
-        "shellfish": false,
-        "tree_nuts": false
-      },
-      "ingredients": "Cucumber"
-    },
-    {
       "id": "75161",
       "name": "Fresh Fruit Salad",
       "station": "Produce Market",
@@ -7188,6 +7112,44 @@
         "tree_nuts": false
       },
       "ingredients": "Dark Red Kidney Beans"
+    },
+    {
+      "id": "103687",
+      "name": "Roasted Corn",
+      "station": "Produce Market",
+      "period": "Dinner",
+      "description": "Roasted corn tossed with salt and pepper",
+      "serving": "1/4 cup",
+      "nutrition": {
+        "calories": 50,
+        "total_fat": 1.5,
+        "saturated_fat": 0,
+        "trans_fat": 0,
+        "cholesterol": 0,
+        "sodium": 36,
+        "carbohydrate": 10,
+        "fiber": 1,
+        "total_sugars": 1,
+        "protein": 1.5,
+        "calcium": 2.3,
+        "iron": 0.2,
+        "potassium": 105
+      },
+      "vegan": true,
+      "vegetarian": true,
+      "contains": {
+        "soy": false,
+        "eggs": false,
+        "fish": false,
+        "milk": false,
+        "wheat": false,
+        "gluten": false,
+        "peanut": false,
+        "sesame": false,
+        "shellfish": false,
+        "tree_nuts": false
+      },
+      "ingredients": "Corn Kernels, Vegetable Oil Blend (Vegetable Oil (May contain one or more of the following: Soybean, Canola, Corn, Sunflower Oil); Olive Oil; Colorant: Beta-Carotene E160a(i)), Kosher Salt, Black Pepper"
     },
     {
       "id": "75173",
@@ -8632,44 +8594,6 @@
         "tree_nuts": false
       },
       "ingredients": "Medium salsa (Tomatoes (Tomatoes, Tomato Juice, Citric Acid [To Acidify], Calcium Chloride [Firming]), Tomato Puree (Tomato Paste, Water), Onions, Water, Green Chile Peppers, Jalapeño Peppers, Contains 2% or less of Iodized Salt (Contains Potassium Iodate), Distilled Vinegar, Garlic Powder, Xanthan Gum, Spice, Paprika, Calcium Chloride (Firming), Citric Acid (To Acidify))"
-    },
-    {
-      "id": "75156",
-      "name": "Santa Fe Chicken",
-      "station": "Tex Mex",
-      "period": "Dinner",
-      "description": "Char-grilled boneless chicken thigh seasoned with chili, lime and garlic. Garnished with cilantro and sweet peppers.",
-      "serving": "1 scoop",
-      "nutrition": {
-        "calories": 160,
-        "total_fat": 7,
-        "saturated_fat": 1.5,
-        "trans_fat": 0,
-        "cholesterol": 105,
-        "sodium": 147,
-        "carbohydrate": 1,
-        "fiber": 0,
-        "total_sugars": 0,
-        "protein": 22.4,
-        "calcium": 2.6,
-        "iron": 1.1,
-        "potassium": 20
-      },
-      "vegan": false,
-      "vegetarian": false,
-      "contains": {
-        "soy": false,
-        "eggs": false,
-        "fish": false,
-        "milk": false,
-        "wheat": false,
-        "gluten": false,
-        "peanut": false,
-        "sesame": false,
-        "shellfish": false,
-        "tree_nuts": false
-      },
-      "ingredients": "Chicken Thigh, Cilantro, Vegetable Oil Blend (Vegetable Oil (May contain one or more of the following: Soybean, Canola, Corn, Sunflower Oil); Olive Oil; Colorant: Beta-Carotene E160a(i)), Roasted Red Peppers, Chili Lime Rub  (SPICES (INCLUDING CHILI PEPPER), SEA SALT, SUGAR, PAPRIKA, BROWN MUSTARD SEED, CORNMALTODEXTRIN, GARLIC, ONION, LIME JUICE CONCENTRATE, CITRIC ACID, EXTRACTIVES OF PAPRIKA & LIMEOIL.)"
     },
     {
       "id": "75328",
