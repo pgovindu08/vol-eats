@@ -4,9 +4,47 @@
   "serviceAreaId": 125621,
   "source": "https://dining.utk.edu/vendor/rocky-top-dining-hall/",
   "date": "2026-11-19",
-  "scrapedAt": "2026-11-19T10:23:58.271Z",
-  "itemCount": 269,
+  "scrapedAt": "2026-11-19T20:40:13.138Z",
+  "itemCount": 268,
   "items": [
+    {
+      "id": "103797",
+      "name": "Apple Cinnamon Scone",
+      "station": "Bakery",
+      "period": "Breakfast",
+      "description": "Freshly baked cinnamon-spiced scone with apple chunks",
+      "serving": "each",
+      "nutrition": {
+        "calories": 120,
+        "total_fat": 4.5,
+        "saturated_fat": 2.5,
+        "trans_fat": 0,
+        "cholesterol": 0,
+        "sodium": 243,
+        "carbohydrate": 17,
+        "fiber": 1,
+        "total_sugars": 3,
+        "protein": 1.5,
+        "calcium": 37.3,
+        "iron": 1,
+        "potassium": 5
+      },
+      "vegan": false,
+      "vegetarian": true,
+      "contains": {
+        "soy": true,
+        "eggs": true,
+        "fish": false,
+        "milk": true,
+        "wheat": true,
+        "gluten": true,
+        "peanut": false,
+        "sesame": false,
+        "shellfish": false,
+        "tree_nuts": false
+      },
+      "ingredients": "Buttermilk Biscuit Mix (ENRICHED FLOUR BLEACHED (WHEAT FLOUR, NIACIN, IRON, THIAMIN MONONITRATE, RIBOFLAVIN, FOLIC ACID), PALM OIL, LEAVENING (BAKING SODA, SODIUM ALUMINUM PHOSPHATE, MONOCALCIUM PHOSPHATE), SALT, BUTTERMILK, DEXTROSE, SOY FLOUR, EGG.), Water, Apples, Granulated Sugar, Water, Egg Blend (WHOLE EGG, CITRIC ACID, 0.15% WATER ADDED AS CARRIER FOR CITRIC ACID. CITRIC ACID ADDED TO PRESERVE COLOR.), Cinnamon"
+    },
     {
       "id": "75515",
       "name": "Apple Crumb Cupcake",
@@ -120,44 +158,6 @@
         "tree_nuts": false
       },
       "ingredients": "Donut  (ENRICHED UNBLEACHED WHEAT FLOUR (WHEAT FLOUR, MALTED BARLEY FLOUR, NIACIN, IRON AS FERROUS SULFATE, THIAMINE MONONITRATE, ENZYME, RI BOFLAVIN, FOLIC ACID), WATER, PALM OIL, YEAST, SKIM MILK, DEXTROSE, SUGAR, CONTAINS LESS THAN 2% OF THE FOLLOWING:  SOYBEAN OIL, WHEY (A MILK DERIVATIVE), SALT, DEFATTED SOY FLOUR, LEAVENING (SODIUM ACID PYROPHOSPHATE, BAKING SODA), CELLULOSE GUM, SODIUM STEAROYL LACTYLATE, MONO AND DIGLYCERIDES, TO PRESERVE FRESHNESS (CALCIUM PROPIONATE), GUAR GUM, XANTHAN GUM, COLORED WITH (BETA CAROTENE), EGG WHITES.), Icing (SUGAR, PALM OIL, WATER, CORN SYRUP, COCOA PROCESSED WITH ALKALI, CORN STARCH. CONTAINS 2% OR LESS OF: SALT, MONOGLYCERIDES, POTASSIUM SORBATE (PRESERVATIVE), POLYSORBATE 60, NATURAL AND ARTIFICIAL FLAVOR, SODIUM STEAROYL LACTYLATE, SODIUM ACID PYROPHOSPHATE, CITRIC ACID, COLOR ADDED, NONFAT MILK.), Rainbow Sprinkles (Sugar, Corn Starch, Palm & Palm Kernel Oil,  Soy Lecithin, Dextrin, Confectioners Glaze, Carnauba Wax, FD&C Colors,  Yellow #5 Lake, Yellow #6 Lake, Red #40 Lake, Blue #1 Lake, FD&C Red #3.)"
-    },
-    {
-      "id": "75514",
-      "name": "Chocolate Scone",
-      "station": "Bakery",
-      "period": "Breakfast",
-      "description": "Freshly baked scone with chocolate chips",
-      "serving": "each",
-      "nutrition": {
-        "calories": 100,
-        "total_fat": 4.5,
-        "saturated_fat": 2.5,
-        "trans_fat": 0,
-        "cholesterol": 0,
-        "sodium": 88,
-        "carbohydrate": 14,
-        "fiber": 1,
-        "total_sugars": 6,
-        "protein": 1.3,
-        "calcium": 20.1,
-        "iron": 0.7,
-        "potassium": 45
-      },
-      "vegan": false,
-      "vegetarian": true,
-      "contains": {
-        "soy": true,
-        "eggs": false,
-        "fish": false,
-        "milk": true,
-        "wheat": true,
-        "gluten": true,
-        "peanut": false,
-        "sesame": false,
-        "shellfish": false,
-        "tree_nuts": false
-      },
-      "ingredients": "Chocolate Chunk Scone (Enriched Flour (wheat Flour, Malted Barley Flour, Niacin, Iron, Thiamin Mononitrate, Riboflavin, Folic Acid), Water, Sugar, Palm Oil, Semisweet Chocolate Chunks (sugar, Unsweetened Chocolate, Cocoa Butter, Soy Lecithin, Natural Flavor), Modified Whey, Cinnamon Drops (sugar, Palm And/or Palm Kernel Oil, Cinnamon, Dried Nonfat Milk, Soy Lecithin), Brown Sugar, Modified Corn Starch, Blueberries, High Fructose Corn Syrup (glucose-fructose), Baking Soda, Dextrose, Dried Nonfat Milk, Monocalcium Phosphate, Salt, Cinnamon, Sodium Aluminum Phosphate, Distilled Monoglycerides, Xanthan Gum, Oat Fiber, Corn Flour, Natural Flavor, Fruit and Vegetable Juice Color, Citric Acid (to Protect Color).)"
     },
     {
       "id": "75580",
@@ -1604,26 +1604,26 @@
       "ingredients": "Granulated Sugar, Cinnamon"
     },
     {
-      "id": "75518",
-      "name": "Crispy Tater Tots",
+      "id": "103798",
+      "name": "Home Fries",
       "station": "Grill",
       "period": "Breakfast",
-      "description": "Deep-fried seasoned shredded potato bites",
+      "description": "Oven-roasted seasoned fresh potato slices",
       "serving": "1/2 cup",
       "nutrition": {
-        "calories": 90,
-        "total_fat": 5,
+        "calories": 140,
+        "total_fat": 4.5,
         "saturated_fat": 0.5,
         "trans_fat": 0,
         "cholesterol": 0,
-        "sodium": 265,
-        "carbohydrate": 12,
-        "fiber": 1,
-        "total_sugars": 1,
-        "protein": 0.9,
-        "calcium": 6.8,
-        "iron": 0.2,
-        "potassium": 180
+        "sodium": 143,
+        "carbohydrate": 24,
+        "fiber": 2,
+        "total_sugars": 2,
+        "protein": 2.2,
+        "calcium": 5.9,
+        "iron": 0.4,
+        "potassium": 430
       },
       "vegan": true,
       "vegetarian": true,
@@ -1639,7 +1639,7 @@
         "shellfish": false,
         "tree_nuts": false
       },
-      "ingredients": "Potato (Potatoes, Vegetable Oil (Contains One Or More Of The Following Oils: Canola, Soybean, Cottonseed, Sunflower, Corn).  Contains 2% or less of Dextrose, Natural Flavor, Salt, Sodium Acid Pyrophosphate Added To Maintain Color.)"
+      "ingredients": "Russet Potato, Canola Oil, Kosher Salt, Black Pepper"
     },
     {
       "id": "75662",
@@ -1718,44 +1718,6 @@
       "ingredients": "Water, Pancake Mix  (ENRICHED BLEACHED FLOUR (BLEACHED WHEAT FLOUR, NIACINAMIDE, REDUCED IRON, THIAMIN MONONITRATE, RIBOFLAVIN, FOLIC ACID), SUGAR, LEAVENING (BAKING SODA, SODIUM ALUMINUM PHOSPHATE, MONOCALCIUM PHOSPHATE), DEXTROSE, BUTTERMILK POWDER, PALM OIL, SALT, WHEAT GLUTEN, CORN SYRUP SOLIDS, SODIUM CASEINATE, MONO AND DIGLYCERIDES, DIPOTASSIUM PHOSPHATE, LACTIC ACID, TOCOPHEROLS (TO PRESERVE FRESHNESS).), Canned Pumpkin, Liquid Whole Eggs (WHOLE EGG, CITRIC ACID, 0.15% WATER ADDED AS CARRIER FOR CITRIC ACID. CITRIC ACID ADDED TO PRESERVE COLOR.), Unsalted Butter (Pasteurized Cream, Natural Flavoring.), Orange Marmalade (HIGH FRUCTOSE CORN SYRUP, CORN SYRUP, ORANGE PEEL, CONTAINS 2% OR LESS OF: ORANGE JUICE CONCENTRATE, FRUIT PECTIN, CITRIC ACID, NATURAL ORANGE FLAVOR), Pumpkin Pie Spice (CINNAMON, GINGER, NUTMEG, ALLSPICE & SULFITING AGENT.)"
     },
     {
-      "id": "75617",
-      "name": "Raisins",
-      "station": "Grill",
-      "period": "Breakfast",
-      "description": "Seedless raisins",
-      "serving": "2 tablespoon",
-      "nutrition": {
-        "calories": 60,
-        "total_fat": 0,
-        "saturated_fat": 0,
-        "trans_fat": 0,
-        "cholesterol": 0,
-        "sodium": 6,
-        "carbohydrate": 17,
-        "fiber": 1,
-        "total_sugars": 14,
-        "protein": 0.7,
-        "calcium": 13.2,
-        "iron": 0.4,
-        "potassium": 160
-      },
-      "vegan": true,
-      "vegetarian": true,
-      "contains": {
-        "soy": false,
-        "eggs": false,
-        "fish": false,
-        "milk": false,
-        "wheat": false,
-        "gluten": false,
-        "peanut": false,
-        "sesame": false,
-        "shellfish": false,
-        "tree_nuts": false
-      },
-      "ingredients": "Seedless Raisins"
-    },
-    {
       "id": "75661",
       "name": "Scrambled Eggs",
       "station": "Grill",
@@ -1792,6 +1754,44 @@
         "tree_nuts": false
       },
       "ingredients": "Egg Blend (WHOLE EGG, CITRIC ACID, 0.15% WATER ADDED AS CARRIER FOR CITRIC ACID. CITRIC ACID ADDED TO PRESERVE COLOR.)"
+    },
+    {
+      "id": "103799",
+      "name": "Whipped Butter",
+      "station": "Grill",
+      "period": "Breakfast",
+      "description": "Unsalted whipped butter",
+      "serving": "1 tablespoon",
+      "nutrition": {
+        "calories": 80,
+        "total_fat": 8.5,
+        "saturated_fat": 5.5,
+        "trans_fat": 0.5,
+        "cholesterol": 25,
+        "sodium": 0,
+        "carbohydrate": 0,
+        "fiber": 0,
+        "total_sugars": 0,
+        "protein": 0,
+        "calcium": 2.6,
+        "iron": 0,
+        "potassium": 0
+      },
+      "vegan": false,
+      "vegetarian": true,
+      "contains": {
+        "soy": false,
+        "eggs": false,
+        "fish": false,
+        "milk": true,
+        "wheat": false,
+        "gluten": false,
+        "peanut": false,
+        "sesame": false,
+        "shellfish": false,
+        "tree_nuts": false
+      },
+      "ingredients": "Unsalted Butter (Pasteurized Cream, Natural Flavoring.)"
     },
     {
       "id": "75678",
@@ -8064,6 +8064,44 @@
       "ingredients": "Sour Cream (Cultured Cream, Enzyme.), Low-Fat Buttermilk, Lime Juice, Cilantro, Lemon Zest, Kosher Salt"
     },
     {
+      "id": "103800",
+      "name": "Cilantro-Lime Pulled Chicken",
+      "station": "Tex Mex",
+      "period": "Dinner",
+      "description": "Tender chicken thigh braised with Southwest spices and finished with lime juice and cilantro",
+      "serving": "3 ozw",
+      "nutrition": {
+        "calories": 120,
+        "total_fat": 4.5,
+        "saturated_fat": 1,
+        "trans_fat": 0,
+        "cholesterol": 75,
+        "sodium": 190,
+        "carbohydrate": 2,
+        "fiber": 0,
+        "total_sugars": 1,
+        "protein": 16.3,
+        "calcium": 17.3,
+        "iron": 1,
+        "potassium": 240
+      },
+      "vegan": false,
+      "vegetarian": false,
+      "contains": {
+        "soy": false,
+        "eggs": false,
+        "fish": false,
+        "milk": false,
+        "wheat": false,
+        "gluten": false,
+        "peanut": false,
+        "sesame": false,
+        "shellfish": false,
+        "tree_nuts": false
+      },
+      "ingredients": "Chicken Thigh, Water, Onion, Lime Juice, Garlic, Canola Oil, Cilantro, Chicken Base (CHICKEN MEAT AND NATURAL CHICKEN JUICES, MALTODEXTRIN, AUTOLYZED YEAST EXTRACT, NATURAL FLAVORS, SALT, CORN STARCH, 2% OR LESS OF VEGETABLE OIL (CORN AND/OR CANOLA OIL), DISODIUM INOSINATE, DRIED CHICKEN BROTH, TURMERIC AND ANNATTO (COLOR), POTATO STARCH, DISODIUM GUANYLATE, CHICKEN FAT, PAPRIKA (COLOR), DRIED CHICKEN, SUGAR, SPICES, PAPAIN, CITRIC ACID.), Black Pepper, Cumin, Chili Powder (CHILI PEPPER, SPICES, SALT, SILICON DIOXIDE (TO MAKE FREE FLOWING) AND GARLIC), Kosher Salt"
+    },
+    {
       "id": "75457",
       "name": "Iceberg Lettuce",
       "station": "Tex Mex",
@@ -8100,44 +8138,6 @@
         "tree_nuts": false
       },
       "ingredients": "Lettuce"
-    },
-    {
-      "id": "101664",
-      "name": "Mini Beef Empanada",
-      "station": "Tex Mex",
-      "period": "Dinner",
-      "description": "Mini beef empanada",
-      "serving": "each",
-      "nutrition": {
-        "calories": 60,
-        "total_fat": 1.5,
-        "saturated_fat": 0.5,
-        "trans_fat": 0,
-        "cholesterol": 5,
-        "sodium": 106,
-        "carbohydrate": 8,
-        "fiber": 1,
-        "total_sugars": 0,
-        "protein": 3,
-        "calcium": 5.9,
-        "iron": 0.5,
-        "potassium": 60
-      },
-      "vegan": null,
-      "vegetarian": null,
-      "contains": {
-        "soy": null,
-        "eggs": null,
-        "fish": null,
-        "milk": null,
-        "wheat": null,
-        "gluten": null,
-        "peanut": null,
-        "sesame": null,
-        "shellfish": null,
-        "tree_nuts": null
-      },
-      "ingredients": " Beef Empanada"
     },
     {
       "id": "75503",
@@ -8290,44 +8290,6 @@
         "tree_nuts": false
       },
       "ingredients": "Black Beans, Water, Tomato, Onion, Jalapeno Pepper, Lime Juice, Vegetable Base (SAUTEED VEGETABLE PUREE MIX (CARROTS, ONIONS, CELERY), CORN STARCH, MALTODEXTRIN, VEGETABLE OIL (CORN AND/OR CANOLA OIL), HYDROLYZED CORN PROTEIN, YEAST EXTRACT, TOMATO POWDER, WATER, ONION POWDER, 2% OR LESS OF DISODIUM INOSINATE AND DISODIUM GUANYLATE, SALT, GARLIC POWDER, PAPRIKA (COLOR), NATURAL FLAVORS, LACTIC ACID, NATURAL FLAVOR, MODIFIED CORNSTARCH, CITRIC ACID.), Kosher Salt, Cumin, Black Pepper, Garlic, Kosher Salt, Cilantro"
-    },
-    {
-      "id": "75647",
-      "name": "Taco Beef",
-      "station": "Tex Mex",
-      "period": "Dinner",
-      "description": "Spicy taco-seasoned ground beef",
-      "serving": "1/2 ozw",
-      "nutrition": {
-        "calories": 280,
-        "total_fat": 21.5,
-        "saturated_fat": 8,
-        "trans_fat": 1.5,
-        "cholesterol": 75,
-        "sodium": 681,
-        "carbohydrate": 4,
-        "fiber": 0,
-        "total_sugars": 2,
-        "protein": 18.4,
-        "calcium": 27.8,
-        "iron": 2.4,
-        "potassium": 310
-      },
-      "vegan": false,
-      "vegetarian": false,
-      "contains": {
-        "soy": false,
-        "eggs": false,
-        "fish": false,
-        "milk": false,
-        "wheat": false,
-        "gluten": false,
-        "peanut": false,
-        "sesame": false,
-        "shellfish": false,
-        "tree_nuts": false
-      },
-      "ingredients": "Ground Beef, Water, Taco Seasoning (DEXTROSE, SALT, CORN FLOUR, CHILI PEPPER, CUMIN, ONION POWDER, GARLIC POWDER, OREGANO, CITRIC ACID, SILICON DIOXIDE (AS ANTICAKING AGENT) & EXTRACTIVES OF PAPRIKA.)"
     },
     {
       "id": "75502",

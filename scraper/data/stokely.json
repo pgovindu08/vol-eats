@@ -4,7 +4,7 @@
   "serviceAreaId": 116094,
   "source": "https://dining.utk.edu/vendor/stokely-dining-hall/",
   "date": "2026-11-19",
-  "scrapedAt": "2026-11-19T10:23:58.509Z",
+  "scrapedAt": "2026-11-19T20:40:13.397Z",
   "itemCount": 298,
   "items": [
     {
@@ -9660,26 +9660,26 @@
       "ingredients": "Chili Bean Soup (WATER, GROUND BEEF, KIDNEY BEANS (COOKED KIDNEY  BEANS, WATER, SALT, CALCIUM CHLORIDE, DISODIUM EDTA [AS A PRESERVATIVE]),  TOMATO PASTE, CONTAINS LESS THAN 2% OF CHILI POWDER (SPICES, GARLIC POWDER,  SALT), MODIFIED FOOD STARCH, YELLOW CORN FLOUR, SALT, DEHYDRATED ONION,  MONOSODIUM GLUTAMATE, SUGAR, NATURAL FLAVOR)"
     },
     {
-      "id": "74054",
-      "name": "Banana Buttermilk Pancake",
+      "id": "103796",
+      "name": "Buttermilk Pancake",
       "station": "Traditions",
       "period": "Breakfast",
-      "description": "Piping hot buttermilk pancake with fresh banana",
-      "serving": "2 each",
+      "description": "Fluffy, golden brown buttermilk pancakes",
+      "serving": "each",
       "nutrition": {
-        "calories": 160,
-        "total_fat": 1,
-        "saturated_fat": 0.5,
+        "calories": 80,
+        "total_fat": 0.5,
+        "saturated_fat": 0,
         "trans_fat": 0,
         "cholesterol": 0,
-        "sodium": 416,
-        "carbohydrate": 35,
-        "fiber": 2,
-        "total_sugars": 9,
-        "protein": 4.3,
-        "calcium": 57.1,
-        "iron": 1.5,
-        "potassium": 170
+        "sodium": 250,
+        "carbohydrate": 17,
+        "fiber": 0,
+        "total_sugars": 3,
+        "protein": 2.4,
+        "calcium": 33.3,
+        "iron": 0.8,
+        "potassium": 25
       },
       "vegan": false,
       "vegetarian": true,
@@ -9695,7 +9695,7 @@
         "shellfish": false,
         "tree_nuts": false
       },
-      "ingredients": "Water, Pancake Mix  (ENRICHED BLEACHED FLOUR (BLEACHED WHEAT FLOUR, NIACINAMIDE, REDUCED IRON, THIAMIN MONONITRATE, RIBOFLAVIN, FOLIC ACID), SUGAR, LEAVENING (BAKING SODA, SODIUM ALUMINUM PHOSPHATE, MONOCALCIUM PHOSPHATE), DEXTROSE, BUTTERMILK POWDER, PALM OIL, SALT, WHEAT GLUTEN, CORN SYRUP SOLIDS, SODIUM CASEINATE, MONO AND DIGLYCERIDES, DIPOTASSIUM PHOSPHATE, LACTIC ACID, TOCOPHEROLS (TO PRESERVE FRESHNESS).), Banana"
+      "ingredients": "Water, Pancake Mix  (ENRICHED BLEACHED FLOUR (BLEACHED WHEAT FLOUR, NIACINAMIDE, REDUCED IRON, THIAMIN MONONITRATE, RIBOFLAVIN, FOLIC ACID), SUGAR, LEAVENING (BAKING SODA, SODIUM ALUMINUM PHOSPHATE, MONOCALCIUM PHOSPHATE), DEXTROSE, BUTTERMILK POWDER, PALM OIL, SALT, WHEAT GLUTEN, CORN SYRUP SOLIDS, SODIUM CASEINATE, MONO AND DIGLYCERIDES, DIPOTASSIUM PHOSPHATE, LACTIC ACID, TOCOPHEROLS (TO PRESERVE FRESHNESS).)"
     },
     {
       "id": "74053",
