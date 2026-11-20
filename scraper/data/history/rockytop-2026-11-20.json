@@ -4,8 +4,8 @@
   "serviceAreaId": 125621,
   "source": "https://dining.utk.edu/vendor/rocky-top-dining-hall/",
   "date": "2026-11-20",
-  "scrapedAt": "2026-11-20T12:56:28.158Z",
-  "itemCount": 272,
+  "scrapedAt": "2026-11-20T21:49:57.238Z",
+  "itemCount": 275,
   "items": [
     {
       "id": "75747",
@@ -388,6 +388,44 @@
       "ingredients": "Chocolate Chip Cookie (Enriched bleached flour (bleached wheat flour, malted barley flour, niacin, iron, thiamine mononitrate, riboflavin, folic acid), Sugar, Palm oil, Margarine (palm oil, water, soybean oil, contains 2% or less of: salt, mono- and diglycerides, natural flavor [contains milk], citric acid, vitamin A palmitate added, beta carotene [color]), Semi-sweet chocolate chips (sugar, unsweetened chocolate, cocoa butter, dextrose, soy lecithin, natural flavor, milk), Chocolate flavored chips (sugar, fractionated interesterified  vegetable fat [palm kernel and/or palm oils], cocoa powder [processed with alkali], dextrose, soy lecithin, polysorbate 60, sorbitan monostearate, natural flavor, salt, vanilla extract, milk), Water, Eggs, Dextrose, Contains 2% or less of: Molasses, Pregelatinized wheat starch, Baking soda, Salt, Natural and artificial flavors.)"
     },
     {
+      "id": "103968",
+      "name": "Chocolate Chip Crumb Cupcake",
+      "station": "Bakery",
+      "period": "Lunch",
+      "description": "Tender coffee cake with semisweet chocolate chips, crowned with a buttery streusel crumb topping.",
+      "serving": "each",
+      "nutrition": {
+        "calories": 190,
+        "total_fat": 6.5,
+        "saturated_fat": 3.5,
+        "trans_fat": 0,
+        "cholesterol": 5,
+        "sodium": 184,
+        "carbohydrate": 33,
+        "fiber": 1,
+        "total_sugars": 19,
+        "protein": 1.9,
+        "calcium": 4,
+        "iron": 0.9,
+        "potassium": 20
+      },
+      "vegan": false,
+      "vegetarian": null,
+      "contains": {
+        "soy": true,
+        "eggs": true,
+        "fish": false,
+        "milk": true,
+        "wheat": true,
+        "gluten": true,
+        "peanut": false,
+        "sesame": null,
+        "shellfish": false,
+        "tree_nuts": false
+      },
+      "ingredients": "Mix (CAKE MIX: ENRICHED FLOUR BLEACHED(WHEAT FLOUR, NIACIN, IRON, THIAMIN MONONITRATE,RIBOFLAVIN, FOLIC ACID), SUGAR, PALM OIL, LEAVENING(BAKING SODA, SODIUM ALUMINUM PHOSPHATE).CONTAINS 2% OR LESS OF: DEXTROSE, NONFAT MILK,EGG YOLK WITH SODIUM SILICOALUMINATE, SALT,MODIFIED CORN STARCH, EGGS WITH SODIUMSILICOALUMINATE, XANTHAN GUM, SOY LECITHIN, WHEY,NATURAL FLAVOR, ANNATTO AND TURMERIC EXTRACTCOLOR.TOPPING MIX: ENRICHED FLOUR BLEACHED(WHEAT FLOUR, NIACIN, IRON, THIAMIN MONONITRATE,RIBOFLAVIN, FOLIC ACID), BROWN SUGAR, SUGAR, PALMOIL, CINNAMON, SOY FLOUR, EGG, NONFAT MILK.), Water, Topping (CAKE MIX: ENRICHED FLOUR BLEACHED(WHEAT FLOUR, NIACIN, IRON, THIAMIN MONONITRATE,RIBOFLAVIN, FOLIC ACID), SUGAR, PALM OIL, LEAVENING(BAKING SODA, SODIUM ALUMINUM PHOSPHATE).CONTAINS 2% OR LESS OF: DEXTROSE, NONFAT MILK,EGG YOLK WITH SODIUM SILICOALUMINATE, SALT,MODIFIED CORN STARCH, EGGS WITH SODIUMSILICOALUMINATE, XANTHAN GUM, SOY LECITHIN, WHEY,NATURAL FLAVOR, ANNATTO AND TURMERIC EXTRACTCOLOR.TOPPING MIX: ENRICHED FLOUR BLEACHED(WHEAT FLOUR, NIACIN, IRON, THIAMIN MONONITRATE,RIBOFLAVIN, FOLIC ACID), BROWN SUGAR, SUGAR, PALMOIL, CINNAMON, SOY FLOUR, EGG, NONFAT MILK.), Chocolate Chips (INGREDIENTS: SUGAR, CHOCOLATE LIQUOR, COCOA BUTTER, MILKFAT, SOY LECITHIN, NATURAL FLAVOR. CONTAINS: MILK, SOY.), Powdered Sugar"
+    },
+    {
       "id": "75890",
       "name": "Chocolate Crinkle Whoopie Pie",
       "station": "Bakery",
@@ -424,6 +462,44 @@
         "tree_nuts": false
       },
       "ingredients": "Brownie Mix (SUGAR, ENRICHED FLOUR BLEACHED (WHEAT FLOUR, NIACIN, IRON, THIAMIN MONONITRATE, RIBOFLAVIN, FOLIC ACID), PALM OIL, COCOA PROCESSEDWITH ALKALI, SOYBEAN OIL. CONTAINS 2% OR LESS OF: CORN STARCH, EGG WHITE, SALT, LEAVENING (BAKING SODA, MONOCALCIUM PHOSPHATE), NATURAL FLAVOR, SOY FLOUR, NONFAT MILK.), Vanilla Icing (SUGAR, PALM OIL, WATER, CORN SYRUP, CORN STARCH. CONTAINS 2% OR LESS OF: SALT,MONOGLYCERIDES, YELLOWS 5 ; 6 AND OTHER COLOR ADDED, POLYSORBATE 60, POTASSIUM SORBATE (PRESERVATIVE), NATURALAND ARTIFICIAL FLAVOR, SODIUM STEAROYL LACTYLATE, SODIUM ACID PYROPHOSPHATE, CITRIC ACID, NONFAT MILK.), Water, Powdered Sugar"
+    },
+    {
+      "id": "103969",
+      "name": "Cinnamon Donut Bites",
+      "station": "Bakery",
+      "period": "Lunch",
+      "description": "Cinnamon-sugar donut holes",
+      "serving": "4 each",
+      "nutrition": {
+        "calories": 210,
+        "total_fat": 12,
+        "saturated_fat": 5.5,
+        "trans_fat": 0,
+        "cholesterol": 10,
+        "sodium": 302,
+        "carbohydrate": 23,
+        "fiber": 1,
+        "total_sugars": 9,
+        "protein": 2.3,
+        "calcium": 9.6,
+        "iron": 1.2,
+        "potassium": 40
+      },
+      "vegan": false,
+      "vegetarian": true,
+      "contains": {
+        "soy": true,
+        "eggs": true,
+        "fish": false,
+        "milk": true,
+        "wheat": true,
+        "gluten": true,
+        "peanut": false,
+        "sesame": false,
+        "shellfish": false,
+        "tree_nuts": false
+      },
+      "ingredients": "Donut Holes (ENRICHED UNBLEACHED WHEAT FLOUR (WHEAT FLOUR,NIACIN, REDUCED IRON, THIAMINE MONONITRATE, ENZYME, RIBOFLAVIN, FOLIC ACID),PALM OIL, SUGAR, WATER, SOYBEAN OIL, CONTAINS LESS THAN 2% OF THEFOLLOWING: DEFATTED SOY FLOUR, EGG YOLKS, LEAVENING (SODIUM ACIDPYROPHOSPHATE, BAKING SODA), DEXTROSE, WHEAT STARCH, SALT, SKIM MILK,MODIFIED WHEAT STARCH, POTATO FLOUR, ARTIFICIAL FLAVOR, SODIUM STEAROYLLACTYLATE.), Granulated Sugar, Cinnamon"
     },
     {
       "id": "75731",
@@ -576,6 +652,44 @@
         "tree_nuts": false
       },
       "ingredients": "Jelly (High Fructose Corn Syrup, Corn Syrup, Concentrated Concord Grape Juice, Concentrated White Grape Juice, Contains 2% or less of Sugar, Pectin, Citric Acid, Sodium Benzoate (Preservative), Sodium Citrate.)"
+    },
+    {
+      "id": "103970",
+      "name": "Iced Cinnamon Roll",
+      "station": "Bakery",
+      "period": "Lunch",
+      "description": "Freshly baked cinnamon roll with cream cheese icing",
+      "serving": "1 roll",
+      "nutrition": {
+        "calories": 210,
+        "total_fat": 9,
+        "saturated_fat": 4.5,
+        "trans_fat": 0,
+        "cholesterol": 5,
+        "sodium": 229,
+        "carbohydrate": 30,
+        "fiber": 1,
+        "total_sugars": 16,
+        "protein": 3.2,
+        "calcium": 2.8,
+        "iron": 1.3,
+        "potassium": 0
+      },
+      "vegan": false,
+      "vegetarian": true,
+      "contains": {
+        "soy": true,
+        "eggs": false,
+        "fish": false,
+        "milk": true,
+        "wheat": true,
+        "gluten": true,
+        "peanut": false,
+        "sesame": false,
+        "shellfish": false,
+        "tree_nuts": false
+      },
+      "ingredients": "Cinnamon Roll (ENRICHED FLOUR (WHEAT FLOUR, MALTED BARLEY FLOUR,   NIACIN, IRON, THIAMIN MONONITRATE, RIBOFLAVIN, FOLIC ACID), WATER, SUGAR,   PALM OIL, MARGARINE (PALM OIL, WATER, SOYBEAN OIL, SALT, MONO AND   DIGLYCERIDES, SOY LECITHIN, NATURAL FLAVOR, BETA CAROTENE COLOR, VITAMIN A   PALMITATE), SOYBEAN OIL, HIGH FRUCTOSE CORN SYRUP, YEAST, CINNAMON,   MONOGLYCERIDES, WHEAT PROTEIN ISOLATE, SODIUM CASEINATE, MODIFIED CORN   STARCH, DATEM, GLUCONO DELTA-LACTONE, BAKING SODA, SALT, SODIUM ACID   PYROPHOSPHATE, MOLASSES, NATURAL FLAVOR, ASCORBIC ACID. CONTAINS WHEAT, MILK AND SOY INGREDIENTS. ), Cream Cheese Icing (Sugar, Cream Cheese (Pasteurized Milk and Cream, Salt, Carob Bean Gum, Cheese Culture), Vegetable Shortening (Palm Oil, Canola Oil, Mono- and Diglycerides, Polysorbate 60), Dextrose. Contains 2% or less of each of the following: Cream Cheese Powder (Cream Cheese Solids [Cream, Nonfat Milk, Salt, Sodium Alginate, Lactic Acid], Corn Syrup Solids, Sodium Caseinate [Milk], Natural Flavor), Corn Starch, Soybean Oil, Salt, Natural Flavor, Benzoic Acid (Preservative), Polysorbate 60, Propyl Gallate (Antioxidant), Beta Carotene (Color).)"
     },
     {
       "id": "75891",
@@ -1528,42 +1642,42 @@
       "ingredients": "Chicken Thigh, Barbecue Sauce (HIGH FRUCTOSE CORN SYRUP, DISTILLED VINEGAR, TOMATO PASTE, MODIFIED CORN STARCH, CONTAINS LESS THAN 2% OF SALT, PINEAPPLE JUICE CONCENTRATE, NATURAL SMOKE FLAVOR, SPICE, CARAMEL COLOR, MOLASSES, SODIUM BENZOATE (PRESERVATIVE), GARLIC,* MUSTARD FLOUR, CORN SYRUP, SUGAR, TAMARIND, NATURAL FLAVOR, CELERY SEED. *DRIED.), Harissa Paste  (Bell peppers, jalapenos, canola/olive oil blend, garlic, cilantro, paprika, cumin, caraway seed, salt and citric acid.), Lime Juice, Red Wine Vinegar, Cilantro, Kosher Salt, Black Pepper"
     },
     {
-      "id": "75949",
-      "name": "Old Bay® Brussels Sprouts",
+      "id": "103978",
+      "name": "Spinach Gratin",
       "station": "Entree",
       "period": "Dinner",
-      "description": "Roasted brussels sprouts seasoned with Old Bay® seasoning",
+      "description": "Spinach, mozzarella and Asiago cheese baked with a bread crumb top",
       "serving": "1/2 cup",
       "nutrition": {
-        "calories": 80,
-        "total_fat": 5,
-        "saturated_fat": 0.5,
-        "trans_fat": 0,
-        "cholesterol": 0,
-        "sodium": 271,
-        "carbohydrate": 8,
-        "fiber": 3,
-        "total_sugars": 2,
-        "protein": 3,
-        "calcium": 41,
+        "calories": 150,
+        "total_fat": 9,
+        "saturated_fat": 5,
+        "trans_fat": 0.5,
+        "cholesterol": 25,
+        "sodium": 345,
+        "carbohydrate": 11,
+        "fiber": 2,
+        "total_sugars": 4,
+        "protein": 7.1,
+        "calcium": 214.2,
         "iron": 1.4,
-        "potassium": 350
+        "potassium": 300
       },
-      "vegan": true,
-      "vegetarian": true,
+      "vegan": false,
+      "vegetarian": false,
       "contains": {
         "soy": false,
-        "eggs": false,
+        "eggs": null,
         "fish": false,
-        "milk": false,
-        "wheat": false,
-        "gluten": false,
-        "peanut": false,
-        "sesame": false,
+        "milk": true,
+        "wheat": true,
+        "gluten": true,
+        "peanut": null,
+        "sesame": null,
         "shellfish": false,
-        "tree_nuts": false
+        "tree_nuts": null
       },
-      "ingredients": "Brussel Sprouts, Vegetable Oil Blend (Vegetable Oil (May contain one or more of the following: Soybean, Canola, Corn, Sunflower Oil); Olive Oil; Colorant: Beta-Carotene E160a(i)), Old Bay Seasoning (CELERY SALT (SALT, CELERY SEED), SPICES (INCLUDING RED PEPPER AND BLACK PEPPER), AND PAPRIKA.)"
+      "ingredients": "Whole Milk, Spinach, Wheat Flour (Bleached Wheat Flour, Malted Barley Flour, Niacin, Iron, Thiamin Mononitrate, Riboflavin, Folic Acid), Asiago Cheese (Asiago Cheese (Cultured Pasteurized Milk, Salt, Enzymes), Anti-Caking Blend (Potato Starch, Powdered Cellulose).), Mozzarella Cheese (LOW-MOISTURE PART-SKIM MOZZARELLA CHEESE  (CULTURED PASTEURIZED PART-SKIM MILK, SALT, ENZYMES). ANTI-CAKING BLEND  (POTATO STARCH, POWDERED CELLULOSE).), Unsalted Butter (Pasteurized Cream, Natural Flavoring.), Unsalted Butter (Pasteurized Cream, Natural Flavoring.), Panko Bread Crumbs (WHEAT FLOUR, SUGAR, YEAST, SALT.), Kosher Salt, Black Pepper"
     },
     {
       "id": "102925",
@@ -2022,26 +2136,26 @@
       "ingredients": "Chicken Wings"
     },
     {
-      "id": "75893",
-      "name": "Twister Fries",
+      "id": "103974",
+      "name": "Crispy Waffle Fries",
       "station": "Grill",
       "period": "Lunch",
-      "description": "Crispy on the outside, soft on the inside seasoned spiral-cut fries",
-      "serving": "3 ozw",
+      "description": "Piping hot crispy Waffle fries",
+      "serving": "16 ozw",
       "nutrition": {
-        "calories": 240,
-        "total_fat": 12.5,
-        "saturated_fat": 1.5,
-        "trans_fat": 0,
+        "calories": 790,
+        "total_fat": 46.5,
+        "saturated_fat": 6.5,
+        "trans_fat": 0.5,
         "cholesterol": 0,
-        "sodium": 577,
-        "carbohydrate": 31,
-        "fiber": 2,
-        "total_sugars": 1,
-        "protein": 2.6,
-        "calcium": 19.1,
-        "iron": 0.7,
-        "potassium": 390
+        "sodium": 1563,
+        "carbohydrate": 92,
+        "fiber": 6,
+        "total_sugars": 3,
+        "protein": 7.5,
+        "calcium": 56.2,
+        "iron": 1.9,
+        "potassium": 1160
       },
       "vegan": true,
       "vegetarian": true,
@@ -2057,7 +2171,7 @@
         "shellfish": false,
         "tree_nuts": false
       },
-      "ingredients": "French Fries (Potatoes, Vegetable Oil (Contains One Or More Of The Following Oils: Canola, Soybean, Cottonseed, Sunflower, Corn), Bleached Enriched Wheat Flour (Flour, Niacin, Reduced Iron, Thiamine Mononitrate, Riboflavin, Folic Acid). Contains 2% or less of Caramel Color, Cocoa Powder (Processed With Alkali), Degermed Yellow Corn Meal, Dextrin, Dextrose, Garlic Powder, Leavening (Sodium Acid Pyrophosphate, Sodium Bicarbonate), Natural Garlic Flavor, Onion Powder, Paprika Extract (color), Rice Flour, Salt, Sodium Acid Pyrophosphate Added To Maintain Color, Spices, Tapioca Starch, Tapioca Starch - Modified, Xanthan Gum.)"
+      "ingredients": "Potato Waffle Fries (Potatoes, Vegetable Oil (Contains One Or More Of The Following Oils: Canola, Soybean, Cottonseed, Sunflower, Corn), Bleached Enriched Wheat Flour (Flour, Niacin, Reduced Iron, Thiamine Mononitrate, Riboflavin, Folic Acid).  Contains 2% or less of Caramel Color, Cocoa Powder (Processed With Alkali), Degermed Yellow Corn Meal, Dextrin, Dextrose, Garlic Powder, Leavening (Sodium Acid Pyrophosphate, Sodium Bicarbonate), Natural Garlic Flavor, Onion Powder, Paprika Extract (color), Rice Flour, Salt, Sodium Acid Pyrophosphate Added To Maintain Color, Spices, Tapioca Starch, Tapioca Starch - Modified, Xanthan Gum.)"
     },
     {
       "id": "75936",
@@ -2174,6 +2288,44 @@
       "ingredients": "Roll (unbleached enriched flour (wheat flour, malted barley flour, niacin, reduced iron, thiamin mononitrate, riboflavin, folic acid), water, high fructose corn syrup, yeast, contains 2% or less of each of the following: wheat gluten, salt, soybean oil, dough conditioners, contains one of more of the following: sodium stearoyl lactylate, calcium stearoyl lactylate, monoglycerides, mono- and diglycerides, distilled monoglycerides, calcium peroxide, calcium iodate, datem, ethoxylated mono- and diglycerides, enzymes, ascorbic acid), monocalcium phosphate, sesame flour, soy lecithin, calcium propionate (to retard spoilage). if seeded, sesame seeds added.)"
     },
     {
+      "id": "103976",
+      "name": "Barbecue Sauce",
+      "station": "Grill - Toppings",
+      "period": "Lunch",
+      "description": "Barbecue sauce",
+      "serving": "1 tablespoon",
+      "nutrition": {
+        "calories": 35,
+        "total_fat": 0,
+        "saturated_fat": 0,
+        "trans_fat": 0,
+        "cholesterol": 0,
+        "sodium": 145,
+        "carbohydrate": 9,
+        "fiber": 0,
+        "total_sugars": 8,
+        "protein": 0.2,
+        "calcium": 2.1,
+        "iron": 0.1,
+        "potassium": 50
+      },
+      "vegan": true,
+      "vegetarian": true,
+      "contains": {
+        "soy": false,
+        "eggs": false,
+        "fish": false,
+        "milk": false,
+        "wheat": false,
+        "gluten": false,
+        "peanut": false,
+        "sesame": false,
+        "shellfish": false,
+        "tree_nuts": false
+      },
+      "ingredients": "Barbecue Sauce (HIGH FRUCTOSE CORN SYRUP, DISTILLED VINEGAR, TOMATO PASTE, MODIFIED CORN STARCH, CONTAINS LESS THAN 2% OF SALT, PINEAPPLE JUICE CONCENTRATE, NATURAL SMOKE FLAVOR, SPICE, CARAMEL COLOR, MOLASSES, SODIUM BENZOATE (PRESERVATIVE), GARLIC,* MUSTARD FLOUR, CORN SYRUP, SUGAR, TAMARIND, NATURAL FLAVOR, CELERY SEED. *DRIED.)"
+    },
+    {
       "id": "75914",
       "name": "Boom Boom Sauce",
       "station": "Grill - Toppings",
@@ -2250,42 +2402,42 @@
       "ingredients": "Buffalo Wing Sauce (DISTILLED VINEGAR, AGED CAYENNE RED PEPPERS, SALT, WATER, CANOLA OIL, PAPRIKA, XANTHAN GUM (THICKENER), GARLIC POWDER & NATURAL FLAVOR.)"
     },
     {
-      "id": "75915",
-      "name": "Garlic Parmesan Sauce",
+      "id": "103975",
+      "name": "Korean BBQ Sauce",
       "station": "Grill - Toppings",
       "period": "Lunch",
-      "description": "Garlic Parmesan Sauce",
-      "serving": "1 serving",
+      "description": "Tangy tomato barbecue sauce",
+      "serving": "2 tablespoon",
       "nutrition": {
-        "calories": 2670,
-        "total_fat": 262,
-        "saturated_fat": 46,
-        "trans_fat": 2.5,
-        "cholesterol": 45,
-        "sodium": 14630,
-        "carbohydrate": 62,
-        "fiber": 8,
-        "total_sugars": 18,
-        "protein": 27.7,
-        "calcium": 582.5,
-        "iron": 4,
-        "potassium": 860
+        "calories": 50,
+        "total_fat": 0.5,
+        "saturated_fat": 0,
+        "trans_fat": 0,
+        "cholesterol": 0,
+        "sodium": 629,
+        "carbohydrate": 11,
+        "fiber": 0,
+        "total_sugars": 10,
+        "protein": 1,
+        "calcium": 8.8,
+        "iron": 0.3,
+        "potassium": 85
       },
-      "vegan": false,
-      "vegetarian": false,
+      "vegan": null,
+      "vegetarian": null,
       "contains": {
-        "soy": true,
-        "eggs": false,
-        "fish": false,
-        "milk": true,
-        "wheat": false,
-        "gluten": false,
-        "peanut": false,
-        "sesame": false,
-        "shellfish": false,
-        "tree_nuts": false
+        "soy": null,
+        "eggs": null,
+        "fish": null,
+        "milk": null,
+        "wheat": null,
+        "gluten": null,
+        "peanut": null,
+        "sesame": null,
+        "shellfish": null,
+        "tree_nuts": null
       },
-      "ingredients": "Wing Sauce (WATER, VEGETABLE OIL (SOYBEAN AND/OR CANOLA),  MARGARINE (SOYBEAN AND HYDROGENATED SOYBEAN OILS, WATER, SALT, MONO AND  DIGLYCERIDES, SOY LECITHIN, SODIUM BENZOATE [PRESERVATIVE], NATURAL &  ARTIFICIAL FLAVOR, BETA-CAROTENE [COLOR], VITAMIN A PALMITATE), DISTILLED  VINEGAR, GARLIC,* PARMESAN CHEESE (PASTEURIZED PART-SKIM MILK, CHEESE  CULTURES, SALT, ENZYMES), SALT, CONTAINS LESS THAN 2% OF AGED CAYENNE RED  PEPPER, SUGAR, ONION CONCENTRATE (ONION JUICE, ONION JUICE CONCENTRATE, SALT,  ONION OIL), PHOSPHORIC ACID, WHEY PROTEIN CONCENTRATE, XANTHAN GUM, CITRIC  ACID, SPICE, NATURAL FLAVOR, POLYSORBATE 60, PROPYLENE GLYCOL ALGINATE,  SORBIC ACID AND SODIUM BENZOATE (PRESERVATIVES), BETA CAROTENE (COLOR),  LACTIC ACID, CALCIUM DISODIUM EDTA (TO PROTECT FLAVOR). *DRIED.)"
+      "ingredients": "Korean BBQ Sauce "
     },
     {
       "id": "75759",
@@ -5024,6 +5176,44 @@
       "ingredients": "Macaroni and Cheese (Cavatappi Pasta (Semolina Wheat Flour [Enriched with Niacin, Iron, Thiamine Mononitrate, Riboflavin, Folic Acid], Egg White), Water, Whole Milk, Pasteurized Process Cheese Spread (Cheddar and Colby Cheese [Pasteurized Milk , Cheese Culture, Salt, Enzymes], Water, Whey, Sodium Phosphate, Whey Protein Concentrate, Skim Milk, Milk Fat, Salt, Carrageenan, Cellulose Gum), Pasteurized Process White Cheddar Cheese (Cultured Milk, Water, Cream, Skim Milk, Sodium Phosphates, Salt, Lactic Acid, Enzymes), White Cheddar Cheese (Pasteurized Milk, Cheese Culture, Salt, Enzymes), Butter (Sweet Cream, Salt), Modified Corn Starch, Parmesan Cheese (Part- Skim Milk, Cheese Culture, Salt, Enzymes), Parmesan and Romano Cheese Base (Parmesan and Romano Cheese [Milk, Culture, Enzymes, Salt], Water, Whey, Salt, Modified Corn Starch, Cultured Buttermilk Solids, Calcium and Sodium Caseinates, Natural Flavoring, and Garlic Powder), Cheddar Cheese Flavor (Cheddar Cheese [Milk,  Cultures, Salt, Enzymes], Whey Disodium Phosphate, Enzymes), Salt, Spice, Nisin Preparation (Salt, Nisin [A Natural Antimicrobial]).), Seasoned Pork (Pork), Barbecue Sauce (HIGH FRUCTOSE CORN SYRUP, DISTILLED VINEGAR, TOMATO PASTE, MODIFIED CORN STARCH, CONTAINS LESS THAN 2% OF SALT, PINEAPPLE JUICE CONCENTRATE, NATURAL SMOKE FLAVOR, SPICE, CARAMEL COLOR, MOLASSES, SODIUM BENZOATE (PRESERVATIVE), GARLIC,* MUSTARD FLOUR, CORN SYRUP, SUGAR, TAMARIND, NATURAL FLAVOR, CELERY SEED. *DRIED.)"
     },
     {
+      "id": "103977",
+      "name": "Apple Wedges",
+      "station": "Produce Market",
+      "period": "Breakfast",
+      "description": "Red delicious apple wedges",
+      "serving": "2 ozw",
+      "nutrition": {
+        "calories": 30,
+        "total_fat": 0,
+        "saturated_fat": 0,
+        "trans_fat": 0,
+        "cholesterol": 0,
+        "sodium": 0,
+        "carbohydrate": 8,
+        "fiber": 1,
+        "total_sugars": 6,
+        "protein": 0.1,
+        "calcium": 3.4,
+        "iron": 0.1,
+        "potassium": 60
+      },
+      "vegan": true,
+      "vegetarian": true,
+      "contains": {
+        "soy": false,
+        "eggs": false,
+        "fish": false,
+        "milk": false,
+        "wheat": false,
+        "gluten": false,
+        "peanut": false,
+        "sesame": false,
+        "shellfish": false,
+        "tree_nuts": false
+      },
+      "ingredients": "Apple"
+    },
+    {
       "id": "75982",
       "name": "Cantaloupe",
       "station": "Produce Market",
@@ -5174,44 +5364,6 @@
         "tree_nuts": false
       },
       "ingredients": "Hardboiled Egg (Eggs)"
-    },
-    {
-      "id": "75738",
-      "name": "Honeydew Melon",
-      "station": "Produce Market",
-      "period": "Breakfast",
-      "description": "Cubed honeydew melon",
-      "serving": "1/2 cup",
-      "nutrition": {
-        "calories": 25,
-        "total_fat": 0,
-        "saturated_fat": 0,
-        "trans_fat": 0,
-        "cholesterol": 0,
-        "sodium": 13,
-        "carbohydrate": 6,
-        "fiber": 1,
-        "total_sugars": 6,
-        "protein": 0.4,
-        "calcium": 4.3,
-        "iron": 0.1,
-        "potassium": 160
-      },
-      "vegan": true,
-      "vegetarian": true,
-      "contains": {
-        "soy": false,
-        "eggs": false,
-        "fish": false,
-        "milk": false,
-        "wheat": false,
-        "gluten": false,
-        "peanut": false,
-        "sesame": false,
-        "shellfish": false,
-        "tree_nuts": false
-      },
-      "ingredients": "Honeydew"
     },
     {
       "id": "75740",
@@ -7570,6 +7722,44 @@
       "ingredients": "Tomato Basil Soup (INGREDIENTS: Chopped Tomatoes (tomatoes, salt, naturally derived citric acid), Vegetable Stock (water, onions, cabbage, celery, mushrooms, carrots, turnips, black peppercorns, mustard seed, dill weed, thyme, bay leaves, marjoram), Onions, Carrots, Basil, Tomato Paste (tomatoes), Extra Virgin Olive Oil, Canola Oil, Garlic, Sea Salt, Dried Basil, Bay Leaves.)"
     },
     {
+      "id": "103971",
+      "name": "Arroz Rojo",
+      "station": "Tex Mex",
+      "period": "Lunch",
+      "description": "Brown rice seasoned with oregano, chili powder, garlic and cumin",
+      "serving": "1/2 cup",
+      "nutrition": {
+        "calories": 100,
+        "total_fat": 1,
+        "saturated_fat": 0,
+        "trans_fat": 0,
+        "cholesterol": 0,
+        "sodium": 34,
+        "carbohydrate": 22,
+        "fiber": 1,
+        "total_sugars": 0,
+        "protein": 2.5,
+        "calcium": 12.3,
+        "iron": 0.9,
+        "potassium": 85
+      },
+      "vegan": true,
+      "vegetarian": true,
+      "contains": {
+        "soy": false,
+        "eggs": false,
+        "fish": false,
+        "milk": false,
+        "wheat": false,
+        "gluten": false,
+        "peanut": false,
+        "sesame": false,
+        "shellfish": false,
+        "tree_nuts": false
+      },
+      "ingredients": "Water, Whole Grain Brown Rice, Garlic Powder, Chili Powder (CHILI PEPPER, SPICES, SALT, SILICON DIOXIDE (TO MAKE FREE FLOWING) AND GARLIC), Taco Seasoning (DEXTROSE, SALT, CORN FLOUR, CHILI PEPPER, CUMIN, ONION POWDER, GARLIC POWDER, OREGANO, CITRIC ACID, SILICON DIOXIDE (AS ANTICAKING AGENT) & EXTRACTIVES OF PAPRIKA.), Cumin, Dried Oregano"
+    },
+    {
       "id": "75924",
       "name": "Avocado Ranch Dressing",
       "station": "Tex Mex",
@@ -7608,44 +7798,6 @@
       "ingredients": "Ranch Dressing (SOYBEAN OIL, WATER, CULTURED BUTTERMILK, EGG YOLK, DISTILLED VINEGAR, CONTAINS LESS THAN 2% OF SALT, MONOSODIUM GLUTAMATE, MODIFIED CORN STARCH, BUTTERMILK SOLIDS, SUGAR, GARLIC,* XANTHAN GUM, SPICE, CITRIC ACID, ONION,* SORBIC ACID (PRESERVATIVE), CALCIUM DISODIUM EDTA (TO PROTECT FLAVOR), MILK, NATURAL FLAVOR, EGG WHITES. *DRIED), Avocado"
     },
     {
-      "id": "75921",
-      "name": "Charro Beans",
-      "station": "Tex Mex",
-      "period": "Lunch",
-      "description": "Pinto beans simmered with vegetable broth, salsa and cumin",
-      "serving": "1/2 cup",
-      "nutrition": {
-        "calories": 80,
-        "total_fat": 0.5,
-        "saturated_fat": 0,
-        "trans_fat": 0,
-        "cholesterol": 0,
-        "sodium": 353,
-        "carbohydrate": 15,
-        "fiber": 4,
-        "total_sugars": 1,
-        "protein": 5,
-        "calcium": 42,
-        "iron": 1.3,
-        "potassium": 360
-      },
-      "vegan": true,
-      "vegetarian": true,
-      "contains": {
-        "soy": false,
-        "eggs": false,
-        "fish": false,
-        "milk": false,
-        "wheat": false,
-        "gluten": false,
-        "peanut": false,
-        "sesame": false,
-        "shellfish": false,
-        "tree_nuts": false
-      },
-      "ingredients": "Pinto Beans, Water, Medium salsa (Tomatoes (Tomatoes, Tomato Juice, Citric Acid [To Acidify], Calcium Chloride [Firming]), Tomato Puree (Tomato Paste, Water), Onions, Water, Green Chile Peppers, Jalapeño Peppers, Contains 2% or less of Iodized Salt (Contains Potassium Iodate), Distilled Vinegar, Garlic Powder, Xanthan Gum, Spice, Paprika, Calcium Chloride (Firming), Citric Acid (To Acidify)), Vegetable Base (SAUTEED VEGETABLE PUREE MIX (CARROTS, ONIONS, CELERY), CORN STARCH, MALTODEXTRIN, VEGETABLE OIL (CORN AND/OR CANOLA OIL), HYDROLYZED CORN PROTEIN, YEAST EXTRACT, TOMATO POWDER, WATER, ONION POWDER, 2% OR LESS OF DISODIUM INOSINATE AND DISODIUM GUANYLATE, SALT, GARLIC POWDER, PAPRIKA (COLOR), NATURAL FLAVORS, LACTIC ACID, NATURAL FLAVOR, MODIFIED CORNSTARCH, CITRIC ACID.), Kosher Salt, Cumin, Black Pepper"
-    },
-    {
       "id": "75926",
       "name": "Chicken Tinga",
       "station": "Tex Mex",
@@ -7682,44 +7834,6 @@
         "tree_nuts": false
       },
       "ingredients": "Chicken Thigh, Tomato Puree, Water, Onion, Garlic, Chipotle Soup Base  (RED BELL PEPPER PUREE (RED PEPPERS, WATER, SALT, CITRIC ACID), MALTODEXTRIN, VEGETABLE OIL (CORN AND/OR CANOLA OIL), ONIONS, CHIOPTLE POWDER, SALT, SUGAR, OLIVE OIL, JALAPENO PEPPERS, SPICES, CARROT, CELERY, ONION POWDER, VINEGAR, MODIFIED CORNSTARCH, 2% OR LESS OF PALM OIL, GARLIC, YEAST EXTRACT, NATURAL SMOKE FLAVOR, CITRIC ACID, NATURAL FLAVORS.), Red Wine Vinegar, Vegetable Oil Blend (Vegetable Oil (May contain one or more of the following: Soybean, Canola, Corn, Sunflower Oil); Olive Oil; Colorant: Beta-Carotene E160a(i)), Coriander, Chicken Base (CHICKEN MEAT AND NATURAL CHICKEN JUICES, MALTODEXTRIN, AUTOLYZED YEAST EXTRACT, NATURAL FLAVORS, SALT, CORN STARCH, 2% OR LESS OF VEGETABLE OIL (CORN AND/OR CANOLA OIL), DISODIUM INOSINATE, DRIED CHICKEN BROTH, TURMERIC AND ANNATTO (COLOR), POTATO STARCH, DISODIUM GUANYLATE, CHICKEN FAT, PAPRIKA (COLOR), DRIED CHICKEN, SUGAR, SPICES, PAPAIN, CITRIC ACID.), Kosher Salt, Cumin, Dried Oregano, Black Pepper"
-    },
-    {
-      "id": "103695",
-      "name": "Citrus Braised Pork",
-      "station": "Tex Mex",
-      "period": "Lunch",
-      "description": "Pork marinated in lime, orange juice, garlic and bay leaf",
-      "serving": "1/2 cup",
-      "nutrition": {
-        "calories": 180,
-        "total_fat": 11,
-        "saturated_fat": 4,
-        "trans_fat": 0,
-        "cholesterol": 55,
-        "sodium": 193,
-        "carbohydrate": 2,
-        "fiber": 0,
-        "total_sugars": 1,
-        "protein": 16,
-        "calcium": 19.3,
-        "iron": 1.1,
-        "potassium": 320
-      },
-      "vegan": false,
-      "vegetarian": false,
-      "contains": {
-        "soy": false,
-        "eggs": false,
-        "fish": false,
-        "milk": false,
-        "wheat": false,
-        "gluten": false,
-        "peanut": false,
-        "sesame": false,
-        "shellfish": false,
-        "tree_nuts": false
-      },
-      "ingredients": "Pork Shoulder, Orange Juice, Onion, Lime Juice, Garlic, Kosher Salt, Black Pepper"
     },
     {
       "id": "75923",
@@ -7912,26 +8026,26 @@
       "ingredients": "Medium salsa (Tomatoes (Tomatoes, Tomato Juice, Citric Acid [To Acidify], Calcium Chloride [Firming]), Tomato Puree (Tomato Paste, Water), Onions, Water, Green Chile Peppers, Jalapeño Peppers, Contains 2% or less of Iodized Salt (Contains Potassium Iodate), Distilled Vinegar, Garlic Powder, Xanthan Gum, Spice, Paprika, Calcium Chloride (Firming), Citric Acid (To Acidify))"
     },
     {
-      "id": "102921",
-      "name": "Southwest Roasted Corn",
+      "id": "103972",
+      "name": "Southwest Black Beans",
       "station": "Tex Mex",
       "period": "Lunch",
-      "description": "Oven-roasted corn tossed with taco seasoning",
+      "description": "Spicy black beans with tomato, onion, jalapeno, cumin, cilantro and garlic",
       "serving": "1/2 cup",
       "nutrition": {
-        "calories": 110,
-        "total_fat": 3,
-        "saturated_fat": 0.5,
+        "calories": 90,
+        "total_fat": 0.5,
+        "saturated_fat": 0,
         "trans_fat": 0,
         "cholesterol": 0,
-        "sodium": 53,
-        "carbohydrate": 21,
-        "fiber": 2,
-        "total_sugars": 3,
-        "protein": 3,
-        "calcium": 4.6,
-        "iron": 0.5,
-        "potassium": 210
+        "sodium": 283,
+        "carbohydrate": 16,
+        "fiber": 4,
+        "total_sugars": 1,
+        "protein": 5.4,
+        "calcium": 37.4,
+        "iron": 1.4,
+        "potassium": 400
       },
       "vegan": true,
       "vegetarian": true,
@@ -7947,7 +8061,7 @@
         "shellfish": false,
         "tree_nuts": false
       },
-      "ingredients": "Corn Kernels, Vegetable Oil Blend (Vegetable Oil (May contain one or more of the following: Soybean, Canola, Corn, Sunflower Oil); Olive Oil; Colorant: Beta-Carotene E160a(i)), Taco Seasoning (DEXTROSE, SALT, CORN FLOUR, CHILI PEPPER, CUMIN, ONION POWDER, GARLIC POWDER, OREGANO, CITRIC ACID, SILICON DIOXIDE (AS ANTICAKING AGENT) & EXTRACTIVES OF PAPRIKA.)"
+      "ingredients": "Black Beans, Water, Tomato, Onion, Jalapeno Pepper, Lime Juice, Vegetable Base (SAUTEED VEGETABLE PUREE MIX (CARROTS, ONIONS, CELERY), CORN STARCH, MALTODEXTRIN, VEGETABLE OIL (CORN AND/OR CANOLA OIL), HYDROLYZED CORN PROTEIN, YEAST EXTRACT, TOMATO POWDER, WATER, ONION POWDER, 2% OR LESS OF DISODIUM INOSINATE AND DISODIUM GUANYLATE, SALT, GARLIC POWDER, PAPRIKA (COLOR), NATURAL FLAVORS, LACTIC ACID, NATURAL FLAVOR, MODIFIED CORNSTARCH, CITRIC ACID.), Kosher Salt, Cumin, Black Pepper, Garlic, Kosher Salt, Cilantro"
     },
     {
       "id": "75856",
