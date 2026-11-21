@@ -4,8 +4,8 @@
   "serviceAreaId": 125621,
   "source": "https://dining.utk.edu/vendor/rocky-top-dining-hall/",
   "date": "2026-11-21",
-  "scrapedAt": "2026-11-21T12:41:18.085Z",
-  "itemCount": 275,
+  "scrapedAt": "2026-11-21T20:32:51.563Z",
+  "itemCount": 277,
   "items": [
     {
       "id": "76065",
@@ -274,6 +274,44 @@
       "ingredients": "Cream Cheese (PASTEURIZED MILK AND CREAM, SALT, CAROB BEAN GUM, CHEESE CULTURE), Water"
     },
     {
+      "id": "104114",
+      "name": "Apple Cheese Danish",
+      "station": "Bakery",
+      "period": "Lunch",
+      "description": "Butterfly cheese pastry with apple",
+      "serving": "each",
+      "nutrition": {
+        "calories": 380,
+        "total_fat": 19.5,
+        "saturated_fat": 9,
+        "trans_fat": 0,
+        "cholesterol": 30,
+        "sodium": 420,
+        "carbohydrate": 46,
+        "fiber": 1,
+        "total_sugars": 23,
+        "protein": 5.7,
+        "calcium": 38.8,
+        "iron": 1.1,
+        "potassium": 80
+      },
+      "vegan": null,
+      "vegetarian": null,
+      "contains": {
+        "soy": null,
+        "eggs": null,
+        "fish": null,
+        "milk": null,
+        "wheat": null,
+        "gluten": null,
+        "peanut": null,
+        "sesame": null,
+        "shellfish": null,
+        "tree_nuts": null
+      },
+      "ingredients": "Cheese Danish, Apple Pie Filling"
+    },
+    {
       "id": "76225",
       "name": "Assorted Bagels",
       "station": "Bakery",
@@ -426,6 +464,44 @@
       "ingredients": "Jelly (High Fructose Corn Syrup, Corn Syrup, Concentrated Concord Grape Juice, Concentrated White Grape Juice, Contains 2% or less of Sugar, Pectin, Citric Acid, Sodium Benzoate (Preservative), Sodium Citrate.)"
     },
     {
+      "id": "104113",
+      "name": "Lemon Poppy Mini Muffin",
+      "station": "Bakery",
+      "period": "Lunch",
+      "description": "Freshly baked miniature muffin with lemon and poppy seeds",
+      "serving": "1 muffin",
+      "nutrition": {
+        "calories": 110,
+        "total_fat": 3,
+        "saturated_fat": 1.5,
+        "trans_fat": 0,
+        "cholesterol": 0,
+        "sodium": 159,
+        "carbohydrate": 19,
+        "fiber": 0,
+        "total_sugars": 10,
+        "protein": 1,
+        "calcium": 14.4,
+        "iron": 0.5,
+        "potassium": 35
+      },
+      "vegan": false,
+      "vegetarian": true,
+      "contains": {
+        "soy": true,
+        "eggs": true,
+        "fish": false,
+        "milk": true,
+        "wheat": true,
+        "gluten": true,
+        "peanut": false,
+        "sesame": false,
+        "shellfish": false,
+        "tree_nuts": false
+      },
+      "ingredients": "Variety Muffin Mix (ENRICHED FLOUR BLEACHED (WHEAT FLOUR, NIACIN,  IRON, THIAMIN MONONITRATE, RIBOFLAVIN, FOLIC ACID), SUGAR, PALM OIL, MODIFIED CORN STARCH, MODIFIED WHEY. CONTAINS  2% OR LESS OF: LEAVENING (SODIUM ACID PYROPHOSPHATE, BAKING SODA, MONOCALCIUM PHOSPHATE), DEXTROSE, MONO AND  DIGLYCERIDES, SALT, EGGS WITH SODIUM SILICOALUMINATE, XANTHAN GUM, NONFAT MILK, NATURAL FLAVOR, SOY FLOUR.), Water, Lemon Juice, Granulated Sugar, Poppy Seeds, Lemon Zest"
+    },
+    {
       "id": "76229",
       "name": "M&M® Brown Butter Blondie",
       "station": "Bakery",
@@ -538,6 +614,44 @@
         "tree_nuts": false
       },
       "ingredients": "Cream Cheese (PASTEURIZED MILK AND CREAM, SALT, CAROB BEAN GUM, CHEESE CULTURE), Strawberry Preserve (Strawberries, High Fructose Corn Syrup, Corn  Syrup, Sugar, Fruit Pectin, Citric Acid.)"
+    },
+    {
+      "id": "104111",
+      "name": "Strawberry Oatmeal Bar",
+      "station": "Bakery",
+      "period": "Lunch",
+      "description": "Cinnamon-spiced oatmeal bar layered with luscious strawberry preserves and buttery crumb topping",
+      "serving": "1 cut",
+      "nutrition": {
+        "calories": 330,
+        "total_fat": 13,
+        "saturated_fat": 5.5,
+        "trans_fat": 0,
+        "cholesterol": 5,
+        "sodium": 226,
+        "carbohydrate": 50,
+        "fiber": 2,
+        "total_sugars": 28,
+        "protein": 3.7,
+        "calcium": 10.3,
+        "iron": 1.3,
+        "potassium": 75
+      },
+      "vegan": false,
+      "vegetarian": true,
+      "contains": {
+        "soy": true,
+        "eggs": true,
+        "fish": false,
+        "milk": true,
+        "wheat": true,
+        "gluten": true,
+        "peanut": false,
+        "sesame": false,
+        "shellfish": false,
+        "tree_nuts": false
+      },
+      "ingredients": "Yellow Cake (SUGAR, ENRICHED FLOUR BLEACHED (WHEAT FLOUR, NIACIN, IRON, THIAMIN MONONITRATE, RIBOFLAVIN, FOLIC ACID), PALM OIL, DEXTROSE. CONTAINS 2% OR LESS OF: LEAVENING (SODIUM ALUMINUM PHOSPHATE, BAKING SODA), PROPYLENE GLYCOL MONO AND DIESTERS OF FATTY ACIDS, MODIFIED CORN STARCH, EGGS WITH SODIUM SILICOALUMINATE, EGG WHITE, SALT, NONFAT MILK, MONO AND DIGLYCERIDES, SOY LECITHIN, XANTHAN GUM, WHEY, NATURAL FLAVOR, ANNATTO AND TURMERIC EXTRACT COLOR.), Strawberry Preserve (Strawberries, High Fructose Corn Syrup, Corn  Syrup, Sugar, Fruit Pectin, Citric Acid.), Oatmeal, Margarine (PALM OIL, WATER, SOYBEAN OIL, CONTAINS LESS THAN 2% OF SOY LECITHIN, VEGETABLE MONO & DIGLYCERIDES, POTASSIUM SORBATE (A PRESERVATIVE), CITRIC ACID, NATURAL & ARTIFICIAL FLAVOR, BETA CAROTENE (COLOR), VITAMIN A PALMITATE ADDED, WHEY.), Water, Cinnamon"
     },
     {
       "id": "76223",
@@ -2476,44 +2590,6 @@
         "tree_nuts": false
       },
       "ingredients": "Buffalo Wing Sauce (DISTILLED VINEGAR, AGED CAYENNE RED PEPPERS, SALT, WATER, CANOLA OIL, PAPRIKA, XANTHAN GUM (THICKENER), GARLIC POWDER & NATURAL FLAVOR.)"
-    },
-    {
-      "id": "75993",
-      "name": "Dill Pickle Slices",
-      "station": "Grill - Toppings",
-      "period": "Dinner",
-      "description": "Dill pickle slices",
-      "serving": "2 slice",
-      "nutrition": {
-        "calories": 0,
-        "total_fat": 0,
-        "saturated_fat": 0,
-        "trans_fat": 0,
-        "cholesterol": 0,
-        "sodium": 160,
-        "carbohydrate": 0,
-        "fiber": 0,
-        "total_sugars": 0,
-        "protein": 0.1,
-        "calcium": 8.5,
-        "iron": 0.1,
-        "potassium": 15
-      },
-      "vegan": true,
-      "vegetarian": true,
-      "contains": {
-        "soy": false,
-        "eggs": false,
-        "fish": false,
-        "milk": false,
-        "wheat": false,
-        "gluten": false,
-        "peanut": false,
-        "sesame": false,
-        "shellfish": false,
-        "tree_nuts": false
-      },
-      "ingredients": "Pickle Slices (FRESH  CUCUMBERS, WATER, SALT, DISTILLED VINEGAR, CONTAINS LESS THAN 2% OF DRIED  GARLIC, CALCIUM CHLORIDE, SPICE, SODIUM BENZOATE (TO PRESERVE FLAVOR),  MUSTARD SEED, DRIED RED PEPPERS, NATURAL FLAVOR, POLYSORBATE 80, OLEORESIN  TURMERIC)"
     },
     {
       "id": "102934",
@@ -5138,42 +5214,17 @@
       "ingredients": "Jalapeno Chili Peppers"
     },
     {
-      "id": "76256",
-      "name": "Pretzel Bites ",
+      "id": "104107",
+      "name": "Pickle Pepper Relish",
       "station": "Pasta Build Your Own",
       "period": "Lunch",
-      "description": "Salty pretzel bites ",
-      "serving": "1 serving",
-      "nutrition": {
-        "calories": 190,
-        "total_fat": 0.5,
-        "saturated_fat": 0,
-        "trans_fat": 0,
-        "cholesterol": 0,
-        "sodium": 148,
-        "carbohydrate": 38,
-        "fiber": 1,
-        "total_sugars": 1,
-        "protein": 5.7,
-        "calcium": 10.7,
-        "iron": 2.5,
-        "potassium": 75
-      },
-      "vegan": true,
-      "vegetarian": true,
-      "contains": {
-        "soy": false,
-        "eggs": false,
-        "fish": false,
-        "milk": false,
-        "wheat": true,
-        "gluten": true,
-        "peanut": false,
-        "sesame": false,
-        "shellfish": false,
-        "tree_nuts": false
-      },
-      "ingredients": "Pretzel Bite (ENRICHED WHEAT FLOUR (WHEAT FLOUR, MALTED BARLEY  FLOUR, NIACIN, REDUCED IRON, THIAMINE MONONITRATE, RIBOFLAVIN, FOLIC ACID),  WATER, YEAST, CORN SYRUP, BICARBONATES AND CARBONATES OF SODA.)"
+      "description": null,
+      "serving": null,
+      "nutrition": {},
+      "vegan": null,
+      "vegetarian": null,
+      "contains": {},
+      "ingredients": null
     },
     {
       "id": "76121",
@@ -5290,26 +5341,26 @@
       "ingredients": "Cottage Cheese"
     },
     {
-      "id": "76106",
-      "name": "Diced Pineapple",
+      "id": "104110",
+      "name": "Fresh Grapefruit",
       "station": "Produce Market",
       "period": "Breakfast",
-      "description": "Fresh diced pineapple",
-      "serving": "1/4 cup",
+      "description": "Fresh Grapefruit",
+      "serving": "each",
       "nutrition": {
-        "calories": 25,
-        "total_fat": 0,
+        "calories": 90,
+        "total_fat": 0.5,
         "saturated_fat": 0,
         "trans_fat": 0,
         "cholesterol": 0,
         "sodium": 0,
-        "carbohydrate": 6,
-        "fiber": 1,
-        "total_sugars": 5,
-        "protein": 0.3,
-        "calcium": 6.4,
-        "iron": 0.1,
-        "potassium": 55
+        "carbohydrate": 22,
+        "fiber": 3,
+        "total_sugars": 14,
+        "protein": 1.6,
+        "calcium": 46.2,
+        "iron": 0.2,
+        "potassium": 280
       },
       "vegan": true,
       "vegetarian": true,
@@ -5325,7 +5376,7 @@
         "shellfish": false,
         "tree_nuts": false
       },
-      "ingredients": "Pineapple"
+      "ingredients": "Grapefruit"
     },
     {
       "id": "76011",
@@ -5746,6 +5797,44 @@
       "ingredients": "Balsamic Vinaigrette Dressing (WATER, HIGH FRUCTOSE CORN SYRUP, BALSAMIC VINEGAR, RED WINE VINEGAR, VEGETABLE OIL (SOYBEAN AND/OR CANOLA), OLIVE OIL, CONTAINS LESS THAN 2% OF SALT, DRIED GARLIC, XANTHAN GUM, SPICE, SODIUM ALGINATE, PROPYLENE GLYCOL ALGINATE, CALCIUM DISODIUM EDTA (TO PROTECT FLAVOR), SULFITING AGENTS.)"
     },
     {
+      "id": "104108",
+      "name": "Black Olives",
+      "station": "Produce Market",
+      "period": "Lunch",
+      "description": "Sliced pitted black olives",
+      "serving": "2 tablespoon",
+      "nutrition": {
+        "calories": 20,
+        "total_fat": 2,
+        "saturated_fat": 0.5,
+        "trans_fat": 0,
+        "cholesterol": 0,
+        "sodium": 142,
+        "carbohydrate": 1,
+        "fiber": 0,
+        "total_sugars": 0,
+        "protein": 0.1,
+        "calcium": 15.6,
+        "iron": 1.1,
+        "potassium": 0
+      },
+      "vegan": true,
+      "vegetarian": true,
+      "contains": {
+        "soy": false,
+        "eggs": false,
+        "fish": false,
+        "milk": false,
+        "wheat": false,
+        "gluten": false,
+        "peanut": false,
+        "sesame": false,
+        "shellfish": false,
+        "tree_nuts": false
+      },
+      "ingredients": "Black Olive"
+    },
+    {
       "id": "76094",
       "name": "Chopped Hard-Cooked Egg",
       "station": "Produce Market",
@@ -5936,28 +6025,28 @@
       "ingredients": "Cantaloupe, Pineapple, Honeydew, Red Grapes, Blueberries, Strawberries"
     },
     {
-      "id": "76087",
-      "name": "Green Peas",
+      "id": "104112",
+      "name": "Giardiniera",
       "station": "Produce Market",
       "period": "Lunch",
-      "description": "Green peas",
-      "serving": "1/4 cup",
+      "description": "Italian relish of pickled vegetables in olive oil",
+      "serving": "1/2 cup",
       "nutrition": {
-        "calories": 35,
-        "total_fat": 0,
-        "saturated_fat": 0,
+        "calories": 70,
+        "total_fat": 4,
+        "saturated_fat": 0.5,
         "trans_fat": 0,
         "cholesterol": 0,
-        "sodium": 46,
-        "carbohydrate": 6,
+        "sodium": 232,
+        "carbohydrate": 7,
         "fiber": 2,
-        "total_sugars": 2,
-        "protein": 2.2,
-        "calcium": 9.4,
-        "iron": 0.7,
-        "potassium": 65
+        "total_sugars": 5,
+        "protein": 0.8,
+        "calcium": 21.4,
+        "iron": 0.3,
+        "potassium": 160
       },
-      "vegan": true,
+      "vegan": false,
       "vegetarian": true,
       "contains": {
         "soy": false,
@@ -5971,7 +6060,7 @@
         "shellfish": false,
         "tree_nuts": false
       },
-      "ingredients": "Green peas"
+      "ingredients": "White Vinegar, Cauliflower, Water, Celery, Carrots, Red Bell Pepper, Olives, Extra Virgin Olive Oil, Honey, Granulated Sugar, Kosher Salt, Crushed Red Pepper, Black Pepper, Dried Bay Leaf"
     },
     {
       "id": "76093",
@@ -6126,25 +6215,25 @@
       "ingredients": "Ranch Dressing (SOYBEAN OIL, WATER, CULTURED BUTTERMILK, EGG YOLK, DISTILLED VINEGAR, CONTAINS LESS THAN 2% OF SALT, MONOSODIUM GLUTAMATE, MODIFIED CORN STARCH, BUTTERMILK SOLIDS, SUGAR, GARLIC,* XANTHAN GUM, SPICE, CITRIC ACID, ONION,* SORBIC ACID (PRESERVATIVE), CALCIUM DISODIUM EDTA (TO PROTECT FLAVOR), MILK, NATURAL FLAVOR, EGG WHITES. *DRIED)"
     },
     {
-      "id": "76153",
-      "name": "Roasted Chickpeas",
+      "id": "104109",
+      "name": "Roasted Red Peppers",
       "station": "Produce Market",
       "period": "Lunch",
-      "description": "Baked chickpeas seasoned with kosher salt and pepper",
+      "description": "Diced roasted red peppers",
       "serving": "2 tablespoon",
       "nutrition": {
-        "calories": 25,
-        "total_fat": 0.5,
+        "calories": 10,
+        "total_fat": 0,
         "saturated_fat": 0,
         "trans_fat": 0,
         "cholesterol": 0,
-        "sodium": 77,
-        "carbohydrate": 4,
-        "fiber": 1,
+        "sodium": 68,
+        "carbohydrate": 2,
+        "fiber": 0,
         "total_sugars": 1,
-        "protein": 1.3,
-        "calcium": 8.3,
-        "iron": 0.4,
+        "protein": 0.3,
+        "calcium": 2.6,
+        "iron": 0.1,
         "potassium": 45
       },
       "vegan": true,
@@ -6161,7 +6250,7 @@
         "shellfish": false,
         "tree_nuts": false
       },
-      "ingredients": "Garbanzo Beans, Kosher Salt, Black Pepper"
+      "ingredients": "Roasted Red Peppers"
     },
     {
       "id": "76089",
@@ -6314,44 +6403,6 @@
         "tree_nuts": false
       },
       "ingredients": "Green Bell Pepper"
-    },
-    {
-      "id": "76091",
-      "name": "Sliced Radishes",
-      "station": "Produce Market",
-      "period": "Lunch",
-      "description": "Sliced radishes",
-      "serving": "1/4 cup",
-      "nutrition": {
-        "calories": 5,
-        "total_fat": 0,
-        "saturated_fat": 0,
-        "trans_fat": 0,
-        "cholesterol": 0,
-        "sodium": 11,
-        "carbohydrate": 1,
-        "fiber": 0,
-        "total_sugars": 1,
-        "protein": 0.2,
-        "calcium": 7.1,
-        "iron": 0.1,
-        "potassium": 65
-      },
-      "vegan": true,
-      "vegetarian": true,
-      "contains": {
-        "soy": false,
-        "eggs": false,
-        "fish": false,
-        "milk": false,
-        "wheat": false,
-        "gluten": false,
-        "peanut": false,
-        "sesame": false,
-        "shellfish": false,
-        "tree_nuts": false
-      },
-      "ingredients": "Radish"
     },
     {
       "id": "76154",
@@ -7494,42 +7545,42 @@
       "ingredients": "Green Onion"
     },
     {
-      "id": "76122",
-      "name": "Timberline Chili",
+      "id": "104116",
+      "name": "Southwest Black Bean Soup",
       "station": "Soup",
       "period": "Lunch",
-      "description": "Tender beef, beans and peppers simmered in a zesty tomato sauce seasoned with chili and pepper",
-      "serving": "4 fl oz",
+      "description": "Black beans, fresh pack tomatoes and char-grilled onions simmered in roasted vegetable stock with green chilies, corn, cilantro, cumin, coriander, garlic and lemon juice",
+      "serving": "6 fl oz",
       "nutrition": {
-        "calories": 70,
-        "total_fat": 3.5,
-        "saturated_fat": 1,
+        "calories": 160,
+        "total_fat": 1,
+        "saturated_fat": 0.5,
         "trans_fat": 0,
-        "cholesterol": 10,
-        "sodium": 215,
-        "carbohydrate": 6,
-        "fiber": 2,
-        "total_sugars": 2,
-        "protein": 4.9,
-        "calcium": 21.2,
-        "iron": 1,
-        "potassium": 200
+        "cholesterol": 0,
+        "sodium": 339,
+        "carbohydrate": 32,
+        "fiber": 7,
+        "total_sugars": 4,
+        "protein": 7.4,
+        "calcium": 55.4,
+        "iron": 3.1,
+        "potassium": 540
       },
-      "vegan": false,
-      "vegetarian": false,
+      "vegan": true,
+      "vegetarian": true,
       "contains": {
-        "soy": true,
+        "soy": false,
         "eggs": false,
         "fish": false,
         "milk": false,
-        "wheat": true,
-        "gluten": true,
+        "wheat": false,
+        "gluten": false,
         "peanut": false,
         "sesame": false,
         "shellfish": false,
         "tree_nuts": false
       },
-      "ingredients": "Chili Bean Soup (KIDNEY BEANS (COOKED KIDNEY BEANS, WATER, SALT,  CALCIUM CHLORIDE, DISODIUM EDTA [AS A PRESERVATIVE]), GROUND BEEF, WATER,  TOMATOES IN JUICE (TOMATOES, TOMATO JUICE, CITRIC ACID, CALCIUM CHLORIDE),  TOMATO PASTE, CELERY, GREEN BELL PEPPERS, CONTAINS LESS THAN 2% OF BROWN  SUGAR, MODIFIED FOOD STARCH, CHILI PEPPERS, DRIED ONIONS, SALT, FLAVOR  ENHANCER (HYDROLYZED CORN GLUTEN, WHEAT PROTEIN AND SOY PROTEIN, AUTOLYZED  YEAST EXTRACT), SUGAR, DEXTROSE, GARLIC, SPICES, NATURAL FLAVOR)"
+      "ingredients": "Black Bean Soup (WATER, BLACK BEANS, GROUND TOMATOES (TOMATOES,  TOMATO PUREE, CITRIC ACID), CORN, ONIONS, RICE FLOUR, CONTAINS LESS THAN 2%  OF GREEN CHILI PEPPERS, TOMATO PASTE, CHOPPED GARLIC, SUGAR, DEHYDRATED BLACK  BEANS (BLACK BEANS, SALT), LEMON JUICE CONCENTRATE, CILANTRO PASTE (CILANTRO,  CANOLA OIL, OLIVE OIL, CITRIC ACID), SALT, SPICES, SALT ENHANCER (POTASSIUM  CHLORIDE, CORN MALTODEXTRIN, YEAST EXTRACT, SALT, VINEGAR SOLIDS, NATURAL  FLAVORS), DRIED GARLIC, DRIED ONION)"
     },
     {
       "id": "76042",
@@ -7568,6 +7619,44 @@
         "tree_nuts": null
       },
       "ingredients": "Chicken with Wild Rice Soup"
+    },
+    {
+      "id": "104120",
+      "name": "Corn Chowder",
+      "station": "Soup",
+      "period": "Dinner",
+      "description": "Sweet corn, tender potatoes and sautéed onions in a roux-thickened vegetable stock with light cream and a pinch of sea salt",
+      "serving": "8 fl oz",
+      "nutrition": {
+        "calories": 240,
+        "total_fat": 11.5,
+        "saturated_fat": 7,
+        "trans_fat": 0.5,
+        "cholesterol": 40,
+        "sodium": 679,
+        "carbohydrate": 29,
+        "fiber": 2,
+        "total_sugars": 6,
+        "protein": 3.4,
+        "calcium": 42.5,
+        "iron": 0.3,
+        "potassium": 800
+      },
+      "vegan": null,
+      "vegetarian": null,
+      "contains": {
+        "soy": null,
+        "eggs": null,
+        "fish": null,
+        "milk": null,
+        "wheat": null,
+        "gluten": null,
+        "peanut": null,
+        "sesame": null,
+        "shellfish": null,
+        "tree_nuts": null
+      },
+      "ingredients": "Soup"
     },
     {
       "id": "76045",
@@ -7684,67 +7773,29 @@
       "ingredients": "Cheddar Cheese (CHEDDAR CHEESE (CULTURED PASTEURIZED MILK, SALT, ENZYMES, ANNATTO [VEGETABLE COLOR]), ANTI-CAKING BLEND (POTATO STARCH,  POWDERED CELLULOSE))"
     },
     {
-      "id": "76043",
-      "name": "Southwest Black Bean Soup",
-      "station": "Soup",
-      "period": "Dinner",
-      "description": "Black beans, fresh pack tomatoes and char-grilled onions simmered in roasted vegetable stock with green chilies, corn, cilantro, cumin, coriander, garlic and lemon juice",
-      "serving": "6 fl oz",
-      "nutrition": {
-        "calories": 160,
-        "total_fat": 1,
-        "saturated_fat": 0.5,
-        "trans_fat": 0,
-        "cholesterol": 0,
-        "sodium": 339,
-        "carbohydrate": 32,
-        "fiber": 7,
-        "total_sugars": 4,
-        "protein": 7.4,
-        "calcium": 55.4,
-        "iron": 3.1,
-        "potassium": 540
-      },
-      "vegan": true,
-      "vegetarian": true,
-      "contains": {
-        "soy": false,
-        "eggs": false,
-        "fish": false,
-        "milk": false,
-        "wheat": false,
-        "gluten": false,
-        "peanut": false,
-        "sesame": false,
-        "shellfish": false,
-        "tree_nuts": false
-      },
-      "ingredients": "Black Bean Soup (WATER, BLACK BEANS, GROUND TOMATOES (TOMATOES,  TOMATO PUREE, CITRIC ACID), CORN, ONIONS, RICE FLOUR, CONTAINS LESS THAN 2%  OF GREEN CHILI PEPPERS, TOMATO PASTE, CHOPPED GARLIC, SUGAR, DEHYDRATED BLACK  BEANS (BLACK BEANS, SALT), LEMON JUICE CONCENTRATE, CILANTRO PASTE (CILANTRO,  CANOLA OIL, OLIVE OIL, CITRIC ACID), SALT, SPICES, SALT ENHANCER (POTASSIUM  CHLORIDE, CORN MALTODEXTRIN, YEAST EXTRACT, SALT, VINEGAR SOLIDS, NATURAL  FLAVORS), DRIED GARLIC, DRIED ONION)"
-    },
-    {
-      "id": "76260",
-      "name": "Charro Beans",
+      "id": "104117",
+      "name": "Chicken Tinga",
       "station": "Tex Mex",
       "period": "Lunch",
-      "description": "Pinto beans simmered with vegetable broth, salsa and cumin",
-      "serving": "1/2 cup",
+      "description": "Pulled chicken thigh sautéed with tomatoes, onions, red peppers, chipotle, cumin and coriander",
+      "serving": "3 ozw",
       "nutrition": {
-        "calories": 80,
-        "total_fat": 0.5,
-        "saturated_fat": 0,
+        "calories": 130,
+        "total_fat": 5,
+        "saturated_fat": 1,
         "trans_fat": 0,
-        "cholesterol": 0,
-        "sodium": 353,
-        "carbohydrate": 15,
-        "fiber": 4,
+        "cholesterol": 65,
+        "sodium": 259,
+        "carbohydrate": 6,
+        "fiber": 1,
         "total_sugars": 1,
-        "protein": 5,
-        "calcium": 42,
-        "iron": 1.3,
-        "potassium": 360
+        "protein": 14.1,
+        "calcium": 27.7,
+        "iron": 1.1,
+        "potassium": 310
       },
-      "vegan": true,
-      "vegetarian": true,
+      "vegan": false,
+      "vegetarian": false,
       "contains": {
         "soy": false,
         "eggs": false,
@@ -7757,7 +7808,7 @@
         "shellfish": false,
         "tree_nuts": false
       },
-      "ingredients": "Pinto Beans, Water, Medium salsa (Tomatoes (Tomatoes, Tomato Juice, Citric Acid [To Acidify], Calcium Chloride [Firming]), Tomato Puree (Tomato Paste, Water), Onions, Water, Green Chile Peppers, Jalapeño Peppers, Contains 2% or less of Iodized Salt (Contains Potassium Iodate), Distilled Vinegar, Garlic Powder, Xanthan Gum, Spice, Paprika, Calcium Chloride (Firming), Citric Acid (To Acidify)), Vegetable Base (SAUTEED VEGETABLE PUREE MIX (CARROTS, ONIONS, CELERY), CORN STARCH, MALTODEXTRIN, VEGETABLE OIL (CORN AND/OR CANOLA OIL), HYDROLYZED CORN PROTEIN, YEAST EXTRACT, TOMATO POWDER, WATER, ONION POWDER, 2% OR LESS OF DISODIUM INOSINATE AND DISODIUM GUANYLATE, SALT, GARLIC POWDER, PAPRIKA (COLOR), NATURAL FLAVORS, LACTIC ACID, NATURAL FLAVOR, MODIFIED CORNSTARCH, CITRIC ACID.), Kosher Salt, Cumin, Black Pepper"
+      "ingredients": "Chicken Thigh, Tomato Puree, Water, Onion, Garlic, Chipotle Soup Base  (RED BELL PEPPER PUREE (RED PEPPERS, WATER, SALT, CITRIC ACID), MALTODEXTRIN, VEGETABLE OIL (CORN AND/OR CANOLA OIL), ONIONS, CHIOPTLE POWDER, SALT, SUGAR, OLIVE OIL, JALAPENO PEPPERS, SPICES, CARROT, CELERY, ONION POWDER, VINEGAR, MODIFIED CORNSTARCH, 2% OR LESS OF PALM OIL, GARLIC, YEAST EXTRACT, NATURAL SMOKE FLAVOR, CITRIC ACID, NATURAL FLAVORS.), Red Wine Vinegar, Vegetable Oil Blend (Vegetable Oil (May contain one or more of the following: Soybean, Canola, Corn, Sunflower Oil); Olive Oil; Colorant: Beta-Carotene E160a(i)), Coriander, Chicken Base (CHICKEN MEAT AND NATURAL CHICKEN JUICES, MALTODEXTRIN, AUTOLYZED YEAST EXTRACT, NATURAL FLAVORS, SALT, CORN STARCH, 2% OR LESS OF VEGETABLE OIL (CORN AND/OR CANOLA OIL), DISODIUM INOSINATE, DRIED CHICKEN BROTH, TURMERIC AND ANNATTO (COLOR), POTATO STARCH, DISODIUM GUANYLATE, CHICKEN FAT, PAPRIKA (COLOR), DRIED CHICKEN, SUGAR, SPICES, PAPAIN, CITRIC ACID.), Kosher Salt, Cumin, Dried Oregano, Black Pepper"
     },
     {
       "id": "76264",
@@ -7796,44 +7847,6 @@
         "tree_nuts": false
       },
       "ingredients": "Ranch Dressing (SOYBEAN OIL, WATER, CULTURED BUTTERMILK, EGG YOLK, DISTILLED VINEGAR, CONTAINS LESS THAN 2% OF SALT, MONOSODIUM GLUTAMATE, MODIFIED CORN STARCH, BUTTERMILK SOLIDS, SUGAR, GARLIC,* XANTHAN GUM, SPICE, CITRIC ACID, ONION,* SORBIC ACID (PRESERVATIVE), CALCIUM DISODIUM EDTA (TO PROTECT FLAVOR), MILK, NATURAL FLAVOR, EGG WHITES. *DRIED), Medium salsa (Tomatoes (Tomatoes, Tomato Juice, Citric Acid [To Acidify], Calcium Chloride [Firming]), Tomato Puree (Tomato Paste, Water), Onions, Water, Green Chile Peppers, Jalapeño Peppers, Contains 2% or less of Iodized Salt (Contains Potassium Iodate), Distilled Vinegar, Garlic Powder, Xanthan Gum, Spice, Paprika, Calcium Chloride (Firming), Citric Acid (To Acidify)), Chipotle Soup Base  (RED BELL PEPPER PUREE (RED PEPPERS, WATER, SALT, CITRIC ACID), MALTODEXTRIN, VEGETABLE OIL (CORN AND/OR CANOLA OIL), ONIONS, CHIOPTLE POWDER, SALT, SUGAR, OLIVE OIL, JALAPENO PEPPERS, SPICES, CARROT, CELERY, ONION POWDER, VINEGAR, MODIFIED CORNSTARCH, 2% OR LESS OF PALM OIL, GARLIC, YEAST EXTRACT, NATURAL SMOKE FLAVOR, CITRIC ACID, NATURAL FLAVORS.)"
-    },
-    {
-      "id": "76259",
-      "name": "Cilantro Lime Rice",
-      "station": "Tex Mex",
-      "period": "Lunch",
-      "description": "Long grain white rice with lime and cilantro",
-      "serving": "1/2 cup",
-      "nutrition": {
-        "calories": 120,
-        "total_fat": 0,
-        "saturated_fat": 0,
-        "trans_fat": 0,
-        "cholesterol": 0,
-        "sodium": 41,
-        "carbohydrate": 28,
-        "fiber": 1,
-        "total_sugars": 0,
-        "protein": 3,
-        "calcium": 24.2,
-        "iron": 1,
-        "potassium": 65
-      },
-      "vegan": true,
-      "vegetarian": true,
-      "contains": {
-        "soy": false,
-        "eggs": false,
-        "fish": false,
-        "milk": false,
-        "wheat": false,
-        "gluten": false,
-        "peanut": false,
-        "sesame": false,
-        "shellfish": false,
-        "tree_nuts": false
-      },
-      "ingredients": "Water, White Rice, Lime Juice, Vegetable Base (SAUTEED VEGETABLE PUREE MIX (CARROTS, ONIONS, CELERY), CORN STARCH, MALTODEXTRIN, VEGETABLE OIL (CORN AND/OR CANOLA OIL), HYDROLYZED CORN PROTEIN, YEAST EXTRACT, TOMATO POWDER, WATER, ONION POWDER, 2% OR LESS OF DISODIUM INOSINATE AND DISODIUM GUANYLATE, SALT, GARLIC POWDER, PAPRIKA (COLOR), NATURAL FLAVORS, LACTIC ACID, NATURAL FLAVOR, MODIFIED CORNSTARCH, CITRIC ACID.), Cilantro, Black Pepper"
     },
     {
       "id": "76263",
@@ -8064,31 +8077,31 @@
       "ingredients": "Medium salsa (Tomatoes (Tomatoes, Tomato Juice, Citric Acid [To Acidify], Calcium Chloride [Firming]), Tomato Puree (Tomato Paste, Water), Onions, Water, Green Chile Peppers, Jalapeño Peppers, Contains 2% or less of Iodized Salt (Contains Potassium Iodate), Distilled Vinegar, Garlic Powder, Xanthan Gum, Spice, Paprika, Calcium Chloride (Firming), Citric Acid (To Acidify))"
     },
     {
-      "id": "75992",
-      "name": "Santa Fe Chicken",
+      "id": "104119",
+      "name": "Seasoned Black Beans",
       "station": "Tex Mex",
       "period": "Lunch",
-      "description": "Char-grilled boneless chicken thigh seasoned with chili, lime and garlic. Garnished with cilantro and sweet peppers.",
-      "serving": "1 scoop",
+      "description": "Baked black beans with garlic and bay leaves",
+      "serving": "1/2 cup",
       "nutrition": {
-        "calories": 160,
-        "total_fat": 7,
-        "saturated_fat": 1.5,
+        "calories": 90,
+        "total_fat": 0.5,
+        "saturated_fat": 0,
         "trans_fat": 0,
-        "cholesterol": 105,
-        "sodium": 147,
-        "carbohydrate": 1,
-        "fiber": 0,
-        "total_sugars": 0,
-        "protein": 22.4,
-        "calcium": 2.6,
-        "iron": 1.1,
-        "potassium": 20
+        "cholesterol": 0,
+        "sodium": 234,
+        "carbohydrate": 17,
+        "fiber": 4,
+        "total_sugars": 1,
+        "protein": 5.9,
+        "calcium": 37.8,
+        "iron": 1.4,
+        "potassium": 400
       },
       "vegan": false,
       "vegetarian": false,
       "contains": {
-        "soy": false,
+        "soy": true,
         "eggs": false,
         "fish": false,
         "milk": false,
@@ -8099,7 +8112,7 @@
         "shellfish": false,
         "tree_nuts": false
       },
-      "ingredients": "Chicken Thigh, Cilantro, Vegetable Oil Blend (Vegetable Oil (May contain one or more of the following: Soybean, Canola, Corn, Sunflower Oil); Olive Oil; Colorant: Beta-Carotene E160a(i)), Roasted Red Peppers, Chili Lime Rub  (SPICES (INCLUDING CHILI PEPPER), SEA SALT, SUGAR, PAPRIKA, BROWN MUSTARD SEED, CORNMALTODEXTRIN, GARLIC, ONION, LIME JUICE CONCENTRATE, CITRIC ACID, EXTRACTIVES OF PAPRIKA & LIMEOIL.)"
+      "ingredients": "Black Beans, Water, Pork Base (COOKED BONELESS PORK SIRLOIN, SALT, SUGAR,  MALTODEXTRIN, CORN OIL, HYDROLYZED SOY AND CORN PROTEINS, NATURAL FLAVORS,  WATER, 2% OR LESS OF MODIFIED CORNSTARCH, YEAST EXTRACT, DISODIUM INOSINATE,  DISODIUM GUANYLATE, CARAMEL COLOR, LACTIC ACID.), Garlic, Dried Bay Leaf"
     },
     {
       "id": "76210",
@@ -8138,6 +8151,82 @@
         "tree_nuts": null
       },
       "ingredients": "White Corn Chips, Kosher Salt"
+    },
+    {
+      "id": "104118",
+      "name": "Yellow Rice",
+      "station": "Tex Mex",
+      "period": "Lunch",
+      "description": "Achiote rice with onions, peppers, garlic and cilantro",
+      "serving": "1/2 cup",
+      "nutrition": {
+        "calories": 130,
+        "total_fat": 2,
+        "saturated_fat": 0,
+        "trans_fat": 0,
+        "cholesterol": 0,
+        "sodium": 72,
+        "carbohydrate": 25,
+        "fiber": 1,
+        "total_sugars": 1,
+        "protein": 2.7,
+        "calcium": 23.1,
+        "iron": 0.9,
+        "potassium": 80
+      },
+      "vegan": true,
+      "vegetarian": true,
+      "contains": {
+        "soy": false,
+        "eggs": false,
+        "fish": false,
+        "milk": false,
+        "wheat": false,
+        "gluten": null,
+        "peanut": false,
+        "sesame": false,
+        "shellfish": false,
+        "tree_nuts": false
+      },
+      "ingredients": "Water, White Rice, Green Bell Pepper, Onion, Vegetable Oil Blend (Vegetable Oil (May contain one or more of the following: Soybean, Canola, Corn, Sunflower Oil); Olive Oil; Colorant: Beta-Carotene E160a(i)), Vegetable Base (SAUTEED VEGETABLE PUREE MIX (CARROTS, ONIONS, CELERY), CORN STARCH, MALTODEXTRIN, VEGETABLE OIL (CORN AND/OR CANOLA OIL), HYDROLYZED CORN PROTEIN, YEAST EXTRACT, TOMATO POWDER, WATER, ONION POWDER, 2% OR LESS OF DISODIUM INOSINATE AND DISODIUM GUANYLATE, SALT, GARLIC POWDER, PAPRIKA (COLOR), NATURAL FLAVORS, LACTIC ACID, NATURAL FLAVOR, MODIFIED CORNSTARCH, CITRIC ACID.), Achiote Paste (VINEGAR, ANNATTO SEED, SPICES, SALT, GARLIC.), Cilantro, Garlic, Kosher Salt"
+    },
+    {
+      "id": "104121",
+      "name": "Charro Beans",
+      "station": "Tex Mex",
+      "period": "Dinner",
+      "description": "Pinto beans simmered with vegetable broth, salsa and cumin",
+      "serving": "1/2 cup",
+      "nutrition": {
+        "calories": 80,
+        "total_fat": 0.5,
+        "saturated_fat": 0,
+        "trans_fat": 0,
+        "cholesterol": 0,
+        "sodium": 353,
+        "carbohydrate": 15,
+        "fiber": 4,
+        "total_sugars": 1,
+        "protein": 5,
+        "calcium": 42,
+        "iron": 1.3,
+        "potassium": 360
+      },
+      "vegan": true,
+      "vegetarian": true,
+      "contains": {
+        "soy": false,
+        "eggs": false,
+        "fish": false,
+        "milk": false,
+        "wheat": false,
+        "gluten": false,
+        "peanut": false,
+        "sesame": false,
+        "shellfish": false,
+        "tree_nuts": false
+      },
+      "ingredients": "Pinto Beans, Water, Medium salsa (Tomatoes (Tomatoes, Tomato Juice, Citric Acid [To Acidify], Calcium Chloride [Firming]), Tomato Puree (Tomato Paste, Water), Onions, Water, Green Chile Peppers, Jalapeño Peppers, Contains 2% or less of Iodized Salt (Contains Potassium Iodate), Distilled Vinegar, Garlic Powder, Xanthan Gum, Spice, Paprika, Calcium Chloride (Firming), Citric Acid (To Acidify)), Vegetable Base (SAUTEED VEGETABLE PUREE MIX (CARROTS, ONIONS, CELERY), CORN STARCH, MALTODEXTRIN, VEGETABLE OIL (CORN AND/OR CANOLA OIL), HYDROLYZED CORN PROTEIN, YEAST EXTRACT, TOMATO POWDER, WATER, ONION POWDER, 2% OR LESS OF DISODIUM INOSINATE AND DISODIUM GUANYLATE, SALT, GARLIC POWDER, PAPRIKA (COLOR), NATURAL FLAVORS, LACTIC ACID, NATURAL FLAVOR, MODIFIED CORNSTARCH, CITRIC ACID.), Kosher Salt, Cumin, Black Pepper"
     },
     {
       "id": "76055",
@@ -8442,44 +8531,6 @@
         "tree_nuts": false
       },
       "ingredients": "Medium salsa (Tomatoes (Tomatoes, Tomato Juice, Citric Acid [To Acidify], Calcium Chloride [Firming]), Tomato Puree (Tomato Paste, Water), Onions, Water, Green Chile Peppers, Jalapeño Peppers, Contains 2% or less of Iodized Salt (Contains Potassium Iodate), Distilled Vinegar, Garlic Powder, Xanthan Gum, Spice, Paprika, Calcium Chloride (Firming), Citric Acid (To Acidify))"
-    },
-    {
-      "id": "76051",
-      "name": "Seasoned Black Beans",
-      "station": "Tex Mex",
-      "period": "Dinner",
-      "description": "Black beans simmered with vegetable broth, salsa and cumin",
-      "serving": "1/2 cup",
-      "nutrition": {
-        "calories": 90,
-        "total_fat": 0.5,
-        "saturated_fat": 0,
-        "trans_fat": 0,
-        "cholesterol": 0,
-        "sodium": 361,
-        "carbohydrate": 16,
-        "fiber": 4,
-        "total_sugars": 1,
-        "protein": 5.5,
-        "calcium": 46.4,
-        "iron": 1.4,
-        "potassium": 410
-      },
-      "vegan": true,
-      "vegetarian": true,
-      "contains": {
-        "soy": false,
-        "eggs": false,
-        "fish": false,
-        "milk": false,
-        "wheat": false,
-        "gluten": false,
-        "peanut": false,
-        "sesame": false,
-        "shellfish": false,
-        "tree_nuts": false
-      },
-      "ingredients": "Black Beans, Water, Medium salsa (Tomatoes (Tomatoes, Tomato Juice, Citric Acid [To Acidify], Calcium Chloride [Firming]), Tomato Puree (Tomato Paste, Water), Onions, Water, Green Chile Peppers, Jalapeño Peppers, Contains 2% or less of Iodized Salt (Contains Potassium Iodate), Distilled Vinegar, Garlic Powder, Xanthan Gum, Spice, Paprika, Calcium Chloride (Firming), Citric Acid (To Acidify)), Vegetable Base (SAUTEED VEGETABLE PUREE MIX (CARROTS, ONIONS, CELERY), CORN STARCH, MALTODEXTRIN, VEGETABLE OIL (CORN AND/OR CANOLA OIL), HYDROLYZED CORN PROTEIN, YEAST EXTRACT, TOMATO POWDER, WATER, ONION POWDER, 2% OR LESS OF DISODIUM INOSINATE AND DISODIUM GUANYLATE, SALT, GARLIC POWDER, PAPRIKA (COLOR), NATURAL FLAVORS, LACTIC ACID, NATURAL FLAVOR, MODIFIED CORNSTARCH, CITRIC ACID.), Kosher Salt, Cumin, Black Pepper"
     },
     {
       "id": "103696",
@@ -8824,44 +8875,6 @@
       "ingredients": "Turkey Bacon (Turkey, Water, Sugar, 2% or less of Salt, Canola Oil, Sun flower Oil, Natural Flavor, Sodium Phosphate, Potassium Diacetate, Potassium Acetate, Smoke Flavor, Sodium Erythorbate, Sodium Nitrite.)"
     },
     {
-      "id": "76239",
-      "name": "Bacon Sauerkraut",
-      "station": "True Balance",
-      "period": "Lunch",
-      "description": "Sauerkraut, bacon, onion, carrot and caraway seed simmered in apple juice",
-      "serving": "1/2 cup",
-      "nutrition": {
-        "calories": 50,
-        "total_fat": 1.5,
-        "saturated_fat": 0.5,
-        "trans_fat": 0,
-        "cholesterol": 5,
-        "sodium": 663,
-        "carbohydrate": 7,
-        "fiber": 4,
-        "total_sugars": 2,
-        "protein": 1.4,
-        "calcium": 7.3,
-        "iron": 0.1,
-        "potassium": 45
-      },
-      "vegan": false,
-      "vegetarian": false,
-      "contains": {
-        "soy": false,
-        "eggs": false,
-        "fish": false,
-        "milk": false,
-        "wheat": false,
-        "gluten": false,
-        "peanut": false,
-        "sesame": false,
-        "shellfish": false,
-        "tree_nuts": false
-      },
-      "ingredients": "Sauerkraut, Onion, Bacon (Pork Bellies, Cured with water, salt, sugar, sodium phosphates, sodium erythorbate, sodium nitrite.), Apple Juice (100% Apple Juice from Concentrate (Filtered Water  and Concentrated Apple Juice), Natural Flavors, Malic Acid and Ascorbic Acid  (Vitamin C)), Caraway Seed, Black Pepper"
-    },
-    {
       "id": "76242",
       "name": "Baked Potato Wedges",
       "station": "True Balance",
@@ -9050,6 +9063,44 @@
         "tree_nuts": false
       },
       "ingredients": "Pork Loin, Smoked Sausage (PORK, MECHANICALLY SEPARATED CHICKEN, WATER, CORN SYRUP, CONTAINS 2% OR LESS OF: SALT, MODIFIED FOOD STARCH, FLAVORINGS, AUTOLYZED YEAST EXTRACT, DEXTROSE, POTASSIUM ACETATE, POTASSIUM LACTATE, MONOSODIUM GLUTAMATE, SODIUM PHOSPHATES, SODIUM DIACETATE, SODIUM ERYTHORBATE, SODIUM NITRITE.), Green Bell Pepper, Onion, Chicken Thigh, Vegetable Oil Blend (Vegetable Oil (May contain one or more of the following: Soybean, Canola, Corn, Sunflower Oil); Olive Oil; Colorant: Beta-Carotene E160a(i)), Kosher Salt, Black Pepper"
+    },
+    {
+      "id": "104115",
+      "name": "Southwest Quinoa & Corn Salad",
+      "station": "True Balance",
+      "period": "Lunch",
+      "description": "Quinoa, roasted corn, black beans, roasted poblano, tomato and bell pepper in cilantro-lime dressing",
+      "serving": "1/2 cup",
+      "nutrition": {
+        "calories": 120,
+        "total_fat": 2,
+        "saturated_fat": 0,
+        "trans_fat": 0,
+        "cholesterol": 0,
+        "sodium": 62,
+        "carbohydrate": 23,
+        "fiber": 4,
+        "total_sugars": 2,
+        "protein": 5.1,
+        "calcium": 27.6,
+        "iron": 1.4,
+        "potassium": 380
+      },
+      "vegan": true,
+      "vegetarian": true,
+      "contains": {
+        "soy": false,
+        "eggs": false,
+        "fish": false,
+        "milk": false,
+        "wheat": false,
+        "gluten": false,
+        "peanut": false,
+        "sesame": false,
+        "shellfish": false,
+        "tree_nuts": false
+      },
+      "ingredients": "Corn Kernels, Black Beans, Water, Tomato , White Quinoa, Poblano Chili Pepper, Red Bell Pepper, Lime Juice, Green Onion, Red Wine Vinegar, Vegetable Oil Blend (Vegetable Oil (May contain one or more of the following: Soybean, Canola, Corn, Sunflower Oil); Olive Oil; Colorant: Beta-Carotene E160a(i)), Garlic, Black Pepper, Cumin, Cilantro, Kosher Salt, Black Pepper"
     },
     {
       "id": "76240",
