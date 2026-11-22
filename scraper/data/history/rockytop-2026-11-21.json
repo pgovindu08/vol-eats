@@ -4,7 +4,7 @@
   "serviceAreaId": 125621,
   "source": "https://dining.utk.edu/vendor/rocky-top-dining-hall/",
   "date": "2026-11-21",
-  "scrapedAt": "2026-11-21T20:32:51.563Z",
+  "scrapedAt": "2026-11-22T02:16:23.162Z",
   "itemCount": 277,
   "items": [
     {
@@ -4834,6 +4834,44 @@
       "ingredients": "Tomatillos, Onion, Cilantro, Lime Juice, Jalapeno Pepper, Kosher Salt"
     },
     {
+      "id": "104139",
+      "name": "Bacon Mac & Cheese",
+      "station": "Pasta",
+      "period": "Dinner",
+      "description": "Cavatappi pasta tossed with creamy cheddar sauce, diced bacon and green onion",
+      "serving": "3/4 cup",
+      "nutrition": {
+        "calories": 250,
+        "total_fat": 6,
+        "saturated_fat": 1.5,
+        "trans_fat": 0,
+        "cholesterol": 10,
+        "sodium": 544,
+        "carbohydrate": 40,
+        "fiber": 3,
+        "total_sugars": 4,
+        "protein": 9.1,
+        "calcium": 45.9,
+        "iron": 1.5,
+        "potassium": 210
+      },
+      "vegan": false,
+      "vegetarian": false,
+      "contains": {
+        "soy": false,
+        "eggs": false,
+        "fish": false,
+        "milk": true,
+        "wheat": true,
+        "gluten": true,
+        "peanut": false,
+        "sesame": false,
+        "shellfish": false,
+        "tree_nuts": false
+      },
+      "ingredients": "Water, Water, Pasta (SEMOLINA (WHEAT), DURUM WHEAT FLOUR, NIACIN (VITAMIN B3), FERROUS SULPHATE OR FERROUS LACTATE (IRON), THIAMINE MONONITRATE (VITAMIN B1), RIBOFLAVIN (VITAMIN B2), FOLIC ACID.), Cheese Sauce (MALTODEXTRIN, TAPIOCA STARCH, WHEY*, SALT, SOYBEAN OIL, MODIFIED CORNSTARCH, CANOLA OIL, 2% OR LESS OF BUTTERMILK*, SUGAR, YEAST EXTRACT, EXTRACTS OF ANNATTO & TURMERIC (COLOR), DRIED CHEDDAR CHEESE (CULTURED MILK, SALT, ENZYMES)*, NATURAL FLAVORS, SODIUM CASEINATE (A MILK DERIVATIVE), BUTTERMILK POWDER*, SPICES, CITRIC ACID, DISODIUM INOSINATE, DISODIUM GUANYLATE, PAPRIKA (COLOR).), Bacon  Bits (Pork Cured With: Water, Salt, Sugar, Smoke Flavoring, Sodium Phosphates, Sodium Erythorbate, Sodium Nitrite.), Green Onion, Garlic, Vegetable Oil Blend (Vegetable Oil (May contain one or more of the following: Soybean, Canola, Corn, Sunflower Oil); Olive Oil; Colorant: Beta-Carotene E160a(i)), Black Pepper"
+    },
+    {
       "id": "76026",
       "name": "Caesar Salad",
       "station": "Pasta",
@@ -4908,44 +4946,6 @@
         "tree_nuts": false
       },
       "ingredients": "Focaccia Bread (Unbleached Enriched Flour (wheat Flour, Malted Barley Flour, Niacin, Reduced Iron, Thiamine Mononitrate, Riboflavin, Folic Acid), Water, Contains 2% Or Less Of: Sour Culture, Extra Virgin Olive Oil, Salt, Semolina, Yeast, Enzymes), Extra Virgin Olive Oil, Rosemary"
-    },
-    {
-      "id": "76028",
-      "name": "Spicy Jerk Chicken & Cavatappi",
-      "station": "Pasta",
-      "period": "Dinner",
-      "description": "Corkscrew pasta with grilled jerk chicken, butternut squash, and bacon in a light lemon garlic broth",
-      "serving": "1 serving",
-      "nutrition": {
-        "calories": 360,
-        "total_fat": 14.5,
-        "saturated_fat": 5.5,
-        "trans_fat": 0,
-        "cholesterol": 60,
-        "sodium": 614,
-        "carbohydrate": 41,
-        "fiber": 5,
-        "total_sugars": 5,
-        "protein": 20.4,
-        "calcium": 93.3,
-        "iron": 3.2,
-        "potassium": 790
-      },
-      "vegan": false,
-      "vegetarian": false,
-      "contains": {
-        "soy": true,
-        "eggs": false,
-        "fish": false,
-        "milk": false,
-        "wheat": true,
-        "gluten": true,
-        "peanut": false,
-        "sesame": false,
-        "shellfish": false,
-        "tree_nuts": false
-      },
-      "ingredients": "Water, Butternut Squash, Squash Zucchini, Chicken Thigh, Water, Pasta (SEMOLINA (WHEAT), DURUM WHEAT FLOUR, NIACIN (VITAMIN B3), FERROUS SULPHATE OR FERROUS LACTATE (IRON), THIAMINE MONONITRATE (VITAMIN B1), RIBOFLAVIN (VITAMIN B2), FOLIC ACID.), Coconut Milk (Coconut Milk, Water, Guar Gum, Sodium Carboxymethyl Cellulose, Polysorbate 60, Sodium Metabisulfite (Preservative).), Onion, Bacon  Bits (Pork Cured With: Water, Salt, Sugar, Smoke Flavoring, Sodium Phosphates, Sodium Erythorbate, Sodium Nitrite.), Garlic, Green Onion, Lemon Juice, Vegetable Oil Blend (Vegetable Oil (May contain one or more of the following: Soybean, Canola, Corn, Sunflower Oil); Olive Oil; Colorant: Beta-Carotene E160a(i)), Water, Cilantro, White Vinegar, Vegetable Oil Blend (Vegetable Oil (May contain one or more of the following: Soybean, Canola, Corn, Sunflower Oil); Olive Oil; Colorant: Beta-Carotene E160a(i)), Vegetable Base (SAUTEED VEGETABLE PUREE MIX (CARROTS, ONIONS, CELERY), CORN STARCH, MALTODEXTRIN, VEGETABLE OIL (CORN AND/OR CANOLA OIL), HYDROLYZED CORN PROTEIN, YEAST EXTRACT, TOMATO POWDER, WATER, ONION POWDER, 2% OR LESS OF DISODIUM INOSINATE AND DISODIUM GUANYLATE, SALT, GARLIC POWDER, PAPRIKA (COLOR), NATURAL FLAVORS, LACTIC ACID, NATURAL FLAVOR, MODIFIED CORNSTARCH, CITRIC ACID.), Garlic, Soy Sauce (Water, Soybeans, Salt, Sugar, Alcohol, Vinegar, Lactic Acid), Cornstarch, Kosher Salt, Jalapeno Pepper, Vegetable Oil Blend (Vegetable Oil (May contain one or more of the following: Soybean, Canola, Corn, Sunflower Oil); Olive Oil; Colorant: Beta-Carotene E160a(i)), Green Onion, Vegetable Oil Blend (Vegetable Oil (May contain one or more of the following: Soybean, Canola, Corn, Sunflower Oil); Olive Oil; Colorant: Beta-Carotene E160a(i)), Crushed Red Pepper, Lemon Zest, Montreal Steak Seasoning (COARSE SALT, SPICES (INCLUDING BLACK PEPPER AND RED PEPPER), GARLIC, ONION, SUNFLOWER OIL, NATURAL FLAVOR AND EXTRACTIVES OF PAPRIKA.), Vegetable Oil Blend (Vegetable Oil (May contain one or more of the following: Soybean, Canola, Corn, Sunflower Oil); Olive Oil; Colorant: Beta-Carotene E160a(i)), Black Pepper, Lime Juice, Kosher Salt, Allspice, Cinnamon, Nutmeg, Garlic Powder"
     },
     {
       "id": "76253",
@@ -5060,44 +5060,6 @@
         "tree_nuts": false
       },
       "ingredients": "Onion"
-    },
-    {
-      "id": "76085",
-      "name": "Diced Tomatoes",
-      "station": "Pasta Build Your Own",
-      "period": "Lunch",
-      "description": "Diced fresh tomatoes",
-      "serving": "1/4 cup",
-      "nutrition": {
-        "calories": 10,
-        "total_fat": 0,
-        "saturated_fat": 0,
-        "trans_fat": 0,
-        "cholesterol": 0,
-        "sodium": 0,
-        "carbohydrate": 2,
-        "fiber": 1,
-        "total_sugars": 1,
-        "protein": 0.4,
-        "calcium": 4.3,
-        "iron": 0.1,
-        "potassium": 100
-      },
-      "vegan": true,
-      "vegetarian": true,
-      "contains": {
-        "soy": false,
-        "eggs": false,
-        "fish": false,
-        "milk": false,
-        "wheat": false,
-        "gluten": false,
-        "peanut": false,
-        "sesame": false,
-        "shellfish": false,
-        "tree_nuts": false
-      },
-      "ingredients": "Tomato "
     },
     {
       "id": "103981",
@@ -5225,6 +5187,44 @@
       "vegetarian": null,
       "contains": {},
       "ingredients": null
+    },
+    {
+      "id": "104138",
+      "name": "Sweet Pickle Relish",
+      "station": "Pasta Build Your Own",
+      "period": "Lunch",
+      "description": "Sweet pickle relish",
+      "serving": "1 tablespoon",
+      "nutrition": {
+        "calories": 15,
+        "total_fat": 0,
+        "saturated_fat": 0,
+        "trans_fat": 0,
+        "cholesterol": 0,
+        "sodium": 107,
+        "carbohydrate": 3,
+        "fiber": 0,
+        "total_sugars": 3,
+        "protein": 0.1,
+        "calcium": 0.2,
+        "iron": 0,
+        "potassium": 5
+      },
+      "vegan": true,
+      "vegetarian": true,
+      "contains": {
+        "soy": false,
+        "eggs": false,
+        "fish": false,
+        "milk": false,
+        "wheat": false,
+        "gluten": false,
+        "peanut": false,
+        "sesame": false,
+        "shellfish": false,
+        "tree_nuts": false
+      },
+      "ingredients": "Sweet Pickle Relish (CUCUMBERS,  HIGH FRUCTOSE CORN SYRUP, SALT, DISTILLED WHITE VINEGAR, WATER, ALUMINUM  SULPHATE, XANTHAN GUM, NATURAL FLAVOR, DEHYDRATED RED BELL PEPPERS,  POLYSORBATE 80, OLEORESIN TURMERIC)"
     },
     {
       "id": "76121",
