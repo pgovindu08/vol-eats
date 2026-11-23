@@ -4,8 +4,8 @@
   "serviceAreaId": 125621,
   "source": "https://dining.utk.edu/vendor/rocky-top-dining-hall/",
   "date": "2026-11-22",
-  "scrapedAt": "2026-11-22T12:37:32.535Z",
-  "itemCount": 271,
+  "scrapedAt": "2026-11-23T02:48:11.543Z",
+  "itemCount": 275,
   "items": [
     {
       "id": "76296",
@@ -274,6 +274,44 @@
       "ingredients": "Cream Cheese (PASTEURIZED MILK AND CREAM, SALT, CAROB BEAN GUM, CHEESE CULTURE), Water"
     },
     {
+      "id": "104243",
+      "name": "Apple Cinnamon Mini Muffin",
+      "station": "Bakery",
+      "period": "Lunch",
+      "description": "Freshly baked miniature muffin with apples, raisins and ground cinnamon",
+      "serving": "1 muffin",
+      "nutrition": {
+        "calories": 90,
+        "total_fat": 2,
+        "saturated_fat": 1,
+        "trans_fat": 0,
+        "cholesterol": 0,
+        "sodium": 119,
+        "carbohydrate": 16,
+        "fiber": 0,
+        "total_sugars": 10,
+        "protein": 0.8,
+        "calcium": 8,
+        "iron": 0.4,
+        "potassium": 40
+      },
+      "vegan": false,
+      "vegetarian": true,
+      "contains": {
+        "soy": true,
+        "eggs": true,
+        "fish": false,
+        "milk": true,
+        "wheat": true,
+        "gluten": true,
+        "peanut": false,
+        "sesame": false,
+        "shellfish": false,
+        "tree_nuts": false
+      },
+      "ingredients": "Variety Muffin Mix (ENRICHED FLOUR BLEACHED (WHEAT FLOUR, NIACIN,  IRON, THIAMIN MONONITRATE, RIBOFLAVIN, FOLIC ACID), SUGAR, PALM OIL, MODIFIED CORN STARCH, MODIFIED WHEY. CONTAINS  2% OR LESS OF: LEAVENING (SODIUM ACID PYROPHOSPHATE, BAKING SODA, MONOCALCIUM PHOSPHATE), DEXTROSE, MONO AND  DIGLYCERIDES, SALT, EGGS WITH SODIUM SILICOALUMINATE, XANTHAN GUM, NONFAT MILK, NATURAL FLAVOR, SOY FLOUR.), Water, Apples, Seedless Raisins, Granulated Sugar, Cinnamon"
+    },
+    {
       "id": "76446",
       "name": "Assorted Bagels",
       "station": "Bakery",
@@ -462,6 +500,44 @@
         "tree_nuts": false
       },
       "ingredients": "Lemon Glazed Cake  (Enriched Wheat Flour [wheat flour, malted barley flour, niacin, reduced iron, thiamin mononitrate, riboflavin, folic acid], Sugar, Buttermilk, Butter, Eggs, Maltitol, Water, Margarine [soybean oil, palm oil, water, salt, mono & diglycerides, nonfat dry milk, sunflower lecithin, natural flavor, vitamin A palmitate, beta carotene], Lemon Peel [lemon peel zest, cane sugar, lemon oil essence], Lemon Juice Concentrate, Salt, Baking Soda, Corn Starch, Soybean Oil.)"
+    },
+    {
+      "id": "104244",
+      "name": "Powdered Sugar Donut Bites",
+      "station": "Bakery",
+      "period": "Lunch",
+      "description": "Freshly baked donut bites coated with powdered sugar",
+      "serving": "4 each",
+      "nutrition": {
+        "calories": 210,
+        "total_fat": 12,
+        "saturated_fat": 5.5,
+        "trans_fat": 0,
+        "cholesterol": 10,
+        "sodium": 302,
+        "carbohydrate": 23,
+        "fiber": 0,
+        "total_sugars": 10,
+        "protein": 2.2,
+        "calcium": 6.6,
+        "iron": 1.2,
+        "potassium": 40
+      },
+      "vegan": false,
+      "vegetarian": true,
+      "contains": {
+        "soy": true,
+        "eggs": true,
+        "fish": false,
+        "milk": true,
+        "wheat": true,
+        "gluten": true,
+        "peanut": false,
+        "sesame": false,
+        "shellfish": false,
+        "tree_nuts": false
+      },
+      "ingredients": "Donut Holes (ENRICHED UNBLEACHED WHEAT FLOUR (WHEAT FLOUR,NIACIN, REDUCED IRON, THIAMINE MONONITRATE, ENZYME, RIBOFLAVIN, FOLIC ACID),PALM OIL, SUGAR, WATER, SOYBEAN OIL, CONTAINS LESS THAN 2% OF THEFOLLOWING: DEFATTED SOY FLOUR, EGG YOLKS, LEAVENING (SODIUM ACIDPYROPHOSPHATE, BAKING SODA), DEXTROSE, WHEAT STARCH, SALT, SKIM MILK,MODIFIED WHEAT STARCH, POTATO FLOUR, ARTIFICIAL FLAVOR, SODIUM STEAROYLLACTYLATE.), Powdered Sugar"
     },
     {
       "id": "76440",
@@ -996,44 +1072,6 @@
       "ingredients": "Broccoli, Cauliflower, Carrots"
     },
     {
-      "id": "76464",
-      "name": "Dinner Roll",
-      "station": "Entree",
-      "period": "Lunch",
-      "description": "Soft and delicious white dinner rolls",
-      "serving": "1 roll",
-      "nutrition": {
-        "calories": 110,
-        "total_fat": 2,
-        "saturated_fat": 0.5,
-        "trans_fat": 0,
-        "cholesterol": 5,
-        "sodium": 86,
-        "carbohydrate": 20,
-        "fiber": 1,
-        "total_sugars": 5,
-        "protein": 3,
-        "calcium": 0,
-        "iron": 0,
-        "potassium": 0
-      },
-      "vegan": false,
-      "vegetarian": false,
-      "contains": {
-        "soy": false,
-        "eggs": true,
-        "fish": false,
-        "milk": true,
-        "wheat": true,
-        "gluten": true,
-        "peanut": false,
-        "sesame": false,
-        "shellfish": false,
-        "tree_nuts": false
-      },
-      "ingredients": "Dinner Roll (Enriched Bleached Wheat Flour (Bleached Wheat Flour, Malted Barley Flour, Niacin, Iron, Potassium Bromate, Thiamin Mononitrate, Riboflavin, Folic Acid), Water, Sugar, Interesterified Vegetable Oil (High Oleic Soybean Oil, Soybean Oil), Eggs, Butter, Yeast, Salt.)"
-    },
-    {
       "id": "76466",
       "name": "Green Peas",
       "station": "Entree",
@@ -1070,6 +1108,44 @@
         "tree_nuts": false
       },
       "ingredients": "Green peas, Margarine (PALM OIL, WATER, SOYBEAN OIL, CONTAINS LESS THAN 2% OF SOY LECITHIN, VEGETABLE MONO & DIGLYCERIDES, POTASSIUM SORBATE (A PRESERVATIVE), CITRIC ACID, NATURAL & ARTIFICIAL FLAVOR, BETA CAROTENE (COLOR), VITAMIN A PALMITATE ADDED, WHEY.), Garlic  Herb Seasoning (GARLIC, SPICES (INCLUDING OREGANO, ROSEMARY, BASIL, AND RED PEPPER), ORANGE PEEL, ONION, PAPRIKA, AND CELERY.), Black Pepper"
+    },
+    {
+      "id": "104245",
+      "name": "Grilled Baguette Slices",
+      "station": "Entree",
+      "period": "Lunch",
+      "description": "French baguette slices grilled to a golden brown",
+      "serving": "1 slice",
+      "nutrition": {
+        "calories": 35,
+        "total_fat": 0,
+        "saturated_fat": 0,
+        "trans_fat": 0,
+        "cholesterol": 0,
+        "sodium": 82,
+        "carbohydrate": 7,
+        "fiber": 0,
+        "total_sugars": 0,
+        "protein": 1.1,
+        "calcium": 2,
+        "iron": 0.5,
+        "potassium": 15
+      },
+      "vegan": true,
+      "vegetarian": true,
+      "contains": {
+        "soy": false,
+        "eggs": false,
+        "fish": false,
+        "milk": false,
+        "wheat": true,
+        "gluten": true,
+        "peanut": false,
+        "sesame": false,
+        "shellfish": false,
+        "tree_nuts": false
+      },
+      "ingredients": "Baguette Bread (UNBLEACHED ENRICHED FLOUR (WHEAT FLOUR, MALTED BARLEY FLOUR, NIACIN, REDUCED IRON, THIAMINE MONONITRATE, RIBOFLAVIN, FOLIC ACID), WATER, SOUR CULTURE, CONTAINS 2% OR LESS OF: SALT, SEMOLINA, YEAST.)"
     },
     {
       "id": "76462",
@@ -1300,44 +1376,6 @@
       "ingredients": "Unsalted Butter (Pasteurized Cream, Natural Flavoring.), Lemon Zest, Parsley, Lemon Juice, Dijon Mustard (Distilled White Vinegar, Mustard Seed, Water, Salt, White Wine, Citric Acid, Tartaric Acid, Fruit Pectin, Sugar, Spices), Kosher Salt, Paprika"
     },
     {
-      "id": "76508",
-      "name": "Roasted Cauliflower",
-      "station": "Entree",
-      "period": "Dinner",
-      "description": "Fresh cauliflower seasoned and roasted",
-      "serving": "1/2 cup",
-      "nutrition": {
-        "calories": 70,
-        "total_fat": 5,
-        "saturated_fat": 0.5,
-        "trans_fat": 0,
-        "cholesterol": 0,
-        "sodium": 173,
-        "carbohydrate": 6,
-        "fiber": 2,
-        "total_sugars": 2,
-        "protein": 2.3,
-        "calcium": 26.9,
-        "iron": 0.5,
-        "potassium": 360
-      },
-      "vegan": true,
-      "vegetarian": true,
-      "contains": {
-        "soy": false,
-        "eggs": false,
-        "fish": false,
-        "milk": false,
-        "wheat": false,
-        "gluten": false,
-        "peanut": false,
-        "sesame": false,
-        "shellfish": false,
-        "tree_nuts": false
-      },
-      "ingredients": "Cauliflower, Vegetable Oil Blend (Vegetable Oil (May contain one or more of the following: Soybean, Canola, Corn, Sunflower Oil); Olive Oil; Colorant: Beta-Carotene E160a(i)), Kosher Salt, Black Pepper"
-    },
-    {
       "id": "103992",
       "name": "Salisbury Steak & Mushroom Sauce",
       "station": "Entree",
@@ -1412,6 +1450,44 @@
         "tree_nuts": false
       },
       "ingredients": "Carrots, Water, Margarine (PALM OIL, WATER, SOYBEAN OIL, CONTAINS LESS THAN 2% OF SOY LECITHIN, VEGETABLE MONO & DIGLYCERIDES, POTASSIUM SORBATE (A PRESERVATIVE), CITRIC ACID, NATURAL & ARTIFICIAL FLAVOR, BETA CAROTENE (COLOR), VITAMIN A PALMITATE ADDED, WHEY.), Seasoning Blend (ONION, SPICES (INCLUDING PARSLEY, BASIL, OREGANO, THYME, AND RED PEPPER), GARLIC, LEMON PEEL, CELERY, AND PAPRIKA.), Garlic Powder"
+    },
+    {
+      "id": "104249",
+      "name": "Spinach Gratin",
+      "station": "Entree",
+      "period": "Dinner",
+      "description": "Spinach, mozzarella and Asiago cheese baked with a bread crumb top",
+      "serving": "1/2 cup",
+      "nutrition": {
+        "calories": 150,
+        "total_fat": 9,
+        "saturated_fat": 5,
+        "trans_fat": 0.5,
+        "cholesterol": 25,
+        "sodium": 345,
+        "carbohydrate": 11,
+        "fiber": 2,
+        "total_sugars": 4,
+        "protein": 7.1,
+        "calcium": 214.2,
+        "iron": 1.4,
+        "potassium": 300
+      },
+      "vegan": false,
+      "vegetarian": false,
+      "contains": {
+        "soy": false,
+        "eggs": null,
+        "fish": false,
+        "milk": true,
+        "wheat": true,
+        "gluten": true,
+        "peanut": null,
+        "sesame": null,
+        "shellfish": false,
+        "tree_nuts": null
+      },
+      "ingredients": "Whole Milk, Spinach, Wheat Flour (Bleached Wheat Flour, Malted Barley Flour, Niacin, Iron, Thiamin Mononitrate, Riboflavin, Folic Acid), Mozzarella Cheese (LOW-MOISTURE PART-SKIM MOZZARELLA CHEESE  (CULTURED PASTEURIZED PART-SKIM MILK, SALT, ENZYMES). ANTI-CAKING BLEND  (POTATO STARCH, POWDERED CELLULOSE).), Asiago Cheese (Asiago Cheese (Cultured Pasteurized Milk, Salt, Enzymes), Anti-Caking Blend (Potato Starch, Powdered Cellulose).), Unsalted Butter (Pasteurized Cream, Natural Flavoring.), Unsalted Butter (Pasteurized Cream, Natural Flavoring.), Panko Bread Crumbs (WHEAT FLOUR, SUGAR, YEAST, SALT.), Kosher Salt, Black Pepper"
     },
     {
       "id": "76430",
@@ -4986,26 +5062,26 @@
       "ingredients": "Parsley"
     },
     {
-      "id": "104215",
-      "name": "Grilled Italian Sausage",
+      "id": "104242",
+      "name": "Grilled Kielbasa",
       "station": "Pasta Build Your Own",
       "period": "Lunch",
-      "description": "Grilled sliced Italian sausage",
-      "serving": "1/4 cup",
+      "description": "Savory kielbasa sausages, grilled to achieve a smoky char and juicy bite",
+      "serving": "1/2 piece",
       "nutrition": {
-        "calories": 170,
-        "total_fat": 14.5,
-        "saturated_fat": 5,
+        "calories": 200,
+        "total_fat": 16.5,
+        "saturated_fat": 5.5,
         "trans_fat": 0,
-        "cholesterol": 40,
-        "sodium": 345,
-        "carbohydrate": 2,
+        "cholesterol": 50,
+        "sodium": 531,
+        "carbohydrate": 4,
         "fiber": 0,
         "total_sugars": 1,
-        "protein": 8,
-        "calcium": 9.6,
-        "iron": 0.6,
-        "potassium": 140
+        "protein": 6.3,
+        "calcium": 52.5,
+        "iron": 0.5,
+        "potassium": 200
       },
       "vegan": false,
       "vegetarian": false,
@@ -5021,7 +5097,7 @@
         "shellfish": false,
         "tree_nuts": false
       },
-      "ingredients": "Italian Sausage (Pork, Water, Corn Syrup Solids, Salt, Dextrose, Spices, Paprika, Monosodium Glutamate, Natural Flavors, BHA, Citric Acid, Propyl Gallate.)"
+      "ingredients": "Smoked Sausage (PORK, MECHANICALLY SEPARATED CHICKEN, WATER, CORN SYRUP, CONTAINS 2% OR LESS OF: SALT, MODIFIED FOOD STARCH, FLAVORINGS, AUTOLYZED YEAST EXTRACT, DEXTROSE, POTASSIUM ACETATE, POTASSIUM LACTATE, MONOSODIUM GLUTAMATE, SODIUM PHOSPHATES, SODIUM DIACETATE, SODIUM ERYTHORBATE, SODIUM NITRITE.)"
     },
     {
       "id": "76309",
@@ -7380,6 +7456,44 @@
       "ingredients": "Vegetable Soup "
     },
     {
+      "id": "104246",
+      "name": "Italian Wedding Soup",
+      "station": "Soup",
+      "period": "Lunch",
+      "description": "Beef and chicken meatballs, acini di pepe pasta and spinach in a mild garlic Parmesan chicken broth",
+      "serving": "6 fl oz",
+      "nutrition": {
+        "calories": 90,
+        "total_fat": 3,
+        "saturated_fat": 1,
+        "trans_fat": 0,
+        "cholesterol": 10,
+        "sodium": 612,
+        "carbohydrate": 11,
+        "fiber": 1,
+        "total_sugars": 1,
+        "protein": 4.4,
+        "calcium": 31.2,
+        "iron": 0.7,
+        "potassium": 125
+      },
+      "vegan": false,
+      "vegetarian": false,
+      "contains": {
+        "soy": true,
+        "eggs": true,
+        "fish": false,
+        "milk": true,
+        "wheat": true,
+        "gluten": true,
+        "peanut": false,
+        "sesame": false,
+        "shellfish": false,
+        "tree_nuts": false
+      },
+      "ingredients": "Water, Italian Wedding Soup  (CHICKEN  BROTH, COOKED ITALIAN STYLE MEATBALLS (BEEF, CHICKEN, WATER, TEXTURED SOY  FLOUR, BREAD CRUMBS [WHEAT FLOUR, SALT, YEAST], EGGS, SALT, DEHYDRATED ONION,  FLAVORINGS, ROMANO CHEESE [SHEEP’S AND/OR COW’S MILK, RENNET, SALT, CHEESE  CULTURES, ENZYMES]), ENRICHED MACARONI PRODUCT (SEMOLINA WHEAT FLOUR, EGG  WHITE, NIACIN, FERROUS SULFATE (IRON), THIAMIN MONONITRATE, RIBOFLAVIN AND  FOLIC ACID), SPINACH, CARROTS, CONTAINS LESS THAN 2% OF MODIFIED FOOD STARCH,  CHICKEN FLAVOR (SALT, HYDROLYZED CORN GLUTEN, SUGAR, YEAST EXTRACT, CHICKEN  POWDER, YEAST, ROSEMARY, SOY FLOUR), GARLIC PUREE (GARLIC, HIGH FRUCTOSE CORN  SYRUP), SALT, CHICKEN SEASONING (AUTOLYZED YEAST EXTRACT, CHICKEN FAT,  TAPIOCA DEXTRIN, MALTODEXTRIN [CORN], HYDROLYZED WHEAT PROTEIN, FLAVOR,  SILICON DIOXIDE, MODIFIED CORNSTARCH, CARAMEL COLOR, GRILL FLAVOR [FROM  VEGETABLE OIL], DISODIUM GUANYLATE, DISODIUM INOSINATE, TRICALCIUM PHOSPHATE,  LACTIC ACID, SULFITIES), PARMESAN CHEESE FLAVOR (PARMESAN CHEESE [MILK,  CHEESE CULTURES, SALT, ENZYMES], NATURAL FLAVORS, DISODIUM PHOSPHATE),  DEHYDRATED ONION, ANNATTO COLOR, DISODIUM INOSINATE AND GUANYLATE, FLAVOR  (GUM ARABIC, EXTRACTIVES OF TURMERIC), WHITE PEPPER)"
+    },
+    {
       "id": "76467",
       "name": "Saltine Crackers",
       "station": "Soup",
@@ -7682,6 +7796,44 @@
         "tree_nuts": false
       },
       "ingredients": "Green Onion"
+    },
+    {
+      "id": "104247",
+      "name": "Arroz Rojo",
+      "station": "Tex Mex",
+      "period": "Lunch",
+      "description": "Brown rice seasoned with oregano, chili powder, garlic and cumin",
+      "serving": "1/2 cup",
+      "nutrition": {
+        "calories": 100,
+        "total_fat": 1,
+        "saturated_fat": 0,
+        "trans_fat": 0,
+        "cholesterol": 0,
+        "sodium": 34,
+        "carbohydrate": 22,
+        "fiber": 1,
+        "total_sugars": 0,
+        "protein": 2.5,
+        "calcium": 12.3,
+        "iron": 0.9,
+        "potassium": 85
+      },
+      "vegan": true,
+      "vegetarian": true,
+      "contains": {
+        "soy": false,
+        "eggs": false,
+        "fish": false,
+        "milk": false,
+        "wheat": false,
+        "gluten": false,
+        "peanut": false,
+        "sesame": false,
+        "shellfish": false,
+        "tree_nuts": false
+      },
+      "ingredients": "Water, Whole Grain Brown Rice, Garlic Powder, Chili Powder (CHILI PEPPER, SPICES, SALT, SILICON DIOXIDE (TO MAKE FREE FLOWING) AND GARLIC), Taco Seasoning (DEXTROSE, SALT, CORN FLOUR, CHILI PEPPER, CUMIN, ONION POWDER, GARLIC POWDER, OREGANO, CITRIC ACID, SILICON DIOXIDE (AS ANTICAKING AGENT) & EXTRACTIVES OF PAPRIKA.), Cumin, Dried Oregano"
     },
     {
       "id": "76480",
@@ -9014,44 +9166,6 @@
       "ingredients": "Rice Flour (Sweet White Rice Flour, Whole Grain Brown Rice Flour, Potato Starch, Whole Grain Sweet White Sorghum Flour, Tapioca Flour, Xanthan Gum.), Granulated Sugar, Blueberries, Oat Milk (Oat base (water, oats), low erucic acid rapeseed oil. Contains 2% or less of: dipotassium phosphate, calcium carbonate, tricalcium phosphate, sea salt, dicalcium phosphate, riboflavin, vitamin A acetate, vitamin D2, vitamin B12), Plant Based Butter Spread (PALM KERNEL AND PALM OIL, WATER, SUNFLOWER OIL, PEA PROTEIN, SUNFLOWER LECITHIN, LACTIC ACID, NATURAL FLAVOR, ANNATTO (COLOR), VITAMIN A PALMITATE.), Sugar in the Raw, Egg Substitute (Potato Starch, Tapioca Flour, Baking Soda, Psyllium Husk Powder), Baking Powder, Xanthan Gum, Kosher Salt, Pure Vanilla Extract"
     },
     {
-      "id": "76502",
-      "name": "Cajun Grilled Baked Potato",
-      "station": "True Balance",
-      "period": "Dinner",
-      "description": "Grill-finished baked russet potato, tossed with olive oil, salt, pepper and Cajun spices",
-      "serving": "each",
-      "nutrition": {
-        "calories": 80,
-        "total_fat": 2.5,
-        "saturated_fat": 0.5,
-        "trans_fat": 0,
-        "cholesterol": 0,
-        "sodium": 67,
-        "carbohydrate": 14,
-        "fiber": 1,
-        "total_sugars": 0,
-        "protein": 1.7,
-        "calcium": 11.3,
-        "iron": 0.7,
-        "potassium": 330
-      },
-      "vegan": true,
-      "vegetarian": true,
-      "contains": {
-        "soy": false,
-        "eggs": false,
-        "fish": false,
-        "milk": false,
-        "wheat": false,
-        "gluten": false,
-        "peanut": false,
-        "sesame": false,
-        "shellfish": false,
-        "tree_nuts": false
-      },
-      "ingredients": "Russet Potato, Vegetable Oil Blend (Vegetable Oil (May contain one or more of the following: Soybean, Canola, Corn, Sunflower Oil); Olive Oil; Colorant: Beta-Carotene E160a(i)), Cajun Seasoning (GARLIC, SPICES (INCLUDING PAPRIKA, OREGANO, RED PEPPER), SALT AND ONION.), Kosher Salt, Black Pepper"
-    },
-    {
       "id": "76335",
       "name": "Calabacitas",
       "station": "True Balance",
@@ -9126,6 +9240,44 @@
         "tree_nuts": false
       },
       "ingredients": "Red Grapes, Honeydew, Pineapple, Cantaloupe"
+    },
+    {
+      "id": "104248",
+      "name": "Seasoned Rice",
+      "station": "True Balance",
+      "period": "Dinner",
+      "description": "Long grain white rice seasoned with salt and pepper",
+      "serving": "1/2 cup",
+      "nutrition": {
+        "calories": 130,
+        "total_fat": 1,
+        "saturated_fat": 0,
+        "trans_fat": 0,
+        "cholesterol": 0,
+        "sodium": 71,
+        "carbohydrate": 27,
+        "fiber": 1,
+        "total_sugars": 0,
+        "protein": 2.8,
+        "calcium": 23.6,
+        "iron": 1,
+        "potassium": 55
+      },
+      "vegan": true,
+      "vegetarian": true,
+      "contains": {
+        "soy": false,
+        "eggs": false,
+        "fish": false,
+        "milk": false,
+        "wheat": false,
+        "gluten": false,
+        "peanut": false,
+        "sesame": false,
+        "shellfish": false,
+        "tree_nuts": false
+      },
+      "ingredients": "Water, White Rice, Canola Oil, Kosher Salt, Black Pepper"
     },
     {
       "id": "76499",
