@@ -4,8 +4,8 @@
   "serviceAreaId": 116094,
   "source": "https://dining.utk.edu/vendor/stokely-dining-hall/",
   "date": "2026-11-25",
-  "scrapedAt": "2026-11-25T11:20:26.116Z",
-  "itemCount": 161,
+  "scrapedAt": "2026-11-25T21:43:59.638Z",
+  "itemCount": 162,
   "items": [
     {
       "id": "104711",
@@ -4186,6 +4186,44 @@
         "tree_nuts": false
       },
       "ingredients": "Water, Grits (DEGERMINATED WHITE CORN GRITS, NIACINAMIDE*,  REDUCED IRON, THIAMIN MONONITRATE*, RIBOFLAVIN*, FOLIC ACID*. *ONE OF THE B  VITAMINS), Kosher Salt"
+    },
+    {
+      "id": "104730",
+      "name": "Old Fashioned Oatmeal",
+      "station": "Soup",
+      "period": "Breakfast",
+      "description": "Homestyle oatmeal cereal",
+      "serving": "6 fl oz",
+      "nutrition": {
+        "calories": 110,
+        "total_fat": 2,
+        "saturated_fat": 0.5,
+        "trans_fat": 0,
+        "cholesterol": 0,
+        "sodium": 6,
+        "carbohydrate": 20,
+        "fiber": 3,
+        "total_sugars": 0,
+        "protein": 3.9,
+        "calcium": 20.5,
+        "iron": 1.1,
+        "potassium": 115
+      },
+      "vegan": true,
+      "vegetarian": true,
+      "contains": {
+        "soy": false,
+        "eggs": false,
+        "fish": false,
+        "milk": false,
+        "wheat": false,
+        "gluten": true,
+        "peanut": false,
+        "sesame": false,
+        "shellfish": false,
+        "tree_nuts": false
+      },
+      "ingredients": "Water, Oatmeal"
     },
     {
       "id": "77303",
