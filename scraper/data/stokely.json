@@ -4,7 +4,7 @@
   "serviceAreaId": 116094,
   "source": "https://dining.utk.edu/vendor/stokely-dining-hall/",
   "date": "2026-11-27",
-  "scrapedAt": "2026-11-27T08:37:57.153Z",
+  "scrapedAt": "2026-11-27T19:29:16.524Z",
   "itemCount": 166,
   "items": [
     {
@@ -4796,6 +4796,44 @@
       "ingredients": "Turkey Sausage (Turkey, Water, Contains 2% or Less of Salt, Spices, Sugar, BHA, BHT, Citric Acid.)"
     },
     {
+      "id": "104872",
+      "name": "BBQ Chicken Drumstick",
+      "station": "Traditions",
+      "period": "Lunch",
+      "description": "Savor the bold flavors of our Baked BBQ-Seasoned Chicken Drumstick, a perfect blend of smoky & sweet",
+      "serving": "each",
+      "nutrition": {
+        "calories": 220,
+        "total_fat": 10.5,
+        "saturated_fat": 3,
+        "trans_fat": 0,
+        "cholesterol": 95,
+        "sodium": 520,
+        "carbohydrate": 9,
+        "fiber": 0,
+        "total_sugars": 8,
+        "protein": 23.4,
+        "calcium": 2.8,
+        "iron": 1.3,
+        "potassium": 330
+      },
+      "vegan": false,
+      "vegetarian": false,
+      "contains": {
+        "soy": null,
+        "eggs": null,
+        "fish": null,
+        "milk": null,
+        "wheat": null,
+        "gluten": null,
+        "peanut": null,
+        "sesame": null,
+        "shellfish": null,
+        "tree_nuts": null
+      },
+      "ingredients": "Chicken Drumstick, Barbecue Sauce, Kosher Salt, Granulated Sugar, Paprika, Chili Powder, Garlic Powder, Black Pepper, Cayenne Pepper"
+    },
+    {
       "id": "77953",
       "name": "California Blend Vegetables",
       "station": "Traditions",
@@ -4908,44 +4946,6 @@
         "tree_nuts": false
       },
       "ingredients": "Muffin (ENRICHED FLOUR BLEACHED (WHEAT FLOUR, NIACIN, IRON, THIAMIN MONONITRATE, RIBOFLAVIN, FOLIC ACID), SUGAR, DEGERMED YELLOW CORN MEAL, SOYBEAN OIL, MODIFIED CORN STARCH, YELLOW CORN FLOUR, LEAVENING (SODIUM ACID PYROPHOSPHATE, BAKING SODA, MONOCALCIUM PHOSPHATE). CONTAINS 2% OR LESS OF: SALT, EGGS WITH SODIUM SILICOALUMINATE, MODIFIED WHEY, MONO AND DIGLYCERIDES, NONFAT MILK, XANTHAN GUM, SOY FLOUR.), Water"
-    },
-    {
-      "id": "104334",
-      "name": "Grilled Chicken",
-      "station": "Traditions",
-      "period": "Lunch",
-      "description": "Grilled seasoned boneless chicken thigh",
-      "serving": "4 ozw",
-      "nutrition": {
-        "calories": 160,
-        "total_fat": 7,
-        "saturated_fat": 1.5,
-        "trans_fat": 0,
-        "cholesterol": 105,
-        "sodium": 177,
-        "carbohydrate": 0,
-        "fiber": 0,
-        "total_sugars": 0,
-        "protein": 22.4,
-        "calcium": 9.2,
-        "iron": 1,
-        "potassium": 280
-      },
-      "vegan": false,
-      "vegetarian": false,
-      "contains": {
-        "soy": false,
-        "eggs": false,
-        "fish": false,
-        "milk": false,
-        "wheat": false,
-        "gluten": false,
-        "peanut": false,
-        "sesame": false,
-        "shellfish": false,
-        "tree_nuts": false
-      },
-      "ingredients": "Chicken Thigh, Canola Oil, Black Pepper, Kosher Salt"
     },
     {
       "id": "77952",
